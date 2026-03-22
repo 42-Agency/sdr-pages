@@ -10,7 +10,7 @@
 
 Personalized intel pages for AI SDR outbound campaigns. Each page is created for a specific prospect/company and linked in outreach emails.
 
-**These pages are ephemeral** - they typically live 30-90 days during an outbound campaign.
+**These pages are permanent** - once created, they stay live indefinitely so email links always work.
 
 ---
 
@@ -78,13 +78,9 @@ Reference shared assets from intel.42agency.com:
 
 ## Page Lifecycle
 
-| Stage | Duration | Action |
-|-------|----------|--------|
-| Active | 0-30 days | Linked in outbound emails |
-| Stale | 30-90 days | May still get visits |
-| Archive | 90+ days | Can be deleted |
+Pages stay live indefinitely. Old email links always work.
 
-**No manifest needed** - pages can be freely created/deleted without coordination.
+**No manifest needed** - just create pages and push. No cleanup required.
 
 ---
 
