@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flightpath — Market Intelligence | 42 Agency</title>
+    <link rel="icon" type="image/png" href="https://www.flightpath.fm/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MM5BTNS');</script>
+    <!-- HubSpot -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44888286.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            border-bottom: 2px solid #1a1a1a;
+            background: #fff;
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { height: 32px; }
+        .header-badge {
+            padding: 6px 12px;
+            background: #f5f5f5;
+            border: 2px solid #1a1a1a;
+            border-radius: 9999px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* Hero */
+        .hero {
+            background: #f5f5f5;
+            border-bottom: 2px solid #1a1a1a;
+            padding: 64px 24px;
+        }
+        .hero-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: #4a4a4a;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        @media (min-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 24px;
+        }
+        .stats-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        @media (min-width: 768px) {
+            .stats-inner { grid-template-columns: repeat(4, 1fr); }
+        }
+        .stat { text-align: center; }
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #DFFE68;
+        }
+        .stat-label {
+            font-size: 0.875rem;
+            color: #9a9a9a;
+            margin-top: 4px;
+        }
+
+        /* Main Content */
+        .main { padding: 48px 24px; }
+        .main-inner { max-width: 900px; margin: 0 auto; }
+
+        /* Section */
+        .section { margin-bottom: 48px; }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .section-title::before {
+            content: "";
+            width: 4px;
+            height: 24px;
+            background: #DFFE68;
+            border-radius: 2px;
+        }
+
+        /* Cards */
+        .card {
+            background: #fff;
+            border: 2px solid #1a1a1a;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 4px 4px 0px 0px #1a1a1a;
+        }
+        .card-grid {
+            display: grid;
+            gap: 16px;
+        }
+        @media (min-width: 768px) {
+            .card-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        .finding-card {
+            background: #fff;
+            border: 2px solid #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 3px 3px 0px 0px #1a1a1a;
+        }
+        .finding-number {
+            width: 28px;
+            height: 28px;
+            background: #DFFE68;
+            border: 2px solid #1a1a1a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        .finding-text {
+            font-size: 0.95rem;
+            color: #1a1a1a;
+        }
+
+        /* Revenue Model */
+        .revenue-model {
+            background: #f5f5f5;
+            border: 2px solid #1a1a1a;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 4px 4px 0px 0px #1a1a1a;
+        }
+        .funnel {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 24px 0;
+        }
+        @media (min-width: 768px) {
+            .funnel {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        .funnel-step {
+            flex: 1;
+            text-align: center;
+            padding: 16px;
+            background: #fff;
+            border: 2px solid #1a1a1a;
+            border-radius: 8px;
+            position: relative;
+        }
+        .funnel-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1a1a1a;
+        }
+        .funnel-label {
+            font-size: 0.75rem;
+            color: #6b6b6b;
+            margin-top: 4px;
+        }
+        .funnel-arrow {
+            color: #9a9a9a;
+            font-size: 1.5rem;
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .funnel-arrow { display: block; }
+        }
+
+        /* Unit Economics */
+        .unit-economics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 2px dashed #ccc;
+        }
+        .unit-stat {
+            text-align: center;
+        }
+        .unit-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        .unit-label {
+            font-size: 0.75rem;
+            color: #6b6b6b;
+        }
+
+        /* Keyword Table */
+        .keyword-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+        }
+        .keyword-table th,
+        .keyword-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .keyword-table th {
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: #6b6b6b;
+        }
+        .keyword-table td {
+            font-size: 0.9rem;
+        }
+        .keyword-table tr:hover {
+            background: #f9f9f9;
+        }
+        .cpc-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            background: #F59E0B10;
+            border: 1px solid #F59E0B;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #F59E0B;
+        }
+        .cpc-badge.high {
+            background: #EF444410;
+            border-color: #EF4444;
+            color: #EF4444;
+        }
+
+        /* LinkedIn Section */
+        .linkedin-section {
+            background: #0077B510;
+            border: 2px solid #0077B5;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 3px 3px 0px 0px #0077B5;
+        }
+        .linkedin-title {
+            font-weight: 700;
+            color: #0077B5;
+            margin-bottom: 16px;
+        }
+        .audience-grid {
+            display: grid;
+            gap: 12px;
+        }
+        @media (min-width: 768px) {
+            .audience-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .audience-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px;
+            background: #fff;
+            border-radius: 8px;
+        }
+        .audience-label { color: #4a4a4a; }
+        .audience-value { font-weight: 700; color: #0077B5; }
+
+        /* CTA Section */
+        .cta {
+            background: #DFFE68;
+            border: 2px solid #1a1a1a;
+            border-radius: 16px;
+            padding: 48px 32px;
+            box-shadow: 6px 6px 0px 0px #1a1a1a;
+            text-align: center;
+            margin-top: 48px;
+        }
+        .cta h2 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .cta p {
+            color: #4a4a4a;
+            margin-bottom: 24px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 16px 32px;
+            background: #1a1a1a;
+            color: #fff;
+            font-weight: 700;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .cta-button:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+        .cta-subtext {
+            margin-top: 12px;
+            font-size: 0.875rem;
+            color: #6b6b6b;
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 2px solid #1a1a1a;
+            padding: 32px 24px;
+            background: #1a1a1a;
+            text-align: center;
+        }
+        .footer p {
+            color: #9a9a9a;
+            font-size: 0.875rem;
+        }
+        .footer a {
+            color: #DFFE68;
+            text-decoration: none;
+        }
+
+        /* Competitor Section */
+        .competitor-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: #fff;
+            border: 2px solid #1a1a1a;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin: 4px;
+        }
+        .competitor-funding {
+            font-size: 0.75rem;
+            color: #10B981;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM5BTNS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <img src="https://intel.42agency.com/42-logo.png" alt="42 Agency" class="logo">
+            <span class="header-badge">Executive Briefing</span>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>19,000+ Monthly Searches. $136 CPCs.<br>The Traffic Management Software Market.</h1>
+            <p>Operations and logistics leaders are searching for predictive traffic analytics. Here's where the opportunity is — and how to capture it.</p>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="stats-inner">
+            <div class="stat">
+                <div class="stat-value">56+</div>
+                <div class="stat-label">VP/Director Ops on LinkedIn</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">19,070</div>
+                <div class="stat-label">Monthly Searches</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">$68</div>
+                <div class="stat-label">Avg. CPC</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">$4.8M</div>
+                <div class="stat-label">Pipeline Opportunity</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="main-inner">
+
+            <!-- Key Findings -->
+            <section class="section">
+                <h2 class="section-title">Key Findings</h2>
+                <div class="card-grid">
+                    <div class="finding-card">
+                        <div class="finding-number">1</div>
+                        <p class="finding-text"><strong>12,100 searches/mo for "fleet management software"</strong> at $136 CPC — signaling high enterprise intent and budget for traffic solutions.</p>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-number">2</div>
+                        <p class="finding-text"><strong>56+ VP/Director-level ops leaders</strong> at transportation, logistics, and fleet companies (50-500 employees) actively on LinkedIn.</p>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-number">3</div>
+                        <p class="finding-text"><strong>"Real-time tracking" and "route optimization"</strong> — high-value long-tail keywords with $47-102 CPCs. Predictive analytics angle is underserved.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Revenue Opportunity Model -->
+            <section class="section">
+                <h2 class="section-title">Revenue Opportunity Model</h2>
+                <div class="revenue-model">
+                    <p style="color: #6b6b6b; margin-bottom: 8px;">Based on category search volume x enterprise conversion benchmarks</p>
+
+                    <div class="funnel">
+                        <div class="funnel-step">
+                            <div class="funnel-value">19,070</div>
+                            <div class="funnel-label">Monthly Searches</div>
+                        </div>
+                        <span class="funnel-arrow">→</span>
+                        <div class="funnel-step">
+                            <div class="funnel-value">1,907</div>
+                            <div class="funnel-label">Clicks (10% CTR)</div>
+                        </div>
+                        <span class="funnel-arrow">→</span>
+                        <div class="funnel-step">
+                            <div class="funnel-value">95</div>
+                            <div class="funnel-label">Leads (5% CVR)</div>
+                        </div>
+                        <span class="funnel-arrow">→</span>
+                        <div class="funnel-step">
+                            <div class="funnel-value">24</div>
+                            <div class="funnel-label">SQLs (25%)</div>
+                        </div>
+                        <span class="funnel-arrow">→</span>
+                        <div class="funnel-step" style="background: #DFFE68;">
+                            <div class="funnel-value">$4.8M</div>
+                            <div class="funnel-label">Pipeline (@ $200K ACV)</div>
+                        </div>
+                    </div>
+
+                    <div class="unit-economics">
+                        <div class="unit-stat">
+                            <div class="unit-value">$200K</div>
+                            <div class="unit-label">Est. Deal Size (Enterprise)</div>
+                        </div>
+                        <div class="unit-stat">
+                            <div class="unit-value">$2,500</div>
+                            <div class="unit-label">Target CAC (8:1 LTV:CAC)</div>
+                        </div>
+                        <div class="unit-stat">
+                            <div class="unit-value">$130K</div>
+                            <div class="unit-label">Est. Monthly Ad Spend</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Keyword Data -->
+            <section class="section">
+                <h2 class="section-title">Keyword Intelligence</h2>
+                <div class="card">
+                    <table class="keyword-table">
+                        <thead>
+                            <tr>
+                                <th>Keyword</th>
+                                <th>Monthly Volume</th>
+                                <th>CPC</th>
+                                <th>Competition</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>fleet management software</strong></td>
+                                <td>12,100</td>
+                                <td><span class="cpc-badge high">$136.53</span></td>
+                                <td>Low</td>
+                            </tr>
+                            <tr>
+                                <td><strong>transportation management software</strong></td>
+                                <td>3,600</td>
+                                <td><span class="cpc-badge">$39.45</span></td>
+                                <td>Low</td>
+                            </tr>
+                            <tr>
+                                <td><strong>route optimization software</strong></td>
+                                <td>1,300</td>
+                                <td><span class="cpc-badge">$47.52</span></td>
+                                <td>Low</td>
+                            </tr>
+                            <tr>
+                                <td><strong>logistics software</strong></td>
+                                <td>1,300</td>
+                                <td><span class="cpc-badge">$34.47</span></td>
+                                <td>Medium</td>
+                            </tr>
+                            <tr>
+                                <td><strong>delivery management software</strong></td>
+                                <td>590</td>
+                                <td><span class="cpc-badge">$31.53</span></td>
+                                <td>Low</td>
+                            </tr>
+                            <tr>
+                                <td><strong>traffic management solutions</strong></td>
+                                <td>590</td>
+                                <td><span class="cpc-badge">$8.41</span></td>
+                                <td>Low</td>
+                            </tr>
+                            <tr>
+                                <td><strong>supply chain visibility</strong></td>
+                                <td>390</td>
+                                <td><span class="cpc-badge">$16.43</span></td>
+                                <td>Low</td>
+                            </tr>
+                            <tr>
+                                <td><strong>vehicle tracking software</strong></td>
+                                <td>320</td>
+                                <td><span class="cpc-badge high">$102.70</span></td>
+                                <td>Low</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="margin-top: 16px; font-size: 0.85rem; color: #6b6b6b;">
+                        <strong>Insight:</strong> "Fleet management software" at $136 CPC shows high buyer intent — enterprises are actively looking. "Traffic management solutions" at $8 CPC is greenfield with low competition.
+                    </p>
+                </div>
+            </section>
+
+            <!-- LinkedIn Audience -->
+            <section class="section">
+                <h2 class="section-title">LinkedIn Audience</h2>
+                <div class="linkedin-section">
+                    <h3 class="linkedin-title">Target ICP: Operations Leaders at Transportation & Logistics Companies</h3>
+                    <div class="audience-grid">
+                        <div class="audience-item">
+                            <span class="audience-label">VP Operations</span>
+                            <span class="audience-value">Targeted</span>
+                        </div>
+                        <div class="audience-item">
+                            <span class="audience-label">Director of Logistics</span>
+                            <span class="audience-value">Targeted</span>
+                        </div>
+                        <div class="audience-item">
+                            <span class="audience-label">Head of Logistics</span>
+                            <span class="audience-value">Targeted</span>
+                        </div>
+                        <div class="audience-item">
+                            <span class="audience-label">Operations Manager</span>
+                            <span class="audience-value">Targeted</span>
+                        </div>
+                    </div>
+                    <p style="margin-top: 16px; font-size: 0.85rem; color: #4a4a4a;">
+                        <strong>Industries:</strong> Warehousing, Freight & Package Transportation, Truck Transportation, Maritime Transportation<br>
+                        <strong>Company Size:</strong> 51-500 employees<br>
+                        <strong>Skills:</strong> Transportation Management, Supply Chain, Logistics, Operations Management
+                    </p>
+                </div>
+            </section>
+
+            <!-- Competitive Landscape -->
+            <section class="section">
+                <h2 class="section-title">Competitive Landscape</h2>
+                <div class="card">
+                    <p style="margin-bottom: 16px;">Key players in traffic management & fleet analytics:</p>
+                    <div>
+                        <span class="competitor-badge">
+                            Samsara
+                            <span class="competitor-funding">$2.6B market cap</span>
+                        </span>
+                        <span class="competitor-badge">
+                            Motive (ex-KeepTruckin)
+                            <span class="competitor-funding">$2.85B valuation</span>
+                        </span>
+                        <span class="competitor-badge">
+                            Trimble
+                            <span class="competitor-funding">Public (TRMB)</span>
+                        </span>
+                        <span class="competitor-badge">
+                            FourKites
+                            <span class="competitor-funding">$100M+ raised</span>
+                        </span>
+                        <span class="competitor-badge">
+                            project44
+                            <span class="competitor-funding">$420M raised</span>
+                        </span>
+                    </div>
+                    <p style="margin-top: 16px; font-size: 0.85rem; color: #6b6b6b;">
+                        <strong>Flightpath differentiation:</strong> Predictive analytics platform with 12-month inventory forecasting and real-time performance alerts. Competitors focus on tracking — Flightpath focuses on <em>prediction</em>.
+                    </p>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="cta">
+                <h2>Want the Complete Market Analysis?</h2>
+                <p>This briefing covers the opportunity. The full strategy includes 50+ keywords, campaign architecture, and a 90-day roadmap for capturing traffic management demand.</p>
+                <a href="https://www.42agency.com/contact-us" class="cta-button">Schedule a Strategy Call →</a>
+                <p class="cta-subtext">15 minutes. We'll walk through the specific numbers.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Prepared by <a href="https://www.42agency.com">42 Agency</a> — B2B Demand Generation</p>
+    </footer>
+</body>
+</html>
