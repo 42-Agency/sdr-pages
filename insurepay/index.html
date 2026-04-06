@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsurePay Signal Sample | 42 Agency AI SDR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #F59E0B 0%, #10B981 50%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-white text-[#1a1a1a]">
+
+    <!-- Header with Both Logos -->
+    <header class="border-b-2 border-[#1a1a1a] bg-white sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <!-- 42 Agency Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-[#1a1a1a] rounded-lg flex items-center justify-center">
+                        <span class="text-white font-extrabold text-lg">42</span>
+                    </div>
+                    <span class="font-bold text-sm hidden sm:block">AI SDR</span>
+                </div>
+                <span class="text-[#6b6b6b]">×</span>
+                <!-- InsurePay Logo -->
+                <img src="https://insurepay.com/wp-content/uploads/2023/07/insurepay-logo-1.png" alt="InsurePay" class="h-8 object-contain">
+            </div>
+            <div class="px-3 py-1 bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-full text-xs font-bold shadow-[2px_2px_0px_0px_#1a1a1a]">
+                Signal Sample
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-[#f5f5f5] via-white to-[#DFFE68]/20 border-b-2 border-[#1a1a1a] py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-wrap gap-3 mb-6">
+                <div class="inline-block px-4 py-2 bg-white border-2 border-[#1a1a1a] rounded-full text-sm font-bold shadow-[3px_3px_0px_0px_#F59E0B]">
+                    Prepared for InsurePay
+                </div>
+                <div class="inline-block px-4 py-2 bg-[#1a1a1a] text-white rounded-full text-sm font-bold">
+                    15 Accounts · 3 Signal Types
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+                Signal-Based Outbound<br>
+                <span class="gradient-text">for Your ICP</span>
+            </h1>
+            <p class="text-xl text-[#4a4a4a] max-w-2xl">
+                This is what AI-powered SDR looks like when it's built around your actual buyers—not generic spray-and-pray.
+            </p>
+        </div>
+    </section>
+
+    <!-- What This Is -->
+    <section class="py-12 px-6 border-b-2 border-[#1a1a1a]">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-gradient-to-r from-[#3B82F6]/5 to-[#10B981]/5 border-2 border-[#1a1a1a] rounded-xl p-8 shadow-[4px_4px_0px_0px_#1a1a1a]">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-[#3B82F6] rounded-xl flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-extrabold tracking-tight mb-3">What You're Looking At</h2>
+                        <p class="text-[#4a4a4a] mb-3">
+                            This is a sample output from <strong class="text-[#1a1a1a]">42 Agency's AI SDR Agent</strong>—not a tool you configure yourself, but a <span class="bg-[#DFFE68] px-1">managed service</span> that runs on your behalf.
+                        </p>
+                        <p class="text-[#4a4a4a]">
+                            We took InsurePay's ICP, made assumptions about who buys from you, and found accounts showing <span class="text-[#F59E0B] font-semibold">active buying signals</span>. This is what your team would receive daily—accounts worth reaching out to, with context on <em>why now</em>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assumptions -->
+    <section class="py-12 px-6 border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center gap-3 mb-2">
+                <h2 class="text-2xl font-extrabold tracking-tight">ICP Assumptions We Made</h2>
+                <div class="px-2 py-1 bg-[#10B981]/10 border border-[#10B981] rounded text-xs font-bold text-[#10B981]">AUTO-DETECTED</div>
+            </div>
+            <p class="text-[#6b6b6b] mb-8">Based on InsurePay's website—pay-as-you-go workers' comp billing integrated with payroll.</p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Assumption Card 1 -->
+                <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#F59E0B] hover:shadow-[6px_6px_0px_0px_#F59E0B] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all">
+                    <div class="w-10 h-10 bg-[#F59E0B] rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Workers' Comp Carriers</h3>
+                    <p class="text-[#4a4a4a] text-sm">Companies that underwrite workers' comp policies and need modern premium collection, pay-as-you-go billing, and reconciliation.</p>
+                </div>
+
+                <!-- Assumption Card 2 -->
+                <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#3B82F6] hover:shadow-[6px_6px_0px_0px_#3B82F6] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all">
+                    <div class="w-10 h-10 bg-[#3B82F6] rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Insurance Agencies & Brokers</h3>
+                    <p class="text-[#4a4a4a] text-sm">Agencies selling workers' comp that need to manage premium payments, payables to carriers, and commission distribution.</p>
+                </div>
+
+                <!-- Assumption Card 3 -->
+                <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#10B981] hover:shadow-[6px_6px_0px_0px_#10B981] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all">
+                    <div class="w-10 h-10 bg-[#10B981] rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">MGAs (Managing General Agents)</h3>
+                    <p class="text-[#4a4a4a] text-sm">Specialty underwriters that need premium collection, pay-as-you-go billing, and commission distribution at scale.</p>
+                </div>
+
+                <!-- Assumption Card 4 -->
+                <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#8B5CF6] hover:shadow-[6px_6px_0px_0px_#8B5CF6] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all">
+                    <div class="w-10 h-10 bg-[#8B5CF6] rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Premium Finance Companies</h3>
+                    <p class="text-[#4a4a4a] text-sm">Companies financing insurance premiums that need integration with modern billing and payment infrastructure.</p>
+                </div>
+            </div>
+
+            <div class="mt-8 p-4 bg-white rounded-xl border-2 border-[#1a1a1a] shadow-[3px_3px_0px_0px_#1a1a1a]">
+                <p class="text-sm text-[#4a4a4a]">
+                    <span class="inline-block px-2 py-0.5 bg-[#DFFE68] rounded font-bold text-xs mr-2">SIGNALS WE TRACK</span>
+                    New tech/ops leadership <span class="text-[#F59E0B]">●</span> M&A activity <span class="text-[#10B981]">●</span> Geographic expansion <span class="text-[#3B82F6]">●</span> Product launches <span class="text-[#8B5CF6]">●</span> Funding rounds
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signal Tables -->
+    <section class="py-12 px-6 border-b-2 border-[#1a1a1a]">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-2xl font-extrabold tracking-tight">Sample Accounts with Signals</h2>
+                <div class="flex gap-2">
+                    <span class="px-2 py-1 bg-[#F59E0B]/10 text-[#F59E0B] rounded text-xs font-bold">6 High Intent</span>
+                    <span class="px-2 py-1 bg-[#10B981]/10 text-[#10B981] rounded text-xs font-bold">5 Growth</span>
+                    <span class="px-2 py-1 bg-[#3B82F6]/10 text-[#3B82F6] rounded text-xs font-bold">4 Product</span>
+                </div>
+            </div>
+
+            <!-- Signal Category 1 -->
+            <div class="mb-10">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="px-3 py-1.5 bg-[#F59E0B] text-white rounded-lg shadow-[2px_2px_0px_0px_#1a1a1a]">
+                        <span class="text-xs font-bold">HIGH INTENT</span>
+                    </div>
+                    <h3 class="font-bold text-lg">New Tech/Ops Leadership</h3>
+                </div>
+                <p class="text-[#6b6b6b] text-sm mb-4">New leaders evaluate vendors in first <span class="bg-[#F59E0B]/20 px-1 rounded font-medium text-[#1a1a1a]">90 days</span>. These are your best outbound targets.</p>
+
+                <div class="bg-white border-2 border-[#1a1a1a] rounded-xl overflow-hidden shadow-[4px_4px_0px_0px_#F59E0B]">
+                    <table class="w-full">
+                        <thead class="bg-[#F59E0B]/10 border-b-2 border-[#1a1a1a]">
+                            <tr>
+                                <th class="text-left px-4 py-3 font-bold text-sm">Company</th>
+                                <th class="text-left px-4 py-3 font-bold text-sm">Signal</th>
+                                <th class="text-left px-4 py-3 font-bold text-sm">Contact</th>
+                                <th class="text-left px-4 py-3 font-bold text-sm">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-[#F59E0B]/5 transition-colors">
+                                <td class="px-4 py-3">
+                                    <div class="font-semibold">MEMIC</div>
+                                    <div class="text-xs text-[#6b6b6b]">Workers' Comp Carrier</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">New CIO appointed</td>
+                                <td class="px-4 py-3 text-sm font-medium text-[#F59E0B]">Matt Coy, CIO</td>
+                                <td class="px-4 py-3 text-sm text-[#6b6b6b]">Jan 2026</td>
+                            </tr>
+                            <tr class="hover:bg-[#F59E0B]/5 transition-colors">
+                                <td class="px-4 py-3">
+                                    <div class="font-semibold">CopperPoint Insurance</div>
+                                    <div class="text-xs text-[#6b6b6b]">Workers' Comp Carrier</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">New SVP/CIO - "shape future of innovation"</td>
+                                <td class="px-4 py-3 text-sm font-medium text-[#F59E0B]">Thomas Beale, SVP/CIO</td>
+                                <td class="px-4 py-3 text-sm text-[#6b6b6b]">Mar 2026</td>
+                            </tr>
+                            <tr class="hover:bg-[#F59E0B]/5 transition-colors">
+                                <td class="px-4 py-3">
+                                    <div class="font-semibold">Brown & Brown</div>
+                                    <div class="text-xs text-[#6b6b6b]">Top 10 Insurance Broker</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">New Chief Information Technology Officer</td>
+                                <td class="px-4 py-3 text-sm font-medium text-[#F59E0B]">Dori Henderson, CITO</td>
+                                <td class="px-4 py-3 text-sm text-[#6b6b6b]">Feb 2026</td>
+                            </tr>
+                            <tr class="hover:bg-[#F59E0B]/5 transition-colors">
+                                <td class="px-4 py-3">
+                                    <div class="font-semibold">Chubb / ESIS</div>
+                                    <div class="text-xs text-[#6b6b6b]">TPA Division</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">New Division President</td>
+                                <td class="px-4 py-3 text-sm font-medium text-[#F59E0B]">Brent MacLean, Division President</td>
+                                <td class="px-4 py-3 text-sm text-[#6b6b6b]">Feb 2026</td>
+                            </tr>
+                            <tr class="hover:bg-[#F59E0B]/5 transition-colors">
+                                <td class="px-4 py-3">
+                                    <div class="font-semibold">EverPeak Insurance</div>
+                                    <div class="text-xs text-[#6b6b6b]">Workers' Comp (Pinnacol subsidiary)</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">New President + full leadership restructure</td>
+                                <td class="px-4 py-3 text-sm font-medium text-[#F59E0B]">Kathy Kranz, President</td>
+                                <td class="px-4 py-3 text-sm text-[#6b6b6b]">Jan 2026</td>
+                            </tr>
+                            <tr class="hover:bg-[#F59E0B]/5 transition-colors">
+                                <td class="px-4 py-3">
+                                    <div class="font-semibold">Safety National</div>
+                                    <div class="text-xs text-[#6b6b6b]">Workers' Comp Carrier</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">Multiple leadership promotions announced</td>
+                                <td class="px-4 py-3 text-sm font-medium text-[#F59E0B]">Multiple contacts</td>
+                                <td class="px-4 py-3 text-sm text-[#6b6b6b]">Mar 2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Signal Category 2 -->
+            <div class="mb-10">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="px-3 py-1.5 bg-[#10B981] text-white rounded-lg shadow-[2px_2px_0px_0px_#1a1a1a]">
+                        <span class="text-xs font-bold">GROWTH MODE</span>
+                    </div>
+                    <h3 class="font-bold text-lg">Agency Expansion & M&A</h3>
+                </div>
+                <p class="text-[#6b6b6b] text-sm mb-4">Acquisitions and expansion create <span class="bg-[#10B981]/20 px-1 rounded font-medium text-[#1a1a1a]">systems consolidation pain</span>. Perfect timing for new infrastructure.</p>
+
+                <div class="bg-white border-2 border-[#1a1a1a] rounded-xl overflow-hidden shadow-[4px_4px_0px_0px_#10B981]">
+                    <table class="w-full">
+                        <thead class="bg-[#10B981]/10 border-b-2 border-[#1a1a1a]">
+                            <tr>
+                                <th class="text-left px-4 py-3 font-bold text-sm">Company</th>
+                                <th class="text-left px-4 py-3 font-bold text-sm">Signal</th>
+                                <th class="text-left px-4 py-3 font-bold text-sm">Why It Matters</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-[#10B981]/5 transition-colors">
+                                <td class="px-4 py-3">
+                                    <div class="font-semibold">Farmers Insurance</div>
+                                    <div class="text-xs text-[#6b6b6b]">Major Carrier</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">1,700 new agency owners planned + Elite Owner Program</td>
+                                <td class="px-4 py-3 text-sm text-[#10B981] font-medium">Massive distribution expansion = billing complexity at scale</td>
+                            </tr>
+                            <tr class="hover:bg-[#10B981]/5 transition-colors">
+                                <td class="px-4 py-3">
+                                    <div class="font-semibold">Inszone Insurance</div>
+                                    <div class="text-xs text-[#6b6b6b]">Growing Agency Network</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">3+ acquisitions in 30 days (NE, OK, UT)</td>
+                                <td class="px-4 py-3 text-sm text-[#10B981] font-medium">Rapid M&A = urgent need for systems consolidation</td>
+                            </tr>
+                            <tr class="hover:bg-[#10B981]/5 transition-colors">
+                                <td class="px-4 py-3">
+                                    <div class="font-semibold">A-MAX Insurance</div>
+                                    <div class="text-xs text-[#6b6b6b]">Regional Agency</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">Acquired Best Buy Insurance, expanding to Arizona</td>
+                                <td class="px-4 py-3 text-sm text-[#10B981] font-medium">New state = new premium flows, compliance requirements</td>
+                            </tr>
+                            <tr class="hover:bg-[#10B981]/5 transition-colors">
+                                <td class="px-4 py-3">
+                                    <div class="font-semibold">King Risk Partners</div>
+                                    <div class="text-xs text-[#6b6b6b]">#51 Largest US Broker</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">Acquired PRL Associates (Northeast expansion)</td>
+                                <td class="px-4 py-3 text-sm text-[#10B981] font-medium">Fast-growing broker integrating new operations</td>
+                            </tr>
+                            <tr class="hover:bg-[#10B981]/5 transition-colors">
+                                <td class="px-4 py-3">
+                                    <div class="font-semibold">WalkerHughes Insurance</div>
+                                    <div class="text-xs text-[#6b6b6b]">Regional Broker</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">Kansas City metro acquisition</td>
+                                <td class="px-4 py-3 text-sm text-[#10B981] font-medium">Geographic expansion, new market entry</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Signal Category 3 -->
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="px-3 py-1.5 bg-[#3B82F6] text-white rounded-lg shadow-[2px_2px_0px_0px_#1a1a1a]">
+                        <span class="text-xs font-bold">WORKERS' COMP SPECIFIC</span>
+                    </div>
+                    <h3 class="font-bold text-lg">Product & Platform Moves</h3>
+                </div>
+                <p class="text-[#6b6b6b] text-sm mb-4">Companies launching new WC products or building platforms need <span class="bg-[#3B82F6]/20 px-1 rounded font-medium text-[#1a1a1a]">billing infrastructure</span>.</p>
+
+                <div class="bg-white border-2 border-[#1a1a1a] rounded-xl overflow-hidden shadow-[4px_4px_0px_0px_#3B82F6]">
+                    <table class="w-full">
+                        <thead class="bg-[#3B82F6]/10 border-b-2 border-[#1a1a1a]">
+                            <tr>
+                                <th class="text-left px-4 py-3 font-bold text-sm">Company</th>
+                                <th class="text-left px-4 py-3 font-bold text-sm">Signal</th>
+                                <th class="text-left px-4 py-3 font-bold text-sm">Why It Matters</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-[#3B82F6]/5 transition-colors">
+                                <td class="px-4 py-3">
+                                    <div class="font-semibold">EMPLOYERS®</div>
+                                    <div class="text-xs text-[#6b6b6b]">WC Specialist Carrier</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">Expanding into Excess Workers' Compensation</td>
+                                <td class="px-4 py-3 text-sm text-[#3B82F6] font-medium">New product line = new billing/premium flows needed</td>
+                            </tr>
+                            <tr class="hover:bg-[#3B82F6]/5 transition-colors">
+                                <td class="px-4 py-3">
+                                    <div class="font-semibold">Lumen Holdings</div>
+                                    <div class="text-xs text-[#6b6b6b]">Specialty MGA</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">Vistria Group partnership, 30+ states, KURRENT tech platform</td>
+                                <td class="px-4 py-3 text-sm text-[#3B82F6] font-medium">Tech-forward MGA scaling nationally, building modern stack</td>
+                            </tr>
+                            <tr class="hover:bg-[#3B82F6]/5 transition-colors">
+                                <td class="px-4 py-3">
+                                    <div class="font-semibold">EverPeak Insurance</div>
+                                    <div class="text-xs text-[#6b6b6b]">Pinnacol Subsidiary</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">Acquired Method Insurance for national WC solution</td>
+                                <td class="px-4 py-3 text-sm text-[#3B82F6] font-medium">Building comprehensive national WC platform for brokers</td>
+                            </tr>
+                            <tr class="hover:bg-[#3B82F6]/5 transition-colors">
+                                <td class="px-4 py-3">
+                                    <div class="font-semibold">AmTrust / ANV Group</div>
+                                    <div class="text-xs text-[#6b6b6b]">Major Carrier + MGA</div>
+                                </td>
+                                <td class="px-4 py-3 text-sm">New MGA platform launch with Blackstone backing</td>
+                                <td class="px-4 py-3 text-sm text-[#3B82F6] font-medium">Major MGA restructuring, greenfield for new vendors</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why This Works -->
+    <section class="py-12 px-6 border-b-2 border-[#1a1a1a] bg-gradient-to-br from-[#f5f5f5] to-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-extrabold tracking-tight mb-6">Why Signal-Based Outbound Works</h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#F59E0B]">
+                    <div class="text-4xl font-extrabold text-[#F59E0B] mb-2">90<span class="text-lg">days</span></div>
+                    <p class="text-sm text-[#4a4a4a]">New leaders evaluate and replace vendors in their first 90 days. <span class="font-semibold text-[#1a1a1a]">Timing matters more than volume.</span></p>
+                </div>
+                <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#10B981]">
+                    <div class="text-4xl font-extrabold text-[#10B981] mb-2">3-5<span class="text-lg">x</span></div>
+                    <p class="text-sm text-[#4a4a4a]">Signal-triggered outreach converts 3-5x better than cold lists because you're reaching people with <span class="font-semibold text-[#1a1a1a]">active needs</span>.</p>
+                </div>
+                <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#3B82F6]">
+                    <div class="text-4xl font-extrabold text-[#3B82F6] mb-2">Context</div>
+                    <p class="text-sm text-[#4a4a4a]">"Saw you just joined as CIO" beats "Hi, I'm reaching out because..." <span class="font-semibold text-[#1a1a1a]">Every time.</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-12 px-6 border-b-2 border-[#1a1a1a]">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-extrabold tracking-tight mb-6">How 42's Managed Outbound Works</h2>
+
+            <div class="space-y-4">
+                <div class="flex gap-4 items-start p-4 bg-[#F59E0B]/5 rounded-xl border-l-4 border-[#F59E0B]">
+                    <div class="w-8 h-8 bg-[#F59E0B] rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold text-sm">1</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold mb-1">We define your ICP together</h3>
+                        <p class="text-[#4a4a4a] text-sm">Not just firmographics—the actual buying signals and triggers that indicate readiness.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start p-4 bg-[#10B981]/5 rounded-xl border-l-4 border-[#10B981]">
+                    <div class="w-8 h-8 bg-[#10B981] rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold text-sm">2</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold mb-1">AI monitors for signals daily</h3>
+                        <p class="text-[#4a4a4a] text-sm">Leadership changes, M&A, funding, hiring, product launches—across your target accounts.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start p-4 bg-[#3B82F6]/5 rounded-xl border-l-4 border-[#3B82F6]">
+                    <div class="w-8 h-8 bg-[#3B82F6] rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold text-sm">3</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold mb-1">We write and send personalized outreach</h3>
+                        <p class="text-[#4a4a4a] text-sm">Not templates with {firstName}—actual personalization based on the signal and context.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start p-4 bg-[#8B5CF6]/5 rounded-xl border-l-4 border-[#8B5CF6]">
+                    <div class="w-8 h-8 bg-[#8B5CF6] rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold text-sm">4</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold mb-1">You get meetings, not headaches</h3>
+                        <p class="text-[#4a4a4a] text-sm">No tool to configure. No SDR to manage. Just qualified conversations on your calendar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 px-6 bg-[#1a1a1a]">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-2xl p-8 md:p-12 shadow-[8px_8px_0px_0px_#F59E0B]">
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="https://insurepay.com/wp-content/uploads/2023/07/insurepay-logo-1.png" alt="InsurePay" class="h-6 object-contain opacity-60">
+                    <span class="text-[#6b6b6b]">→</span>
+                    <span class="text-sm font-bold text-[#4a4a4a]">This could be running for you</span>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mb-4">Want to see this for your actual ICP?</h2>
+                <p class="text-[#4a4a4a] mb-6 max-w-xl">
+                    This was a quick sample. The real thing is a managed service that runs continuously—finding signals, writing outreach, and booking meetings. <span class="font-semibold">No tool to configure. No SDR to hire.</span>
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://outbound.42agency.com" class="inline-flex items-center justify-center gap-2 bg-[#1a1a1a] text-white font-bold px-6 py-3 rounded-lg hover:bg-[#333] transition-colors">
+                        See How It Works
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="https://outbound.42agency.com" class="inline-flex items-center justify-center gap-2 bg-white text-[#1a1a1a] font-bold px-6 py-3 rounded-lg border-2 border-[#1a1a1a] hover:bg-[#f5f5f5] transition-colors">
+                        Book a Call
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t-2 border-[#333] py-8 px-6 bg-[#1a1a1a]">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-[#DFFE68] rounded-lg flex items-center justify-center">
+                        <span class="text-[#1a1a1a] font-extrabold text-sm">42</span>
+                    </div>
+                    <span class="text-gray-400 text-sm">42 Agency</span>
+                </div>
+                <span class="text-gray-600">·</span>
+                <span class="text-gray-400 text-sm">Managed Outbound</span>
+            </div>
+            <p class="text-gray-500 text-sm">
+                Generated April 2026 · <a href="https://outbound.42agency.com" class="text-[#DFFE68] hover:underline">outbound.42agency.com</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
