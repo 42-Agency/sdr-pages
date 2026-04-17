@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signal-Based Outreach Intel: Healthcare Background Screening | InCheck</title>
+    <meta name="description" content="Signal-based outreach intelligence for InCheck. Hiring signals, compliance triggers, and expansion opportunities in healthcare background screening.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- GTM -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MM5BTNS');</script>
+
+    <!-- HubSpot -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44888286.js"></script>
+
+    <style>
+        :root {
+            --accent: #DFFE68;
+            --accent-hover: #C8E85C;
+            --black: #1a1a1a;
+            --gray: #4a4a4a;
+            --muted: #6b6b6b;
+            --light-gray: #f5f5f5;
+            --green: #10B981;
+            --orange: #F59E0B;
+            --red: #EF4444;
+            --blue: #3B82F6;
+            --purple: #8B5CF6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background-color: var(--light-gray);
+            color: var(--black);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            border-bottom: 2px solid var(--black);
+            padding: 0.75rem 1.5rem;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img { height: 28px; width: auto; }
+        .nav { display: flex; align-items: center; gap: 0.25rem; }
+        .nav a {
+            padding: 0.5rem 1rem;
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.15s;
+        }
+        .nav a:hover { color: var(--black); background: var(--light-gray); }
+        .nav-cta {
+            margin-left: 0.5rem;
+            padding: 0.5rem 1rem !important;
+            background: var(--black) !important;
+            color: white !important;
+            border-radius: 6px;
+            font-weight: 600 !important;
+        }
+        @media (max-width: 768px) { .nav { display: none; } }
+
+        /* Hero */
+        .hero {
+            background: #ffffff;
+            border-bottom: 2px solid var(--black);
+            padding: 3rem 2rem;
+        }
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .prepared-for {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--light-gray);
+            border: 2px solid var(--black);
+            border-radius: 8px;
+        }
+        .prepared-for-logo {
+            height: 24px;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.025em;
+        }
+        .prepared-for span { font-size: 0.85rem; color: var(--muted); }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+        }
+        @media (max-width: 600px) { h1 { font-size: 1.75rem; } }
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+        .date { font-size: 0.875rem; color: var(--muted); }
+
+        .company-overview {
+            margin-top: 1.5rem;
+            padding: 1.25rem;
+            background: var(--light-gray);
+            border: 2px solid var(--black);
+            border-radius: 12px;
+        }
+        .overview-title {
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .overview-item {
+            font-size: 0.85rem;
+        }
+        .overview-item strong {
+            display: block;
+            color: var(--black);
+            margin-bottom: 0.25rem;
+        }
+        .overview-item span {
+            color: var(--gray);
+        }
+
+        /* Main Content */
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 0.5rem;
+        }
+        .section-subtitle {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Key Finding */
+        .key-finding {
+            background: var(--accent);
+            border: 2px solid var(--black);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 4px 4px 0px 0px var(--black);
+        }
+        .key-finding-title {
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .key-finding p {
+            font-size: 0.95rem;
+            color: var(--gray);
+        }
+        .key-finding strong {
+            color: var(--black);
+        }
+
+        /* Signal Cards */
+        .signal-section {
+            margin-bottom: 2.5rem;
+        }
+        .signal-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        .signal-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--black);
+        }
+        .signal-icon.hiring { background: #DCFCE7; }
+        .signal-icon.compliance { background: #FEF3C7; }
+        .signal-icon.leadership { background: #DBEAFE; }
+        .signal-icon.expansion { background: #F3E8FF; }
+        .signal-icon svg { width: 24px; height: 24px; }
+
+        .signal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .signal-card {
+            background: white;
+            border: 2px solid var(--black);
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: 4px 4px 0px 0px var(--black);
+        }
+        .signal-card.green { box-shadow: 4px 4px 0px 0px var(--green); }
+        .signal-card.orange { box-shadow: 4px 4px 0px 0px var(--orange); }
+        .signal-card.blue { box-shadow: 4px 4px 0px 0px var(--blue); }
+        .signal-card.purple { box-shadow: 4px 4px 0px 0px var(--purple); }
+
+        .signal-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .signal-card p {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 0.75rem;
+        }
+        .signal-tag {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background: var(--light-gray);
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--muted);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+        .stat-card {
+            background: white;
+            border: 2px solid var(--black);
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-align: center;
+            box-shadow: 3px 3px 0px 0px var(--black);
+        }
+        .stat-number {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--black);
+            line-height: 1.2;
+        }
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-top: 0.25rem;
+        }
+
+        /* Card */
+        .card {
+            background: white;
+            border: 2px solid var(--black);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 4px 4px 0px 0px var(--black);
+            margin-bottom: 2rem;
+        }
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* Decision Makers */
+        .dm-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+        .dm-card {
+            background: var(--light-gray);
+            border: 2px solid var(--black);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+        .dm-card h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        .dm-card p {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        /* Outreach Angles */
+        .angles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .angle-card {
+            background: white;
+            border: 2px solid var(--black);
+            border-radius: 8px;
+            padding: 1.25rem;
+            box-shadow: 3px 3px 0px 0px var(--black);
+        }
+        .angle-card .signal-type {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+        .angle-card .signal-type.hiring { background: #DCFCE7; color: #166534; }
+        .angle-card .signal-type.compliance { background: #FEF3C7; color: #92400E; }
+        .angle-card .signal-type.leadership { background: #DBEAFE; color: #1E40AF; }
+        .angle-card .signal-type.expansion { background: #F3E8FF; color: #6B21A8; }
+        .angle-card h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .angle-card p {
+            font-size: 0.85rem;
+            color: var(--gray);
+            font-style: italic;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: var(--accent);
+            border: 2px solid var(--black);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 6px 6px 0px 0px var(--black);
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .cta-title {
+            font-size: 1.75rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 0.75rem;
+        }
+        .cta-text {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-button {
+            display: inline-block;
+            background: var(--black);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .cta-button:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px 0px var(--black);
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 2px solid var(--black);
+            padding: 3rem 1.5rem;
+            background: var(--black);
+            margin-top: 2rem;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer img { height: 24px; filter: brightness(0) invert(1); }
+        .footer p { color: #999; font-size: 0.85rem; }
+        @media (max-width: 600px) {
+            .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .main { padding: 1.5rem; }
+            .hero { padding: 2rem 1.5rem; }
+            .cta-section { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <img src="/42-logo.png" alt="42 Agency">
+            </a>
+            <nav class="nav">
+                <a href="https://intel.42agency.com/assess/">Assess</a>
+                <a href="https://intel.42agency.com/b2b-benchmarks/">Benchmarks</a>
+                <a href="https://intel.42agency.com/tools/">Tools</a>
+                <a href="https://www.42agency.com/contact-us" target="_blank" class="nav-cta">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="prepared-for">
+                <span class="prepared-for-logo">InCheck</span>
+                <span>Signal-Based Outreach Intel</span>
+            </div>
+            <h1>Healthcare Background Screening Market Signals</h1>
+            <p class="subtitle">Buying signals, compliance triggers, and expansion opportunities for healthcare organizations</p>
+            <p class="date">Prepared for Kirsten Wiegman | April 2026</p>
+
+            <div class="company-overview">
+                <div class="overview-title">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    InCheck Overview
+                </div>
+                <div class="overview-grid">
+                    <div class="overview-item">
+                        <strong>Founded</strong>
+                        <span>2002 in Wisconsin</span>
+                    </div>
+                    <div class="overview-item">
+                        <strong>Specialization</strong>
+                        <span>Healthcare, Staffing, Financial Services</span>
+                    </div>
+                    <div class="overview-item">
+                        <strong>Key Services</strong>
+                        <span>Criminal checks, OIG/LEIE screening, Drug testing, Occupational health</span>
+                    </div>
+                    <div class="overview-item">
+                        <strong>Differentiator</strong>
+                        <span>1-3 day turnaround, dedicated support, FCRA/HIPAA/OIG compliance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="key-finding">
+            <div class="key-finding-title">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                Key Market Insight
+            </div>
+            <p>The healthcare staffing market is projected to reach <strong>$89.71B by 2033</strong>, with over <strong>2 million new healthcare jobs</strong> expected through 2033. Meanwhile, a <strong>shortage of 3.2 million healthcare workers by 2026</strong> is driving unprecedented hiring velocity. Every new hire in healthcare requires background screening, creating massive demand for fast, compliant screening partners.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">2M+</div>
+                <div class="stat-label">New healthcare jobs by 2033</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">83 days</div>
+                <div class="stat-label">Avg. time to hire an RN</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">16.4%</div>
+                <div class="stat-label">National RN turnover rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">$61K</div>
+                <div class="stat-label">Cost per RN turnover</div>
+            </div>
+        </div>
+
+        <!-- Signal 1: Hiring Signals -->
+        <section class="signal-section">
+            <div class="signal-header">
+                <div class="signal-icon hiring">
+                    <svg fill="none" stroke="#166534" stroke-width="2" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Hiring Surge Signals</h2>
+                    <p class="section-subtitle">Healthcare organizations ramping up hiring = immediate background check demand</p>
+                </div>
+            </div>
+            <div class="signal-grid">
+                <div class="signal-card green">
+                    <h4>High-Volume RN Recruiting</h4>
+                    <p>Hospitals posting 50+ nursing positions indicate major staffing initiatives. Average 83-day hiring cycle means background checks are a bottleneck.</p>
+                    <span class="signal-tag">LinkedIn Jobs API</span>
+                    <span class="signal-tag">Indeed Trends</span>
+                </div>
+                <div class="signal-card green">
+                    <h4>Travel Nurse Agency Contracts</h4>
+                    <p>Healthcare staffing agencies winning large contracts need rapid screening. Locum tenens showing highest growth in 2026.</p>
+                    <span class="signal-tag">SEC Filings</span>
+                    <span class="signal-tag">Press Releases</span>
+                </div>
+                <div class="signal-card green">
+                    <h4>New Grad Nursing Programs</h4>
+                    <p>Health systems partnering with nursing schools for pipeline programs need bulk screening for cohorts of 20-100+ new grads.</p>
+                    <span class="signal-tag">Education Partnerships</span>
+                </div>
+                <div class="signal-card green">
+                    <h4>Internal Float Pool Expansion</h4>
+                    <p>Hospitals building flexible staffing models with retirees, part-timers, and non-traditional workers need pre-credentialed candidate pools.</p>
+                    <span class="signal-tag">Job Descriptions</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signal 2: Compliance Triggers -->
+        <section class="signal-section">
+            <div class="signal-header">
+                <div class="signal-icon compliance">
+                    <svg fill="none" stroke="#92400E" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Compliance & Regulatory Triggers</h2>
+                    <p class="section-subtitle">New regulations force healthcare orgs to reassess screening partners</p>
+                </div>
+            </div>
+            <div class="signal-grid">
+                <div class="signal-card orange">
+                    <h4>Virginia Clean Slate Law (July 2026)</h4>
+                    <p>Record-sealing changes what shows in background checks. Healthcare employers need partners who understand new visibility rules.</p>
+                    <span class="signal-tag">State Regulation</span>
+                </div>
+                <div class="signal-card orange">
+                    <h4>Washington Fair Chance Act (July 2026)</h4>
+                    <p>Employers with 15+ employees cannot request criminal history until after conditional offer. Timing and process changes required.</p>
+                    <span class="signal-tag">State Regulation</span>
+                </div>
+                <div class="signal-card orange">
+                    <h4>OIG Exclusion List Monthly Checks</h4>
+                    <p>Healthcare providers must check LEIE at least monthly for all employees, contractors, and vendors. Non-compliance = civil monetary penalties.</p>
+                    <span class="signal-tag">Federal Requirement</span>
+                </div>
+                <div class="signal-card orange">
+                    <h4>CMS Network Adequacy 2026</h4>
+                    <p>Medicaid certification requires stricter compliance. Health plans face federal scrutiny on credentialing and screening processes.</p>
+                    <span class="signal-tag">Federal Regulation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signal 3: Leadership Changes -->
+        <section class="signal-section">
+            <div class="signal-header">
+                <div class="signal-icon leadership">
+                    <svg fill="none" stroke="#1E40AF" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Leadership Change Signals</h2>
+                    <p class="section-subtitle">New HR/Compliance leaders often audit and switch vendors in first 90 days</p>
+                </div>
+            </div>
+            <div class="signal-grid">
+                <div class="signal-card blue">
+                    <h4>New CHRO/VP HR Appointments</h4>
+                    <p>Chief Human Resources Officers and VP HR hires often review all vendor relationships. Prime time for competitive displacement.</p>
+                    <span class="signal-tag">LinkedIn Alerts</span>
+                </div>
+                <div class="signal-card blue">
+                    <h4>Director of Talent Acquisition</h4>
+                    <p>New TA leaders focus on hiring efficiency. Background check turnaround time is a common pain point they want to fix.</p>
+                    <span class="signal-tag">Job Changes</span>
+                </div>
+                <div class="signal-card blue">
+                    <h4>Chief Compliance Officer</h4>
+                    <p>New CCOs audit all compliance processes. OIG exclusion screening and FCRA compliance are early focus areas.</p>
+                    <span class="signal-tag">Executive Moves</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signal 4: Facility Expansion -->
+        <section class="signal-section">
+            <div class="signal-header">
+                <div class="signal-icon expansion">
+                    <svg fill="none" stroke="#6B21A8" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Facility Expansion Signals</h2>
+                    <p class="section-subtitle">New hospitals and expansions mean hundreds of new hires requiring screening</p>
+                </div>
+            </div>
+            <div class="signal-grid">
+                <div class="signal-card purple">
+                    <h4>Ohio State Wexner Medical Center</h4>
+                    <p>Opened Feb 2026. 1.9M sq ft facility with 820 beds. Massive hiring for nursing, support staff, and specialists.</p>
+                    <span class="signal-tag">New Opening</span>
+                </div>
+                <div class="signal-card purple">
+                    <h4>HCA Florida Ocala - $200M Expansion</h4>
+                    <p>New 16-bed ICU, two 26-bed med/surg units. Construction begins 2026. Pre-hire screening ramp-up needed.</p>
+                    <span class="signal-tag">Expansion Project</span>
+                </div>
+                <div class="signal-card purple">
+                    <h4>OHSU Vista Pavilion</h4>
+                    <p>14-story cancer center with 128 beds opening April 2026. Specialized oncology staff screening requirements.</p>
+                    <span class="signal-tag">New Opening</span>
+                </div>
+                <div class="signal-card purple">
+                    <h4>HCA Jacksonville Projects</h4>
+                    <p>Three major projects starting construction 2026, completing 2027-2028. Multi-year hiring pipeline.</p>
+                    <span class="signal-tag">Construction Start</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Decision Makers -->
+        <section style="margin-bottom: 2rem;">
+            <h2 class="section-title">Key Decision Maker Titles</h2>
+            <p class="section-subtitle">Target personas for background screening conversations</p>
+
+            <div class="card">
+                <div class="dm-grid">
+                    <div class="dm-card">
+                        <h4>VP/Director of Talent Acquisition</h4>
+                        <p>Owns hiring efficiency, time-to-fill metrics, candidate experience</p>
+                    </div>
+                    <div class="dm-card">
+                        <h4>Chief Human Resources Officer</h4>
+                        <p>Strategic HR decisions, vendor relationships, budget authority</p>
+                    </div>
+                    <div class="dm-card">
+                        <h4>HR Operations Manager</h4>
+                        <p>Day-to-day screening operations, process improvements</p>
+                    </div>
+                    <div class="dm-card">
+                        <h4>Chief Compliance Officer</h4>
+                        <p>Regulatory compliance, OIG/LEIE, FCRA requirements</p>
+                    </div>
+                    <div class="dm-card">
+                        <h4>Director of Nursing</h4>
+                        <p>Clinical hiring needs, staffing levels, credentialing</p>
+                    </div>
+                    <div class="dm-card">
+                        <h4>VP of Medical Staff Affairs</h4>
+                        <p>Physician credentialing, privileging, compliance</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sample Outreach -->
+        <section>
+            <h2 class="section-title">Sample Outreach Angles</h2>
+            <p class="section-subtitle">Signal-triggered messaging templates for SDR sequences</p>
+
+            <div class="angles-grid">
+                <div class="angle-card">
+                    <span class="signal-type hiring">Hiring Signal</span>
+                    <h4>"Saw you're hiring 50+ nurses..."</h4>
+                    <p>"When you're hiring at that volume, background check turnaround becomes a bottleneck. Most providers quote 5-7 days. We average 1-3. Worth a quick chat about how we keep healthcare staffing agencies moving?"</p>
+                </div>
+                <div class="angle-card">
+                    <span class="signal-type compliance">Compliance Trigger</span>
+                    <h4>"Virginia Clean Slate goes live July 1..."</h4>
+                    <p>"The new record-sealing law changes what shows in background checks. We're helping healthcare employers in Virginia update their screening protocols before the deadline. Quick audit of your current process?"</p>
+                </div>
+                <div class="angle-card">
+                    <span class="signal-type leadership">Leadership Change</span>
+                    <h4>"Congrats on the new role..."</h4>
+                    <p>"New TA leaders often inherit vendor relationships that need a fresh look. We work with healthcare orgs who got tired of slow turnaround and poor support from their screening provider. Happy to share what we're seeing work."</p>
+                </div>
+                <div class="angle-card">
+                    <span class="signal-type expansion">Expansion Signal</span>
+                    <h4>"Saw the announcement about your new facility..."</h4>
+                    <p>"820 beds means hundreds of new hires. We specialize in healthcare screening at scale. FCRA, OIG exclusion checks, drug testing, all in one platform. Worth connecting before the hiring ramp?"</p>
+                </div>
+                <div class="angle-card">
+                    <span class="signal-type compliance">OIG Compliance</span>
+                    <h4>"Quick question on your LEIE monitoring..."</h4>
+                    <p>"OIG expects monthly checks on all employees, contractors, and vendors. Most healthcare orgs we talk to are either over-paying for this or doing it manually. We automate it. Interested in seeing how?"</p>
+                </div>
+                <div class="angle-card">
+                    <span class="signal-type hiring">Staffing Agency</span>
+                    <h4>"Travel nursing is booming..."</h4>
+                    <p>"Locum tenens is seeing the highest growth in healthcare staffing for 2026. Fast turnaround on background checks is table stakes. We're the partner healthcare staffing agencies switch to when they need speed without compliance risk."</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta-section">
+            <h3 class="cta-title">Ready to Activate These Signals?</h3>
+            <p class="cta-text">Let's discuss how 42 Agency can build signal-triggered outbound campaigns for InCheck's healthcare background screening services.</p>
+            <a href="https://www.42agency.com/contact-us" class="cta-button">Schedule a Strategy Call</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <img src="/42-logo.png" alt="42 Agency">
+            <p>B2B Performance Marketing</p>
+        </div>
+    </footer>
+
+    <!-- Vercel Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
