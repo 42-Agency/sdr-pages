@@ -1,6 +1,18 @@
 {
   "cleanUrls": true,
   "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/turnstyle/clayabm",
+      "destination": "/turnstile/clayabm/",
+      "permanent": true
+    },
+    {
+      "source": "/turnstyle/clayabm/:path*",
+      "destination": "/turnstile/clayabm/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
