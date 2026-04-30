@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>For Clay · A working memo on quote-to-cash at usage-based scale</title>
+  <meta name="description" content="A private working memo on what breaks when usage-based pricing meets spreadsheet finance — and the four moves to fix it. Prepared for Clay." />
+  <link rel="preconnect" href="https://cdn.prod.website-files.com" />
+  <style>
+    /* Turnstile brand — verified tokens (2026-04-30) */
+    :root {
+      --ts-navy: #141533;
+      --ts-navy-deep: #0E0F24;
+      --ts-mint: #43E4D9;
+      --ts-sand: #F7F5F3;
+      --ts-sand-card: #ECE6E1;
+      --ts-lavender: #B59EF9;
+      --ts-gold: #F6C84E;
+      --ts-white: #FFFFFF;
+      --ts-text: #141533;
+      --ts-text-muted: rgba(20, 21, 51, 0.7);
+      --ts-text-on-dark: #FFFFFF;
+      --ts-text-on-dark-muted: rgba(255, 255, 255, 0.72);
+      --ts-border: rgba(20, 21, 51, 0.12);
+      --ts-border-on-dark: rgba(255, 255, 255, 0.16);
+      --ts-r-tile: 16px;
+      --ts-r-card: 24px;
+      --ts-r-pill: 1281px;
+      --ts-font: "TT Hoves Pro", Inter, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      background: var(--ts-white);
+      color: var(--ts-text);
+      font-family: var(--ts-font);
+      font-size: 16px;
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* Type */
+    .h1 { font-size: clamp(36px, 5.2vw, 64px); font-weight: 500; line-height: 1.08; letter-spacing: -0.04em; margin: 0; }
+    .h2 { font-size: clamp(28px, 3.2vw, 40px); font-weight: 500; line-height: 1.18; letter-spacing: -0.02em; margin: 0; }
+    .h3 { font-size: 20px; font-weight: 500; line-height: 1.3; margin: 0; }
+    .eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ts-text-muted); margin: 0 0 24px 0; display: block; }
+    .eyebrow--on-dark { color: var(--ts-text-on-dark-muted); }
+    .body-lg { font-size: 20px; font-weight: 400; line-height: 1.5; margin: 0; }
+    .body { font-size: 17px; font-weight: 400; line-height: 1.55; margin: 0; }
+    .body-sm { font-size: 15px; line-height: 1.5; color: var(--ts-text-muted); margin: 0; }
+    .light { font-weight: 300; }
+
+    /* Layout */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .narrow { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 88px 0; }
+    .section--sand { background: var(--ts-sand); }
+    .section--white { background: var(--ts-white); }
+    .section--navy { background: var(--ts-navy); color: var(--ts-text-on-dark); }
+    .stack > * + * { margin-top: 14px; }
+    .stack-lg > * + * { margin-top: 28px; }
+
+    /* Nav */
+    .nav { height: 72px; display: flex; align-items: center; border-bottom: 1px solid var(--ts-border); background: var(--ts-white); position: sticky; top: 0; z-index: 50; }
+    .nav__inner { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav__brand { display: flex; align-items: center; gap: 16px; }
+    .nav__brand img { height: 22px; }
+    .nav__divider { width: 1px; height: 22px; background: var(--ts-border); }
+    .nav__prospect { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--ts-text-muted); }
+    .nav__prospect img { height: 22px; max-width: 90px; object-fit: contain; }
+    .nav__cta { margin-left: auto; }
+
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12.8px 28px; border-radius: var(--ts-r-pill); font: 500 16px var(--ts-font); cursor: pointer; border: 1px solid transparent; transition: transform 0.12s ease; text-decoration: none; white-space: nowrap; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn--primary { background: var(--ts-mint); color: var(--ts-navy); border-color: var(--ts-mint); }
+    .btn--secondary { background: transparent; color: var(--ts-navy); border-color: var(--ts-navy); }
+    .btn--ghost-dark { background: transparent; color: var(--ts-white); border-color: rgba(255,255,255,0.45); }
+    .btn--sm { padding: 8px 16px; font-size: 14px; }
+
+    /* Pills */
+    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: var(--ts-r-pill); font-size: 13px; font-weight: 500; background: var(--ts-sand-card); color: var(--ts-text); }
+    .pill--dark { background: rgba(255,255,255,0.08); color: var(--ts-text-on-dark); border: 1px solid rgba(255,255,255,0.16); }
+    .pill__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ts-mint); }
+
+    /* Cards */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    @media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; align-items: start; }
+    @media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } }
+    .card { background: var(--ts-sand-card); border-radius: var(--ts-r-card); padding: 32px; }
+    .card__numeral { font-size: 13px; font-weight: 500; letter-spacing: 0.14em; color: var(--ts-text-muted); margin-bottom: 14px; display: block; }
+    .card__title { font-size: 20px; font-weight: 500; line-height: 1.3; margin: 0 0 12px 0; }
+    .card__body { font-size: 15px; line-height: 1.55; color: var(--ts-text-muted); margin: 0; }
+
+    /* Numbered playbook step */
+    .step { background: var(--ts-white); border: 1px solid var(--ts-border); border-radius: var(--ts-r-card); padding: 28px; }
+    .step__num { display: inline-flex; width: 32px; height: 32px; border-radius: 50%; background: var(--ts-mint); color: var(--ts-navy); align-items: center; justify-content: center; font-weight: 500; font-size: 14px; margin-bottom: 16px; }
+    .step__title { font-size: 18px; font-weight: 500; line-height: 1.3; margin: 0 0 8px 0; }
+    .step__body { font-size: 15px; line-height: 1.55; color: var(--ts-text-muted); margin: 0; }
+
+    /* Pull quote */
+    .quote-block { padding: 56px 0; }
+    .pull-quote { font-size: clamp(22px, 2.6vw, 30px); font-weight: 500; line-height: 1.3; letter-spacing: -0.01em; color: var(--ts-navy); max-width: 760px; margin: 0; }
+    .pull-quote__attr { margin-top: 20px; font-size: 13px; color: var(--ts-text-muted); }
+
+    /* Peer proof */
+    .peer-card { background: var(--ts-navy); color: var(--ts-white); border-radius: var(--ts-r-card); padding: 40px; }
+    .peer-card .quote { font-size: 19px; line-height: 1.5; font-weight: 400; }
+    .peer-card .attr { margin-top: 20px; font-size: 13px; color: var(--ts-text-on-dark-muted); }
+
+    /* Metric tiles */
+    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 28px; }
+    @media (max-width: 700px) { .metrics { grid-template-columns: repeat(2, 1fr); } }
+    .metric { border-radius: var(--ts-r-tile); padding: 22px; min-height: 160px; display: flex; flex-direction: column; justify-content: space-between; }
+    .metric--lavender { background: var(--ts-lavender); color: var(--ts-navy); }
+    .metric--mint { background: var(--ts-mint); color: var(--ts-navy); }
+    .metric--gold { background: var(--ts-gold); color: var(--ts-navy); }
+    .metric--navy { background: var(--ts-navy-deep); color: var(--ts-white); }
+    .metric__num { font-size: clamp(40px, 5vw, 64px); font-weight: 500; line-height: 1; letter-spacing: -0.03em; }
+    .metric__label { font-size: 13px; line-height: 1.4; opacity: 0.88; }
+
+    /* Why now */
+    .why-now { background: var(--ts-white); border: 1px solid var(--ts-border); border-radius: var(--ts-r-card); padding: 36px; max-width: 760px; margin: 0 auto; }
+    .why-now p + p { margin-top: 14px; }
+
+    /* End CTA */
+    .endcta { background: var(--ts-navy); color: var(--ts-text-on-dark); border-radius: var(--ts-r-card); padding: clamp(40px, 6vw, 64px); text-align: left; max-width: 1100px; margin: 0 auto; }
+
+    /* Footer */
+    .footer { background: var(--ts-navy-deep); color: var(--ts-text-on-dark); padding: 48px 0; }
+    .footer__inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; font-size: 13px; color: var(--ts-text-on-dark-muted); }
+
+    /* Hero meta strip */
+    .meta-strip { display: flex; flex-wrap: wrap; gap: 24px; font-size: 13px; color: var(--ts-text-on-dark-muted); border-top: 1px solid rgba(255,255,255,0.16); padding-top: 24px; margin-top: 40px; }
+    .meta-strip span { display: inline-flex; align-items: center; gap: 8px; }
+
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+  <!-- ── Nav ───────────────────────────── -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <div class="nav__brand">
+        <img src="./turnstile-logo.svg" alt="turnstile" onerror="this.src='https://cdn.prod.website-files.com/68bfef7f6e05cbe407966883/68c95b5e22deb7712cf15784_turnstile-logo-dark.svg'" />
+        <span class="nav__divider"></span>
+        <div class="nav__prospect">
+          <span>Prepared for</span>
+          <img src="https://cdn.prod.website-files.com/61477f2c24a826836f969afe/6778506d788ebf16fef48551_Clay%20primary%20logo.avif" alt="Clay" />
+        </div>
+      </div>
+      <div class="nav__cta">
+        <a class="btn btn--primary btn--sm" href="https://turnstile.ai/#" target="_blank" rel="noopener">Talk to Turnstile</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Hero ──────────────────────────── -->
+  <section class="section section--navy" style="padding: 96px 0 80px;">
+    <div class="narrow stack-lg">
+      <span class="pill pill--dark"><span class="pill__dot"></span> For the Clay finance + RevOps team · Private working memo</span>
+      <h1 class="h1">Usage-based pricing breaks at the inflection point. The faster you grow, the more invisible your ARR becomes.</h1>
+      <p class="body-lg" style="color: var(--ts-text-on-dark-muted);">The same pricing model that gets you to ten million dollars in revenue is the one that turns finance into a manual reconciliation team. Credit packs, mid-cycle top-ups, custom enterprise terms, and overage true-ups don't fit on a subscription clock. Spreadsheet finance plus Stripe was fine at two million ARR. At twenty, every quote is a one-off and ARR is whatever Excel says today.</p>
+      <p class="body" style="color: var(--ts-text-on-dark-muted);" >This is a working memo, not a pitch. It names what we think breaks at this stage in usage-based SaaS, and the four moves we'd make if we sat in your seat. If the diagnosis is right, the conversation is worth having.</p>
+      <div class="cta-row">
+        <a class="btn btn--primary" href="https://turnstile.ai/#" target="_blank" rel="noopener">Book a 20-minute working session</a>
+        <a class="btn btn--ghost-dark" href="#playbook">Read the playbook</a>
+      </div>
+      <div class="meta-strip">
+        <span>Compiled 2026-04-30</span>
+        <span>·</span>
+        <span>GTM SaaS · usage-based pricing</span>
+        <span>·</span>
+        <span>HQ New York</span>
+        <span>·</span>
+        <span>Prototype memo · not indexed</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Diagnosis ─────────────────────── -->
+  <section class="section section--sand">
+    <div class="container">
+      <div style="max-width: 760px; margin-bottom: 56px;">
+        <span class="eyebrow">The diagnosis</span>
+        <h2 class="h2">Spreadsheet finance was a feature when ARR was small. It is the bottleneck now.</h2>
+        <p class="body-lg light" style="margin-top: 20px; color: var(--ts-text-muted);">Three structural causes show up at the same time in usage-based SaaS at this scale. None of them are unique to one company. All three are inevitable if the system of record is a spreadsheet.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <span class="card__numeral">01</span>
+          <h3 class="card__title">Pricing is product. The model ships weekly.</h3>
+          <p class="card__body">Credit packs, hybrid tiers, AI overages, enterprise carve-outs. The pricing surface area moves faster than any billing tool was scoped for. Every release adds another exception that finance handles by hand.</p>
+        </article>
+        <article class="card">
+          <span class="card__numeral">02</span>
+          <h3 class="card__title">Quote terms become code, then become bugs.</h3>
+          <p class="card__body">Custom rates, ramps, mid-cycle upsells, overage true-ups. Each one is a one-off in CPQ, then a manual mirror in the ERP. Each manual mirror is a future reconciliation ticket.</p>
+        </article>
+        <article class="card">
+          <span class="card__numeral">03</span>
+          <h3 class="card__title">ARR is a derived metric, not a stored one.</h3>
+          <p class="card__body">Without a system that ties signed quote to subscription state to invoice to recognition, ARR is whatever Excel computed this morning. Two ops people, three sources of truth, no audit trail.</p>
+        </article>
+      </div>
+
+      <!-- Pull quote -->
+      <div class="quote-block">
+        <p class="pull-quote">"One system for quoting, through reporting, so you stop chasing down invoices, reconciling spreadsheets, and guessing at your ARR."</p>
+        <p class="pull-quote__attr">turnstile.ai · positioning, verbatim</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Playbook ──────────────────────── -->
+  <section class="section section--white" id="playbook">
+    <div class="container">
+      <div style="max-width: 760px; margin-bottom: 48px;">
+        <span class="eyebrow">What we'd change</span>
+        <h2 class="h2">Stop guessing at ARR. Start storing it.</h2>
+        <p class="body-lg light" style="margin-top: 20px; color: var(--ts-text-muted);">The shift is mechanical, not philosophical. Four moves, in order. Each one removes a manual handoff and a place where the number can drift.</p>
+      </div>
+
+      <div class="grid-2" style="gap: 20px;">
+        <article class="step">
+          <span class="step__num">1</span>
+          <h3 class="step__title">Move the quote out of Google Docs.</h3>
+          <p class="step__body">The signed quote is the contract. The contract is the schedule. CRM-synced, e-sign built in, structured pricing fields the rest of the stack can read. A PDF is not a system of record.</p>
+        </article>
+        <article class="step">
+          <span class="step__num">2</span>
+          <h3 class="step__title">Tie subscription state to the signed quote.</h3>
+          <p class="step__body">Mid-cycle upsell becomes an amendment, not a new spreadsheet line. Downgrades, terminations, ramp-ups, and overages flow from one object that already knows the terms.</p>
+        </article>
+        <article class="step">
+          <span class="step__num">3</span>
+          <h3 class="step__title">Generate invoices from subscription state.</h3>
+          <p class="step__body">Not from a CSV pulled out of Stripe. Prorations, ramps, and usage charges are derived in real time. Mid-cycle changes invoice on the next cycle, accurately, without anyone touching them.</p>
+        </article>
+        <article class="step">
+          <span class="step__num">4</span>
+          <h3 class="step__title">Recognize revenue from the invoice.</h3>
+          <p class="step__body">Not from a spreadsheet that finance updates on Fridays. ARR, MRR, bookings, deferred — all derived from the same chain. Audit-ready by construction. The number you tell investors is the number in the system.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Peer proof ────────────────────── -->
+  <section class="section section--sand">
+    <div class="container">
+      <div class="grid-2" style="gap: 48px;">
+        <div>
+          <span class="eyebrow">Peer proof · usage-based SaaS</span>
+          <h2 class="h2">Haven runs hundreds of invoices a month on Turnstile in minutes.</h2>
+          <p class="body" style="margin-top: 20px; color: var(--ts-text-muted);">Same pricing complexity, same growth pressure, same finance team size. The difference is where the system of record sits.</p>
+          <a class="btn btn--secondary" href="https://turnstile.ai/customers" target="_blank" rel="noopener" style="margin-top: 24px;">See customer stories</a>
+        </div>
+
+        <div class="peer-card">
+          <p class="quote">"Before Turnstile, invoicing was a week-long grind. Now we send hundreds of invoices monthly in just minutes — saving us countless hours and eliminating costly billing errors."</p>
+          <p class="attr">Cyrus Shirazi · Co-Founder &amp; CEO, Haven</p>
+
+          <div class="metrics">
+            <div class="metric metric--lavender">
+              <div class="metric__num">60</div>
+              <div class="metric__label">Seconds to quote from scratch</div>
+            </div>
+            <div class="metric metric--mint">
+              <div class="metric__num">90%</div>
+              <div class="metric__label">Reduction in manual billing work</div>
+            </div>
+            <div class="metric metric--gold">
+              <div class="metric__num">0</div>
+              <div class="metric__label">Billing errors. Turnstile automates it all.</div>
+            </div>
+            <div class="metric metric--navy">
+              <div class="metric__num" style="font-size: clamp(22px, 2.6vw, 32px);">SOC 2</div>
+              <div class="metric__label">Live in under a day, secure from day one.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Why now ───────────────────────── -->
+  <section class="section section--white">
+    <div class="container">
+      <div style="text-align: left; max-width: 760px; margin: 0 auto 32px;">
+        <span class="eyebrow">Why we are sending this now</span>
+        <h2 class="h2">The structural argument is true at any year. Here is why timing got more interesting at Clay.</h2>
+      </div>
+      <div class="why-now stack-lg">
+        <p class="body">Clay is in the part of the curve where pricing and packaging start shipping faster than the back office can absorb them. Credit packs, agent-based pricing, enterprise carve-outs, and partner-led motions stack on top of the same finance stack that worked at Series A.</p>
+        <p class="body">When the GTM motion is sales-led at the top and self-serve at the bottom, every enterprise quote ends up custom, every credit top-up has to be reconciled by hand, and every quarter close runs a little longer than the last. Headcount fixes the symptom. The system of record fixes the cause.</p>
+        <p class="body">We work with a small set of usage-based SaaS companies between Series A and B where the same dynamic shows up. Turnstile is built for the edge cases that come with selling that way. If even half of the diagnosis lands, the working session is the cheapest version of finding out.</p>
+        <p class="body-sm" style="font-style: italic; color: var(--ts-text-muted);">All references are public. No observation from inside Clay's systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── End CTA ───────────────────────── -->
+  <section class="section section--sand">
+    <div class="container">
+      <div class="endcta">
+        <span class="eyebrow eyebrow--on-dark">Twenty minutes</span>
+        <h2 class="h2" style="max-width: 760px;">Close deals. Get paid. Know your numbers — without the spreadsheet grind.</h2>
+        <p class="body-lg" style="color: var(--ts-text-on-dark-muted); margin-top: 20px; max-width: 720px;">If the diagnosis is wrong, the call is short. If it lands, we'll send the four-move playbook adapted to Clay's pricing stack within 48 hours.</p>
+        <div class="cta-row" style="margin-top: 32px;">
+          <a class="btn btn--primary" href="https://turnstile.ai/#" target="_blank" rel="noopener">Book a 20-minute session with Turnstile</a>
+          <a class="btn btn--ghost-dark" href="https://turnstile.ai/" target="_blank" rel="noopener">Read positioning →</a>
+        </div>
+        <p class="body-sm" style="margin-top: 24px; color: var(--ts-text-on-dark-muted);">Or reply to the email and we will send the playbook one-pager directly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="stack">
+        <div style="font-weight: 500; color: var(--ts-white);">turnstile</div>
+        <div>Built for Clay · prototype working memo</div>
+      </div>
+      <div class="stack" style="text-align: right;">
+        <div>References: <a href="https://turnstile.ai" style="color: var(--ts-mint);">turnstile.ai</a> · <a href="https://turnstile.ai/customers" style="color: var(--ts-mint);">customers</a></div>
+        <div>Compiled 2026-04-30 · not indexed · shared by direct link only</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
