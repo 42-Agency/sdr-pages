@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<title>What a wizard-level GTM chain produced on Proton.ai — for Dasha Shakov</title>
+<meta name="description" content="You asked how to spot a wizard-level GTM engineer. So we pointed our AI-SDR chain at Proton.ai. This page is its raw output — judgment calls and all." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="You asked how to spot a wizard. Here's one running on Proton.ai." />
+<meta property="og:description" content="Our AI-SDR chain ran end-to-end on Proton.ai in ~12 minutes. This is its raw output — signals, judgment calls, and the sequence it wrote." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MM5BTNS');</script>
+<!-- End Google Tag Manager -->
+
+<!-- HubSpot -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44888286.js"></script>
+
+<style>
+  :root {
+    --ink:      #1a1a1a;
+    --body:     #4a4a4a;
+    --muted:    #6b6b6b;
+    --lime:     #DFFE68;
+    --lime-dk:  #C8E85C;
+    --paper:    #ffffff;
+    --gray:     #f5f5f5;
+    --orange:   #F59E0B;
+    --blue:     #3B82F6;
+    --green:    #10B981;
+    --line:     #1a1a1a;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.5;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+  @media (max-width: 720px) { .container { padding: 0 18px; } }
+
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+    font-weight: 500; color: var(--muted);
+  }
+
+  /* ===== Sample / context banner ===== */
+  .ctx-banner {
+    background: var(--ink); color: #fff;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;
+    text-align: center; padding: 9px 16px;
+  }
+  .ctx-banner .dot { color: var(--lime); }
+
+  /* ===== Header ===== */
+  header.site {
+    border-bottom: 2px solid var(--line);
+    background: #fff; position: sticky; top: 0; z-index: 50;
+  }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+  .logo { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -0.02em; }
+  .logo .mark {
+    display: inline-grid; place-items: center;
+    width: 30px; height: 30px; background: var(--lime);
+    border: 2px solid var(--ink); border-radius: 7px;
+    font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px;
+    box-shadow: 2px 2px 0 0 var(--ink);
+  }
+  .header-meta { display: flex; align-items: center; gap: 18px; }
+  .header-meta .for { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); }
+  @media (max-width: 640px) { .header-meta .for { display: none; } }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 9px;
+    padding: 11px 18px; font-weight: 700; font-size: 14px;
+    border: 2px solid var(--ink); border-radius: 9px;
+    background: var(--lime); color: var(--ink);
+    box-shadow: 4px 4px 0 0 var(--ink);
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn:hover { background: var(--lime-dk); box-shadow: 6px 6px 0 0 var(--ink); transform: translate(-2px,-2px); }
+  .btn.ghost { background: #fff; box-shadow: 3px 3px 0 0 var(--ink); }
+  .btn.ghost:hover { background: var(--gray); }
+  .btn.dark { background: var(--ink); color: #fff; box-shadow: 4px 4px 0 0 var(--lime); }
+  .btn.dark:hover { background: #000; }
+  .btn .arrow { width: 15px; height: 15px; transition: transform .15s ease; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* ===== Hero ===== */
+  .hero { background: var(--gray); border-bottom: 2px solid var(--line); padding: 72px 0 64px; }
+  .hero .tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em;
+    padding: 6px 12px; background: #fff; border: 2px solid var(--ink); border-radius: 999px;
+    box-shadow: 2px 2px 0 0 var(--ink); margin-bottom: 26px;
+  }
+  .hero .tag .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 0 rgba(16,185,129,.6); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(16,185,129,.5);} 70%{box-shadow:0 0 0 7px rgba(16,185,129,0);} 100%{box-shadow:0 0 0 0 rgba(16,185,129,0);} }
+  .hero h1 {
+    font-size: clamp(32px, 5.2vw, 56px); font-weight: 800; letter-spacing: -0.025em;
+    line-height: 1.03; max-width: 17ch; margin-bottom: 24px;
+  }
+  .hero h1 .hl { background: var(--lime); padding: 0 6px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .hero .lead { font-size: clamp(17px, 1.6vw, 20px); color: var(--body); max-width: 60ch; margin-bottom: 14px; }
+  .hero .lead strong { color: var(--ink); font-weight: 700; }
+  .hero .punch {
+    margin-top: 22px; padding: 16px 18px; background: #fff;
+    border: 2px solid var(--ink); border-left-width: 8px; border-radius: 10px;
+    box-shadow: 4px 4px 0 0 var(--ink); max-width: 62ch; font-size: 16px;
+  }
+  .hero .punch b { font-weight: 700; }
+
+  /* ===== Run summary stats ===== */
+  .runbar { border-bottom: 2px solid var(--line); background: var(--ink); color: #fff; }
+  .runbar .grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 720px) { .runbar .grid { grid-template-columns: repeat(2, 1fr); } }
+  .runbar .cell { padding: 26px 22px; border-right: 1px solid rgba(255,255,255,.14); }
+  .runbar .cell:last-child { border-right: 0; }
+  @media (max-width: 720px) {
+    .runbar .cell:nth-child(2n) { border-right: 0; }
+    .runbar .cell:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.14); }
+  }
+  .runbar .num { font-size: clamp(30px, 4vw, 44px); font-weight: 800; letter-spacing: -0.02em; line-height: 1; }
+  .runbar .num em { font-style: normal; color: var(--lime); }
+  .runbar .lab { margin-top: 9px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; color: rgba(255,255,255,.6); text-transform: uppercase; }
+
+  /* ===== Sections ===== */
+  section.block { padding: 72px 0; }
+  @media (max-width: 720px) { section.block { padding: 52px 0; } }
+  .block.alt { background: var(--gray); border-top: 2px solid var(--line); border-bottom: 2px solid var(--line); }
+
+  .sec-head { max-width: 720px; margin-bottom: 40px; }
+  .sec-head .step { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+  .sec-head .step b { color: var(--ink); }
+  .sec-head h2 { font-size: clamp(25px, 3.4vw, 36px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; }
+  .sec-head p { margin-top: 16px; font-size: 17px; color: var(--body); }
+
+  /* ===== Signal cards ===== */
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  @media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
+  .card {
+    background: #fff; border: 2px solid var(--ink); border-radius: 14px; padding: 24px;
+    box-shadow: 4px 4px 0 0 var(--ink);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 0 var(--ink); }
+  .card.flag { border-color: var(--orange); box-shadow: 4px 4px 0 0 var(--orange); }
+  .card.flag:hover { box-shadow: 6px 6px 0 0 var(--orange); }
+  .badge {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 5px 10px; border: 2px solid var(--ink); border-radius: 999px; background: var(--gray);
+    margin-bottom: 14px;
+  }
+  .badge.orange { color: var(--orange); border-color: var(--orange); background: rgba(245,158,11,.08); }
+  .badge.blue { color: var(--blue); border-color: var(--blue); background: rgba(59,130,246,.08); }
+  .badge.green { color: var(--green); border-color: var(--green); background: rgba(16,185,129,.08); }
+  .card h3 { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 10px; line-height: 1.2; }
+  .card p { font-size: 15px; color: var(--body); line-height: 1.55; }
+  .card .meta { margin-top: 14px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); border-top: 1px dashed #d4d4d4; padding-top: 12px; }
+  .card .big { font-size: 34px; font-weight: 800; letter-spacing: -0.02em; line-height: 1; }
+  .card .big .u { color: var(--orange); }
+
+  /* ===== Judgment list ===== */
+  .judge { display: grid; gap: 18px; }
+  .jrow {
+    display: grid; grid-template-columns: 56px 1fr; gap: 20px; align-items: start;
+    background: #fff; border: 2px solid var(--ink); border-radius: 14px; padding: 24px;
+    box-shadow: 4px 4px 0 0 var(--ink);
+  }
+  @media (max-width: 600px) { .jrow { grid-template-columns: 1fr; gap: 12px; } }
+  .jrow .jn {
+    width: 44px; height: 44px; display: grid; place-items: center;
+    background: var(--lime); border: 2px solid var(--ink); border-radius: 10px;
+    font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 16px;
+    box-shadow: 2px 2px 0 0 var(--ink);
+  }
+  .jrow h3 { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 8px; }
+  .jrow p { font-size: 15px; color: var(--body); line-height: 1.55; }
+  .jrow p .q { color: var(--ink); font-weight: 600; }
+
+  /* ===== Rubric table ===== */
+  .rubric { border: 2px solid var(--ink); border-radius: 14px; overflow: hidden; box-shadow: 4px 4px 0 0 var(--ink); background: #fff; }
+  .rubric .rhead { display: grid; grid-template-columns: 1fr 1fr; background: var(--ink); color: #fff; }
+  .rubric .rhead div { padding: 16px 20px; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; }
+  .rubric .rhead div:first-child { border-right: 1px solid rgba(255,255,255,.2); color: rgba(255,255,255,.65); }
+  .rubric .rhead div:last-child { color: var(--lime); }
+  .rrow { display: grid; grid-template-columns: 1fr 1fr; border-top: 2px solid var(--ink); }
+  .rrow div { padding: 18px 20px; font-size: 15px; line-height: 1.5; }
+  .rrow div:first-child { border-right: 2px solid var(--ink); color: var(--muted); background: var(--gray); }
+  .rrow div:last-child { color: var(--ink); font-weight: 500; }
+  @media (max-width: 600px) {
+    .rubric .rhead, .rrow { grid-template-columns: 1fr; }
+    .rrow div:first-child { border-right: 0; border-bottom: 1px solid #ddd; }
+  }
+
+  .callout {
+    margin-top: 34px; background: var(--lime); border: 2px solid var(--ink); border-radius: 16px;
+    padding: 28px 30px; box-shadow: 6px 6px 0 0 var(--ink);
+  }
+  .callout .eyebrow { color: var(--ink); opacity: .65; margin-bottom: 12px; }
+  .callout h3 { font-size: 21px; font-weight: 800; letter-spacing: -0.015em; margin-bottom: 10px; }
+  .callout p { font-size: 16px; color: var(--ink); line-height: 1.6; }
+  .callout p + p { margin-top: 12px; }
+
+  /* ===== Output / sequence ===== */
+  .terminal { background: var(--ink); border-radius: 14px; overflow: hidden; box-shadow: 6px 6px 0 0 var(--lime); }
+  .term-bar { display: flex; align-items: center; gap: 8px; padding: 13px 16px; border-bottom: 1px solid rgba(255,255,255,.12); }
+  .term-bar .d { width: 11px; height: 11px; border-radius: 50%; }
+  .term-bar .d.r { background: #ff5f57; } .term-bar .d.y { background: #febc2e; } .term-bar .d.g { background: #28c840; }
+  .term-bar .t { margin-left: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: rgba(255,255,255,.55); }
+  .term-body { padding: 26px 28px; color: #e8e8e8; font-size: 15.5px; line-height: 1.62; }
+  .term-body .subj { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--lime); letter-spacing: 0.04em; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px dashed rgba(255,255,255,.2); }
+  .term-body .subj span { color: rgba(255,255,255,.5); }
+  .term-body p { margin-bottom: 13px; }
+  .term-body .ps { color: rgba(255,255,255,.6); font-style: italic; border-top: 1px dashed rgba(255,255,255,.18); margin-top: 18px; padding-top: 14px; }
+  .term-cap { margin-top: 14px; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--muted); }
+
+  /* ===== Close / CTA ===== */
+  .close { background: var(--ink); color: #fff; padding: 76px 0; }
+  .close .eyebrow { color: var(--lime); margin-bottom: 16px; }
+  .close h2 { font-size: clamp(26px, 3.6vw, 40px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; max-width: 20ch; margin-bottom: 20px; }
+  .close p { font-size: 17px; color: rgba(255,255,255,.72); max-width: 60ch; margin-bottom: 14px; }
+  .close p strong { color: #fff; }
+  .close .cta-row { margin-top: 30px; display: flex; gap: 14px; flex-wrap: wrap; }
+
+  footer { background: var(--ink); color: rgba(255,255,255,.5); border-top: 1px solid rgba(255,255,255,.14); padding: 30px 0; }
+  .foot-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+
+  .lead-note { font-size: 13.5px; color: var(--muted); margin-top: 18px; font-style: italic; }
+</style>
+</head>
+<body>
+<!-- GTM noscript -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM5BTNS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="ctx-banner">Prepared for Dasha Shakov <span class="dot">·</span> Head of Marketing, Proton.ai <span class="dot">·</span> in reply to your Exit Five post</div>
+
+<header class="site">
+  <div class="container header-inner">
+    <a class="logo" href="https://www.42agency.com">
+      <span class="mark">42</span> Agency
+    </a>
+    <div class="header-meta">
+      <span class="for">// live chain output · proton.ai</span>
+      <a class="btn ghost" href="https://www.42agency.com/contact-us">
+        Contact
+        <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h12M9 3l5 5-5 5"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="tag"><span class="pulse"></span> <span class="mono">AI-SDR chain · 3 agents · ran end-to-end in ~12 min</span></div>
+    <h1>You asked how to tell a <span class="hl">wizard</span> from someone who's just good with the tools.</h1>
+    <p class="lead">Fair question — and nobody has a clean answer. So instead of theorizing, I pointed our AI-SDR chain at <strong>Proton.ai</strong> and let it run. This page is its raw output: the signals it found, the calls it made, and the email it wrote.</p>
+    <p class="lead">The polished result isn't the interesting part. The <strong>judgment</strong> is. So I left it all in — including the places it chose <em>not</em> to do the obvious thing.</p>
+    <div class="punch">
+      <b>One thing it surfaced on its own:</b> your open <b>“Founding GTM Engineer”</b> req. The chain went looking for buying signals and found the exact role you're hiring for. Felt like the right page to send.
+    </div>
+    <p class="lead-note">Three agents, run in sequence — Detective (signals + enrichment) → Strategist (angle) → Writer (the sequence). Everything below is what they actually produced, lightly formatted for reading.</p>
+  </div>
+</section>
+
+<div class="runbar">
+  <div class="container">
+    <div class="grid">
+      <div class="cell"><div class="num"><em>~12</em>m</div><div class="lab">End-to-end runtime</div></div>
+      <div class="cell"><div class="num">4<em>/4</em></div><div class="lab">Signal score</div></div>
+      <div class="cell"><div class="num">3</div><div class="lab">Chained agents</div></div>
+      <div class="cell"><div class="num">4</div><div class="lab">Judgment calls (the tell)</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE 1 -->
+<section class="block">
+  <div class="container">
+    <div class="sec-head">
+      <div class="step">Phase 01 — <b>Detective</b> · what it detected</div>
+      <h2>The easy part: it read Proton.ai correctly.</h2>
+      <p>Anyone with the right tools can pull signals. So I'll move through these fast — the point isn't that it found them, it's what it did with them next.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="badge orange">High-intent · paid</span>
+        <div class="big">330<span class="u"> ads</span></div>
+        <h3 style="margin-top:14px;">A dual-engine paid program, run cleanly</h3>
+        <p>Brand account <em>and</em> founder-led personal ads (Benjamin Cohen) running in parallel — anchored on your “Making AI work in distribution” workshop and the “Stop searching, just ask Pronto” agent launch. That's a sophisticated demand setup, not a boosted-post operation.</p>
+        <div class="meta">src: LinkedIn Ad Library · page 18579456</div>
+      </div>
+      <div class="card">
+        <span class="badge green">Hiring signal</span>
+        <h3>3 open GTM/marketing roles — including the one that matters</h3>
+        <p>Director of Product Marketing, a Sr. Demand Gen Manager ($140–180k, with an AI-lead-magnet mandate), and a <strong>“Founding GTM Engineer.”</strong> You're institutionalizing the exact agentic-GTM capability this run is demonstrating.</p>
+        <div class="meta">src: Greenhouse · job-boards.greenhouse.io/protonai</div>
+      </div>
+      <div class="card">
+        <span class="badge blue">Growth profile</span>
+        <h3>Scaling, multi-engine, multi-geo</h3>
+        <p>$20M Series A (Felicis), ~$10.9M ARR, 86 people across 12+ countries, with Pricing AI + Inventory AI on the roadmap. A company building demand infrastructure, not patching it.</p>
+        <div class="meta">src: Crunchbase · MDM · Latka</div>
+      </div>
+      <div class="card">
+        <span class="badge">Channel read</span>
+        <h3>Zero Meta spend — and that's correct</h3>
+        <p>It found your FB/IG page with <strong>0 active ads</strong> and logged it as channel discipline, not a gap. A tool would flag “missing channel!” A read of a B2B-distribution ICP says LinkedIn + Google is the right concentration. It knew the difference.</p>
+        <div class="meta">note recorded by Detective, not flagged as an opportunity</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE WIZARD PART -->
+<section class="block alt">
+  <div class="container">
+    <div class="sec-head">
+      <div class="step">The actual answer to your question</div>
+      <h2>Wizard-level shows up in what it refused to do.</h2>
+      <p>Tool-fluent means you can make the machine produce output. Wizard-level means the machine makes the calls a sharp operator would make — including restraint. Here are the four places this run did that. These are the things I'd grade a take-home on.</p>
+    </div>
+    <div class="judge">
+      <div class="jrow">
+        <div class="jn">01</div>
+        <div>
+          <h3>It threw away the most impressive signal.</h3>
+          <p>330 live ads would normally route straight to an “audit offer” play. The chain <span class="q">discarded it</span> — wrong register for a warm peer note. Tool-fluent dumps every signal it finds. Wizard-level scores each one against the actual goal and drops what doesn't change the move.</p>
+        </div>
+      </div>
+      <div class="jrow">
+        <div class="jn">02</div>
+        <div>
+          <h3>It knew when <em>not</em> to enrich.</h3>
+          <p>It marked “new marketing leader: <span class="q">false</span>” — you've run marketing here 3+ years, so it refused to fabricate a fake “congrats on the new role” hook. And it <span class="q">excluded your work email</span> because proton.ai blocks verification and it wouldn't guess a pattern that could burn sender reputation. Restraint is the skill most tools don't have.</p>
+        </div>
+      </div>
+      <div class="jrow">
+        <div class="jn">03</div>
+        <div>
+          <h3>It surfaced uncertainty instead of hiding it.</h3>
+          <p>Your Google Ads account is labeled “PRM Solutions.” The chain <span class="q">flagged it as possibly a third party</span> on the domain rather than asserting it as yours. Wizards caveat what they can't confirm. Tool-jockeys present everything with the same false confidence.</p>
+        </div>
+      </div>
+      <div class="jrow">
+        <div class="jn">04</div>
+        <div>
+          <h3>It rebuilt the play when the situation didn't fit the template.</h3>
+          <p>The default output is a 4-email cold sequence. It saw a <span class="q">warm, 1st-degree relationship</span> and threw the cold logic out — rewriting the whole angle as a peer demonstration with the artifact as the payload. Judgment over template is the entire ballgame.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="eyebrow">For the take-home you're designing</div>
+      <h3>Grade the judgment calls, not the output.</h3>
+      <p>Hand a candidate a real (or fictional) company and a goal — not a tool checklist. Then score the four moves above: <b>Did they throw away the impressive-but-irrelevant signal? Did they refuse to fabricate? Did they flag what they weren't sure of? Did they change the plan when the context broke the template?</b></p>
+      <p>The polished sequence at the end is the easy part — anyone with Clay and an LLM gets there. The candidate who narrates <em>why they didn't</em> do three obvious things is the wizard.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RUBRIC -->
+<section class="block">
+  <div class="container">
+    <div class="sec-head">
+      <div class="step">The one-line version</div>
+      <h2>Tool-fluent vs. wizard-level</h2>
+    </div>
+    <div class="rubric">
+      <div class="rhead"><div>Tool-fluent (good with the tools)</div><div>Wizard-level (what to hire for)</div></div>
+      <div class="rrow"><div>Runs the scraper, returns every signal it finds.</div><div>Scores signals against the goal and discards the ones that don't change the decision.</div></div>
+      <div class="rrow"><div>Fills every field; guesses the email from a pattern.</div><div>Leaves fields blank when the truth is blank; won't guess in a way that creates downstream risk.</div></div>
+      <div class="rrow"><div>Presents all output with equal confidence.</div><div>Separates what's verified from what's inferred, and says so.</div></div>
+      <div class="rrow"><div>Ships the templated workflow it built.</div><div>Notices when the situation breaks the template and rebuilds the approach.</div></div>
+      <div class="rrow"><div>Optimizes for “look what I automated.”</div><div>Optimizes for the outcome — sometimes that means doing less, by hand.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PHASE 3 - OUTPUT -->
+<section class="block alt">
+  <div class="container">
+    <div class="sec-head">
+      <div class="step">Phase 03 — <b>Writer</b> · what it actually shipped</div>
+      <h2>And then it wrote this.</h2>
+      <p>For completeness — here's the opening email the chain drafted off everything above. Note it leads with <em>your</em> question, not a pitch, and carries exactly one light housekeeping line. That register was a deliberate call, not a default.</p>
+    </div>
+    <div class="terminal">
+      <div class="term-bar">
+        <span class="d r"></span><span class="d y"></span><span class="d g"></span>
+        <span class="t">writer_output.json — email 1 of 4 · warm_peer_demonstration</span>
+      </div>
+      <div class="term-body">
+        <div class="subj"><span>subject:</span> you asked how to spot a wizard</div>
+        <p>Dasha,</p>
+        <p>Saw your Exit Five post asking how to spot a wizard-level GTM engineer vs. someone who's just tool-fluent. Good question, and one nobody really has a clean answer for.</p>
+        <p>So instead of theorizing, I pointed our AI-SDR chain at Proton.ai to show you what the output actually looks like. It ran end to end in about twelve minutes and, funny enough, surfaced your own Founding GTM Engineer req along the way.</p>
+        <p>Here's the full page it produced on your own company: <span style="color:var(--lime);text-decoration:underline;">[this page]</span></p>
+        <p>Figured the most useful answer to your question was just to hand you the thing and let you judge it yourself.</p>
+        <p>Kamil</p>
+        <p class="ps">P.S. btw hope you got the refund for Marvin — if not lmk and I can process asap.</p>
+      </div>
+    </div>
+    <p class="term-cap">// followups (days 3 / 7 / 14): reframe the hard parts as your interview rubric → a peer nod to the dual-engine paid setup → a no-ask sign-off. Drafted, not sent.</p>
+  </div>
+</section>
+
+<!-- CLOSE -->
+<section class="close">
+  <div class="container">
+    <div class="eyebrow">No pitch — just the honest answer</div>
+    <h2>That's the whole thing. The machine's actual work, judgment calls and all.</h2>
+    <p>You asked a genuinely hard question, so I gave you the most concrete answer I had: not a framework, but a live run on your own company with nothing cleaned up. <strong>If it's useful for designing the take-home, steal any of it.</strong></p>
+    <p>And if you ever want to compare notes on how this chain is wired — what's genuinely hard to build vs. what just looks impressive in a demo — I'm always up for that conversation. Founder to operator.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://www.42agency.com/contact-us">
+        Compare notes
+        <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h12M9 3l5 5-5 5"/></svg>
+      </a>
+      <a class="btn dark" href="https://www.linkedin.com/in/dashashakov">Reply on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container foot-inner">
+    <div>42 Agency · GTM engineering for technical B2B</div>
+    <div>Live chain output · prepared for Proton.ai · 2026</div>
+  </div>
+</footer>
+
+</body>
+</html>
