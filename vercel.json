@@ -22,13 +22,7 @@
       ]
     },
     {
-      "source": "/artera-share-of-model",
-      "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive, nosnippet" }
-      ]
-    },
-    {
-      "source": "/artera-share-of-model/:path*",
+      "source": "/artera-share-of-model(.*)",
       "headers": [
         { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive, nosnippet" }
       ]
