@@ -33,7 +33,7 @@
       <span class="font-extrabold tracking-tight text-lg">42<span class="text-[#6b6b6b]">/</span>INTEL</span>
       <span class="hidden sm:inline px-3 py-1 bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">GEO / AEO ANALYSIS</span>
     </div>
-    <a href="https://www.42agency.com/contact-us" class="bg-[#DFFE68] text-[#1a1a1a] font-bold rounded-lg border-2 border-[#1a1a1a] shadow-[3px_3px_0px_0px_#1a1a1a] hover:shadow-[5px_5px_0px_0px_#1a1a1a] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all px-4 py-2 text-sm">Measure your category →</a>
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">INTERNAL · PREPARED FOR ARTERA · JUN 2026</span>
   </div>
 </header>
 
@@ -219,35 +219,75 @@
 <section id="method" class="border-b-2 border-[#1a1a1a] bg-white">
   <div class="max-w-6xl mx-auto px-6 py-16">
     <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">07 — METHODOLOGY</span>
-    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4">How we measured it</h2>
-    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl">
-      <div>
-        <h3 class="font-bold">Share of GEO</h3>
-        <p class="mt-2 text-sm text-[#4a4a4a]">12 category buyer-questions (health-system shortlist, HIPAA texting, Epic/Cerner integration, alternatives-to, market leaders, appointment reminders at scale) run live through ChatGPT and Perplexity via BrightData's LLM scrapers. A brand "mentions" when it's named in the answer; we excluded a query's subject brand from its own tally. Grok was attempted but its scraper timed out.</p>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4">Exactly what we did</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Reproducible end-to-end. The whole study is two data pulls — one against AI answer engines, one against Google search volume — run on 2026-06-05.</p>
+
+    <!-- STEP CARDS -->
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-xs font-bold text-[#6b6b6b]">STEP 1</div>
+        <h3 class="font-bold mt-1">Define category buyer-questions</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Six prompts a real health-system buyer would ask an AI when shortlisting a patient-communication vendor — spanning discovery, technical fit, and switching intent (full text below).</p>
       </div>
-      <div>
-        <h3 class="font-bold">Share of Search</h3>
-        <p class="mt-2 text-sm text-[#4a4a4a]">Branded Google search volume (US, 12-mo avg) via DataForSEO's Google Ads endpoint. Ambiguous brand tokens were disambiguated ("weave communications", "klara health") to avoid generic-word inflation; contaminated terms are footnoted.</p>
+      <div class="bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-xs font-bold text-[#6b6b6b]">STEP 2</div>
+        <h3 class="font-bold mt-1">Run each through 2 AI engines</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">6 prompts × ChatGPT + Perplexity = 12 live answers, pulled via BrightData's LLM scrapers (<code class="text-xs bg-white px-1 border border-[#ddd] rounded">web_data_chatgpt_ai_insights</code>, <code class="text-xs bg-white px-1 border border-[#ddd] rounded">web_data_perplexity_ai_insights</code>). Grok was attempted; its scraper timed out and was dropped.</p>
       </div>
-      <div>
-        <h3 class="font-bold">Caveats</h3>
-        <p class="mt-2 text-sm text-[#4a4a4a]">Two engines is a directional sample, not a census — the engine asymmetry is the signal, not a single precise percentage. Brand-search disambiguation slightly understates the most ambiguous names (Artera, Klara, Weave, Luma). LLM answers vary run-to-run; the pattern is stable, the exact ordering of mid-pack brands is not.</p>
-      </div>
-      <div>
-        <h3 class="font-bold">Why it matters</h3>
-        <p class="mt-2 text-sm text-[#4a4a4a]">As buyers move first-touch discovery from Google to AI answer engines, Share of Model becomes the leading indicator of pipeline that Share of Search used to be — and it's measurable today, per category, per engine.</p>
+      <div class="bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-xs font-bold text-[#6b6b6b]">STEP 3</div>
+        <h3 class="font-bold mt-1">Tally mentions → Share of GEO</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">A brand scores a "mention" when named in an answer. A query's own subject (e.g. Solutionreach in "alternatives to Solutionreach") is excluded from its tally. 51 total mentions across 14 brands; share = a brand's mentions ÷ total.</p>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- CTA -->
-<section class="bg-white">
-  <div class="max-w-6xl mx-auto px-6 py-16">
-    <div class="bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-2xl p-8 md:p-12 shadow-[6px_6px_0px_0px_#1a1a1a]">
-      <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight max-w-3xl">Want this run on your category?</h2>
-      <p class="mt-3 text-[#1a1a1a] text-lg max-w-2xl">We'll measure your Share of Model against your Share of Search, per engine — and hand you the queries where AI leaves you out.</p>
-      <a href="https://www.42agency.com/contact-us" class="inline-block mt-6 bg-[#1a1a1a] text-white font-bold rounded-lg px-6 py-3 hover:bg-[#333] transition-colors">Talk to 42 →</a>
+    <!-- THE PROMPTS -->
+    <div class="mt-8 bg-white border-2 border-[#1a1a1a] rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_#1a1a1a]">
+      <h3 class="font-extrabold text-lg">The 6 prompts (each run on ChatGPT + Perplexity)</h3>
+      <ol class="mt-4 space-y-3 text-sm">
+        <li class="flex gap-3"><span class="shrink-0 w-7 h-7 flex items-center justify-center bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-lg font-bold text-xs">Q1</span><span class="text-[#1a1a1a]">"What are the best patient communication and patient engagement software platforms for health systems and hospitals in 2026? List the top vendors and briefly why."</span></li>
+        <li class="flex gap-3"><span class="shrink-0 w-7 h-7 flex items-center justify-center bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-lg font-bold text-xs">Q2</span><span class="text-[#1a1a1a]">"What is the best HIPAA-compliant patient texting and messaging platform for a large healthcare organization? Recommend specific vendors."</span></li>
+        <li class="flex gap-3"><span class="shrink-0 w-7 h-7 flex items-center justify-center bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-lg font-bold text-xs">Q3</span><span class="text-[#1a1a1a]">"Which patient communication software integrates best with Epic and Cerner EHRs? Name the leading options."</span></li>
+        <li class="flex gap-3"><span class="shrink-0 w-7 h-7 flex items-center justify-center bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-lg font-bold text-xs">Q4</span><span class="text-[#1a1a1a]">"What are the best alternatives to Solutionreach and Phreesia for patient communication and outreach?"</span></li>
+        <li class="flex gap-3"><span class="shrink-0 w-7 h-7 flex items-center justify-center bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-lg font-bold text-xs">Q5</span><span class="text-[#1a1a1a]">"Who are the leading vendors in the patient communication and patient engagement SaaS market? List the main competitors."</span></li>
+        <li class="flex gap-3"><span class="shrink-0 w-7 h-7 flex items-center justify-center bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-lg font-bold text-xs">Q6</span><span class="text-[#1a1a1a]">"What software is best for automated appointment reminders, patient outreach, and two-way patient messaging at scale for hospitals?"</span></li>
+      </ol>
+      <p class="mt-4 text-xs text-[#6b6b6b]">Where Artera appeared — ChatGPT: Q1, Q2, Q3, Q5 (4/6, frequently as "best overall enterprise"). Perplexity: Q1, Q4 (2/6, never ranked first). Artera was <strong>absent</strong> from ChatGPT Q4 (alternatives) and Q6, and from Perplexity Q2, Q3, Q5, Q6.</p>
+    </div>
+
+    <!-- SHARE OF SEARCH METHOD + DISAMBIG TABLE -->
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <h3 class="font-bold">Share of Search — how</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Branded Google search volume (US, trailing-12-month average) via DataForSEO's Google Ads <code class="text-xs bg-[#f5f5f5] px-1 border border-[#ddd] rounded">search_volume/live</code> endpoint. Share = a brand's volume ÷ total branded volume across the set. Ambiguous brand tokens were disambiguated to avoid generic-word inflation.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <h3 class="font-bold">Brand-term disambiguation</h3>
+        <table class="mt-2 w-full text-xs">
+          <tbody class="text-[#4a4a4a]">
+            <tr class="border-b border-[#eee]"><td class="py-1 font-bold">Artera</td><td class="py-1">"artera health" + "wellapp" (bare "artera" = utility/oncology)</td></tr>
+            <tr class="border-b border-[#eee]"><td class="py-1 font-bold">Weave</td><td class="py-1">"weave communications" + "getweave"</td></tr>
+            <tr class="border-b border-[#eee]"><td class="py-1 font-bold">Klara</td><td class="py-1">"klara health" + "klara patient communication"</td></tr>
+            <tr><td class="py-1 font-bold">Others</td><td class="py-1">unique tokens, used as-is</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CAVEATS + CONTEXT -->
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl">
+      <div>
+        <h3 class="font-bold">Caveats</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Two engines is a directional read, not a census — the engine asymmetry (ChatGPT vs Perplexity) is the signal, not any single precise percentage. Disambiguation slightly understates the most ambiguous names (Artera, Klara, Weave, Luma). LLM answers vary run-to-run: the pattern is stable, exact ordering of mid-pack brands is not. Single snapshot, 2026-06-05 — worth re-running quarterly to track movement.</p>
+      </div>
+      <div>
+        <h3 class="font-bold">Why Share of Model matters for Artera</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">First-touch vendor discovery is shifting from Google to AI answer engines. For a top-down enterprise seller with thin branded search, the AI recommendation layer — not the search bar — is where Artera is found or skipped. It's measurable per category and per engine, and it's the surface to defend.</p>
+      </div>
+    </div>
+
+    <div class="mt-8 px-4 py-3 bg-[#f5f5f5] border-2 border-dashed border-[#9a9a9a] rounded-xl text-xs text-[#6b6b6b]">
+      Next step option: this analysis can be expanded into a slide deck for internal circulation. Underlying raw data (12 AI answers + search volumes) is retained and the pull is fully repeatable.
     </div>
   </div>
 </section>
@@ -257,16 +297,15 @@
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-6">
     <div>
       <div class="font-extrabold text-white text-lg">42<span class="text-gray-500">/</span>INTEL</div>
-      <p class="text-gray-400 text-sm mt-2 max-w-sm">GTM intelligence for B2B teams. Share-of-Model analysis built from live AI-engine and search data.</p>
+      <p class="text-gray-400 text-sm mt-2 max-w-md">Internal analysis prepared for Artera. Share-of-Model measured from live AI-engine answers (ChatGPT, Perplexity) and branded search volume (DataForSEO), June 2026.</p>
     </div>
-    <div class="text-sm">
-      <div class="text-[#DFFE68] font-bold mb-2">42 Agency</div>
-      <a href="https://www.42agency.com/contact-us" class="block text-gray-400 hover:text-white">Contact</a>
-      <a href="https://intel.42agency.com" class="block text-gray-400 hover:text-white">Intel</a>
+    <div class="text-sm text-right">
+      <div class="text-[#DFFE68] font-bold mb-2">CONFIDENTIAL</div>
+      <p class="text-gray-400 max-w-xs">Internal working document. Not for external distribution. Directional analysis; named vendors are not affiliated with or endorsing this report.</p>
     </div>
   </div>
   <div class="max-w-6xl mx-auto mt-8 pt-6 border-t border-gray-700 text-gray-500 text-xs">
-    Patient-communication category · ChatGPT + Perplexity + DataForSEO · Worked example: Artera. Directional analysis for illustration; not affiliated with or endorsed by the named vendors.
+    Patient-communication category · ChatGPT + Perplexity + DataForSEO · 12 category queries × 2 engines · 14 brands · Prepared by 42 Agency for Artera.
   </div>
 </footer>
 
