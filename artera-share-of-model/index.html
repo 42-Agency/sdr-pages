@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share of Model — Who AI Recommends in Patient Communication | 42 Intel</title>
+<meta name="description" content="We measured Share of GEO (what ChatGPT & Perplexity recommend) against Share of Search for the patient-communication category. Artera as worked example. By 42 Agency.">
+<meta name="robots" content="noindex, nofollow">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MM5BTNS');</script>
+<!-- End Google Tag Manager -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
+  .bar { transition: width 1.1s cubic-bezier(.2,.8,.2,1); }
+  .reveal { opacity:0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity:1; transform:none; }
+  .dot { transition: all .9s cubic-bezier(.2,.8,.2,1); }
+</style>
+</head>
+<body class="bg-white text-[#1a1a1a]">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM5BTNS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- HEADER -->
+<header class="border-b-2 border-[#1a1a1a] bg-white sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <span class="font-extrabold tracking-tight text-lg">42<span class="text-[#6b6b6b]">/</span>INTEL</span>
+      <span class="hidden sm:inline px-3 py-1 bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">GEO / AEO ANALYSIS</span>
+    </div>
+    <a href="https://www.42agency.com/contact-us" class="bg-[#DFFE68] text-[#1a1a1a] font-bold rounded-lg border-2 border-[#1a1a1a] shadow-[3px_3px_0px_0px_#1a1a1a] hover:shadow-[5px_5px_0px_0px_#1a1a1a] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all px-4 py-2 text-sm">Measure your category →</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="bg-[#f5f5f5] border-b-2 border-[#1a1a1a]">
+  <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+    <div class="flex flex-wrap gap-2 mb-5">
+      <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">PATIENT COMMUNICATION SaaS</span>
+      <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">2 AI ENGINES · 12 QUERIES · 14 BRANDS</span>
+      <span class="px-3 py-1 bg-[#F59E0B]/10 border-2 border-[#F59E0B] rounded-full text-xs font-bold text-[#F59E0B]">WORKED EXAMPLE: ARTERA</span>
+    </div>
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05] max-w-4xl">
+      The brand AI recommends isn't the brand people search.
+    </h1>
+    <p class="mt-6 text-lg md:text-xl text-[#4a4a4a] max-w-3xl">
+      We measured <strong>Share of Model</strong> — how often each patient-communication vendor gets named when buyers ask ChatGPT and Perplexity for a recommendation — and held it against classic <strong>Share of Search</strong>. The two rankings are nearly inverted. <span class="bg-[#DFFE68] px-1 font-bold">Artera is the #2 brand AI recommends, and near-last in branded search.</span>
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#inversion" class="bg-[#1a1a1a] text-white font-bold rounded-lg px-5 py-3 hover:bg-[#333] transition-colors">See the inversion</a>
+      <a href="#method" class="bg-white text-[#1a1a1a] font-medium rounded-lg border-2 border-[#1a1a1a] shadow-[4px_4px_0px_0px_#1a1a1a] hover:bg-[#f5f5f5] transition-colors px-5 py-3">How we measured it</a>
+    </div>
+  </div>
+</section>
+
+<!-- STAT STRIP -->
+<section class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+      <div class="text-3xl md:text-4xl font-extrabold">#2</div>
+      <div class="text-sm text-[#6b6b6b] font-medium mt-1">Artera — Share of GEO rank</div>
+    </div>
+    <div class="bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+      <div class="text-3xl md:text-4xl font-extrabold">#13</div>
+      <div class="text-sm text-[#1a1a1a] font-bold mt-1">Artera — Share of Search rank</div>
+    </div>
+    <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+      <div class="text-3xl md:text-4xl font-extrabold">67%</div>
+      <div class="text-sm text-[#6b6b6b] font-medium mt-1">of ChatGPT answers name Artera</div>
+    </div>
+    <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+      <div class="text-3xl md:text-4xl font-extrabold">33%</div>
+      <div class="text-sm text-[#6b6b6b] font-medium mt-1">of Perplexity answers do</div>
+    </div>
+  </div>
+</section>
+
+<!-- THE INVERSION (quadrant) -->
+<section id="inversion" class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">01 — THE INVERSION</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">Authority wins the model. Volume wins the search bar.</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Each dot is a vendor. Up = recommended more often by AI. Right = searched more often by buyers. The brands AI trusts (top-left) and the brands buyers Google (bottom-right) are almost entirely different companies.</p>
+
+    <div class="mt-8 bg-white border-2 border-[#1a1a1a] rounded-2xl p-5 md:p-8 shadow-[6px_6px_0px_0px_#1a1a1a]">
+      <div class="flex justify-between text-xs font-bold mb-2">
+        <span class="text-[#6b6b6b]">▲ HIGH SHARE OF GEO (AI-recommended)</span>
+        <span class="text-[#6b6b6b]">Bubble = mentions</span>
+      </div>
+      <!-- plot -->
+      <div id="plot" class="relative border-2 border-[#1a1a1a] rounded-xl bg-[#fafafa]" style="height:440px;">
+        <!-- quadrant tints -->
+        <div class="absolute inset-0 grid grid-cols-2 grid-rows-2 pointer-events-none">
+          <div class="bg-[#DFFE68]/20 border-r border-b border-dashed border-[#cfcfcf]"></div>
+          <div class="border-b border-dashed border-[#cfcfcf]"></div>
+          <div class="border-r border-dashed border-[#cfcfcf]"></div>
+          <div class="bg-[#3B82F6]/5"></div>
+        </div>
+        <!-- quadrant labels -->
+        <div class="absolute top-3 left-3 text-[11px] font-bold text-[#1a1a1a] bg-[#DFFE68] border border-[#1a1a1a] rounded px-2 py-0.5">AUTHORITY BRANDS · GEO-rich, search-poor</div>
+        <div class="absolute bottom-3 right-3 text-[11px] font-bold text-[#3B82F6] bg-white border border-[#3B82F6] rounded px-2 py-0.5">DEMAND BRANDS · search-rich, GEO-poor</div>
+        <!-- dots injected by JS -->
+      </div>
+      <div class="flex justify-between text-xs font-bold mt-2">
+        <span class="text-[#6b6b6b]">low</span>
+        <span class="text-[#6b6b6b]">SHARE OF SEARCH (branded Google volume) ▶</span>
+        <span class="text-[#6b6b6b]">high</span>
+      </div>
+    </div>
+    <p class="mt-4 text-sm text-[#6b6b6b] max-w-3xl"><strong>Read it like this:</strong> Artera, Klara and Luma sit in the lime quadrant — AI hands them the recommendation, but few buyers type their name. Phreesia, Solutionreach and TigerConnect own the search bar yet barely register when a buyer asks an AI to choose.</p>
+  </div>
+</section>
+
+<!-- SHARE OF GEO LEADERBOARD -->
+<section class="border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">02 — SHARE OF GEO</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4">Who AI recommends</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Share of brand mentions across 12 category buyer-questions run through ChatGPT and Perplexity. Artera ties for the lead on quality of mention — it's the name ChatGPT reaches for first on enterprise, HIPAA texting, and Epic integration.</p>
+    <div id="geoChart" class="mt-8 space-y-3"></div>
+  </div>
+</section>
+
+<!-- ENGINE SPLIT -->
+<section class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">03 — THE ENGINE SPLIT</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">ChatGPT loves Artera. Perplexity doesn't know it as well.</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">The two engines source answers differently — and it shows. ChatGPT leans on parametric authority (KLAS wins, analyst language, enterprise reputation), where Artera is strong. Perplexity retrieves and cites live third-party listicles (ohmd.com, televox.com, leadsquared, fitgap) — where Artera is under-featured or missing.</p>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="flex items-center justify-between">
+          <span class="font-bold">ChatGPT</span>
+          <span class="px-3 py-1 bg-[#10B981]/10 border-2 border-[#10B981] rounded-full text-xs font-bold text-[#10B981]">STRONG</span>
+        </div>
+        <div class="text-5xl font-extrabold mt-4">4<span class="text-[#9a9a9a] text-2xl">/6</span></div>
+        <div class="text-sm text-[#6b6b6b] mt-1">category answers name Artera — often framed "best overall enterprise."</div>
+        <div class="mt-4 h-4 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full overflow-hidden">
+          <div class="bar h-full bg-[#10B981]" style="width:0%" data-w="67%"></div>
+        </div>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="flex items-center justify-between">
+          <span class="font-bold">Perplexity</span>
+          <span class="px-3 py-1 bg-[#F59E0B]/10 border-2 border-[#F59E0B] rounded-full text-xs font-bold text-[#F59E0B]">EXPOSED</span>
+        </div>
+        <div class="text-5xl font-extrabold mt-4">2<span class="text-[#9a9a9a] text-2xl">/6</span></div>
+        <div class="text-sm text-[#6b6b6b] mt-1">name Artera — never ranked first; absent from HIPAA, Epic & market-leader answers.</div>
+        <div class="mt-4 h-4 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full overflow-hidden">
+          <div class="bar h-full bg-[#F59E0B]" style="width:0%" data-w="33%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHARE OF SEARCH LEADERBOARD -->
+<section class="border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">04 — SHARE OF SEARCH</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4">Who buyers Google</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Branded US search volume (Google, avg monthly). A different category leaderboard entirely — dominated by the SMB / self-serve vendors with thousands of small-practice buyers typing their name. Artera's top-down enterprise motion means almost no branded search demand.</p>
+    <div id="searchChart" class="mt-8 space-y-3"></div>
+    <p class="mt-4 text-xs text-[#9a9a9a] max-w-3xl">* "artera" as a bare term returns 12,100/mo but is contaminated by Artera Services (utility infrastructure) and ArteraAI (oncology). Clean patient-comms terms — "artera health" (320) + the former brand "wellapp / well app" (3,600) — put true branded demand in the low thousands. See methodology.</p>
+  </div>
+</section>
+
+<!-- THE TWO FLANKS -->
+<section class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">05 — TWO EXPOSED FLANKS</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">Where Artera's AI lead leaks</h2>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-xs font-bold text-[#F59E0B] mb-2">FLANK 1 · RETRIEVAL / AEO</div>
+        <h3 class="text-xl font-bold">Perplexity cites listicles, not KLAS</h3>
+        <p class="mt-3 text-[#4a4a4a] text-sm">ChatGPT authority doesn't transfer to retrieval engines. Perplexity's answers are built from the "best patient communication software" roundups it can crawl — and Artera is under-represented or missing in them. The fix is owning that third-party citation surface, not more brand advertising.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-xs font-bold text-[#F59E0B] mb-2">FLANK 2 · CONSIDERATION-STAGE</div>
+        <h3 class="text-xl font-bold">Artera vanishes from "alternatives to…" answers</h3>
+        <p class="mt-3 text-[#4a4a4a] text-sm">Ask ChatGPT for alternatives to Solutionreach or Phreesia — the exact moment a buyer is switching — and Artera drops off the list entirely. Luma, Weave, NexHealth and Klara own that comparison surface. The highest-intent query is where Artera is weakest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IT MEANS -->
+<section class="border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">06 — WHAT TO DO</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4">Three moves off this data</h2>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold text-[#DFFE68] [-webkit-text-stroke:1px_#1a1a1a]">01</div>
+        <h3 class="text-lg font-bold mt-2">Defend ChatGPT, attack Perplexity</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">The authority lead is real but engine-specific. Seed and update the third-party comparison content Perplexity retrieves so the AEO citation layer matches the ChatGPT reputation.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold text-[#DFFE68] [-webkit-text-stroke:1px_#1a1a1a]">02</div>
+        <h3 class="text-lg font-bold mt-2">Win the "alternatives to" surface</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Target the switch-intent queries directly — comparison pages, migration stories, and review-site presence against Solutionreach and Phreesia, where AI currently leaves Artera out.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold text-[#DFFE68] [-webkit-text-stroke:1px_#1a1a1a]">03</div>
+        <h3 class="text-lg font-bold mt-2">Don't chase branded search</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Low branded volume is a feature of enterprise selling, not a failure. The category buyer asks the AI, not the search bar — so Share of Model is the metric to defend and grow.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section id="method" class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">07 — METHODOLOGY</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4">How we measured it</h2>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl">
+      <div>
+        <h3 class="font-bold">Share of GEO</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">12 category buyer-questions (health-system shortlist, HIPAA texting, Epic/Cerner integration, alternatives-to, market leaders, appointment reminders at scale) run live through ChatGPT and Perplexity via BrightData's LLM scrapers. A brand "mentions" when it's named in the answer; we excluded a query's subject brand from its own tally. Grok was attempted but its scraper timed out.</p>
+      </div>
+      <div>
+        <h3 class="font-bold">Share of Search</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Branded Google search volume (US, 12-mo avg) via DataForSEO's Google Ads endpoint. Ambiguous brand tokens were disambiguated ("weave communications", "klara health") to avoid generic-word inflation; contaminated terms are footnoted.</p>
+      </div>
+      <div>
+        <h3 class="font-bold">Caveats</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Two engines is a directional sample, not a census — the engine asymmetry is the signal, not a single precise percentage. Brand-search disambiguation slightly understates the most ambiguous names (Artera, Klara, Weave, Luma). LLM answers vary run-to-run; the pattern is stable, the exact ordering of mid-pack brands is not.</p>
+      </div>
+      <div>
+        <h3 class="font-bold">Why it matters</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">As buyers move first-touch discovery from Google to AI answer engines, Share of Model becomes the leading indicator of pipeline that Share of Search used to be — and it's measurable today, per category, per engine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <div class="bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-2xl p-8 md:p-12 shadow-[6px_6px_0px_0px_#1a1a1a]">
+      <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight max-w-3xl">Want this run on your category?</h2>
+      <p class="mt-3 text-[#1a1a1a] text-lg max-w-2xl">We'll measure your Share of Model against your Share of Search, per engine — and hand you the queries where AI leaves you out.</p>
+      <a href="https://www.42agency.com/contact-us" class="inline-block mt-6 bg-[#1a1a1a] text-white font-bold rounded-lg px-6 py-3 hover:bg-[#333] transition-colors">Talk to 42 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t-2 border-[#1a1a1a] py-12 px-6 bg-[#1a1a1a]">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-6">
+    <div>
+      <div class="font-extrabold text-white text-lg">42<span class="text-gray-500">/</span>INTEL</div>
+      <p class="text-gray-400 text-sm mt-2 max-w-sm">GTM intelligence for B2B teams. Share-of-Model analysis built from live AI-engine and search data.</p>
+    </div>
+    <div class="text-sm">
+      <div class="text-[#DFFE68] font-bold mb-2">42 Agency</div>
+      <a href="https://www.42agency.com/contact-us" class="block text-gray-400 hover:text-white">Contact</a>
+      <a href="https://intel.42agency.com" class="block text-gray-400 hover:text-white">Intel</a>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto mt-8 pt-6 border-t border-gray-700 text-gray-500 text-xs">
+    Patient-communication category · ChatGPT + Perplexity + DataForSEO · Worked example: Artera. Directional analysis for illustration; not affiliated with or endorsed by the named vendors.
+  </div>
+</footer>
+
+<script>
+// ---- DATA ----
+const geo = [
+  {b:"Luma Health", v:13.7, hl:false},
+  {b:"Artera",      v:11.8, hl:true},
+  {b:"Klara",       v:11.8, hl:false},
+  {b:"Phreesia",    v:7.8,  hl:false},
+  {b:"TeleVox",     v:7.8,  hl:false},
+  {b:"OhMD",        v:7.8,  hl:false},
+  {b:"Weave",       v:7.8,  hl:false},
+  {b:"NexHealth",   v:5.9,  hl:false},
+  {b:"TigerConnect",v:3.9,  hl:false},
+  {b:"Solutionreach",v:3.9, hl:false},
+];
+const search = [
+  {b:"Phreesia",    v:40.8, hl:false},
+  {b:"Solutionreach",v:18.3,hl:false},
+  {b:"TigerConnect",v:18.3, hl:false},
+  {b:"NexHealth",   v:8.2,  hl:false},
+  {b:"Luma Health", v:3.6,  hl:false},
+  {b:"OhMD",        v:3.6,  hl:false},
+  {b:"Weave",       v:2.9,  hl:false},
+  {b:"Relatient",   v:1.3,  hl:false},
+  {b:"TeleVox",     v:0.7,  hl:false},
+  {b:"Artera",      v:0.2,  hl:true},
+];
+// quadrant: x=search share, y=geo share, m=mentions(bubble), jy=tiny visual nudge to
+// separate tied points, ld=label direction (r/l/t/b)
+const quad = [
+  {b:"Artera",      x:0.2,  y:11.8, m:6, hl:true, jy:0,    ld:'r'},
+  {b:"Klara",       x:0.3,  y:11.8, m:6, jy:0.9,  ld:'t'},
+  {b:"Luma Health", x:3.6,  y:13.7, m:7, jy:0,    ld:'r'},
+  {b:"Phreesia",    x:40.8, y:7.8,  m:4, jy:0,    ld:'l'},
+  {b:"Solutionreach",x:18.3,y:3.9,  m:2, jy:-0.9, ld:'b'},
+  {b:"TigerConnect",x:18.3, y:3.9,  m:2, jy:0.9,  ld:'t'},
+  {b:"NexHealth",   x:8.2,  y:5.9,  m:3, jy:0,    ld:'r'},
+  {b:"OhMD",        x:3.6,  y:7.0,  m:4, jy:0,    ld:'r'},
+  {b:"TeleVox",     x:0.7,  y:8.5,  m:4, jy:0,    ld:'r'},
+  {b:"Weave",       x:2.4,  y:6.2,  m:4, jy:0,    ld:'b'},
+];
+
+const maxGeo = 15, maxSearch = 42;
+
+function barRow(d, max, color){
+  const w = (d.v/max*100).toFixed(1);
+  return `<div class="flex items-center gap-3">
+    <div class="w-28 md:w-36 text-sm font-bold ${d.hl?'text-[#1a1a1a]':'text-[#4a4a4a]'} text-right shrink-0">${d.b}${d.hl?' ★':''}</div>
+    <div class="flex-1 h-8 bg-white border-2 border-[#1a1a1a] rounded-lg overflow-hidden ${d.hl?'shadow-[3px_3px_0px_0px_#1a1a1a]':''}">
+      <div class="bar h-full ${d.hl?'bg-[#DFFE68]':color} flex items-center justify-end pr-2" style="width:0%" data-w="${w}%">
+        <span class="text-xs font-bold ${d.hl?'text-[#1a1a1a]':'text-[#1a1a1a]/70'}">${d.v}%</span>
+      </div>
+    </div>
+  </div>`;
+}
+document.getElementById('geoChart').innerHTML = geo.map(d=>barRow(d,maxGeo,'bg-[#1a1a1a]/15')).join('');
+document.getElementById('searchChart').innerHTML = search.map(d=>barRow(d,maxSearch,'bg-[#3B82F6]/25')).join('');
+
+// quadrant dots
+const plot = document.getElementById('plot');
+function place(){
+  const w = plot.clientWidth, h = plot.clientHeight, pad = 48;
+  quad.forEach((d, i)=>{
+    const el = document.createElement('div');
+    const size = 14 + d.m*4;
+    const yv = d.y + (d.jy||0);
+    const cx = pad + (d.x/maxSearch)*(w-2*pad);
+    const cy = (h-pad) - (yv/maxGeo)*(h-2*pad);
+    const left = cx - size/2, top = cy - size/2;
+    el.className = 'dot absolute flex items-center justify-center rounded-full border-2 border-[#1a1a1a] '+(d.hl?'bg-[#DFFE68] z-30 shadow-[3px_3px_0px_0px_#1a1a1a]':'bg-white z-10');
+    el.style.width = size+'px'; el.style.height = size+'px';
+    el.style.left = '50%'; el.style.top='50%'; el.style.opacity=0;
+    setTimeout(()=>{ el.style.left=left+'px'; el.style.top=top+'px'; el.style.opacity=1; }, 120+i*55);
+    // label placement by direction
+    const lab = document.createElement('span');
+    const approxW = d.b.length*6.2;
+    lab.className = 'absolute whitespace-nowrap text-[11px] font-bold z-40 '+(d.hl?'text-[#1a1a1a] bg-[#DFFE68] px-1 rounded':'text-[#4a4a4a]');
+    let lx, ly;
+    if(d.ld==='l'){ lx = left - approxW - 6; ly = cy - 8; }
+    else if(d.ld==='t'){ lx = cx - approxW/2; ly = top - 16; }
+    else if(d.ld==='b'){ lx = cx - approxW/2; ly = top + size + 4; }
+    else { lx = left + size + 5; ly = cy - 8; }
+    lab.style.left = lx+'px'; lab.style.top = ly+'px';
+    lab.style.opacity=0; lab.textContent = d.b;
+    setTimeout(()=>{ lab.style.transition='opacity .6s ease'; lab.style.opacity=1; }, 420+i*55);
+    plot.appendChild(el); plot.appendChild(lab);
+  });
+}
+
+// animate bars + reveal on scroll
+const io = new IntersectionObserver((es)=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.querySelectorAll('.bar').forEach(b=> b.style.width = b.dataset.w);
+      e.target.classList.add('in');
+    }
+  });
+},{threshold:.2});
+document.querySelectorAll('section').forEach(s=>io.observe(s));
+window.addEventListener('load', ()=> setTimeout(place, 200));
+window.addEventListener('resize', ()=>{ plot.querySelectorAll('.dot,span').forEach(n=>n.remove()); place(); });
+</script>
+</body>
+</html>
