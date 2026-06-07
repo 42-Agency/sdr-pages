@@ -44,6 +44,15 @@
           "value": "noindex, nofollow, noarchive, nosnippet"
         }
       ]
+    },
+    {
+      "source": "/ethyca-share-of-model(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive, nosnippet"
+        }
+      ]
     }
   ]
 }
