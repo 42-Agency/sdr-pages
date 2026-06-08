@@ -41,14 +41,14 @@
   <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
     <div class="flex flex-wrap gap-2 mb-5">
       <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">PATIENT ENGAGEMENT SaaS</span>
-      <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">3 SURFACES · AI · SEARCH VOLUME · TRENDS</span>
+      <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">4 SURFACES · AI · SEARCH · TRENDS · GSC</span>
       <span class="px-3 py-1 bg-[#F59E0B]/10 border-2 border-[#F59E0B] rounded-full text-xs font-bold text-[#F59E0B]">DISCOVERY &amp; MOMENTUM RISK</span>
     </div>
     <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05] max-w-4xl">
       AI engines still <span class="bg-[#DFFE68] px-1">remember TeleVox</span>. The market has stopped searching for it.
     </h1>
     <p class="mt-6 text-lg md:text-xl text-[#4a4a4a] max-w-3xl">
-      We measured how buyers actually find vendors across three independent surfaces — AI answer engines (ChatGPT &amp; Perplexity), branded search volume, and Google Trends momentum. They tell an unusual story. In AI recommendations TeleVox sits <strong>tied for the top of the independent-vendor pack (5.2% Share of GEO)</strong> — but in branded search it's <strong>near-invisible (#10, ~0.5%)</strong>. That recall is real, and it's anchored almost entirely to one thing: TeleVox's heritage in automated voice and patient outreach.
+      We measured how buyers actually find vendors across four independent surfaces — AI answer engines (ChatGPT &amp; Perplexity), branded search volume, Google Trends momentum, and TeleVox's own Google Search Console. They tell an unusual story. In AI recommendations TeleVox sits <strong>tied for the top of the independent-vendor pack (5.2% Share of GEO)</strong> — but in branded search it's <strong>near-invisible (#10, ~0.5%)</strong>, and its organic clicks are falling. That recall is real, and it's anchored almost entirely to one thing: TeleVox's heritage in automated voice and patient outreach.
     </p>
     <div class="mt-8 flex flex-wrap gap-3">
       <a href="#heat" class="bg-[#1a1a1a] text-white font-bold rounded-lg px-5 py-3 hover:bg-[#333] transition-colors">Where the recall concentrates</a>
@@ -188,23 +188,74 @@
   </div>
 </section>
 
-<!-- 06 THE MISSING SURFACE + TRIANGULATION -->
+<!-- 06 FIRST-PARTY ORGANIC (GSC) + TRIANGULATION -->
 <section class="border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
   <div class="max-w-6xl mx-auto px-6 py-16">
-    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">06 — THE THIRD SURFACE</span>
-    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">One read is missing — and it's a quick win</h2>
-    <p class="mt-3 text-[#4a4a4a] max-w-3xl">The cleanest possible read of real branded demand is first-party Google Search Console — the queries that actually land on televox.com. It's contamination-free and confirms the search picture from the inside. <strong>TeleVox's GSC isn't connected to the reporting stack yet</strong>, so this report triangulates the three surfaces we do have. Connecting GSC is the single highest-leverage measurement fix — it would let us see exactly which queries (branded vs category) are winning organic clicks.</p>
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">06 — FIRST-PARTY ORGANIC SEARCH</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">The first-party check: Google Search Console</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Connected during this analysis, televox.com's own Search Console is the cleanest read of real demand — it only counts queries that actually reached the domain. It confirms the AI + search picture from an independent source, and surfaces one problem worth acting on immediately.</p>
+
+    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold">776K</div>
+        <div class="text-sm text-[#6b6b6b] mt-1">organic impressions / 28 days</div>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold">1,238</div>
+        <div class="text-sm text-[#6b6b6b] mt-1">organic clicks / 28 days <span class="text-[#F59E0B] font-bold">−16%</span></div>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold">13.6</div>
+        <div class="text-sm text-[#6b6b6b] mt-1">avg. position (page 2 of results)</div>
+      </div>
+      <div class="bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold">~0.16%</div>
+        <div class="text-sm text-[#1a1a1a] font-bold mt-1">raw CTR — but it's contaminated (see below)</div>
+      </div>
+    </div>
+
+    <!-- SPAM CONTAMINATION CALLOUT -->
+    <div class="mt-6 bg-white border-2 border-[#F59E0B] rounded-xl p-6 shadow-[4px_4px_0px_0px_#F59E0B]">
+      <div class="text-xs font-bold text-[#F59E0B] mb-2">⚠ FLAG — ACT ON THIS</div>
+      <h3 class="font-bold">Roughly half of all impressions are a junk query getting zero clicks</h3>
+      <p class="mt-2 text-sm text-[#4a4a4a] max-w-3xl">The single largest query hitting televox.com is <code class="bg-[#f5f5f5] px-1 border border-[#ddd] rounded">pusulabet</code> — an unrelated <strong>Turkish online-betting brand</strong> — at ~12,900 impressions/day (≈70% of some days' total) and <strong>zero clicks</strong>. Persisting across days, it accounts for roughly <strong>half of the 776K impressions</strong>, which is what drags the headline CTR down to 0.16%. This is almost certainly spam/SEO-poisoning (a hacked or scraped page, or toxic backlinks) — worth a security + SEO-hygiene investigation. Strip it out and the effective CTR on legitimate queries is closer to <strong>~1%</strong> — modest, but not the alarm the raw number implies.</p>
+    </div>
+
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <h3 class="font-bold">The clicks that are real are mostly the brand name</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">On a typical weekday the top organic-click query is <strong>“televox”</strong> (≈13 of ~60 daily clicks) — plus the branded “televox healthcare” / “televox ai”. The rest are scattered single clicks on broad <em>informational</em> terms (“ai healthcare companies”, “top ai healthcare companies”), not category buying queries. Same conclusion as AI: found by name, and by broad content — not by category intent.</p>
+        <div class="mt-4 h-9 w-full bg-white border-2 border-[#1a1a1a] rounded-lg overflow-hidden flex">
+          <div class="bar h-full bg-[#DFFE68] flex items-center justify-center text-xs font-bold border-r-2 border-[#1a1a1a]" style="width:0%" data-w="38%">“televox” — branded</div>
+          <div class="h-full flex items-center justify-center text-xs font-bold text-[#6b6b6b] flex-1">scattered informational long-tail</div>
+        </div>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <h3 class="font-bold">It ranks for category terms — on page 2</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">TeleVox's content <em>does</em> appear for real category queries — “patient engagement software”, “patient engagement platform”, “patient journey software” — but at an average position of ~13.6 (page 2), so it earns impressions, not clicks. The demand exists; TeleVox just isn't ranking high enough to capture it.</p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="px-2 py-1 bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">televox</span>
+          <span class="px-2 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">patient engagement software</span>
+          <span class="px-2 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">patient engagement platform</span>
+          <span class="px-2 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">patient journey software</span>
+          <span class="px-2 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">top ai healthcare companies</span>
+          <span class="px-2 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">secure messaging healthcare</span>
+        </div>
+        <p class="mt-3 text-xs text-[#6b6b6b]">Window: 28 days to 2026-06-07 (GSC newly connected; early data may be partial). Clicks −16% vs the prior 28 days.</p>
+      </div>
+    </div>
 
     <!-- TRIANGULATION SYNTHESIS -->
     <div class="mt-8 bg-[#1a1a1a] text-white border-2 border-[#1a1a1a] rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_#DFFE68]">
-      <h3 class="text-xl font-extrabold">Three surfaces, one conclusion</h3>
-      <p class="mt-2 text-gray-300 text-sm max-w-3xl">The analysis doesn't rest on AI alone. Three independent surfaces converge on the same finding:</p>
-      <div class="mt-5 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+      <h3 class="text-xl font-extrabold">Four surfaces, one conclusion</h3>
+      <p class="mt-2 text-gray-300 text-sm max-w-3xl">The analysis doesn't rest on AI alone. Four independent surfaces converge on the same finding:</p>
+      <div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
         <div class="border-l-2 border-[#DFFE68] pl-3"><span class="font-bold text-[#DFFE68]">AI answer engines</span><br><span class="text-gray-300">Strong, top-of-specialist recall — but concentrated in TeleVox's voice/outreach heritage, absent at modern use-cases.</span></div>
         <div class="border-l-2 border-[#DFFE68] pl-3"><span class="font-bold text-[#DFFE68]">Branded search volume</span><br><span class="text-gray-300">Thin and clean — ~0.5%, #10 of 12. Real demand, but small, and the WestCX name has none.</span></div>
         <div class="border-l-2 border-[#DFFE68] pl-3"><span class="font-bold text-[#DFFE68]">Google Trends</span><br><span class="text-gray-300">Flat-to-declining off a tiny base while Luma Health's interest nearly tripled. Not capturing category momentum.</span></div>
+        <div class="border-l-2 border-[#DFFE68] pl-3"><span class="font-bold text-[#DFFE68]">Organic Search Console</span><br><span class="text-gray-300">Top click query is “televox”; category terms rank page-2; clicks falling −16%; impressions inflated by spam.</span></div>
       </div>
-      <p class="mt-5 text-white font-bold">TeleVox keeps the recall a 30-year brand earns — but it's tied to the old job, invisible in search, and losing the momentum race. The growth surface is the AI use-case and integration queries it's already <em>almost</em> winning.</p>
+      <p class="mt-5 text-white font-bold">TeleVox keeps the recall a 30-year brand earns — but it's tied to the old job, found by name not category, ranking page-2 where demand exists, and losing the momentum race. The growth surface is the AI and organic <em>category</em> queries it's already <em>almost</em> winning.</p>
     </div>
   </div>
 </section>
@@ -294,8 +345,8 @@
       </div>
       <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
         <div class="text-3xl font-extrabold text-[#DFFE68] [-webkit-text-stroke:1px_#1a1a1a]">04</div>
-        <h3 class="text-lg font-bold mt-2">Connect GSC + track Share of Model quarterly</h3>
-        <p class="mt-2 text-sm text-[#4a4a4a]">Wire televox.com's Search Console into reporting (the missing third surface), then re-run this Share of Model per engine, per query-cluster each quarter. For a brand with thin branded search, the AI recommendation layer is where TeleVox is found or skipped.</p>
+        <h3 class="text-lg font-bold mt-2">Fix the spam, then climb off page 2</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">GSC (now connected) shows ~half of impressions are the <code>pusulabet</code> spam query at zero clicks — investigate for a hacked page / toxic backlinks first. Then push the real category terms TeleVox already ranks for (“patient engagement software/platform”, “patient journey software”) off page 2. Re-run this Share of Model per engine and per query-cluster quarterly.</p>
       </div>
     </div>
   </div>
@@ -306,7 +357,7 @@
   <div class="max-w-6xl mx-auto px-6 py-16">
     <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">10 — METHODOLOGY</span>
     <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4">Exactly what we did</h2>
-    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Three data pulls, run 2026-06-08, fully repeatable. Built to the Kantar "holistic" standard — full keyword/prompt spectrum, ambiguity correction, product→parent mapping — rather than a naive single-term read.</p>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Four data pulls, run 2026-06-08, fully repeatable. Built to the Kantar "holistic" standard — full keyword/prompt spectrum, ambiguity correction, product→parent mapping — rather than a naive single-term read.</p>
 
     <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
@@ -327,9 +378,9 @@
     </div>
 
     <div class="mt-6 bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a] max-w-4xl">
-      <div class="text-xs font-bold text-[#6b6b6b]">THE MISSING SURFACE</div>
-      <h3 class="font-bold mt-1">First-party organic (Google Search Console) — not yet connected</h3>
-      <p class="mt-2 text-sm text-[#4a4a4a]">The ideal third surface is televox.com's own GSC (contamination-free; only counts queries that landed on the domain). TeleVox's GSC isn't yet connected to the reporting stack, so this wave triangulates AI + search-volume + Trends. Connecting it (Rec 04) would replace estimated branded search with the exact query mix winning organic clicks — the single highest-value measurement upgrade for the next wave.</p>
+      <div class="text-xs font-bold text-[#6b6b6b]">FIRST-PARTY ORGANIC (the fourth surface)</div>
+      <h3 class="font-bold mt-1">Google Search Console, via Databox</h3>
+      <p class="mt-2 text-sm text-[#4a4a4a]">televox.com's own GSC property (<code class="text-xs bg-[#f5f5f5] px-1 border border-[#ddd] rounded">sc-domain:televox.com</code>), connected during this analysis; 28-day window to 2026-06-07. Impressions, clicks, CTR, average position and query-level breakdown — contamination-free in principle (only queries that reached televox.com), though in practice the impression base is inflated by a persistent spam query (<code class="text-xs bg-[#f5f5f5] px-1 border border-[#ddd] rounded">pusulabet</code>, ~half of impressions, zero clicks — Section 06). Query/page dimensions are pulled at a 1-day window per the Databox GSC limitation; whole-range totals at 28 days. Early data may be partial (newly connected).</p>
     </div>
 
     <div class="mt-6 bg-white border-2 border-[#1a1a1a] rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_#1a1a1a]">
