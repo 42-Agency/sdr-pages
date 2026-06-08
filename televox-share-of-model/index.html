@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share of Model — TeleVox & the Patient-Engagement Category | 42 Intel</title>
+<meta name="description" content="Share of GEO/AEO vs holistic Share of Search analysis for TeleVox and the patient-engagement category. 20 prompts, 2 AI engines, holistic search + Google Trends. Internal — prepared for TeleVox by 42 Agency.">
+<meta name="robots" content="noindex, nofollow">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MM5BTNS');</script>
+<!-- End Google Tag Manager -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
+  .bar { transition: width 1.1s cubic-bezier(.2,.8,.2,1); }
+  .reveal { opacity:0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity:1; transform:none; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+</style>
+</head>
+<body class="bg-white text-[#1a1a1a]">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM5BTNS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- HEADER -->
+<header class="border-b-2 border-[#1a1a1a] bg-white sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <span class="font-extrabold tracking-tight text-lg">42<span class="text-[#6b6b6b]">/</span>INTEL</span>
+      <span class="hidden sm:inline px-3 py-1 bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">SHARE OF MODEL · GEO / AEO</span>
+    </div>
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">INTERNAL · PREPARED FOR TELEVOX · JUN 2026</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="bg-[#f5f5f5] border-b-2 border-[#1a1a1a]">
+  <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+    <div class="flex flex-wrap gap-2 mb-5">
+      <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">PATIENT ENGAGEMENT SaaS</span>
+      <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">3 SURFACES · AI · SEARCH VOLUME · TRENDS</span>
+      <span class="px-3 py-1 bg-[#F59E0B]/10 border-2 border-[#F59E0B] rounded-full text-xs font-bold text-[#F59E0B]">DISCOVERY &amp; MOMENTUM RISK</span>
+    </div>
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05] max-w-4xl">
+      AI engines still <span class="bg-[#DFFE68] px-1">remember TeleVox</span>. The market has stopped searching for it.
+    </h1>
+    <p class="mt-6 text-lg md:text-xl text-[#4a4a4a] max-w-3xl">
+      We measured how buyers actually find vendors across three independent surfaces — AI answer engines (ChatGPT &amp; Perplexity), branded search volume, and Google Trends momentum. They tell an unusual story. In AI recommendations TeleVox sits <strong>tied for the top of the independent-vendor pack (5.2% Share of GEO)</strong> — but in branded search it's <strong>near-invisible (#10, ~0.5%)</strong>. That recall is real, and it's anchored almost entirely to one thing: TeleVox's heritage in automated voice and patient outreach.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#heat" class="bg-[#1a1a1a] text-white font-bold rounded-lg px-5 py-3 hover:bg-[#333] transition-colors">Where the recall concentrates</a>
+      <a href="#method" class="bg-white text-[#1a1a1a] font-medium rounded-lg border-2 border-[#1a1a1a] shadow-[4px_4px_0px_0px_#1a1a1a] hover:bg-[#f5f5f5] transition-colors px-5 py-3">Methodology (20 prompts)</a>
+    </div>
+  </div>
+</section>
+
+<!-- STAT STRIP -->
+<section class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+      <div class="text-3xl md:text-4xl font-extrabold">5.2%</div>
+      <div class="text-sm text-[#1a1a1a] font-bold mt-1">Share of GEO — tied top of the independent vendors (with Luma, Phreesia, OhMD)</div>
+    </div>
+    <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+      <div class="text-3xl md:text-4xl font-extrabold">#10</div>
+      <div class="text-sm text-[#6b6b6b] font-medium mt-1">Share of Search — ~0.5% branded demand, near the bottom of the set</div>
+    </div>
+    <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+      <div class="text-3xl md:text-4xl font-extrabold">4 / 6</div>
+      <div class="text-sm text-[#6b6b6b] font-medium mt-1">voice + automated-outreach prompts name TeleVox — its heritage cluster</div>
+    </div>
+    <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+      <div class="text-3xl md:text-4xl font-extrabold">0 / 12</div>
+      <div class="text-sm text-[#6b6b6b] font-medium mt-1">use-case + integration prompts name TeleVox — invisible at the modern jobs</div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 TWO METRICS + QUADRANT -->
+<section id="quad" class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">01 — TWO METRICS</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">Share of Model vs Share of Search</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl"><strong>Share of GEO</strong> = how often a brand is named when buyers ask an AI engine to recommend a vendor. <strong>Share of Search</strong> = branded Google demand. Each dot is a vendor: up = recommended more by AI, right = searched more by buyers. Most brands sit near the diagonal. <strong>TeleVox does not.</strong> It sits firmly top-left — high AI recall, almost no search volume. Mental availability without the demand to match.</p>
+
+    <div class="mt-8 bg-white border-2 border-[#1a1a1a] rounded-2xl p-5 md:p-8 shadow-[6px_6px_0px_0px_#1a1a1a]">
+      <div class="flex justify-between text-xs font-bold mb-2">
+        <span class="text-[#6b6b6b]">▲ HIGH SHARE OF GEO (AI-recommended)</span>
+        <span class="text-[#6b6b6b]">bubble = total mentions</span>
+      </div>
+      <div id="plot" class="relative border-2 border-[#1a1a1a] rounded-xl bg-[#fafafa]" style="height:460px;">
+        <div class="absolute inset-0 grid grid-cols-2 grid-rows-2 pointer-events-none">
+          <div class="bg-[#DFFE68]/20 border-r border-b border-dashed border-[#cfcfcf]"></div>
+          <div class="border-b border-dashed border-[#cfcfcf]"></div>
+          <div class="border-r border-dashed border-[#cfcfcf]"></div>
+          <div class="bg-[#3B82F6]/5"></div>
+        </div>
+        <div class="absolute top-3 left-3 text-[11px] font-bold text-[#1a1a1a] bg-[#DFFE68] border border-[#1a1a1a] rounded px-2 py-0.5">RECALL · GEO-rich, search-light</div>
+        <div class="absolute bottom-3 right-3 text-[11px] font-bold text-[#3B82F6] bg-white border border-[#3B82F6] rounded px-2 py-0.5">VOLUME · search-rich, GEO-light</div>
+      </div>
+      <div class="flex justify-between text-xs font-bold mt-2">
+        <span class="text-[#6b6b6b]">low</span>
+        <span class="text-[#6b6b6b]">HOLISTIC SHARE OF SEARCH ▶</span>
+        <span class="text-[#6b6b6b]">high</span>
+      </div>
+    </div>
+    <p class="mt-4 text-sm text-[#6b6b6b] max-w-3xl">Phreesia and Tebra own search but Tebra barely registers in AI recommendations. <strong class="text-[#1a1a1a]">TeleVox is the clearest "recall, not volume" brand in the category — AI names it as readily as Luma or Phreesia, while buyers search for it ~60× less than Phreesia.</strong> That gap is the whole report.</p>
+  </div>
+</section>
+
+<!-- 02 SHARE OF GEO LEADERBOARD -->
+<section class="border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">02 — SHARE OF GEO</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4">Who AI recommends — 16 category queries, 2 engines</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Share of brand mentions across 172 total mentions in 32 answers. The EHR incumbents (Epic, Oracle/Cerner) dominate because AI offers them as the default "patient portal" answer. <strong>Among the best-of-breed patient-engagement vendors, TeleVox is tied for the top spot</strong> — level with Luma Health, Phreesia and OhMD.</p>
+    <div id="geoChart" class="mt-8 space-y-3"></div>
+    <p class="mt-4 text-xs text-[#9a9a9a]">★ = TeleVox. <span class="font-bold">*</span> Epic, Oracle/Cerner and athenahealth are EHR-native portals (MyChart / HealtheLife) — included because AI surfaces them as options, but they compete differently than dedicated engagement vendors. Strip them out and TeleVox sits at the front of the specialist field.</p>
+  </div>
+</section>
+
+<!-- 03 ENGINE SPLIT -->
+<section id="engine" class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">03 — THE ENGINE SPLIT</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">TeleVox does slightly better on Perplexity — the opposite of the AI-native names</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">The two engines build answers differently. ChatGPT leans on parametric authority, where the buzzy AI-native challengers and the EHR incumbents crowd the top. Perplexity retrieves and cites live third-party listicles (televox.com, ohmd.com, callin.io, selecthub) — where TeleVox, an established 30-year brand, is well-represented. So TeleVox is named slightly <em>more</em> on Perplexity (5/16) than ChatGPT (4/16): its equity lives in the indexed record, not in the model's "hot new vendor" memory.</p>
+
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="flex items-center justify-between"><span class="font-bold">ChatGPT — TeleVox vs Luma</span><span class="px-3 py-1 bg-[#F59E0B]/10 border-2 border-[#F59E0B] rounded-full text-xs font-bold text-[#F59E0B]">BEHIND</span></div>
+        <div class="mt-5 space-y-3" id="cgSplit"></div>
+        <p class="mt-4 text-sm text-[#6b6b6b]">On ChatGPT's parametric answers, Luma (6/16) edges TeleVox (4/16) — the model reaches for the newer "AI access" names first.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="flex items-center justify-between"><span class="font-bold">Perplexity — TeleVox vs Luma</span><span class="px-3 py-1 bg-[#10B981]/10 border-2 border-[#10B981] rounded-full text-xs font-bold text-[#10B981]">AHEAD</span></div>
+        <div class="mt-5 space-y-3" id="ppSplit"></div>
+        <p class="mt-4 text-sm text-[#6b6b6b]">On Perplexity's retrieval answers, TeleVox (5/16) actually leads Luma (3/16) — the citation surface remembers the incumbent.</p>
+      </div>
+    </div>
+    <p class="mt-4 text-sm text-[#6b6b6b] max-w-3xl">The lever this exposes: TeleVox's AI presence is <strong>retrieval-driven</strong>. It rises and falls with the third-party listicles Perplexity cites — a surface you can influence with content, not a fixed brand-memory you can't.</p>
+  </div>
+</section>
+
+<!-- 04 JOURNEY CLUSTER HEATMAP -->
+<section id="heat" class="border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">04 — WHERE THE RECALL CONCENTRATES</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">TeleVox owns its heritage. It disappears at the modern jobs.</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Breaking the 16 prompts into buying-journey clusters shows the concentration plainly. TeleVox is present on <strong>voice + automated-outreach</strong> queries (4/6) — its 30-year core — and on general discovery (3/8). But ask a <em>specific modern</em> question — reduce no-shows, two-way texting, patient recall, deepest Epic/Cerner integration, dental — and TeleVox is named <strong>zero times out of 12</strong>, even though it does all of them. Each cell = how many prompts in that cluster named TeleVox.</p>
+    <div id="heatmap" class="mt-8 overflow-x-auto"></div>
+    <p class="mt-4 text-sm text-[#6b6b6b] max-w-3xl">The pattern: AI recommends TeleVox for what it <em>was</em> known for (automated reminder calls, outreach) and for the broad "who are the vendors" question — but not for the high-intent use-case and integration queries where deals are actually scoped. Its recall is anchored to the past, not the platform it sells today.</p>
+  </div>
+</section>
+
+<!-- 05 HOLISTIC SHARE OF SEARCH -->
+<section class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">05 — HOLISTIC SHARE OF SEARCH</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">Branded search: thin, and clean</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Unlike many brand tokens, "televox" is <em>not</em> ambiguous — the only collision is a 1927 Westinghouse robot, which registers no measurable modern search. So the holistic read is honest and low: <strong>~0.15%–0.5% Share of Search (#10 of 12)</strong>. Phreesia and Tebra together own two-thirds of category search. TeleVox's problem isn't a measurement artifact — it's genuinely small branded demand.</p>
+
+    <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <h3 class="font-bold mb-4">Holistic Share of Search</h3>
+        <div id="searchChart" class="space-y-3"></div>
+      </div>
+      <div class="bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <h3 class="font-bold">The WestCX rebrand has no search demand yet</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">TeleVox is repositioning as "powered by WestCX Orchestrate." Buyers aren't searching for it — monthly US volume:</p>
+        <div class="mt-4 space-y-2 text-sm">
+          <div class="flex justify-between border-b border-[#ddd] pb-1"><span><code>artera</code> <span class="text-[#9a9a9a]">(peer, for scale)</span></span><span class="font-bold">12,100</span></div>
+          <div class="flex justify-between border-b border-[#ddd] pb-1"><span><code>televox</code></span><span class="font-bold">1,000</span></div>
+          <div class="flex justify-between border-b border-[#ddd] pb-1"><span><code>westcx</code></span><span>110</span></div>
+          <div class="flex justify-between"><span><code>westcx orchestrate</code></span><span class="font-bold text-[#1a1a1a] bg-[#DFFE68] px-1">0</span></div>
+        </div>
+        <p class="mt-3 text-xs text-[#6b6b6b]">The models already understand the rebrand (Section 08) — but there is no demand pulling buyers toward the new name. Protect the "TeleVox" equity AI still anchors on while the new architecture earns its own recall.</p>
+      </div>
+    </div>
+    <div class="mt-6 flex flex-wrap items-center gap-4 text-sm">
+      <div class="px-4 py-2 bg-white border-2 border-[#1a1a1a] rounded-lg">Search: <strong>~0.5%</strong> · #10</div>
+      <span class="text-[#9a9a9a] font-bold">vs</span>
+      <div class="px-4 py-2 bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-lg shadow-[3px_3px_0px_0px_#1a1a1a]">AI recall: <strong>5.2%</strong> · tied top of specialists</div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 THE MISSING SURFACE + TRIANGULATION -->
+<section class="border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">06 — THE THIRD SURFACE</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">One read is missing — and it's a quick win</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">The cleanest possible read of real branded demand is first-party Google Search Console — the queries that actually land on televox.com. It's contamination-free and confirms the search picture from the inside. <strong>TeleVox's GSC isn't connected to the reporting stack yet</strong>, so this report triangulates the three surfaces we do have. Connecting GSC is the single highest-leverage measurement fix — it would let us see exactly which queries (branded vs category) are winning organic clicks.</p>
+
+    <!-- TRIANGULATION SYNTHESIS -->
+    <div class="mt-8 bg-[#1a1a1a] text-white border-2 border-[#1a1a1a] rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_#DFFE68]">
+      <h3 class="text-xl font-extrabold">Three surfaces, one conclusion</h3>
+      <p class="mt-2 text-gray-300 text-sm max-w-3xl">The analysis doesn't rest on AI alone. Three independent surfaces converge on the same finding:</p>
+      <div class="mt-5 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+        <div class="border-l-2 border-[#DFFE68] pl-3"><span class="font-bold text-[#DFFE68]">AI answer engines</span><br><span class="text-gray-300">Strong, top-of-specialist recall — but concentrated in TeleVox's voice/outreach heritage, absent at modern use-cases.</span></div>
+        <div class="border-l-2 border-[#DFFE68] pl-3"><span class="font-bold text-[#DFFE68]">Branded search volume</span><br><span class="text-gray-300">Thin and clean — ~0.5%, #10 of 12. Real demand, but small, and the WestCX name has none.</span></div>
+        <div class="border-l-2 border-[#DFFE68] pl-3"><span class="font-bold text-[#DFFE68]">Google Trends</span><br><span class="text-gray-300">Flat-to-declining off a tiny base while Luma Health's interest nearly tripled. Not capturing category momentum.</span></div>
+      </div>
+      <p class="mt-5 text-white font-bold">TeleVox keeps the recall a 30-year brand earns — but it's tied to the old job, invisible in search, and losing the momentum race. The growth surface is the AI use-case and integration queries it's already <em>almost</em> winning.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 07 GOOGLE TRENDS -->
+<section class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">07 — SEARCH INTEREST OVER TIME</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">Google Trends: Luma is the one gaining — TeleVox is fading</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Relative search interest over the last 12 months (US, normalized 0–100 to the set's peak). Phreesia still dominates the category but is sliding. The story underneath is momentum: <strong>Luma Health nearly tripled its search interest</strong> — the strongest mover in the set — while <strong>TeleVox's already-tiny line drifted lower</strong>. The brand isn't capturing the rising attention in the category; the AI-native challenger is.</p>
+
+    <div class="mt-8 bg-white border-2 border-[#1a1a1a] rounded-2xl p-5 md:p-8 shadow-[6px_6px_0px_0px_#1a1a1a]">
+      <div id="trendLegend" class="flex flex-wrap gap-4 mb-4 text-sm font-bold"></div>
+      <div id="trendChart"></div>
+      <div class="flex justify-between text-xs text-[#9a9a9a] mt-1 font-bold"><span>Jun 2025</span><span>Dec 2025</span><span>May 2026</span></div>
+    </div>
+
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#F59E0B]">
+        <div class="flex items-baseline gap-2"><span class="text-3xl font-extrabold text-[#F59E0B]">+16</span><span class="text-sm font-bold text-[#F59E0B]">↑ BREAKOUT</span></div>
+        <div class="text-sm text-[#4a4a4a] mt-1"><strong>Luma Health</strong> — interest nearly tripled (13.5 → 29.5 avg). The momentum threat, on both AI and search.</div>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#3B82F6]">
+        <div class="flex items-baseline gap-2"><span class="text-3xl font-extrabold text-[#3B82F6]">−11</span><span class="text-sm font-bold text-[#3B82F6]">↓ FADING LEAD</span></div>
+        <div class="text-sm text-[#4a4a4a] mt-1"><strong>Phreesia</strong> — still #1 by far, but trending down (91 → 80 avg).</div>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="flex items-baseline gap-2"><span class="text-3xl font-extrabold">−4</span><span class="text-sm font-bold text-[#6b6b6b]">↓ ALREADY TINY</span></div>
+        <div class="text-sm text-[#4a4a4a] mt-1"><strong>TeleVox</strong> — drifting lower off a near-zero base (4.8 → 1.0). Solutionreach −9, Relatient flat-tiny.</div>
+      </div>
+    </div>
+
+    <div class="mt-8 bg-[#f5f5f5] border-2 border-dashed border-[#9a9a9a] rounded-xl p-6">
+      <h3 class="font-bold text-sm">"televox" is a clean token — the issue is volume, not ambiguity</h3>
+      <p class="mt-2 text-sm text-[#4a4a4a] max-w-3xl">Many brand names need ambiguity correction (a sibling company sharing the token). TeleVox doesn't. Its modifiers ("televox patient", "televox healthcare") and the historical "televox robot" collision all register essentially zero interest — there's simply not enough search to disambiguate. For scale, a peer brand ("artera") is shown against it. The line is honest: TeleVox's branded demand is genuinely small.</p>
+      <div class="mt-4 space-y-2" id="disambigBars"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 BRAND-DEFENSIVE -->
+<section class="border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">08 — WHEN TELEVOX IS NAMED</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">The identity is clean. The problem is discovery, not reputation.</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">We asked both engines directly about TeleVox ("is TeleVox good?", "TeleVox vs Artera vs Luma", "what is WestCX Orchestrate?"). When prompted by name, the models describe it <strong>accurately and fairly</strong> — and, notably, they already understand the WestCX rebrand correctly. There's no identity confusion to fix; the entire gap is getting <em>surfaced</em> in unprompted category queries.</p>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-xs font-bold text-[#10B981] mb-2">STRONG</div>
+        <h3 class="font-bold">Reputation is accurate</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Both engines frame TeleVox as a "solid, mature" platform — "one of the largest patient engagement providers," strong in appointment reminders, recall, automated outreach and EHR-connected workflows. ChatGPT produced a fair TeleVox-vs-Artera-vs-Luma comparison table.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-xs font-bold text-[#3B82F6] mb-2">THE BRIGHT SPOT</div>
+        <h3 class="font-bold">The rebrand already reads correctly</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Both engines explain WestCX Orchestrate accurately — "an AI-native orchestration layer… TeleVox is the healthcare brand that uses it." No mangled identity (the failure mode we see in other rebrands). The models did the explaining for you; demand just hasn't followed.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-xs font-bold text-[#F59E0B] mb-2">THE HONEST KNOCKS</div>
+        <h3 class="font-bold">Consistent stated weaknesses</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Both engines cite the same drawbacks: implementation complexity, cost/contract rigidity, and "more focused on communication automation than broader patient experience." Real objections to pre-empt in content — not misperceptions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 WHAT TO DO -->
+<section class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">09 — WHAT TO DO</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4">Four moves off this data</h2>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold text-[#DFFE68] [-webkit-text-stroke:1px_#1a1a1a]">01</div>
+        <h3 class="text-lg font-bold mt-2">Extend recall from the heritage to the modern jobs</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">TeleVox is named for voice/outreach but is absent (0/12) on no-shows, two-way texting, recall, Epic/Cerner integration and dental — all things it does. Build use-case and integration proof content so AI surfaces TeleVox at the specific, high-intent moment, not just the legacy one.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold text-[#DFFE68] [-webkit-text-stroke:1px_#1a1a1a]">02</div>
+        <h3 class="text-lg font-bold mt-2">Own the listicle surface Perplexity retrieves</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">TeleVox's AI presence is retrieval-driven — it does better on Perplexity than ChatGPT. Get TeleVox into and up the third-party "best patient engagement software" listicles (and keep its own current), and the Perplexity number moves measurably.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold text-[#DFFE68] [-webkit-text-stroke:1px_#1a1a1a]">03</div>
+        <h3 class="text-lg font-bold mt-2">Sequence the WestCX transition — don't strand the equity</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">"WestCX Orchestrate" has zero search demand; AI still anchors on "TeleVox." The models already explain the relationship correctly — so lead with TeleVox as the recognised brand and introduce Orchestrate as its engine, rather than shifting to a name no one yet searches.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold text-[#DFFE68] [-webkit-text-stroke:1px_#1a1a1a]">04</div>
+        <h3 class="text-lg font-bold mt-2">Connect GSC + track Share of Model quarterly</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Wire televox.com's Search Console into reporting (the missing third surface), then re-run this Share of Model per engine, per query-cluster each quarter. For a brand with thin branded search, the AI recommendation layer is where TeleVox is found or skipped.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 METHODOLOGY -->
+<section id="method" class="border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">10 — METHODOLOGY</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4">Exactly what we did</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Three data pulls, run 2026-06-08, fully repeatable. Built to the Kantar "holistic" standard — full keyword/prompt spectrum, ambiguity correction, product→parent mapping — rather than a naive single-term read.</p>
+
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-xs font-bold text-[#6b6b6b]">SHARE OF GEO</div>
+        <h3 class="font-bold mt-1">20 prompts × 2 engines</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">16 category prompts (counted toward share) + 4 brand-defensive prompts, each run live on ChatGPT and Perplexity via BrightData LLM scrapers (<code class="text-xs bg-[#f5f5f5] px-1 border border-[#ddd] rounded">web_data_chatgpt_ai_insights</code>, <code class="text-xs bg-[#f5f5f5] px-1 border border-[#ddd] rounded">web_data_perplexity_ai_insights</code>). Grok skipped (scraper times out).</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-xs font-bold text-[#6b6b6b]">SCORING</div>
+        <h3 class="font-bold mt-1">Mention tally</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">A brand scores when named in an answer. A query's own subject (Solutionreach/Phreesia in "alternatives to…") is excluded from its tally. 172 mentions across 32 category answers; share = mentions ÷ total. Prompts grouped into 5 journey clusters for the heatmap. Brand-defensive answers read qualitatively (Section 08), not tallied.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-xs font-bold text-[#6b6b6b]">SHARE OF SEARCH + TRENDS</div>
+        <h3 class="font-bold mt-1">Holistic, via DataForSEO</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Branded Google volume (US, 12-mo avg) on a brand × 14-modifier long-tail matrix; "televox" modeled for the (negligible) Westinghouse-robot collision and reported as a floor→modeled range. Google Trends: 52 weekly points, US, normalized 0–100, for competitor-relative momentum.</p>
+      </div>
+    </div>
+
+    <div class="mt-6 bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a] max-w-4xl">
+      <div class="text-xs font-bold text-[#6b6b6b]">THE MISSING SURFACE</div>
+      <h3 class="font-bold mt-1">First-party organic (Google Search Console) — not yet connected</h3>
+      <p class="mt-2 text-sm text-[#4a4a4a]">The ideal third surface is televox.com's own GSC (contamination-free; only counts queries that landed on the domain). TeleVox's GSC isn't yet connected to the reporting stack, so this wave triangulates AI + search-volume + Trends. Connecting it (Rec 04) would replace estimated branded search with the exact query mix winning organic clicks — the single highest-value measurement upgrade for the next wave.</p>
+    </div>
+
+    <div class="mt-6 bg-white border-2 border-[#1a1a1a] rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_#1a1a1a]">
+      <h3 class="font-extrabold text-lg">The 16 category prompts (each run on ChatGPT + Perplexity)</h3>
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm" id="promptList"></div>
+      <h3 class="font-extrabold text-lg mt-6">+ 4 brand-defensive prompts (qualitative)</h3>
+      <ol class="mt-3 space-y-1 text-sm text-[#4a4a4a] list-disc pl-5">
+        <li>"Is TeleVox a good patient engagement platform? Strengths and weaknesses?"</li>
+        <li>"TeleVox vs Artera vs Luma Health — how do they compare?"</li>
+        <li>"What do reviews say about TeleVox for patient communication?"</li>
+        <li>"What is WestCX Orchestrate and how does it relate to TeleVox?"</li>
+      </ol>
+    </div>
+
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl">
+      <div>
+        <h3 class="font-bold">Caveats</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Two engines is a directional read, not a census — the engine asymmetry and the cluster concentration are the signal, not any single decimal. LLM answers vary run-to-run; the pattern (heritage-strong / use-case-absent, Perplexity-leaning, high-recall / low-search) is stable, the exact mid-pack ordering is not. EHR portals (Epic, Oracle/Cerner, athenahealth) are included in the tally but flagged — they compete differently. Single snapshot — re-run quarterly.</p>
+      </div>
+      <div>
+        <h3 class="font-bold">Why Share of Model matters for TeleVox</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">First-touch vendor discovery is moving from Google to AI answer engines. For a brand with strong legacy recall but thin branded search, the AI recommendation layer is precisely where TeleVox is found or skipped — and it's measurable today, per engine and per query-cluster. Underlying raw data (all 40 answers + search volumes + Trends series) is retained; this can be expanded into a slide deck.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t-2 border-[#1a1a1a] py-12 px-6 bg-[#1a1a1a]">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-6">
+    <div>
+      <div class="font-extrabold text-white text-lg">42<span class="text-gray-500">/</span>INTEL</div>
+      <p class="text-gray-400 text-sm mt-2 max-w-md">Internal analysis prepared for TeleVox. Share of Model measured from live AI-engine answers (ChatGPT, Perplexity), holistic branded search volume and Google Trends (DataForSEO), June 2026.</p>
+    </div>
+    <div class="text-sm text-right">
+      <div class="text-[#DFFE68] font-bold mb-2">CONFIDENTIAL</div>
+      <p class="text-gray-400 max-w-xs">Internal working document. Not for external distribution. Directional analysis; named vendors are not affiliated with or endorsing this report.</p>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto mt-8 pt-6 border-t border-gray-700 text-gray-500 text-xs">
+    Patient-engagement category · 20 prompts × ChatGPT + Perplexity · holistic DataForSEO search + Google Trends · 172 mentions / 32 category answers · Prepared by 42 Agency for TeleVox.
+  </div>
+</footer>
+
+<script>
+// ============ DATA ============
+const FOCAL = "TeleVox", RIVAL = "Luma Health";
+const geo = [
+  {b:"Epic*",         v:11.6, hl:false},
+  {b:"Oracle/Cerner*",v:8.7,  hl:false},
+  {b:"Luma Health",   v:5.2,  hl:false},
+  {b:"Phreesia",      v:5.2,  hl:false},
+  {b:"OhMD",          v:5.2,  hl:false},
+  {b:"TeleVox",       v:5.2,  hl:true},
+  {b:"Relatient",     v:4.6,  hl:false},
+  {b:"Artera",        v:4.6,  hl:false},
+  {b:"athenahealth*", v:4.6,  hl:false},
+  {b:"Weave",         v:4.0,  hl:false},
+];
+const search = [
+  {b:"Phreesia",      v:32.6, hl:false},
+  {b:"Tebra",         v:32.2, hl:false},
+  {b:"Solutionreach", v:14.5, hl:false},
+  {b:"NexHealth",     v:8.1,  hl:false},
+  {b:"Artera",        v:5.6,  hl:false},
+  {b:"Luma Health",   v:2.9,  hl:false},
+  {b:"Relatient",     v:1.3,  hl:false},
+  {b:"Weave",         v:1.1,  hl:false},
+  {b:"CipherHealth",  v:0.7,  hl:false},
+  {b:"TeleVox",       v:0.5,  hl:true},
+];
+// engine split — TeleVox vs Luma counts out of 16
+const cgSplit = [{b:"TeleVox", v:4, hl:true},{b:"Luma Health", v:6, hl:false}];
+const ppSplit = [{b:"TeleVox", v:5, hl:true},{b:"Luma Health", v:3, hl:false}];
+// quadrant — x = holistic search %, y = Share of GEO %, m = total mentions
+const quad = [
+  {b:"TeleVox",      x:0.5,  y:5.2, m:9, hl:true, jy:0,    ld:'r'},
+  {b:"Luma Health",  x:2.9,  y:5.2, m:9, jy:0.55, ld:'t'},
+  {b:"OhMD",         x:0.1,  y:5.2, m:9, jy:-0.7, ld:'r'},
+  {b:"Phreesia",     x:32.6, y:5.2, m:9, jy:0,    ld:'l'},
+  {b:"Artera",       x:5.6,  y:4.6, m:8, jy:0,    ld:'r'},
+  {b:"Relatient",    x:1.3,  y:4.6, m:8, jy:-0.4, ld:'b'},
+  {b:"Weave",        x:1.1,  y:4.0, m:7, jy:0,    ld:'b'},
+  {b:"NexHealth",    x:8.1,  y:3.5, m:6, jy:0,    ld:'r'},
+  {b:"Solutionreach",x:14.5, y:2.3, m:4, jy:0,    ld:'t'},
+  {b:"Tebra",        x:32.2, y:0.6, m:1, jy:0,    ld:'l'},
+];
+const maxGeo = 7, maxGeoBar = 12, maxSearch = 35;
+// heatmap: TeleVox presence by cluster
+const clusters = [
+  {c:"Discovery / shortlist", cg:1, cgn:4, pp:2, ppn:4},
+  {c:"Voice + automated outreach", cg:2, cgn:3, pp:2, ppn:3},
+  {c:"Conversational AI / call deflection", cg:1, cgn:3, pp:1, ppn:3},
+  {c:"Use-case (no-shows, 2-way text, recall)", cg:0, cgn:3, pp:0, ppn:3},
+  {c:"Integration / segment (Epic, dental, switching)", cg:0, cgn:3, pp:0, ppn:3},
+];
+const PROMPTS = [
+ "Best patient engagement / communication software for health systems 2026",
+ "Shortlist for a large multi-specialty medical group",
+ "What large hospitals / IDNs use for reminders & outreach",
+ "Enterprise platforms handling voice + SMS + email outreach",
+ "Best for automated appointment reminder calls & outreach",
+ "Automated voice + text patient outreach at scale",
+ "Leading IVR / automated voice patient communication",
+ "Conversational AI / voice agent to answer patient calls",
+ "Deflect inbound patient calls with AI — which platforms",
+ "Best AI-native platforms orchestrating voice + digital",
+ "Reduce patient no-shows with reminders & self-reschedule",
+ "Best for two-way texting between patients and care teams",
+ "Patient recall & care-gap outreach campaigns",
+ "Deepest Epic / Oracle Health (Cerner) integration",
+ "Best reminder software for dental practices & DSOs",
+ "Good alternatives to Solutionreach and Phreesia",
+];
+
+// google trends — 52 weekly points, 0-100 normalized to set peak
+const trend = {
+  series: {
+    "TeleVox":       [0, 0, 0, 0, 5, 5, 0, 4, 0, 0, 5, 5, 0, 0, 7, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 0, 0, 0, 0, 0, 5, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1],
+    "Luma Health":   [10, 11, 10, 14, 15, 16, 21, 16, 14, 9, 16, 13, 10, 13, 9, 15, 13, 12, 13, 8, 13, 15, 17, 16, 14, 17, 15, 20, 15, 16, 27, 21, 19, 30, 28, 18, 26, 46, 33, 29, 34, 35, 32, 33, 36, 32, 30, 29, 33, 36, 11, 13],
+    "Phreesia":      [98, 90, 98, 75, 100, 95, 100, 91, 94, 86, 87, 91, 80, 92, 96, 96, 83, 85, 75, 85, 79, 81, 79, 84, 50, 76, 87, 78, 56, 57, 78, 66, 61, 78, 79, 74, 79, 80, 85, 83, 74, 99, 76, 84, 86, 88, 77, 79, 88, 76, 61, 72],
+    "Solutionreach": [34, 35, 35, 26, 36, 37, 34, 33, 37, 28, 39, 38, 26, 34, 30, 35, 31, 27, 23, 28, 29, 32, 29, 27, 23, 29, 21, 30, 14, 23, 26, 24, 32, 34, 29, 26, 25, 39, 22, 30, 22, 26, 23, 25, 30, 30, 23, 26, 29, 19, 18, 21],
+    "Relatient":     [0, 5, 0, 6, 0, 5, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 4, 5, 0, 0, 0, 4, 0, 6, 0, 0, 0, 13, 0, 0, 7, 0, 0, 0, 0, 0, 6, 0, 7, 0, 2, 2],
+  },
+  colors: {"TeleVox":"#1a1a1a","Luma Health":"#F59E0B","Phreesia":"#3B82F6","Solutionreach":"#10B981","Relatient":"#9a9a9a"},
+  widths: {"TeleVox":3,"Luma Health":3,"Phreesia":2,"Solutionreach":2,"Relatient":2},
+};
+// "televox is clean" — normalized Trends interest (0-100 within its set; peak = artera)
+const disambig = [
+  {b:'"artera" (peer, scale)', v:70.9, hl:false, note:'a peer brand, for scale'},
+  {b:'"televox" (raw)', v:11.8, hl:true, note:'clean token — but low'},
+  {b:'"televox patient"', v:0, hl:false, note:'too little volume to register'},
+  {b:'"televox healthcare"', v:0, hl:false, note:'too little volume to register'},
+  {b:'"televox robot" (1927)', v:0, hl:false, note:'historical collision: none'},
+];
+const disambigMax = 72;
+
+// ============ RENDER ============
+function barRow(d, max, color, unit){
+  const w = (d.v/max*100).toFixed(1);
+  const lbl = unit==='n' ? d.v+'/16' : d.v+'%';
+  return `<div class="flex items-center gap-3">
+    <div class="w-28 md:w-40 text-sm font-bold ${d.hl?'text-[#1a1a1a]':'text-[#4a4a4a]'} text-right shrink-0">${d.b}${d.hl?' ★':''}</div>
+    <div class="flex-1 h-8 bg-white border-2 border-[#1a1a1a] rounded-lg overflow-hidden ${d.hl?'shadow-[3px_3px_0px_0px_#1a1a1a]':''}">
+      <div class="bar h-full ${d.hl?'bg-[#DFFE68]':color} flex items-center justify-end pr-2" style="width:0%" data-w="${w}%">
+        <span class="text-xs font-bold text-[#1a1a1a]/80">${lbl}</span>
+      </div>
+    </div></div>`;
+}
+document.getElementById('geoChart').innerHTML = geo.map(d=>barRow(d,maxGeoBar,'bg-[#1a1a1a]/15','pct')).join('');
+document.getElementById('searchChart').innerHTML = search.map(d=>barRow(d,maxSearch,'bg-[#3B82F6]/25','pct')).join('');
+document.getElementById('cgSplit').innerHTML = cgSplit.map(d=>barRow(d,16,'bg-[#F59E0B]/30','n')).join('');
+document.getElementById('ppSplit').innerHTML = ppSplit.map(d=>barRow(d,16,'bg-[#10B981]/30','n')).join('');
+document.getElementById('promptList').innerHTML = PROMPTS.map((p,i)=>
+  `<div class="flex gap-2"><span class="shrink-0 w-6 h-6 flex items-center justify-center bg-[#DFFE68] border border-[#1a1a1a] rounded font-bold text-[11px]">${i+1}</span><span class="text-[#1a1a1a]">${p}</span></div>`).join('');
+
+// google trends line chart
+(function(){
+  const W=760,H=280,pl=8,pr=8,pt=18,pb=22, iw=W-pl-pr, ih=H-pt-pb;
+  const names=Object.keys(trend.series), n=trend.series[FOCAL].length;
+  const X=i=> pl + i/(n-1)*iw;
+  const Y=v=> pt + (100-v)/100*ih;
+  let g='';
+  [0,25,50,75,100].forEach(gy=>{ const y=Y(gy);
+    g+=`<line x1="${pl}" y1="${y}" x2="${W-pr}" y2="${y}" stroke="#e5e5e5" stroke-width="1"/>`;
+    g+=`<text x="${pl}" y="${y-3}" font-size="9" fill="#9a9a9a">${gy}</text>`; });
+  let lines='';
+  names.forEach(nm=>{
+    const pts=trend.series[nm].map((v,i)=>`${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(' ');
+    lines+=`<polyline points="${pts}" fill="none" stroke="${trend.colors[nm]}" stroke-width="${trend.widths[nm]}" stroke-linejoin="round" stroke-linecap="round" opacity="${nm===FOCAL||nm===RIVAL?1:0.6}"/>`;
+  });
+  document.getElementById('trendChart').innerHTML =
+    `<svg viewBox="0 0 ${W} ${H}" class="w-full" style="height:auto">${g}${lines}</svg>`;
+  document.getElementById('trendLegend').innerHTML = names.map(nm=>
+    `<span class="flex items-center gap-2"><span style="width:18px;height:3px;background:${trend.colors[nm]};display:inline-block;border-radius:2px"></span><span style="color:${nm===FOCAL?'#1a1a1a':(nm===RIVAL?'#F59E0B':'#6b6b6b')}">${nm}${nm===RIVAL?' ↑':(nm===FOCAL?' ↓':'')}</span></span>`).join('');
+})();
+// disambiguation bars
+document.getElementById('disambigBars').innerHTML = disambig.map(d=>{
+  const w=(d.v/disambigMax*100).toFixed(0);
+  const col = d.hl?'bg-[#DFFE68]':'bg-[#1a1a1a]/15';
+  return `<div class="flex items-center gap-3">
+    <div class="w-44 text-xs font-bold text-right shrink-0 ${d.hl?'text-[#1a1a1a]':'text-[#4a4a4a]'}">${d.b}</div>
+    <div class="flex-1 h-6 bg-white border-2 border-[#1a1a1a] rounded-md overflow-hidden">
+      <div class="bar h-full ${col} flex items-center justify-end pr-2" style="width:0%" data-w="${w}%"><span class="text-[10px] font-bold text-[#1a1a1a]/80">${d.v}</span></div>
+    </div>
+    <div class="w-40 text-[11px] text-[#9a9a9a] shrink-0 hidden md:block">${d.note}</div>
+  </div>`;
+}).join('');
+
+// heatmap
+function cell(hit, n){
+  const r = n? hit/n : 0;
+  let bg = 'bg-white', tx='text-[#9a9a9a]';
+  if(r>=1){bg='bg-[#DFFE68]'; tx='text-[#1a1a1a]';}
+  else if(r>=0.5){bg='bg-[#DFFE68]/45'; tx='text-[#1a1a1a]';}
+  else if(r>0){bg='bg-[#DFFE68]/15'; tx='text-[#4a4a4a]';}
+  return `<td class="border-2 border-[#1a1a1a] text-center font-bold ${bg} ${tx} p-3">${hit}/${n}</td>`;
+}
+document.getElementById('heatmap').innerHTML = `
+<table class="w-full border-collapse text-sm min-w-[520px]">
+  <thead><tr>
+    <th class="text-left p-3 font-bold">Buying-journey cluster</th>
+    <th class="border-2 border-[#1a1a1a] p-3 bg-[#1a1a1a] text-white">ChatGPT</th>
+    <th class="border-2 border-[#1a1a1a] p-3 bg-[#1a1a1a] text-white">Perplexity</th>
+  </tr></thead>
+  <tbody>${clusters.map(c=>`<tr><td class="p-3 font-medium border-b border-[#eee]">${c.c}</td>${cell(c.cg,c.cgn)}${cell(c.pp,c.ppn)}</tr>`).join('')}</tbody>
+</table>`;
+
+// quadrant
+const plot = document.getElementById('plot');
+function place(){
+  const w = plot.clientWidth, h = plot.clientHeight, pad = 48;
+  quad.forEach((d, i)=>{
+    const size = 13 + d.m*1.6;
+    const yv = d.y + (d.jy||0);
+    const cx = pad + (d.x/maxSearch)*(w-2*pad);
+    const cy = (h-pad) - (yv/maxGeo)*(h-2*pad);
+    const left = cx - size/2, top = cy - size/2;
+    const el = document.createElement('div');
+    el.className = 'qnode absolute flex items-center justify-center rounded-full border-2 border-[#1a1a1a] '+(d.hl?'bg-[#DFFE68] z-30 shadow-[3px_3px_0px_0px_#1a1a1a]':'bg-white z-10');
+    el.style.width=size+'px'; el.style.height=size+'px';
+    el.style.transition='all .9s cubic-bezier(.2,.8,.2,1)';
+    el.style.left='50%'; el.style.top='50%'; el.style.opacity=0;
+    setTimeout(()=>{ el.style.left=left+'px'; el.style.top=top+'px'; el.style.opacity=1; }, 120+i*55);
+    const lab = document.createElement('span');
+    const aw = d.b.length*6.2;
+    lab.className='qnode absolute whitespace-nowrap text-[11px] font-bold z-40 '+(d.hl?'text-[#1a1a1a] bg-[#DFFE68] px-1 rounded':'text-[#4a4a4a]');
+    let lx,ly;
+    if(d.ld==='l'){ lx=left-aw-6; ly=cy-8; }
+    else if(d.ld==='t'){ lx=cx-aw/2; ly=top-16; }
+    else if(d.ld==='b'){ lx=cx-aw/2; ly=top+size+4; }
+    else { lx=left+size+5; ly=cy-8; }
+    lab.style.left=lx+'px'; lab.style.top=ly+'px'; lab.style.opacity=0; lab.textContent=d.b;
+    setTimeout(()=>{ lab.style.transition='opacity .6s ease'; lab.style.opacity=1; }, 420+i*55);
+    plot.appendChild(el); plot.appendChild(lab);
+  });
+}
+
+const io = new IntersectionObserver((es)=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.querySelectorAll('.bar').forEach(b=> b.style.width=b.dataset.w); e.target.classList.add('in'); }});
+},{threshold:.15});
+document.querySelectorAll('section').forEach(s=>io.observe(s));
+window.addEventListener('load', ()=> setTimeout(place,200));
+window.addEventListener('resize', ()=>{ plot.querySelectorAll('.qnode').forEach(n=>n.remove()); place(); });
+</script>
+</body>
+</html>
