@@ -213,13 +213,16 @@ const trend = [
   {b:'"AI data governance" (category)',v:50.5,cat:true},{b:"Ethyca",v:1.0,hl:true},
 ];
 function barRow(d,max,color,unit){
-  const w=Math.max(d.v/max*100,d.v>0?1.5:0).toFixed(1);
+  const wNum=Math.max(d.v/max*100,d.v>0?1.5:0);
+  const w=wNum.toFixed(1);
   const lbl = unit==='raw'? d.v.toLocaleString() : d.v;
   const fill = d.hl?'bg-[#DFFE68]':(d.cat?'bg-[#10B981]/40':color);
+  const inside = wNum >= 15;   // narrow bars can't fit the label — show it just outside the fill
   return `<div class="flex items-center gap-3">
     <div class="w-40 text-xs font-bold ${d.hl?'text-[#1a1a1a]':(d.cat?'text-[#10B981]':'text-[#4a4a4a]')} text-right shrink-0">${d.b}${d.hl?' ★':''}</div>
-    <div class="flex-1 h-6 bg-white border-2 border-[#1a1a1a] rounded-md overflow-hidden ${d.hl?'shadow-[2px_2px_0px_0px_#1a1a1a]':''}">
-      <div class="bar h-full ${fill} flex items-center justify-end pr-2" style="width:0%" data-w="${w}%"><span class="text-[10px] font-bold text-[#1a1a1a]/80">${lbl}</span></div>
+    <div class="flex-1 h-6 bg-white border-2 border-[#1a1a1a] rounded-md overflow-hidden flex items-center ${d.hl?'shadow-[2px_2px_0px_0px_#1a1a1a]':''}">
+      <div class="bar h-full ${fill} flex items-center justify-end pr-2 shrink-0" style="width:0%" data-w="${w}%">${inside?`<span class="text-[10px] font-bold text-[#1a1a1a]/80">${lbl}</span>`:''}</div>
+      ${inside?'':`<span class="text-[10px] font-bold text-[#4a4a4a] pl-2 shrink-0">${lbl}</span>`}
     </div></div>`;
 }
 document.getElementById('geoA').innerHTML = geoA.map(d=>barRow(d,11,'bg-[#3B82F6]/25')).join('');

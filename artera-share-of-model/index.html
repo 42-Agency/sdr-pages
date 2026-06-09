@@ -515,12 +515,14 @@ const disambig = [
 function barRow(d, max, color, unit){
   const w = (d.v/max*100).toFixed(1);
   const lbl = unit==='n' ? d.v+'/16' : d.v+'%';
+  const inside = parseFloat(w) >= 15;   // narrow bars can't fit the label — show it just outside the fill
   return `<div class="flex items-center gap-3">
     <div class="w-28 md:w-36 text-sm font-bold ${d.hl?'text-[#1a1a1a]':'text-[#4a4a4a]'} text-right shrink-0">${d.b}${d.hl?' ★':''}</div>
-    <div class="flex-1 h-8 bg-white border-2 border-[#1a1a1a] rounded-lg overflow-hidden ${d.hl?'shadow-[3px_3px_0px_0px_#1a1a1a]':''}">
-      <div class="bar h-full ${d.hl?'bg-[#DFFE68]':color} flex items-center justify-end pr-2" style="width:0%" data-w="${w}%">
-        <span class="text-xs font-bold text-[#1a1a1a]/80">${lbl}</span>
+    <div class="flex-1 h-8 bg-white border-2 border-[#1a1a1a] rounded-lg overflow-hidden flex items-center ${d.hl?'shadow-[3px_3px_0px_0px_#1a1a1a]':''}">
+      <div class="bar h-full ${d.hl?'bg-[#DFFE68]':color} flex items-center justify-end pr-2 shrink-0" style="width:0%" data-w="${w}%">
+        ${inside?`<span class="text-xs font-bold text-[#1a1a1a]/80">${lbl}</span>`:''}
       </div>
+      ${inside?'':`<span class="text-xs font-bold text-[#4a4a4a] pl-2 shrink-0">${lbl}</span>`}
     </div></div>`;
 }
 document.getElementById('geoChart').innerHTML = geo.map(d=>barRow(d,maxGeo,'bg-[#1a1a1a]/15','pct')).join('');
@@ -554,10 +556,12 @@ document.getElementById('promptList').innerHTML = PROMPTS.map((p,i)=>
 document.getElementById('disambigBars').innerHTML = disambig.map(d=>{
   const w=(d.v/56*100).toFixed(0);
   const col = d.hl?'bg-[#F59E0B]':(d.b.includes('comms')?'bg-[#DFFE68]':'bg-[#1a1a1a]/15');
+  const inside = parseFloat(w) >= 15;
   return `<div class="flex items-center gap-3">
     <div class="w-44 text-xs font-bold text-right shrink-0 ${d.hl?'text-[#F59E0B]':'text-[#4a4a4a]'}">${d.b}</div>
-    <div class="flex-1 h-6 bg-white border-2 border-[#1a1a1a] rounded-md overflow-hidden">
-      <div class="bar h-full ${col} flex items-center justify-end pr-2" style="width:0%" data-w="${w}%"><span class="text-[10px] font-bold text-[#1a1a1a]/80">${d.v}</span></div>
+    <div class="flex-1 h-6 bg-white border-2 border-[#1a1a1a] rounded-md overflow-hidden flex items-center">
+      <div class="bar h-full ${col} flex items-center justify-end pr-2 shrink-0" style="width:0%" data-w="${w}%">${inside?`<span class="text-[10px] font-bold text-[#1a1a1a]/80">${d.v}</span>`:''}</div>
+      ${inside?'':`<span class="text-[10px] font-bold text-[#4a4a4a] pl-2 shrink-0">${d.v}</span>`}
     </div>
     <div class="w-40 text-[11px] text-[#9a9a9a] shrink-0 hidden md:block">${d.note}</div>
   </div>`;
