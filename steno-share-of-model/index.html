@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share of Model — Steno & the Court Reporting Category | 42 Intel</title>
+<meta name="description" content="Share of GEO/AEO vs holistic Share of Search analysis for Steno and the court reporting / deposition category. 20 prompts, 2 AI engines, holistic search, Google Trends, first-party Search Console. Confidential — prepared for Steno by 42 Agency.">
+<meta name="robots" content="noindex, nofollow">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MM5BTNS');</script>
+<!-- End Google Tag Manager -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
+  .bar { transition: width 1.1s cubic-bezier(.2,.8,.2,1); }
+  .reveal { opacity:0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity:1; transform:none; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+</style>
+</head>
+<body class="bg-white text-[#1a1a1a]">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM5BTNS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- HEADER -->
+<header class="border-b-2 border-[#1a1a1a] bg-white sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <span class="font-extrabold tracking-tight text-lg">42<span class="text-[#6b6b6b]">/</span>INTEL</span>
+      <span class="hidden sm:inline px-3 py-1 bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">SHARE OF MODEL · GEO / AEO</span>
+    </div>
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">CONFIDENTIAL · PREPARED FOR STENO · JUL 2026</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="bg-[#f5f5f5] border-b-2 border-[#1a1a1a]">
+  <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+    <div class="flex flex-wrap gap-2 mb-5">
+      <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">COURT REPORTING &amp; DEPOSITIONS</span>
+      <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">4 SURFACES · AI · SEARCH · TRENDS · SEARCH CONSOLE</span>
+      <span class="px-3 py-1 bg-[#F59E0B]/10 border-2 border-[#F59E0B] rounded-full text-xs font-bold text-[#F59E0B]">POSITIONING MISMATCH</span>
+    </div>
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05] max-w-4xl">
+      AI knows Steno as <span class="bg-[#DFFE68] px-1">the alternative</span>. Never as the answer.
+    </h1>
+    <p class="mt-6 text-lg md:text-xl text-[#4a4a4a] max-w-3xl">
+      We looked at four independent places a litigator actually finds a court reporting vendor: AI assistants (ChatGPT and Perplexity), how often people Google each brand, search interest over the past year, and Steno's own Search Console data. Steno places <strong>4th of 18 vendors</strong> in AI recommendations — genuinely strong. But <em>where</em> it gets named is the problem. Ask the AI who has the best deposition technology, and Steno is named <strong>zero times out of six</strong>. That is the exact claim Steno's own homepage makes.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#heat" class="bg-[#1a1a1a] text-white font-bold rounded-lg px-5 py-3 hover:bg-[#333] transition-colors">See where Steno gets named</a>
+      <a href="#method" class="bg-white text-[#1a1a1a] font-medium rounded-lg border-2 border-[#1a1a1a] shadow-[4px_4px_0px_0px_#1a1a1a] hover:bg-[#f5f5f5] transition-colors px-5 py-3">Methodology (20 prompts)</a>
+    </div>
+  </div>
+</section>
+
+<!-- STAT STRIP -->
+<section class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+      <div class="text-3xl md:text-4xl font-extrabold">8.8%</div>
+      <div class="text-sm text-[#1a1a1a] font-bold mt-1">Share of AI recommendations — 4th of 18 vendors, behind Lexitas, Veritext, Esquire</div>
+    </div>
+    <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+      <div class="text-3xl md:text-4xl font-extrabold text-[#F59E0B]">0 / 6</div>
+      <div class="text-sm text-[#6b6b6b] font-medium mt-1">deposition-<strong>technology</strong> questions name Steno — its own headline claim</div>
+    </div>
+    <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+      <div class="text-3xl md:text-4xl font-extrabold">0 / 8</div>
+      <div class="text-sm text-[#6b6b6b] font-medium mt-1">"who should I hire?" shortlist questions name Steno</div>
+    </div>
+    <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+      <div class="text-3xl md:text-4xl font-extrabold text-[#10B981]">5 / 6</div>
+      <div class="text-sm text-[#6b6b6b] font-medium mt-1">"what's an alternative to Veritext?" questions <em>do</em> name Steno</div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM LINE -->
+<section class="border-b-2 border-[#1a1a1a] bg-[#DFFE68]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#1a1a1a] text-white rounded-full text-xs font-bold">THE BOTTOM LINE — IN PLAIN ENGLISH</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">Steno sells technology. The market has filed it under "the one that lets you pay later."</h2>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="font-bold">1. The AI recall is real, and it's top-four.</div>
+        <p class="mt-1 text-sm text-[#4a4a4a]">Across 32 answers, Steno was named 9 times — 4th of 18 vendors, ahead of U.S. Legal Support, Planet Depos and Magna. For a company far smaller than the incumbents, that's a genuine asset. This is not a visibility problem.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="font-bold">2. But Steno is never on the default shortlist.</div>
+        <p class="mt-1 text-sm text-[#4a4a4a]">Ask "who are the best court reporting agencies?" or "who do large firms use?" — the four ways a buyer opens the search — and Steno is named <strong>zero times out of eight</strong>. Lexitas, Veritext and Esquire take those slots every time.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="font-bold">3. It gets named for money, not for technology.</div>
+        <p class="mt-1 text-sm text-[#4a4a4a]">Steno appears on the deferred-payment questions (DelayPay) and on the "who's an alternative to Veritext?" questions. It does <strong>not</strong> appear on any of the six questions about remote-deposition technology, exhibit sharing or realtime transcript — which is what steno.com leads with.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="font-bold">4. Nobody finds Steno by searching the category.</div>
+        <p class="mt-1 text-sm text-[#4a4a4a]">Steno's own Search Console shows every one of its top 15 organic queries is someone typing the brand name. Not a single category term — "court reporting agency", "deposition services" — earns a click. Organic is growing fast (+283% year on year), but it's all people who already knew the name.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="font-bold">5. The name itself is working against the brand.</div>
+        <p class="mt-1 text-sm text-[#4a4a4a]">"Steno" is a common word — steno pad, steno machine, stenography. Most people typing it are not looking for the company. That makes branded search a weak signal for Steno specifically, and it's why we lean on Search Console, which only counts people who actually reached steno.com.</p>
+      </div>
+      <div class="bg-[#1a1a1a] text-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="font-bold text-[#DFFE68]">So what do we do?</div>
+        <p class="mt-1 text-sm text-gray-200">Two moves. (1) <strong>Bank the win:</strong> the challenger slot is real and defensible — lean into "the alternative to Veritext" and DelayPay, which is the one thing the models already give Steno for free. (2) <strong>Close the gap:</strong> Steno's technology claim exists on its website and nowhere else the models can see it. Publish the proof — realtime transcript, exhibit sharing, Transcript Genius — where AI actually reads it, or keep losing the technology question to vendors with worse technology.</p>
+      </div>
+    </div>
+    <p class="mt-6 text-sm text-[#1a1a1a]/70 max-w-3xl">The rest of this report shows the evidence behind each point, across four independent surfaces: AI answers, Google search demand, search interest over time, and Steno's own Search Console.</p>
+  </div>
+</section>
+
+<!-- 01 QUADRANT -->
+<section id="quad" class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">01 — TWO METRICS</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">Share of Model vs Share of Search</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Two measures. <strong>Up the chart</strong> = how often AI assistants recommend the vendor. <strong>Right on the chart</strong> = how often people Google its name. Each dot is a vendor; the bubble is its total mentions. Most brands sit on a diagonal — the better known you are, the more of both you get. <strong>Steno sits above the line:</strong> AI recommends it more than its search demand would predict. Meanwhile First Legal and TransPerfect sit at the bottom right — people search for them, but AI never brings them up.</p>
+
+    <div class="mt-8 bg-white border-2 border-[#1a1a1a] rounded-2xl p-5 md:p-8 shadow-[6px_6px_0px_0px_#1a1a1a]">
+      <div class="flex justify-between text-xs font-bold mb-2">
+        <span class="text-[#6b6b6b]">▲ MORE OFTEN RECOMMENDED BY AI</span>
+        <span class="text-[#6b6b6b]">bubble = total mentions</span>
+      </div>
+      <div id="plot" class="relative border-2 border-[#1a1a1a] rounded-xl bg-[#fafafa]" style="height:460px;">
+        <div class="absolute inset-0 grid grid-cols-2 grid-rows-2 pointer-events-none">
+          <div class="bg-[#DFFE68]/20 border-r border-b border-dashed border-[#cfcfcf]"></div>
+          <div class="border-b border-dashed border-[#cfcfcf]"></div>
+          <div class="border-r border-dashed border-[#cfcfcf]"></div>
+          <div class="bg-[#3B82F6]/5"></div>
+        </div>
+        <div class="absolute top-3 left-3 text-[11px] font-bold text-[#1a1a1a] bg-[#DFFE68] border border-[#1a1a1a] rounded px-2 py-0.5">RECOMMENDED more than searched</div>
+        <div class="absolute bottom-3 right-3 text-[11px] font-bold text-[#3B82F6] bg-white border border-[#3B82F6] rounded px-2 py-0.5">SEARCHED more than recommended</div>
+      </div>
+      <div class="flex justify-between text-xs font-bold mt-2">
+        <span class="text-[#6b6b6b]">low</span>
+        <span class="text-[#6b6b6b]">HOW OFTEN PEOPLE GOOGLE THE BRAND ▶</span>
+        <span class="text-[#6b6b6b]">high</span>
+      </div>
+    </div>
+    <p class="mt-4 text-sm text-[#6b6b6b] max-w-3xl">Read Steno's position carefully. It is <strong class="text-[#1a1a1a]">punching above its search demand in AI answers</strong> — the models rate it higher than the market's awareness of it would suggest. That is a good problem: recall is the hard part, and Steno has it. The gap is that the recall is pointed at the wrong thing (Section 04).</p>
+  </div>
+</section>
+
+<!-- 02 SHARE OF GEO -->
+<section class="border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">02 — SHARE OF GEO</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4">Who the AI recommends — 16 category questions, 2 engines</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Share of all brand mentions across 102 mentions in 32 answers. The three national incumbents — Lexitas, Veritext, Esquire — take the top of the board, as you'd expect from their size and their coverage in "best court reporting agency" articles. <strong>Steno is 4th</strong>, ahead of U.S. Legal Support, Planet Depos and Magna, all of which are considerably larger businesses. Steno's problem is not how <em>often</em> it is named.</p>
+    <div id="geoChart" class="mt-8 space-y-3"></div>
+    <p class="mt-4 text-xs text-[#9a9a9a]">★ = Steno. Percentages are share of all 102 vendor mentions. Also named but below the cut: Network Deposition Services, VoiceScript, Optima Juris, Verbit, National Court Reporters Inc, Rev, LexisNexis, Everlaw, Relativity, Westlaw. <strong>Parrot, First Legal and TransPerfect were named zero times</strong> across all 32 answers.</p>
+  </div>
+</section>
+
+<!-- 03 ENGINE SPLIT -->
+<section id="engine" class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">03 — THE ENGINE SPLIT</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">Both engines agree on Steno — which makes the finding solid</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">The two assistants work differently. <strong>ChatGPT answers largely from memory.</strong> <strong>Perplexity reads live web pages</strong> — review sites, "best of" lists — before answering. When a brand scores well on one and badly on the other, its presence is fragile. Steno scores <strong>almost the same on both</strong> (5 of 16 on ChatGPT, 4 of 16 on Perplexity), which means its standing is genuine rather than an artifact of one engine's sources.</p>
+
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="flex items-center justify-between"><span class="font-bold">ChatGPT — Steno vs Lexitas</span><span class="px-3 py-1 bg-[#F59E0B]/10 border-2 border-[#F59E0B] rounded-full text-xs font-bold text-[#F59E0B]">BEHIND</span></div>
+        <div class="mt-5 space-y-3" id="cgSplit"></div>
+        <p class="mt-4 text-sm text-[#6b6b6b]">Steno named in 5 of 16 category answers; Lexitas in 7.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="flex items-center justify-between"><span class="font-bold">Perplexity — Steno vs Lexitas</span><span class="px-3 py-1 bg-[#F59E0B]/10 border-2 border-[#F59E0B] rounded-full text-xs font-bold text-[#F59E0B]">BEHIND</span></div>
+        <div class="mt-5 space-y-3" id="ppSplit"></div>
+        <p class="mt-4 text-sm text-[#6b6b6b]">Steno named in 4 of 16; Lexitas in 7. Consistent — no engine is carrying Steno.</p>
+      </div>
+    </div>
+    <div class="mt-6 bg-[#f5f5f5] border-2 border-dashed border-[#9a9a9a] rounded-xl p-6">
+      <h3 class="font-bold text-sm">The contrast worth noting: Planet Depos and Magna are ChatGPT-only</h3>
+      <p class="mt-2 text-sm text-[#4a4a4a] max-w-3xl">Planet Depos is named 7 times by ChatGPT and <strong>zero times</strong> by Perplexity. Magna: 4 and zero. Both live entirely in ChatGPT's memory and vanish the moment an engine goes and reads the live web. Steno's presence survives that test — it is on the pages Perplexity actually retrieves. That is the more durable position, and it is the one worth compounding.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 04 HEATMAP — THE CORE FINDING -->
+<section id="heat" class="border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">04 — WHERE THE RECALL SITS</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">This is the finding. Steno is named for payment terms, never for technology.</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">We grouped the 16 questions into the five stages of how a litigator actually buys. Each cell shows how many questions in that group named Steno. The pattern is stark and it is consistent across both engines:</p>
+    <div id="heatmap" class="mt-8 overflow-x-auto"></div>
+
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white border-2 border-[#F59E0B] rounded-xl p-6 shadow-[4px_4px_0px_0px_#F59E0B]">
+        <div class="text-xs font-bold text-[#F59E0B] mb-2">⚠ THE MISMATCH</div>
+        <h3 class="font-bold">Steno's homepage claim gets zero AI recall</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">steno.com leads with technology — Steno Connect for Zoom, realtime transcript, exhibit sharing, Transcript Genius. A testimonial on the homepage says Steno's "technology continues to outshine any other court reporting agency."</p>
+        <p class="mt-2 text-sm text-[#4a4a4a]">We asked both engines six separate questions about exactly that: best platform for remote depositions, which agencies have the best remote-deposition technology, what lets attorneys share exhibits and see realtime transcript in a Zoom deposition. <strong>Steno was named zero times out of six.</strong> Veritext, Lexitas and LiveLitigation took those answers instead.</p>
+      </div>
+      <div class="bg-white border-2 border-[#10B981] rounded-xl p-6 shadow-[4px_4px_0px_0px_#10B981]">
+        <div class="text-xs font-bold text-[#10B981] mb-2">✓ THE SLOT STENO DOES OWN</div>
+        <h3 class="font-bold">DelayPay and "the alternative to Veritext"</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Where Steno <em>does</em> get named is money and challenger positioning. On "which agencies let firms pay after the case settles?" ChatGPT names Steno directly. On "what are good alternatives to Veritext and U.S. Legal Support?" both engines name Steno.</p>
+        <p class="mt-2 text-sm text-[#4a4a4a]">DelayPay has done something Steno's technology marketing has not: it gave the models a <strong>specific, differentiated reason to name the brand</strong>. It is the sharpest asset Steno has in AI, and it is currently doing all the work.</p>
+      </div>
+    </div>
+
+    <div class="mt-6 bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+      <h3 class="font-bold">The gap nobody is filling: Perplexity won't name <em>anyone</em> for deferred payment</h3>
+      <p class="mt-2 text-sm text-[#4a4a4a] max-w-4xl">Asked how a contingency-fee plaintiff firm can defer deposition costs, Perplexity gave a long, careful, entirely <strong>vendor-free</strong> answer — it explains that you should "use deferred-payment plans with court reporting vendors" and then names not one of them. Same on the cost question. That is an open slot on the single topic Steno is already closest to owning: the engine is describing DelayPay's category and failing to name DelayPay. That is a content problem, and it is fixable.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 05 SHARE OF SEARCH -->
+<section class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">05 — HOLISTIC SHARE OF SEARCH</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">How often people Google each brand — and why Steno's number is a floor</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">This counts real Google search demand for each brand name across a matrix of modifiers ("veritext pricing", "lexitas login", and so on). On the raw numbers Steno lands <strong>7th at 4.0%</strong>, well behind Veritext and U.S. Legal Support. But that number is <strong>understated, and we want to be explicit about why.</strong></p>
+
+    <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <h3 class="font-bold mb-4">Holistic Share of Search</h3>
+        <div id="searchChart" class="space-y-3"></div>
+        <p class="mt-4 text-xs text-[#9a9a9a]">★ = Steno, shown at its conservative floor. Note First Legal (10.5%) and TransPerfect (1.7%) — both have real search demand and were named <strong>zero times</strong> by either AI engine.</p>
+      </div>
+      <div class="bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <h3 class="font-bold">The word "steno" is not Steno's</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">14,800 people a month search the bare word <code>steno</code> in the US. Most of them want stationery or a profession, not a company. Monthly US volume:</p>
+        <div class="mt-4 space-y-2 text-sm">
+          <div class="flex justify-between border-b border-[#ddd] pb-1"><span><code>stenography</code></span><span class="font-bold">14,800</span></div>
+          <div class="flex justify-between border-b border-[#ddd] pb-1"><span><code>steno machine</code></span><span class="font-bold">6,600</span></div>
+          <div class="flex justify-between border-b border-[#ddd] pb-1"><span><code>steno pad</code></span><span class="font-bold">5,400</span></div>
+          <div class="flex justify-between border-b border-[#ddd] pb-1"><span><code>steno keyboard</code></span><span>2,400</span></div>
+          <div class="flex justify-between"><span><code>steno court reporting</code> <span class="text-[#9a9a9a]">(the brand)</span></span><span class="font-bold text-[#1a1a1a] bg-[#DFFE68] px-1">1,000</span></div>
+        </div>
+        <p class="mt-3 text-xs text-[#6b6b6b]">A vendor called "Veritext" owns its word outright. Steno has to share its word with a 150-year-old profession and a pad of paper. Branded search is therefore a <em>weak instrument</em> for this brand — which is why the Search Console read in Section 06 carries the weight.</p>
+      </div>
+    </div>
+
+    <!-- CALIBRATION CALLOUT -->
+    <div class="mt-6 bg-white border-2 border-[#3B82F6] rounded-xl p-6 shadow-[4px_4px_0px_0px_#3B82F6]">
+      <div class="text-xs font-bold text-[#3B82F6] mb-2">HOW WE CORRECTED FOR THE AMBIGUITY — AND WHY 4.0% IS STILL TOO LOW</div>
+      <h3 class="font-bold">The honest range is 4% to roughly 10%</h3>
+      <p class="mt-2 text-sm text-[#4a4a4a] max-w-4xl">We can't just count the 14,800 monthly searches for <code>steno</code> as Steno's — most aren't. We also can't throw them away, which would zero out the brand. So we estimate the brand-attributable slice from the disambiguated siblings: people searching <code>steno court reporting</code> / <code>steno depositions</code> / <code>steno login</code> versus <code>steno pad</code> / <code>steno machine</code> / <code>stenography</code>. That model gives Steno <strong>4.0%</strong>, and it is the <strong>floor</strong>.</p>
+      <p class="mt-2 text-sm text-[#4a4a4a] max-w-4xl">Steno's own Search Console then tells us the model is too conservative. steno.com actually pulls <strong>roughly 5,000 clicks a month from the bare word <code>steno</code> alone</strong> — several times more brand demand than our model was willing to credit it with. Corrected against that first-party evidence, Steno's true Share of Search is closer to <strong>9–10%</strong>, which would place it <strong>4th rather than 7th</strong> — the same rank it holds in AI. We report both numbers rather than pick the flattering one.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 06 GSC -->
+<section class="border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">06 — FIRST-PARTY ORGANIC SEARCH</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">The cleanest read: Steno's own Search Console</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">This is the one surface with no ambiguity problem at all — it only counts searches that actually reached steno.com. It delivers the best news in this report, and the sharpest warning.</p>
+
+    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold">+283%</div>
+        <div class="text-sm text-[#1a1a1a] font-bold mt-1">organic clicks vs prior year</div>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold">98,475</div>
+        <div class="text-sm text-[#6b6b6b] mt-1">organic clicks / 12 months</div>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold">3.26M</div>
+        <div class="text-sm text-[#6b6b6b] mt-1">impressions / 12 months <span class="font-bold">+197%</span></div>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold text-[#F59E0B]">15 / 15</div>
+        <div class="text-sm text-[#6b6b6b] mt-1">of the top organic queries are the <strong>brand name</strong></div>
+      </div>
+    </div>
+
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <h3 class="font-bold">Every top query is someone typing the brand name</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">On a typical day, <code>steno</code> alone drives 165 of the 242 clicks from the top 15 queries — 68%. The rest are <code>steno careers</code>, <code>steno login</code>, <code>steno court reporting</code>, <code>steno dashboard</code>. <strong>Not one category term appears at all</strong> — no "court reporting agency", no "deposition services", no "remote deposition platform".</p>
+        <div class="mt-4 h-9 w-full bg-white border-2 border-[#1a1a1a] rounded-lg overflow-hidden flex">
+          <div class="bar h-full bg-[#DFFE68] flex items-center justify-center text-xs font-bold border-r-2 border-[#1a1a1a]" style="width:0%" data-w="68%">"steno" — the bare brand name</div>
+          <div class="h-full flex items-center justify-center text-xs font-bold text-[#6b6b6b] flex-1">other branded</div>
+        </div>
+        <p class="mt-3 text-xs text-[#6b6b6b]">Same conclusion as the AI data, reached independently: Steno is found by name, not by category.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <h3 class="font-bold">3.26M impressions, 98K clicks — a 3% click rate</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Steno's pages are being <em>shown</em> for a very large number of searches and clicked on for few of them. That is the signature of ranking on page two for a lot of content: the demand is there, the visibility is there, the position isn't. Growth is real and fast — but it is coming from brand, while three million impressions of category demand go uncollected.</p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="px-2 py-1 bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">steno</span>
+          <span class="px-2 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">steno careers</span>
+          <span class="px-2 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">steno court reporting</span>
+          <span class="px-2 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">steno login</span>
+          <span class="px-2 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">steno dashboard</span>
+          <span class="px-2 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">steno connect</span>
+        </div>
+        <p class="mt-3 text-xs text-[#6b6b6b]">Window: 12 months to 2026-07-11, <code>sc-domain:steno.com</code>. Query-level data pulled at a 1-day window (2026-07-08) — the wider windows time out.</p>
+      </div>
+    </div>
+
+    <div class="mt-8 bg-[#1a1a1a] text-white border-2 border-[#1a1a1a] rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_#DFFE68]">
+      <h3 class="text-xl font-extrabold">Four surfaces, one conclusion</h3>
+      <p class="mt-2 text-gray-300 text-sm max-w-3xl">The finding doesn't rest on the AI data alone. Four independent surfaces say the same thing:</p>
+      <div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+        <div class="border-l-2 border-[#DFFE68] pl-3"><span class="font-bold text-[#DFFE68]">AI answer engines</span><br><span class="text-gray-300">4th of 18 — strong. But 0/8 on the shortlist question and 0/6 on the technology question. Named for payment terms and as the challenger.</span></div>
+        <div class="border-l-2 border-[#DFFE68] pl-3"><span class="font-bold text-[#DFFE68]">Branded search volume</span><br><span class="text-gray-300">7th at 4.0% on the conservative model; ~9–10% once corrected against first-party data. The "steno" token is shared with stenography.</span></div>
+        <div class="border-l-2 border-[#DFFE68] pl-3"><span class="font-bold text-[#DFFE68]">Google Trends</span><br><span class="text-gray-300">U.S. Legal Support is the breakout (+12 over 12 months). "Steno court reporting" interest is drifting slightly down off a small base.</span></div>
+        <div class="border-l-2 border-[#DFFE68] pl-3"><span class="font-bold text-[#DFFE68]">Search Console</span><br><span class="text-gray-300">Organic up 283%, but 15 of 15 top queries are the brand name. Zero category terms earn a click.</span></div>
+      </div>
+      <p class="mt-5 text-white font-bold">Steno has recall it hasn't converted into category presence. The models will recommend it — as the alternative, and as the one that lets you pay later. They will not recommend it to a buyer who hasn't already heard of it, and they will not recommend it for the technology Steno actually sells.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 07 TRENDS -->
+<section class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">07 — SEARCH INTEREST OVER TIME</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">Google Trends: U.S. Legal Support is the one gaining</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Relative search interest over the last 12 months (US, scaled 0–100 against the set's peak). <strong>U.S. Legal Support is the clear breakout</strong> — its interest roughly doubled across the year. Veritext is flat and steady. <strong>"Steno court reporting" drifted slightly down</strong> off an already-small base. Note this line tracks only the disambiguated brand phrase; the bare word can't be charted honestly, for the reason directly below.</p>
+
+    <div class="mt-8 bg-white border-2 border-[#1a1a1a] rounded-2xl p-5 md:p-8 shadow-[6px_6px_0px_0px_#1a1a1a]">
+      <div id="trendLegend" class="flex flex-wrap gap-4 mb-4 text-sm font-bold"></div>
+      <div id="trendChart"></div>
+      <div class="flex justify-between text-xs text-[#9a9a9a] mt-1 font-bold"><span>Jul 2025</span><span>Jan 2026</span><span>Jul 2026</span></div>
+    </div>
+
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#F59E0B]">
+        <div class="flex items-baseline gap-2"><span class="text-3xl font-extrabold text-[#F59E0B]">+12</span><span class="text-sm font-bold text-[#F59E0B]">↑ BREAKOUT</span></div>
+        <div class="text-sm text-[#4a4a4a] mt-1"><strong>U.S. Legal Support</strong> — interest climbed from 31 to 43 (avg 50.7 across the year, the largest in the set). The momentum story in this category.</div>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#3B82F6]">
+        <div class="flex items-baseline gap-2"><span class="text-3xl font-extrabold text-[#3B82F6]">+0.4</span><span class="text-sm font-bold text-[#3B82F6]">→ STEADY</span></div>
+        <div class="text-sm text-[#4a4a4a] mt-1"><strong>Veritext</strong> — flat and durable (avg 17.7). The incumbent isn't going anywhere. Lexitas also flat (+0.5).</div>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="flex items-baseline gap-2"><span class="text-3xl font-extrabold">−1.7</span><span class="text-sm font-bold text-[#6b6b6b]">↓ SMALL BASE</span></div>
+        <div class="text-sm text-[#4a4a4a] mt-1"><strong>"Steno court reporting"</strong> — slipping gently (4.0 → 2.3) off a low base. Planet Depos similar (−1.3).</div>
+      </div>
+    </div>
+
+    <div class="mt-8 bg-[#f5f5f5] border-2 border-dashed border-[#9a9a9a] rounded-xl p-6">
+      <h3 class="font-bold text-sm">Proof that the brand name is contaminated</h3>
+      <p class="mt-2 text-sm text-[#4a4a4a] max-w-3xl">This is the ambiguity problem in one chart. The bare word <code>steno</code> shows healthy search interest — and <code>stenography</code>, a profession Steno does not sell, shows nearly as much. Meanwhile the actual brand phrase, <code>steno court reporting</code>, barely registers. Anyone who reports Steno's "branded search" using the bare token is measuring the stationery aisle. Anyone who uses only the clean phrase is erasing most of the brand. Both are wrong, and it is why this report gives a range and leans on Search Console.</p>
+      <div class="mt-4 space-y-2" id="disambigBars"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 BRAND-DEFENSIVE -->
+<section class="border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">08 — WHEN WE ASK ABOUT STENO BY NAME</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">The reputation is excellent. The problem is discovery, not perception.</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">We asked both engines directly about Steno — is it good, how does it compare to Veritext and Lexitas, what do reviews say, what is DelayPay. When prompted by name, the models describe Steno <strong>accurately and favourably</strong>. There is no misperception to correct here. The entire gap is getting surfaced in the first place, when the buyer hasn't said the name.</p>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-xs font-bold text-[#10B981] mb-2">STRONG</div>
+        <h3 class="font-bold">Reviews are a genuine asset</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">The engines consistently surface Steno's ~4.9-star G2 standing and describe it as the tech-forward, service-strong option. When Steno is in the conversation, it wins the comparison. It just isn't in enough conversations.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-xs font-bold text-[#3B82F6] mb-2">THE ASSET</div>
+        <h3 class="font-bold">DelayPay is understood correctly</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Both engines explain deferred payment accurately and tie it to Steno specifically. This is the one concept the models have genuinely learned — and it's why Steno wins the cost cluster. It is a repeatable pattern: give the models a specific, ownable idea and they will attach the brand to it.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-xs font-bold text-[#F59E0B] mb-2">THE HONEST KNOCK</div>
+        <h3 class="font-bold">Coverage doubts</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">The recurring caveat is geographic reach — the engines position the national incumbents as the safe multi-state choice and Steno as strongest in California. That objection is worth pre-empting directly in content if the coverage story has changed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 WHAT TO DO -->
+<section class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">09 — WHAT TO DO</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4">Four moves off this data</h2>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold text-[#DFFE68] [-webkit-text-stroke:1px_#1a1a1a]">01</div>
+        <h3 class="text-lg font-bold mt-2">Publish the technology proof where the models can read it</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Steno's technology claim currently lives on steno.com and nowhere else — which is why it earns 0/6 on the technology questions. The engines answer those questions from third-party pages, comparison articles and review sites. Get specific, checkable capability content — realtime transcript, exhibit sharing in Zoom, Transcript Genius — onto those surfaces. This is the single highest-leverage gap in the report.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold text-[#DFFE68] [-webkit-text-stroke:1px_#1a1a1a]">02</div>
+        <h3 class="text-lg font-bold mt-2">Take the deferred-payment slot outright</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Perplexity explains deferred payment for depositions in detail and names <em>no vendor at all</em>. That is an unclaimed answer on the topic Steno is already closest to owning. Publish the definitive, citable resource on how contingency-fee firms finance deposition costs — and DelayPay becomes the default answer rather than an unnamed concept.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold text-[#DFFE68] [-webkit-text-stroke:1px_#1a1a1a]">03</div>
+        <h3 class="text-lg font-bold mt-2">Get onto the shortlist lists</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Steno is 0/8 on "who are the best court reporting agencies" — the question that opens every buying process. Those answers are drawn almost entirely from "best court reporting services" roundups, where Lexitas, Veritext and Esquire appear and Steno often doesn't. This is a tractable, well-understood placement job, and it moves the biggest cluster on the board.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-3xl font-extrabold text-[#DFFE68] [-webkit-text-stroke:1px_#1a1a1a]">04</div>
+        <h3 class="text-lg font-bold mt-2">Stop measuring brand with the word "steno"</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Any brand-tracking that counts searches for <code>steno</code> is counting stenography students. Track Search Console clicks on branded queries plus this Share of Model instead — both are clean. Lock this run as the <strong>baseline</strong> and re-run the identical prompt set quarterly; watch the cluster shape, not the decimal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 METHODOLOGY -->
+<section id="method" class="border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">10 — METHODOLOGY</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4">Exactly what we did</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Four data pulls, run 2026-07-14, fully repeatable. Built to a "holistic" standard — full prompt and keyword spectrum, ambiguity correction, sub-brand mapping — rather than a naive single-term read.</p>
+
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-xs font-bold text-[#6b6b6b]">SHARE OF GEO</div>
+        <h3 class="font-bold mt-1">20 prompts × 2 engines</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">16 category questions (counted toward share) + 4 brand-defensive questions, each run live on ChatGPT and Perplexity via the BrightData LLM scrapers. Grok was skipped — its scraper reliably times out.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-xs font-bold text-[#6b6b6b]">SCORING</div>
+        <h3 class="font-bold mt-1">Mention tally</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">A vendor scores when it is named in an answer. A question's own subject (Veritext and U.S. Legal Support in "alternatives to…") is excluded from its own tally. 102 mentions across 32 category answers; share = mentions ÷ total. Case-management tools (Clio, Litify, Filevine) are excluded — they are the integration target in one question, not competitors. The brand-defensive answers are read qualitatively (Section 08), not tallied.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+        <div class="text-xs font-bold text-[#6b6b6b]">SHARE OF SEARCH + TRENDS</div>
+        <h3 class="font-bold mt-1">Holistic, via DataForSEO</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Branded Google volume (US, 12-month average) across a brand × 15-modifier matrix, with sub-brands (DelayPay, Steno Connect, Transcript Genius) mapped to the parent. "Steno" and "Parrot" are both common words and are ambiguity-corrected (see below). Google Trends: 52 weekly points, US, scaled 0–100, for competitor momentum.</p>
+      </div>
+    </div>
+
+    <div class="mt-6 bg-white border-2 border-[#3B82F6] rounded-xl p-6 shadow-[4px_4px_0px_0px_#3B82F6] max-w-4xl">
+      <div class="text-xs font-bold text-[#3B82F6]">THE AMBIGUITY CORRECTION — AND A CORRECTION WE MADE TO OUR OWN METHOD</div>
+      <h3 class="font-bold mt-1">Why "parrot pricing" is not a legal-tech search</h3>
+      <p class="mt-2 text-sm text-[#4a4a4a]">When a brand's name is a common word, you cannot count its bare token as brand demand — but you also cannot count <code>steno pricing</code> or <code>parrot app</code>, because a modifier like "pricing" doesn't disambiguate anything. Our first pass made exactly that mistake and credited Parrot, the legal-transcription startup, with 6,935 monthly searches — most of which were people looking for <strong>the bird and the drone company</strong>. It ranked Parrot above Steno. Corrected, Parrot has ~717.</p>
+      <p class="mt-2 text-sm text-[#4a4a4a]">The fix, applied throughout: split the modifiers into those that <em>carry category meaning</em> ("steno court reporting" — can only mean the brand, counted in full) and those that don't ("steno pricing", bare "steno" — counted only at the brand-attributable fraction estimated from the disambiguated siblings). Steno's floor is 4.0%; corrected against Search Console it is nearer 9–10%. We show both.</p>
+    </div>
+
+    <div class="mt-6 bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a] max-w-4xl">
+      <div class="text-xs font-bold text-[#6b6b6b]">FIRST-PARTY ORGANIC (the fourth surface)</div>
+      <h3 class="font-bold mt-1">Google Search Console, via Databox</h3>
+      <p class="mt-2 text-sm text-[#4a4a4a]">steno.com's own GSC property (<code class="text-xs bg-[#f5f5f5] px-1 border border-[#ddd] rounded">sc-domain:steno.com</code>); 12-month window to 2026-07-11. Impressions, clicks, CTR and query breakdown — free of the ambiguity problem, because it only counts searches that actually reached steno.com. Query-level data is pulled at a 1-day window (2026-07-08), as wider windows time out through the Databox connector; whole-range totals are pulled across the full 12 months.</p>
+    </div>
+
+    <div class="mt-6 bg-white border-2 border-[#1a1a1a] rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_#1a1a1a]">
+      <h3 class="font-extrabold text-lg">The 16 category questions (each run on ChatGPT + Perplexity)</h3>
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm" id="promptList"></div>
+      <h3 class="font-extrabold text-lg mt-6">+ 4 brand-defensive questions (read qualitatively)</h3>
+      <ol class="mt-3 space-y-1 text-sm text-[#4a4a4a] list-disc pl-5">
+        <li>"Is Steno a good court reporting agency? Strengths and weaknesses?"</li>
+        <li>"Steno vs Veritext vs Lexitas — how do they compare?"</li>
+        <li>"What do reviews say about Steno for court reporting and depositions?"</li>
+        <li>"What is Steno's DelayPay, and how does deferred payment for depositions work?"</li>
+      </ol>
+    </div>
+
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl">
+      <div>
+        <h3 class="font-bold">Caveats</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Two engines is a directional read, not a census — the cluster shape is the signal, not any single decimal. LLM answers vary run to run; the pattern here (absent at discovery and technology, present at cost and switching) held consistently across both engines, which is what makes it trustworthy. Mid-table ordering is not stable and shouldn't be over-read. Search volumes are US; Search Console clicks are worldwide, so the 9–10% corrected figure is an estimate, not a precise measurement. Single snapshot — re-run quarterly.</p>
+      </div>
+      <div>
+        <h3 class="font-bold">Why this matters for Steno</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Vendor discovery is moving from Google to AI assistants, and Steno's brand token is too contaminated for conventional branded-search tracking to work. That makes the AI recommendation layer both the place Steno is found or skipped, and one of the few clean instruments available to measure it. This run is the <strong>baseline</strong> — re-run the identical prompt set each quarter and track the movement. All raw data (40 answers, search volumes, Trends series, GSC pulls) is retained.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t-2 border-[#1a1a1a] py-12 px-6 bg-[#1a1a1a]">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-6">
+    <div>
+      <div class="font-extrabold text-white text-lg">42<span class="text-gray-500">/</span>INTEL</div>
+      <p class="text-gray-400 text-sm mt-2 max-w-md">Confidential analysis prepared for Steno. Share of Model measured from live AI-engine answers (ChatGPT, Perplexity), holistic branded search volume and Google Trends (DataForSEO), and first-party Google Search Console. July 2026.</p>
+    </div>
+    <div class="text-sm text-right">
+      <div class="text-[#DFFE68] font-bold mb-2">CONFIDENTIAL</div>
+      <p class="text-gray-400 max-w-xs">Internal working document. Not for external distribution. Directional analysis; named vendors are not affiliated with or endorsing this report.</p>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto mt-8 pt-6 border-t border-gray-700 text-gray-500 text-xs">
+    Court reporting &amp; deposition category · 20 prompts × ChatGPT + Perplexity · holistic DataForSEO search + Google Trends · first-party GSC · 102 mentions / 32 category answers · Prepared by 42 Agency for Steno.
+  </div>
+</footer>
+
+<script>
+// ============ DATA ============
+const FOCAL = "steno court reporting", RIVAL = "us legal support";
+
+const geo = [
+  {b:"Lexitas",              v:13.7, hl:false},
+  {b:"Veritext",             v:12.7, hl:false},
+  {b:"Esquire Deposition",   v:11.8, hl:false},
+  {b:"Steno",                v:8.8,  hl:true},
+  {b:"Planet Depos",         v:6.9,  hl:false},
+  {b:"U.S. Legal Support",   v:5.9,  hl:false},
+  {b:"NAEGELI",              v:4.9,  hl:false},
+  {b:"LiveLitigation",       v:3.9,  hl:false},
+  {b:"Remote Legal",         v:3.9,  hl:false},
+  {b:"Magna Legal",          v:3.9,  hl:false},
+  {b:"Dodonai",              v:3.9,  hl:false},
+];
+const search = [
+  {b:"Veritext",             v:25.6, hl:false},
+  {b:"U.S. Legal Support",   v:19.5, hl:false},
+  {b:"Lexitas",              v:13.8, hl:false},
+  {b:"First Legal",          v:10.5, hl:false},
+  {b:"Esquire Deposition",   v:9.5,  hl:false},
+  {b:"Magna Legal",          v:9.5,  hl:false},
+  {b:"Steno",                v:4.0,  hl:true},
+  {b:"Planet Depos",         v:3.6,  hl:false},
+  {b:"TransPerfect Legal",   v:1.7,  hl:false},
+  {b:"Remote Legal",         v:1.2,  hl:false},
+  {b:"Parrot",               v:1.0,  hl:false},
+];
+// engine split — counts out of 16
+const cgSplit = [{b:"Steno", v:5, hl:true},{b:"Lexitas", v:7, hl:false}];
+const ppSplit = [{b:"Steno", v:4, hl:true},{b:"Lexitas", v:7, hl:false}];
+
+// quadrant — x = holistic search %, y = Share of GEO %, m = total mentions
+const quad = [
+  {b:"Steno",              x:4.0,  y:8.8,  m:9,  hl:true, jy:0,    ld:'r'},
+  {b:"Lexitas",            x:13.8, y:13.7, m:14, jy:0,    ld:'r'},
+  {b:"Veritext",           x:25.6, y:12.7, m:13, jy:0,    ld:'l'},
+  {b:"Esquire Deposition", x:9.5,  y:11.8, m:12, jy:0,    ld:'l'},
+  {b:"Planet Depos",       x:3.6,  y:6.9,  m:7,  jy:0,    ld:'r'},
+  {b:"U.S. Legal Support", x:19.5, y:5.9,  m:6,  jy:0,    ld:'t'},
+  {b:"Magna Legal",        x:9.5,  y:3.9,  m:4,  jy:0,    ld:'t'},
+  {b:"Remote Legal",       x:1.2,  y:3.9,  m:4,  jy:0,    ld:'r'},
+  {b:"First Legal",        x:10.5, y:0.0,  m:0,  jy:0.35, ld:'t'},
+  {b:"TransPerfect",       x:1.7,  y:0.0,  m:0,  jy:0.35, ld:'r'},
+  {b:"Parrot",             x:1.0,  y:0.0,  m:0,  jy:-0.35,ld:'b'},
+];
+const maxGeo = 15, maxGeoBar = 15, maxSearch = 28;
+
+// heatmap: Steno presence by buying-journey cluster
+const clusters = [
+  {c:"Discovery / shortlist — “who should I hire?”", cg:0, cgn:4, pp:0, ppn:4},
+  {c:"Remote depositions / technology", cg:0, cgn:3, pp:0, ppn:3},
+  {c:"AI transcripts", cg:0, cgn:3, pp:1, ppn:3},
+  {c:"Cost + deferred payment (DelayPay)", cg:2, cgn:3, pp:1, ppn:3},
+  {c:"Coverage / integration / “alternatives to…”", cg:3, cgn:3, pp:2, ppn:3},
+];
+const PROMPTS = [
+ "Best court reporting and deposition companies in 2026",
+ "Shortlist for a mid-size firm with a heavy deposition calendar",
+ "What agencies large / AmLaw 100 litigation teams use",
+ "National provider for multi-state litigation (reporters, video, interpreters)",
+ "Best platform or service for remote and virtual depositions",
+ "Which agencies have the best remote-deposition technology",
+ "Tools for exhibit sharing + realtime transcript in a Zoom deposition",
+ "Best AI tools for searching / summarizing deposition transcripts",
+ "Realtime rough drafts and AI-generated deposition summaries",
+ "Which vendors offer AI transcript search and testimony analysis",
+ "How a contingency-fee plaintiff firm can defer deposition costs",
+ "Which agencies let firms pay after the case settles",
+ "How much depositions cost; most cost-effective vendors for plaintiff firms",
+ "Best court reporting agency in California / Los Angeles",
+ "Which vendors integrate with Clio or Litify",
+ "Good alternatives to Veritext and U.S. Legal Support",
+];
+
+// google trends — 52 weekly points, 0-100 scaled to set peak
+const trend = {
+  series: {
+    "steno court reporting": [0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 1, 2],
+    "us legal support":      [23, 28, 36, 26, 27, 26, 24, 29, 22, 47, 49, 34, 30, 26, 27, 39, 47, 48, 44, 52, 94, 80, 63, 52, 62, 71, 73, 74, 92, 84, 66, 69, 78, 100, 82, 74, 62, 59, 57, 56, 53, 44, 46, 43, 46, 50, 51, 50, 47, 36, 26, 13],
+    "veritext":              [23, 20, 20, 20, 19, 19, 17, 13, 18, 17, 16, 16, 13, 17, 19, 18, 16, 19, 18, 13, 14, 17, 17, 10, 11, 19, 19, 19, 16, 18, 20, 21, 18, 21, 20, 20, 21, 17, 16, 17, 19, 17, 18, 16, 19, 17, 20, 17, 17, 23, 17, 19],
+    "lexitas":               [7, 6, 8, 6, 7, 10, 6, 5, 7, 10, 5, 12, 11, 6, 10, 6, 7, 5, 5, 5, 6, 8, 6, 5, 4, 8, 7, 9, 6, 7, 7, 14, 9, 8, 8, 8, 8, 7, 7, 11, 8, 9, 8, 8, 8, 6, 9, 9, 9, 7, 5, 9],
+    "planet depos":          [0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 1, 1],
+  },
+  colors: {"steno court reporting":"#1a1a1a","us legal support":"#F59E0B","veritext":"#3B82F6","lexitas":"#10B981","planet depos":"#9a9a9a"},
+  widths: {"steno court reporting":3,"us legal support":3,"veritext":2,"lexitas":2,"planet depos":2},
+};
+// ambiguity proof — Google Trends avg interest, 0-100 within its set
+const disambig = [
+  {b:'"steno" (the bare word)', v:40.7, hl:false, note:'mostly NOT the company'},
+  {b:'"stenography"',           v:26.8, hl:false, note:'the profession — not a Steno product'},
+  {b:'"steno pad"',             v:4.6,  hl:false, note:'stationery'},
+  {b:'"steno court reporting"', v:3.1,  hl:true,  note:'the actual brand phrase'},
+  {b:'"steno depositions"',     v:0,    hl:true,  note:'too little volume to register'},
+];
+const disambigMax = 42;
+
+// ============ RENDER ============
+function barRow(d, max, color, unit){
+  const wNum = Math.max(d.v/max*100, d.v>0 ? 1.5 : 0);
+  const w = wNum.toFixed(1);
+  const lbl = unit==='n' ? d.v+'/16' : d.v+'%';
+  const fill = d.hl ? 'bg-[#DFFE68]' : color;
+  const inside = wNum >= 15;   // narrow bars can't fit the label — render it just outside the fill
+  return `<div class="flex items-center gap-3">
+    <div class="w-28 md:w-40 text-sm font-bold ${d.hl?'text-[#1a1a1a]':'text-[#4a4a4a]'} text-right shrink-0">${d.b}${d.hl?' ★':''}</div>
+    <div class="flex-1 h-8 bg-white border-2 border-[#1a1a1a] rounded-lg overflow-hidden flex items-center ${d.hl?'shadow-[3px_3px_0px_0px_#1a1a1a]':''}">
+      <div class="bar h-full ${fill} flex items-center justify-end pr-2 shrink-0" style="width:0%" data-w="${w}%">${inside?`<span class="text-xs font-bold text-[#1a1a1a]/80">${lbl}</span>`:''}</div>
+      ${inside?'':`<span class="text-xs font-bold text-[#4a4a4a] pl-2 shrink-0">${lbl}</span>`}
+    </div></div>`;
+}
+document.getElementById('geoChart').innerHTML   = geo.map(d=>barRow(d,maxGeoBar,'bg-[#1a1a1a]/15','pct')).join('');
+document.getElementById('searchChart').innerHTML= search.map(d=>barRow(d,maxSearch,'bg-[#3B82F6]/25','pct')).join('');
+document.getElementById('cgSplit').innerHTML    = cgSplit.map(d=>barRow(d,16,'bg-[#F59E0B]/30','n')).join('');
+document.getElementById('ppSplit').innerHTML    = ppSplit.map(d=>barRow(d,16,'bg-[#10B981]/30','n')).join('');
+document.getElementById('promptList').innerHTML = PROMPTS.map((p,i)=>
+  `<div class="flex gap-2"><span class="shrink-0 w-6 h-6 flex items-center justify-center bg-[#DFFE68] border border-[#1a1a1a] rounded font-bold text-[11px]">${i+1}</span><span class="text-[#1a1a1a]">${p}</span></div>`).join('');
+
+// google trends line chart
+(function(){
+  const W=760,H=280,pl=8,pr=8,pt=18,pb=22, iw=W-pl-pr, ih=H-pt-pb;
+  const names=Object.keys(trend.series), n=trend.series[FOCAL].length;
+  const X=i=> pl + i/(n-1)*iw;
+  const Y=v=> pt + (100-v)/100*ih;
+  let g='';
+  [0,25,50,75,100].forEach(gy=>{ const y=Y(gy);
+    g+=`<line x1="${pl}" y1="${y}" x2="${W-pr}" y2="${y}" stroke="#e5e5e5" stroke-width="1"/>`;
+    g+=`<text x="${pl}" y="${y-3}" font-size="9" fill="#9a9a9a">${gy}</text>`; });
+  let lines='';
+  names.forEach(nm=>{
+    const pts=trend.series[nm].map((v,i)=>`${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(' ');
+    lines+=`<polyline points="${pts}" fill="none" stroke="${trend.colors[nm]}" stroke-width="${trend.widths[nm]}" stroke-linejoin="round" stroke-linecap="round" opacity="${nm===FOCAL||nm===RIVAL?1:0.6}"/>`;
+  });
+  document.getElementById('trendChart').innerHTML =
+    `<svg viewBox="0 0 ${W} ${H}" class="w-full" style="height:auto">${g}${lines}</svg>`;
+  document.getElementById('trendLegend').innerHTML = names.map(nm=>
+    `<span class="flex items-center gap-2"><span style="width:18px;height:3px;background:${trend.colors[nm]};display:inline-block;border-radius:2px"></span><span style="color:${nm===FOCAL?'#1a1a1a':(nm===RIVAL?'#F59E0B':'#6b6b6b')}">${nm}${nm===RIVAL?' ↑':(nm===FOCAL?' ↓':'')}</span></span>`).join('');
+})();
+
+// ambiguity bars
+document.getElementById('disambigBars').innerHTML = disambig.map(d=>{
+  const w=Math.max(d.v/disambigMax*100, d.v>0?1.5:0).toFixed(0);
+  const col = d.hl?'bg-[#DFFE68]':'bg-[#1a1a1a]/15';
+  const inside = (d.v/disambigMax*100) >= 15;
+  return `<div class="flex items-center gap-3">
+    <div class="w-44 text-xs font-bold text-right shrink-0 ${d.hl?'text-[#1a1a1a]':'text-[#4a4a4a]'}">${d.b}</div>
+    <div class="flex-1 h-6 bg-white border-2 border-[#1a1a1a] rounded-md overflow-hidden flex items-center">
+      <div class="bar h-full ${col} flex items-center justify-end pr-2 shrink-0" style="width:0%" data-w="${w}%">${inside?`<span class="text-[10px] font-bold text-[#1a1a1a]/80">${d.v}</span>`:''}</div>
+      ${inside?'':`<span class="text-[10px] font-bold text-[#4a4a4a] pl-2 shrink-0">${d.v}</span>`}
+    </div>
+    <div class="w-40 text-[11px] text-[#9a9a9a] shrink-0 hidden md:block">${d.note}</div>
+  </div>`;
+}).join('');
+
+// heatmap
+function cell(hit, n){
+  const r = n? hit/n : 0;
+  let bg = 'bg-white', tx='text-[#9a9a9a]';
+  if(r>=1){bg='bg-[#DFFE68]'; tx='text-[#1a1a1a]';}
+  else if(r>=0.5){bg='bg-[#DFFE68]/45'; tx='text-[#1a1a1a]';}
+  else if(r>0){bg='bg-[#DFFE68]/15'; tx='text-[#4a4a4a]';}
+  else {bg='bg-[#F59E0B]/10'; tx='text-[#F59E0B]';}
+  return `<td class="border-2 border-[#1a1a1a] text-center font-bold ${bg} ${tx} p-3">${hit}/${n}</td>`;
+}
+document.getElementById('heatmap').innerHTML = `
+<table class="w-full border-collapse text-sm min-w-[560px]">
+  <thead><tr>
+    <th class="text-left p-3 font-bold">How the buyer is asking</th>
+    <th class="border-2 border-[#1a1a1a] p-3 bg-[#1a1a1a] text-white">ChatGPT</th>
+    <th class="border-2 border-[#1a1a1a] p-3 bg-[#1a1a1a] text-white">Perplexity</th>
+  </tr></thead>
+  <tbody>${clusters.map(c=>`<tr><td class="p-3 font-medium border-b border-[#eee]">${c.c}</td>${cell(c.cg,c.cgn)}${cell(c.pp,c.ppn)}</tr>`).join('')}</tbody>
+</table>`;
+
+// quadrant
+const plot = document.getElementById('plot');
+function place(){
+  const w = plot.clientWidth, h = plot.clientHeight, pad = 52;
+  quad.forEach((d, i)=>{
+    const size = 13 + d.m*1.6;
+    const yv = d.y + (d.jy||0);
+    const cx = pad + (d.x/maxSearch)*(w-2*pad);
+    const cy = (h-pad) - (yv/maxGeo)*(h-2*pad);
+    const left = cx - size/2, top = cy - size/2;
+    const el = document.createElement('div');
+    el.className = 'qnode absolute flex items-center justify-center rounded-full border-2 border-[#1a1a1a] '+(d.hl?'bg-[#DFFE68] z-30 shadow-[3px_3px_0px_0px_#1a1a1a]':'bg-white z-10');
+    el.style.width=size+'px'; el.style.height=size+'px';
+    el.style.transition='all .9s cubic-bezier(.2,.8,.2,1)';
+    el.style.left='50%'; el.style.top='50%'; el.style.opacity=0;
+    setTimeout(()=>{ el.style.left=left+'px'; el.style.top=top+'px'; el.style.opacity=1; }, 120+i*55);
+    const lab = document.createElement('span');
+    const aw = d.b.length*6.2;
+    lab.className='qnode absolute whitespace-nowrap text-[11px] font-bold z-40 '+(d.hl?'text-[#1a1a1a] bg-[#DFFE68] px-1 rounded':'text-[#4a4a4a]');
+    let lx,ly;
+    if(d.ld==='l'){ lx=left-aw-6; ly=cy-8; }
+    else if(d.ld==='t'){ lx=cx-aw/2; ly=top-16; }
+    else if(d.ld==='b'){ lx=cx-aw/2; ly=top+size+4; }
+    else { lx=left+size+5; ly=cy-8; }
+    lab.style.left=lx+'px'; lab.style.top=ly+'px'; lab.style.opacity=0; lab.textContent=d.b;
+    setTimeout(()=>{ lab.style.transition='opacity .6s ease'; lab.style.opacity=1; }, 420+i*55);
+    plot.appendChild(el); plot.appendChild(lab);
+  });
+}
+
+const io = new IntersectionObserver((es)=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.querySelectorAll('.bar').forEach(b=> b.style.width=b.dataset.w); e.target.classList.add('in'); }});
+},{threshold:.15});
+document.querySelectorAll('section').forEach(s=>io.observe(s));
+window.addEventListener('load', ()=> setTimeout(place,200));
+window.addEventListener('resize', ()=>{ plot.querySelectorAll('.qnode').forEach(n=>n.remove()); place(); });
+</script>
+</body>
+</html>
