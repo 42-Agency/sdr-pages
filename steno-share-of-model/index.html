@@ -241,10 +241,11 @@
 
     <!-- CALIBRATION CALLOUT -->
     <div class="mt-6 bg-white border-2 border-[#3B82F6] rounded-xl p-6 shadow-[4px_4px_0px_0px_#3B82F6]">
-      <div class="text-xs font-bold text-[#3B82F6] mb-2">HOW WE CORRECTED FOR THE AMBIGUITY — AND WHY 4.0% IS STILL TOO LOW</div>
+      <div class="text-xs font-bold text-[#3B82F6] mb-2">HOW WE CORRECTED FOR THE AMBIGUITY — AND WHY 4.0% IS A FLOOR</div>
       <h3 class="font-bold">The honest range is 4% to roughly 10%</h3>
-      <p class="mt-2 text-sm text-[#4a4a4a] max-w-4xl">We can't just count the 14,800 monthly searches for <code>steno</code> as Steno's — most aren't. We also can't throw them away, which would zero out the brand. So we estimate the brand-attributable slice from the disambiguated siblings: people searching <code>steno court reporting</code> / <code>steno depositions</code> / <code>steno login</code> versus <code>steno pad</code> / <code>steno machine</code> / <code>stenography</code>. That model gives Steno <strong>4.0%</strong>, and it is the <strong>floor</strong>.</p>
-      <p class="mt-2 text-sm text-[#4a4a4a] max-w-4xl">Steno's own Search Console then tells us the model is too conservative. steno.com actually pulls <strong>roughly 5,000 clicks a month from the bare word <code>steno</code> alone</strong> — several times more brand demand than our model was willing to credit it with. Corrected against that first-party evidence, Steno's true Share of Search is closer to <strong>9–10%</strong>, which would place it <strong>4th rather than 7th</strong> — the same rank it holds in AI. We report both numbers rather than pick the flattering one.</p>
+      <p class="mt-2 text-sm text-[#4a4a4a] max-w-4xl">We can't count all 14,800 monthly searches for <code>steno</code> as Steno's — most aren't. We also can't throw them away, which would zero out the brand. The same trap applies to the modifiers: <code>steno pricing</code> tells you nothing about intent, because a word like "pricing" doesn't disambiguate anything. Only the terms that carry the category — <code>steno court reporting</code>, <code>steno depositions</code>, <code>steno login</code> — can only mean the company.</p>
+      <p class="mt-2 text-sm text-[#4a4a4a] max-w-4xl">So we count those in full, and credit the ambiguous terms only at the brand's attributable share, estimated against the noise: <code>steno pad</code>, <code>steno machine</code>, <code>stenography</code>. That gives Steno <strong>4.0%</strong> — a deliberately conservative <strong>floor</strong>.</p>
+      <p class="mt-2 text-sm text-[#4a4a4a] max-w-4xl">Steno's own Search Console shows that floor is too low. steno.com pulls <strong>roughly 5,000 clicks a month from the bare word <code>steno</code> alone</strong> — considerably more brand demand than the conservative model credits. Corrected against that first-party evidence, Steno's true Share of Search is closer to <strong>9–10%</strong>, placing it <strong>4th rather than 7th</strong> — the same rank it holds in AI. We show both numbers rather than pick the flattering one.</p>
     </div>
   </div>
 </section>
@@ -432,10 +433,10 @@
     </div>
 
     <div class="mt-6 bg-white border-2 border-[#3B82F6] rounded-xl p-6 shadow-[4px_4px_0px_0px_#3B82F6] max-w-4xl">
-      <div class="text-xs font-bold text-[#3B82F6]">THE AMBIGUITY CORRECTION — AND A CORRECTION WE MADE TO OUR OWN METHOD</div>
+      <div class="text-xs font-bold text-[#3B82F6]">THE AMBIGUITY CORRECTION</div>
       <h3 class="font-bold mt-1">Why "parrot pricing" is not a legal-tech search</h3>
-      <p class="mt-2 text-sm text-[#4a4a4a]">When a brand's name is a common word, you cannot count its bare token as brand demand — but you also cannot count <code>steno pricing</code> or <code>parrot app</code>, because a modifier like "pricing" doesn't disambiguate anything. Our first pass made exactly that mistake and credited Parrot, the legal-transcription startup, with 6,935 monthly searches — most of which were people looking for <strong>the bird and the drone company</strong>. It ranked Parrot above Steno. Corrected, Parrot has ~717.</p>
-      <p class="mt-2 text-sm text-[#4a4a4a]">The fix, applied throughout: split the modifiers into those that <em>carry category meaning</em> ("steno court reporting" — can only mean the brand, counted in full) and those that don't ("steno pricing", bare "steno" — counted only at the brand-attributable fraction estimated from the disambiguated siblings). Steno's floor is 4.0%; corrected against Search Console it is nearer 9–10%. We show both.</p>
+      <p class="mt-2 text-sm text-[#4a4a4a]">Two brands in this set have names that are ordinary words: Steno and Parrot. For those, the bare token can't be counted as brand demand — and neither can a modifier that carries no category meaning. <code>parrot pricing</code> (2,900/mo) and <code>parrot app</code> (1,600/mo) are overwhelmingly people looking for <strong>the bird and the drone company</strong>, not the legal-transcription startup. Counted naively, Parrot would show ~6,900 monthly searches and outrank Steno. Its real, category-attributable demand is closer to <strong>717</strong>.</p>
+      <p class="mt-2 text-sm text-[#4a4a4a]">So we split the modifiers: those that <em>carry category meaning</em> ("steno court reporting" — can only mean the brand) are counted in full; those that don't ("steno pricing", bare "steno") are counted only at the brand-attributable fraction, estimated from the disambiguated siblings. Steno's floor is 4.0%; corrected against Search Console it is nearer 9–10%. We show both.</p>
     </div>
 
     <div class="mt-6 bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a] max-w-4xl">
