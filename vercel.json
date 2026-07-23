@@ -55,6 +55,15 @@
       ]
     },
     {
+      "source": "/letter-ai-share-of-model(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive, nosnippet"
+        }
+      ]
+    },
+    {
       "source": "/televox-share-of-model(.*)",
       "headers": [
         {
