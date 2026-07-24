@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Capability Map — Share of Model | 42 Intel</title>
+<meta name="description" content="A brand-first reading of Share of Model. One famous brand is really a portfolio of capabilities — and AI answer engines remember each one differently. Worked example: Morningstar across six capability arenas, measured live on ChatGPT + Perplexity.">
+<meta name="robots" content="noindex, nofollow">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MM5BTNS');</script>
+<!-- End Google Tag Manager -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
+  .bar { transition: width 1.1s cubic-bezier(.2,.8,.2,1); }
+  .reveal { opacity:0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity:1; transform:none; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .shadow-hard { box-shadow: 4px 4px 0px 0px #1a1a1a; }
+  .shadow-hard-sm { box-shadow: 3px 3px 0px 0px #1a1a1a; }
+</style>
+</head>
+<body class="bg-white text-[#1a1a1a]">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM5BTNS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- HEADER -->
+<header class="border-b-2 border-[#1a1a1a] bg-white sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <span class="font-extrabold tracking-tight text-lg">42<span class="text-[#6b6b6b]">/</span>INTEL</span>
+      <span class="hidden sm:inline px-3 py-1 bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">SHARE OF MODEL · BRAND CAPABILITY MAP</span>
+    </div>
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">CONCEPT · MORNINGSTAR WORKED EXAMPLE</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="bg-[#f5f5f5] border-b-2 border-[#1a1a1a]">
+  <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+    <div class="flex flex-wrap gap-2 mb-5">
+      <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">A BRAND-FIRST READING OF AI VISIBILITY</span>
+      <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">ONE BRAND · MANY ARENAS · DIFFERENT COMPETITORS</span>
+    </div>
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05] max-w-4xl">
+      A famous brand isn't one brand. It's a portfolio of capabilities — and AI <span class="bg-[#DFFE68] px-1">remembers each one differently.</span>
+    </h1>
+    <p class="mt-6 text-lg md:text-xl text-[#4a4a4a] max-w-3xl">
+      How a brand performs inside AI answer engines is a function of how strong that brand is in real life — <em>per capability</em>. So the readout shouldn't be one blended "AI visibility" score. It should be a <strong>capability map</strong>: rank the brand across the keywords each of its business units competes on, and in each arena the competitors are different. Where the model doesn't name you, the brand story for that audience is thin or under-activated — that's the gap to fix.
+    </p>
+    <p class="mt-5 text-base text-[#4a4a4a] max-w-3xl">
+      Below is a live worked example on <strong>Morningstar</strong> — a single trusted brand that plays in at least six arenas. We asked ChatGPT and Perplexity the buyer questions for each and counted who gets named. The verdict swings hard by capability: the model ranks Morningstar <strong>#1 in fund research</strong>, but <strong>#4 in credit ratings</strong> (behind Moody's, S&amp;P, Fitch) and <strong>#5 in indexes</strong>. And in private markets it ranks #1 — as <em>PitchBook</em> — while <strong>93% of those answers never mention Morningstar at all.</strong>
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#tree" class="bg-[#1a1a1a] text-white font-bold rounded-lg px-5 py-3 hover:bg-[#333] transition-colors">See the capability map</a>
+      <a href="#method" class="bg-white text-[#1a1a1a] font-medium rounded-lg border-2 border-[#1a1a1a] shadow-hard hover:bg-[#f5f5f5] transition-colors px-5 py-3">How we measured it</a>
+    </div>
+  </div>
+</section>
+
+<!-- THESIS QUOTE -->
+<section class="border-b-2 border-[#1a1a1a] bg-[#1a1a1a] text-white">
+  <div class="max-w-6xl mx-auto px-6 py-12">
+    <p class="text-xl md:text-2xl font-semibold leading-snug max-w-4xl">
+      "How your brand performs in AI is a function of how strong your brand is in real life. Weak AI ranking = you need to think about your brand story and how it gets activated for different audiences."
+    </p>
+    <p class="mt-4 text-sm text-[#DFFE68] font-bold tracking-wide">THE PRINCIPLE THIS READOUT IS BUILT ON</p>
+  </div>
+</section>
+
+<!-- STAT STRIP -->
+<section class="border-b-2 border-[#1a1a1a] bg-white">
+  <div id="statStrip" class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+</section>
+
+<!-- 01 THE IDEA -->
+<section class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">01 — THE REFRAME</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">Stop scoring the brand. Score the capability tree.</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">A blended "share of AI answers" hides the real picture. Morningstar's top keyword is <strong>investment ratings &amp; research</strong> — but the brand also plays in credit ratings, ESG, private markets, indexes, and data platforms. Each is a separate arena with a <em>different</em> competitive set. The model's answer in each arena mirrors the brand's real strength there. Strong halo, uneven branches.</p>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-hard">
+        <div class="font-bold text-lg">One brand → many arenas</div>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Each business unit competes on its own capability keywords. "Credit ratings" ≠ "ESG ratings" ≠ "private market data." Measure them separately.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-hard">
+        <div class="font-bold text-lg">Different competitors each</div>
+        <p class="mt-2 text-sm text-[#4a4a4a]">In credit it's Moody's, S&amp;P, Fitch. In ESG it's MSCI. In private markets it's Preqin &amp; CB Insights. The rival set changes every branch.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-hard">
+        <div class="font-bold text-lg">AI rank = brand strength</div>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Where the model names you first, the brand is activated for that audience. Where it forgets you, the story needs building — not an SEO patch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 THE CAPABILITY MAP -->
+<section id="tree" class="border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">02 — THE CAPABILITY MAP</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">Morningstar's share of AI answers, by capability</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Each bar is one arena, ordered by Morningstar's strength. Width = Morningstar's share of answer prominence there; the badge is its rank among all named providers. The ghost marker is the arena's actual front-runner. Read top-to-bottom: <span class="font-bold">where the halo carries, and where it doesn't.</span></p>
+    <div id="treeChart" class="mt-8 space-y-4"></div>
+    <div class="mt-6 flex flex-wrap items-center gap-4 text-xs">
+      <span class="flex items-center gap-2"><span class="w-4 h-4 bg-[#DFFE68] border-2 border-[#1a1a1a] rounded inline-block"></span>Ranks #1</span>
+      <span class="flex items-center gap-2"><span class="w-4 h-4 bg-[#A7E635] border-2 border-[#1a1a1a] rounded inline-block"></span>Strong #2</span>
+      <span class="flex items-center gap-2"><span class="w-4 h-4 bg-[#F59E0B] border-2 border-[#1a1a1a] rounded inline-block"></span>Challenger (#3–#4)</span>
+      <span class="flex items-center gap-2"><span class="w-4 h-4 bg-[#EF4444] border-2 border-[#1a1a1a] rounded inline-block"></span>Trailing (#5+)</span>
+      <span class="flex items-center gap-2"><span class="w-4 h-3 border-2 border-[#1a1a1a] border-dashed inline-block"></span>Arena front-runner</span>
+    </div>
+    <p class="mt-4 text-xs text-[#9a9a9a] max-w-3xl">Bar = Morningstar's <strong>share of answer prominence</strong> in that arena (brands named earlier / more often carry more weight, so "leads" separates from merely "also listed"). The badge is its <strong>rank</strong> among all named providers — the number a brand team briefs against.</p>
+  </div>
+</section>
+
+<!-- 03 PER-BRANCH DETAIL -->
+<section class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">03 — INSIDE EACH ARENA</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">Different arena, different competitors, different verdict</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Each card is one capability. The competitive set is specific to that arena — this is what a brand agency actually briefs against. Morningstar's row is highlighted.</p>
+    <div id="branchCards" class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+  </div>
+</section>
+
+<!-- 04 BRAND LEAKAGE -->
+<section class="border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">04 — WHERE THE EQUITY LEAKS</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">The model knows the product — but not that it's Morningstar</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">In several arenas Morningstar competes under an acquired sub-brand — <strong>DBRS</strong> in credit, <strong>Sustainalytics</strong> in ESG, <strong>PitchBook</strong> in private markets. When the assistants name the product without connecting it to Morningstar, the parent brand's equity leaks to the sub-brand. That's a brand-architecture decision, made visible.</p>
+    <div id="leakage" class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- 05 WHAT IT MEANS -->
+<section class="border-b-2 border-[#1a1a1a] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">05 — THE BRAND READ</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">What a brand agency does with this</h2>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-hard">
+        <div class="px-2 py-0.5 bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-full text-[11px] font-bold inline-block">DEFEND</div>
+        <p class="mt-3 text-sm text-[#4a4a4a]">Arenas where the model already leads with you are mental-availability assets. Protect the associations that put you there and keep feeding them.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-hard">
+        <div class="px-2 py-0.5 bg-[#F59E0B]/20 border-2 border-[#F59E0B] text-[#F59E0B] rounded-full text-[11px] font-bold inline-block">ACTIVATE</div>
+        <p class="mt-3 text-sm text-[#4a4a4a]">Challenger arenas are a story-and-activation problem, not a schema problem. The capability is real; the brand narrative for that audience isn't landing yet.</p>
+      </div>
+      <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-hard">
+        <div class="px-2 py-0.5 bg-white border-2 border-[#1a1a1a] rounded-full text-[11px] font-bold inline-block">DECIDE</div>
+        <p class="mt-3 text-sm text-[#4a4a4a]">Where equity leaks to a sub-brand, that's an architecture call: endorse harder ("Morningstar Sustainalytics") or let the sub-brand run free. Either way, choose it on purpose.</p>
+      </div>
+    </div>
+    <p class="mt-8 text-[#4a4a4a] max-w-3xl">The capability map turns "our AI visibility is low" into a specific brief: <strong>which arena, which audience, which competitor is winning the association, and whether the fix is story, activation, or architecture.</strong></p>
+  </div>
+</section>
+
+<!-- 06 METHOD -->
+<section id="method" class="border-b-2 border-[#1a1a1a] bg-[#f5f5f5]">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <span class="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-full text-xs font-bold">06 — METHODOLOGY</span>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4">Exactly what we did</h2>
+    <div id="methodBody" class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-[#4a4a4a]"></div>
+    <p class="mt-6 text-xs text-[#9a9a9a] max-w-3xl">Share of Model reads salience among the in-market — it observes who the answer engines actually name, not stated recall. LLM answers vary run-to-run; the pattern across a prompt set is stable, the decimal is not. Re-run the identical prompt set to track movement over time. Not affiliated with or endorsed by Morningstar; used here as a public worked example.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#1a1a1a] text-white">
+  <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <div>
+      <div class="font-extrabold tracking-tight text-lg">42<span class="text-[#DFFE68]">/</span>INTEL</div>
+      <p class="text-sm text-[#bdbdbd] mt-1">Share of Model · Brand Capability Map — concept build</p>
+    </div>
+    <div class="text-xs text-[#8a8a8a]" id="footMeta"></div>
+  </div>
+</footer>
+
+<script>
+/* ============ DATA (replace with geo_tree.json) ============ */
+const DATA = {"branches": [{"id": "research","name": "Investment Research & Fund Ratings","ms_product": "Morningstar Ratings","answers": 13,"cg_n": 7,"pp_n": 6,"ms_share": 34,"ms_presence": 100,"ms_present": 13,"ms_parent": 13,"ms_subonly": 0,"leakage_pct": 0,"ms_cg_share": 100,"ms_pp_share": 100,"ms_rank": 1,"field_size": 12,"sub_counts": {"Direct": 3},"leaderboard": [{"name": "Morningstar","share": 34,"pres": 100,"is_ms": true},{"name": "Refinitiv / LSEG","share": 16,"pres": 77,"is_ms": false},{"name": "Lipper (LSEG)","share": 11,"pres": 54,"is_ms": false},{"name": "CFRA","share": 11,"pres": 54,"is_ms": false},{"name": "Zacks","share": 6,"pres": 46,"is_ms": false},{"name": "FactSet","share": 6,"pres": 38,"is_ms": false},{"name": "Bloomberg","share": 4,"pres": 31,"is_ms": false}]},{"id": "private","name": "Private Market Data","ms_product": "Morningstar PitchBook","answers": 14,"cg_n": 7,"pp_n": 7,"ms_share": 32,"ms_presence": 100,"ms_present": 14,"ms_parent": 1,"ms_subonly": 13,"leakage_pct": 93,"ms_cg_share": 100,"ms_pp_share": 100,"ms_rank": 1,"field_size": 9,"sub_counts": {"PitchBook": 14},"leaderboard": [{"name": "Morningstar","share": 32,"pres": 100,"is_ms": true},{"name": "Preqin","share": 19,"pres": 86,"is_ms": false},{"name": "S&P Capital IQ","share": 13,"pres": 71,"is_ms": false},{"name": "Crunchbase","share": 11,"pres": 71,"is_ms": false},{"name": "CB Insights","share": 10,"pres": 71,"is_ms": false},{"name": "Refinitiv / LSEG","share": 8,"pres": 57,"is_ms": false},{"name": "Bloomberg","share": 3,"pres": 29,"is_ms": false}]},{"id": "esg","name": "ESG & Sustainability Ratings","ms_product": "Morningstar Sustainalytics","answers": 14,"cg_n": 7,"pp_n": 7,"ms_share": 19,"ms_presence": 100,"ms_present": 14,"ms_parent": 11,"ms_subonly": 3,"leakage_pct": 21,"ms_cg_share": 100,"ms_pp_share": 100,"ms_rank": 2,"field_size": 11,"sub_counts": {"Sustainalytics": 14},"leaderboard": [{"name": "MSCI ESG","share": 26,"pres": 100,"is_ms": false},{"name": "Morningstar","share": 19,"pres": 100,"is_ms": true},{"name": "S&P Global ESG","share": 14,"pres": 100,"is_ms": false},{"name": "ISS ESG","share": 9,"pres": 93,"is_ms": false},{"name": "Refinitiv / LSEG","share": 9,"pres": 100,"is_ms": false},{"name": "Bloomberg","share": 7,"pres": 79,"is_ms": false},{"name": "Moody's ESG","share": 6,"pres": 93,"is_ms": false}]},{"id": "credit","name": "Credit Ratings","ms_product": "Morningstar DBRS","answers": 14,"cg_n": 7,"pp_n": 7,"ms_share": 13,"ms_presence": 93,"ms_present": 13,"ms_parent": 11,"ms_subonly": 2,"leakage_pct": 15,"ms_cg_share": 100,"ms_pp_share": 86,"ms_rank": 4,"field_size": 8,"sub_counts": {"DBRS": 13},"leaderboard": [{"name": "Moody's","share": 25,"pres": 100,"is_ms": false},{"name": "S&P Global Ratings","share": 25,"pres": 100,"is_ms": false},{"name": "Fitch","share": 17,"pres": 100,"is_ms": false},{"name": "Morningstar","share": 13,"pres": 93,"is_ms": true},{"name": "KBRA","share": 11,"pres": 93,"is_ms": false},{"name": "AM Best","share": 5,"pres": 43,"is_ms": false},{"name": "Scope Ratings","share": 3,"pres": 29,"is_ms": false}]},{"id": "platform","name": "Investment Data & Analytics Platforms","ms_product": "Morningstar Direct","answers": 14,"cg_n": 7,"pp_n": 7,"ms_share": 10,"ms_presence": 57,"ms_present": 8,"ms_parent": 8,"ms_subonly": 0,"leakage_pct": 0,"ms_cg_share": 86,"ms_pp_share": 29,"ms_rank": 4,"field_size": 10,"sub_counts": {"Sustainalytics": 1,"PitchBook": 5,"Direct": 8},"leaderboard": [{"name": "Bloomberg Terminal","share": 23,"pres": 71,"is_ms": false},{"name": "Refinitiv / LSEG","share": 17,"pres": 64,"is_ms": false},{"name": "FactSet","share": 16,"pres": 71,"is_ms": false},{"name": "Morningstar","share": 10,"pres": 57,"is_ms": true},{"name": "S&P Capital IQ","share": 9,"pres": 57,"is_ms": false},{"name": "Addepar","share": 8,"pres": 36,"is_ms": false},{"name": "BlackRock Aladdin","share": 5,"pres": 43,"is_ms": false}]},{"id": "indexes","name": "Indexes & Benchmarks","ms_product": "Morningstar Indexes","answers": 14,"cg_n": 7,"pp_n": 7,"ms_share": 6,"ms_presence": 57,"ms_present": 8,"ms_parent": 8,"ms_subonly": 0,"leakage_pct": 0,"ms_cg_share": 100,"ms_pp_share": 14,"ms_rank": 5,"field_size": 9,"sub_counts": {"Indexes": 5},"leaderboard": [{"name": "S&P Dow Jones Indices","share": 28,"pres": 100,"is_ms": false},{"name": "MSCI","share": 26,"pres": 100,"is_ms": false},{"name": "FTSE Russell","share": 18,"pres": 100,"is_ms": false},{"name": "Nasdaq","share": 7,"pres": 64,"is_ms": false},{"name": "Morningstar","share": 6,"pres": 57,"is_ms": true},{"name": "STOXX","share": 5,"pres": 57,"is_ms": false},{"name": "Bloomberg Indices","share": 4,"pres": 36,"is_ms": false}]}],"run_date": "2026-07-24","engines": ["ChatGPT","Perplexity"]};
+/* =========================================================== */
+
+function statusOf(b){
+  if(b.ms_rank===1) return {k:'lead',color:'#DFFE68',txt:'#1a1a1a',label:'LEADS'};
+  if(b.ms_rank===2) return {k:'co',color:'#A7E635',txt:'#1a1a1a',label:'STRONG #2'};
+  if(b.ms_rank<=4)  return {k:'chal',color:'#F59E0B',txt:'#fff',label:'CHALLENGER'};
+  return {k:'weak',color:'#EF4444',txt:'#fff',label:'TRAILING'};
+}
+
+/* Stat strip */
+(function(){
+  const bs=DATA.branches;
+  const leads=bs.filter(b=>b.ms_rank===1).length;
+  const behind=bs.filter(b=>b.ms_rank>=3).length;
+  const maxLeak=Math.max(...bs.map(b=>b.leakage_pct||0));
+  const cells=[
+    {v:bs.length,l:'capability arenas measured — one brand, one readout',bg:'#fff'},
+    {v:leads,l:'arenas where AI ranks Morningstar #1',bg:'#DFFE68'},
+    {v:behind,l:'arenas where it ranks #3 or worse',bg:'#fff'},
+    {v:maxLeak+'%',l:'peak brand-equity leakage to a sub-brand (PitchBook)',bg:'#fff'},
+  ];
+  document.getElementById('statStrip').innerHTML=cells.map(c=>`
+    <div class="border-2 border-[#1a1a1a] rounded-xl p-5 shadow-hard" style="background:${c.bg}">
+      <div class="text-3xl md:text-4xl font-extrabold">${c.v}</div>
+      <div class="text-sm ${c.bg==='#DFFE68'?'text-[#1a1a1a] font-bold':'text-[#6b6b6b] font-medium'} mt-1">${c.l}</div>
+    </div>`).join('');
+})();
+
+/* Capability map bars */
+(function(){
+  const el=document.getElementById('treeChart');
+  el.innerHTML=DATA.branches.map(b=>{
+    const s=statusOf(b);
+    const leader=b.leaderboard[0];
+    const leaderName=leader.is_ms?'—':leader.name;
+    const leaderShare=leader.share;
+    return `
+    <div class="reveal bg-white border-2 border-[#1a1a1a] rounded-xl p-4 shadow-hard">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="font-bold">${b.name}</span>
+          <span class="text-xs text-[#6b6b6b]">${b.ms_product}</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-0.5 border-2 border-[#1a1a1a] rounded-full text-[11px] font-bold" style="background:${s.color};color:${s.txt}">${s.label}</span>
+          <span class="text-xs text-[#6b6b6b]">rank #${b.ms_rank} of ${b.leaderboard.length}</span>
+        </div>
+      </div>
+      <div class="mt-3 relative h-9 bg-[#f0f0f0] border-2 border-[#1a1a1a] rounded-lg overflow-hidden">
+        <div class="bar h-full flex items-center" style="width:0%;background:${s.color}" data-w="${b.ms_share}">
+          <span class="pl-3 text-sm font-extrabold" style="color:${s.txt}">${b.ms_share}%</span>
+        </div>
+        ${leaderName!=='—'?`<div class="absolute top-0 h-full border-l-2 border-dashed border-[#1a1a1a] flex items-center" style="left:${Math.min(leaderShare,98)}%">
+          <span class="ml-1 text-[10px] font-bold text-[#1a1a1a] bg-white/80 px-1 rounded whitespace-nowrap">${leaderName} ${leaderShare}%</span></div>`:''}
+      </div>
+    </div>`;
+  }).join('');
+})();
+
+/* Per-branch cards */
+(function(){
+  const el=document.getElementById('branchCards');
+  el.innerHTML=DATA.branches.map(b=>{
+    const rows=b.leaderboard.map(l=>{
+      const w=Math.max(l.share,3);
+      const bg=l.is_ms?'#DFFE68':'#e6e6e6';
+      const bd=l.is_ms?'#1a1a1a':'#cfcfcf';
+      return `<div class="flex items-center gap-3 py-1">
+        <div class="w-40 shrink-0 text-sm ${l.is_ms?'font-extrabold':'font-medium text-[#4a4a4a]'}">${l.name}${l.is_ms?' ◀':''}</div>
+        <div class="flex-1 h-5 bg-[#f0f0f0] rounded border border-[#e0e0e0] overflow-hidden">
+          <div class="bar h-full rounded" style="width:0%;background:${bg};border-right:2px solid ${bd}" data-w="${w}"></div>
+        </div>
+        <div class="w-10 text-right text-xs font-bold">${l.share}%</div>
+      </div>`;
+    }).join('');
+    const s=statusOf(b);
+    return `<div class="reveal bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-hard">
+      <div class="flex items-start justify-between gap-3">
+        <div>
+          <div class="font-extrabold text-lg">${b.name}</div>
+          <div class="text-xs text-[#6b6b6b] mt-0.5">Morningstar competes as <strong>${b.ms_product}</strong></div>
+        </div>
+        <span class="px-2 py-0.5 border-2 border-[#1a1a1a] rounded-full text-[11px] font-bold shrink-0" style="background:${s.color};color:${s.txt}">${s.label}</span>
+      </div>
+      <div class="mt-4">${rows}</div>
+      <div class="mt-3 text-xs text-[#9a9a9a]">${b.answers} AI answers · Morningstar named in ${b.ms_present}</div>
+    </div>`;
+  }).join('');
+})();
+
+/* Leakage cards — only sub-branded arenas with leakage */
+(function(){
+  const el=document.getElementById('leakage');
+  const subs=DATA.branches.filter(b=>b.ms_product && /DBRS|Sustainalytics|PitchBook/i.test(b.ms_product));
+  el.innerHTML=subs.map(b=>{
+    const prod=b.ms_product.replace('Morningstar ','');
+    return `<div class="reveal bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-hard">
+      <div class="font-bold text-lg">${prod}</div>
+      <div class="text-xs text-[#6b6b6b]">${b.name}</div>
+      <div class="mt-4 text-4xl font-extrabold">${b.leakage_pct}%</div>
+      <p class="text-sm text-[#4a4a4a] mt-1">of the answers that named ${prod} did <strong>not</strong> mention Morningstar at all.</p>
+      <div class="mt-3 text-xs text-[#9a9a9a]">Parent named in ${b.ms_parent} of ${b.ms_present} Morningstar mentions</div>
+    </div>`;
+  }).join('');
+})();
+
+/* Method body */
+(function(){
+  const totalAnswers=DATA.branches.reduce((a,b)=>a+b.answers,0);
+  const blocks=[
+    ['The prompt set','For each of the '+DATA.branches.length+' arenas we wrote category buyer questions ("who are the top providers of X?") that <strong>never name Morningstar or its products</strong> — so we measure organic recall, not confirmation.'],
+    ['The engines','Every prompt was run through both <strong>ChatGPT</strong> and <strong>Perplexity</strong> via live answer-engine capture ('+totalAnswers+' total answers). We recorded which brands each answer named.'],
+    ['Scoring','Per arena, share = the % of answers naming the brand at least once. Morningstar’s sub-brands (DBRS, Sustainalytics, PitchBook, Indexes, Direct) are counted as Morningstar, and separately tracked for the leakage read.'],
+    ['Reading it','A high share = the brand owns the association for that audience. A low share in a real capability = a brand-story / activation gap, which is the brief a brand program addresses.'],
+  ];
+  document.getElementById('methodBody').innerHTML=blocks.map(([h,t])=>`
+    <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-5 shadow-hard-sm">
+      <div class="font-bold">${h}</div><p class="mt-1">${t}</p></div>`).join('');
+  document.getElementById('footMeta').innerHTML='Live measurement · ChatGPT + Perplexity · '+totalAnswers+' answers · '+DATA.run_date;
+})();
+
+/* Animate bars + reveal */
+function animate(){
+  document.querySelectorAll('.bar').forEach(b=>{b.style.width=(b.dataset.w||0)+'%';});
+}
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(r=>io.observe(r));
+setTimeout(animate,300);
+window.addEventListener('scroll',animate,{passive:true});
+</script>
+</body>
+</html>
