@@ -187,7 +187,7 @@
     <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-hard">
         <div class="font-bold text-lg">Scale is already spoken for</div>
-        <p class="mt-2 text-sm text-[#4a4a4a]">In the plain "who's the best" arena, Epiq appears in <strong>every one of the 12 answers</strong> and twelve brands turn up in half or more. The engines also agree with each other most here. Competing means outspending Epiq, Relativity and Consilio on an association they already own.</p>
+        <p class="mt-2 text-sm text-[#4a4a4a]">When buyers just ask who's best, Epiq appears in <strong>every one of the 12 answers</strong> and twelve brands turn up in half or more. The engines also agree with each other most here. Competing means outspending Epiq, Relativity and Consilio on an association they already own.</p>
       </div>
       <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-hard">
         <div class="font-bold text-lg">Managed review is wide open</div>
@@ -233,7 +233,7 @@
       </div>
       <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-hard">
         <div class="px-2 py-0.5 bg-[#F59E0B]/20 border-2 border-[#F59E0B] text-[#F59E0B] rounded-full text-[11px] font-bold inline-block">SAY ONE THING</div>
-        <p class="mt-3 text-sm text-[#4a4a4a]">"Collaboration" is the right territory and the wrong word — too abstract to get retrieved. The firms that won that arena used a concrete promise a buyer could repeat back. Repario needs its version of that sentence.</p>
+        <p class="mt-3 text-sm text-[#4a4a4a]">"Collaboration" is the right territory and the wrong word — too abstract to get retrieved. The firms that won that question used a concrete promise a buyer could repeat back. Repario needs its version of that sentence.</p>
       </div>
       <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-hard">
         <div class="px-2 py-0.5 bg-white border-2 border-[#1a1a1a] rounded-full text-[11px] font-bold inline-block">MEASURE THE MOVE</div>
@@ -401,7 +401,7 @@ function openness(a){
   const blocks=[
     ['The questions','18 category buyer questions — six supplied by the brief, twelve added so the pattern could be read rather than guessed at. None of them name Repario, so what we measure is unprompted recall, not confirmation. Four further questions did name Repario; those were read qualitatively and kept out of the counts.'],
     ['The engines','Every question went through ChatGPT, Perplexity and Gemini on ' + DATA.run_date + ' — ' + DATA.n_answers + ' answers, ' + DATA.total_mentions + ' brand mentions, ' + DATA.per_answer + ' companies named per answer. ChatGPT and Perplexity via live answer capture; Gemini 3.1 Pro via the API with search grounding off, so it answers from what it knows rather than what it can look up.'],
-    ['Scoring','Per arena, a brand\u2019s score is the share of that arena\u2019s answers naming it at least once. Where a question named a competitor ("alternatives to Consilio"), that competitor is excluded from its own answer. Product names fold into their parent brand. Companies named as the thing to avoid rather than the thing to buy \u2014 Gemini listing Epiq and Consilio as the "big-box" contrast \u2014 are not counted as recommendations.'],
+    ['Scoring','Within each group of questions, a company\u2019s score is the share of that group\u2019s answers naming it at least once. Where a question named a competitor ("alternatives to Consilio"), that competitor is excluded from its own answer. Product names fold into their parent brand. Companies named as the thing to avoid rather than the thing to buy \u2014 Gemini listing Epiq and Consilio as the "big-box" contrast \u2014 are not counted as recommendations.'],
     ['Reading it','A high score means the brand owns the association for that question. A low score in a capability the company genuinely has is a brand and activation gap.'],
   ];
   document.getElementById('methodBody').innerHTML=blocks.map(([h,t])=>`
