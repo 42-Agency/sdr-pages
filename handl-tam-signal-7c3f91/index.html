@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Handl Health — TAM + Signal Sample | 42 Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif; background: #fff; color: #1a1a1a; line-height: 1.6; }
+        .header { border-bottom: 2px solid #1a1a1a; background: #fff; padding: 16px 24px; position: sticky; top: 0; z-index: 50; }
+        .header-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 800; font-size: 20px; letter-spacing: -0.02em; }
+        .badge { padding: 6px 12px; background: #f5f5f5; border: 2px solid #1a1a1a; border-radius: 9999px; font-size: 12px; font-weight: 700; }
+        .hero { background: #f5f5f5; border-bottom: 2px solid #1a1a1a; padding: 56px 24px; }
+        .hero-inner, .section-inner { max-width: 1200px; margin: 0 auto; }
+        .hero h1 { font-size: 40px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 16px; }
+        .hero h1 .lime { background: #DFFE68; padding: 0 8px; }
+        .hero p { color: #4a4a4a; max-width: 760px; font-size: 17px; }
+        .hero .meta { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+        .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; padding: 40px 24px 8px; max-width: 1200px; margin: 0 auto; }
+        @media (min-width: 768px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+        .stat { background: #fff; border: 2px solid #1a1a1a; border-radius: 12px; padding: 20px; box-shadow: 4px 4px 0 0 #1a1a1a; }
+        .stat .num { font-size: 30px; font-weight: 800; letter-spacing: -0.02em; }
+        .stat .lbl { font-size: 13px; color: #6b6b6b; font-weight: 500; margin-top: 2px; }
+        .section { padding: 40px 24px; }
+        .section h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+        .section .sub { color: #6b6b6b; font-size: 14px; margin-bottom: 20px; }
+        .steps { display: grid; grid-template-columns: 1fr; gap: 12px; }
+        @media (min-width: 900px) { .steps { grid-template-columns: repeat(5, 1fr); } }
+        .step { background: #fff; border: 2px solid #1a1a1a; border-radius: 12px; padding: 16px; box-shadow: 3px 3px 0 0 #1a1a1a; }
+        .step .n { display: inline-block; width: 26px; height: 26px; text-align: center; line-height: 22px; background: #DFFE68; border: 2px solid #1a1a1a; border-radius: 9999px; font-weight: 800; font-size: 13px; margin-bottom: 8px; }
+        .step h3 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+        .step p { font-size: 12.5px; color: #4a4a4a; line-height: 1.45; }
+        .tablewrap { overflow-x: auto; border: 2px solid #1a1a1a; border-radius: 12px; box-shadow: 4px 4px 0 0 #1a1a1a; background: #fff; }
+        table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 900px; }
+        th { text-align: left; padding: 12px 14px; background: #1a1a1a; color: #fff; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
+        td { padding: 12px 14px; border-top: 1px solid #e5e5e5; vertical-align: top; }
+        tr:nth-child(even) td { background: #fafafa; }
+        .co { font-weight: 700; white-space: nowrap; }
+        .co .dom { display: block; font-weight: 400; font-size: 11.5px; color: #9a9a9a; }
+        .sig { max-width: 380px; }
+        .sig .d { color: #6b6b6b; font-size: 11.5px; }
+        .sig .s2 { display: block; margin-top: 6px; padding-top: 6px; border-top: 1px dashed #e0e0e0; }
+        .cnum { font-weight: 700; text-align: right; }
+        .cnum.hi { color: #10B981; }
+        .segbadge { display: inline-block; padding: 3px 10px; border-radius: 9999px; border: 2px solid; font-size: 11px; font-weight: 700; white-space: nowrap; }
+        .seg-a { border-color: #3B82F6; color: #3B82F6; background: rgba(59,130,246,0.08); }
+        .seg-b { border-color: #10B981; color: #10B981; background: rgba(16,185,129,0.08); }
+        .note { font-size: 12.5px; color: #6b6b6b; margin-top: 14px; max-width: 860px; }
+        .cta { background: #DFFE68; border: 2px solid #1a1a1a; border-radius: 16px; padding: 32px; box-shadow: 6px 6px 0 0 #1a1a1a; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+        .cta h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 6px; }
+        .cta p { font-size: 14.5px; color: #1a1a1a; max-width: 620px; }
+        .btn { display: inline-block; background: #1a1a1a; color: #fff; font-weight: 700; padding: 14px 24px; border-radius: 10px; text-decoration: none; font-size: 15px; }
+        .btn:hover { background: #333; }
+        .footer { border-top: 2px solid #1a1a1a; background: #1a1a1a; color: #9a9a9a; padding: 32px 24px; margin-top: 48px; font-size: 13px; }
+        .footer a { color: #DFFE68; text-decoration: none; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">42 <span style="background:#DFFE68;padding:0 4px;">Agency</span></div>
+            <div class="badge">TAM + SIGNAL SAMPLE</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>A working TAM sample,<br>built for <span class="lime">Handl Health</span></h1>
+            <p>Twenty accounts across the two segments Handl sells into, each with a dated, verifiable buying signal — and a count of how many verified contacts already exist per account before a dollar goes to data. This is the front end of the same machine that wrote the email that brought you here.</p>
+            <div class="meta">
+                <span class="badge">Prepared Aug 26, 2026</span>
+                <span class="badge">Built with $0 in data spend</span>
+                <span class="badge">Research-agent assembled, human-checked</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats">
+        <div class="stat"><div class="num">20</div><div class="lbl">Sample accounts (10 brokerage, 10 TPA / self-funded)</div></div>
+        <div class="stat"><div class="num">20/20</div><div class="lbl">Accounts with a dated, sourced signal</div></div>
+        <div class="stat"><div class="num">17,691</div><div class="lbl">Verified work emails already on hand (19/20 accounts)</div></div>
+        <div class="stat"><div class="num">2,869</div><div class="lbl">Director-and-above with verified email</div></div>
+    </div>
+
+    <section class="section">
+        <div class="section-inner">
+            <h2>How this was built</h2>
+            <p class="sub">Same chain as the email you received — shown at account scale.</p>
+            <div class="steps">
+                <div class="step"><span class="n">1</span><h3>Map the segment</h3><p>Benefits consultancies &amp; brokerages, plus TPAs and self-funded plan platforms. US only for this sample.</p></div>
+                <div class="step"><span class="n">2</span><h3>Layer signals</h3><p>M&amp;A, funding, leadership hires, office moves, hiring surges — each dated and sourced, nothing inferred.</p></div>
+                <div class="step"><span class="n">3</span><h3>Check owned data first</h3><p>Every domain checked against our licensed contact database before buying anything. Most coverage already exists.</p></div>
+                <div class="step"><span class="n">4</span><h3>No fact, no email</h3><p>Accounts with no verifiable signal get dropped, not templated. Copy is written off the signal, human-edited.</p></div>
+                <div class="step"><span class="n">5</span><h3>Layer channels</h3><p>LinkedIn from real profiles, segment landing pages, and paid against the same list — when budget returns.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+        <div class="section-inner">
+            <h2>The sample</h2>
+            <p class="sub">Signals verified the week of Aug 24, 2026. Contact counts are verified work emails held in 42's licensed database (US slice) — available on day one, no list purchase.</p>
+            <div class="tablewrap">
+                <table>
+                    <thead><tr><th>Account</th><th>Segment</th><th>HQ</th><th>Employees</th><th>Signal</th><th style="text-align:right;">Verified emails</th><th style="text-align:right;">Dir+ verified</th></tr></thead>
+                    <tbody>
+                        <tr><td class="co">Alliant Insurance Services<span class="dom">alliant.com</span></td><td><span class="segbadge seg-a">Brokerage</span></td><td>Irvine, CA</td><td>10,000+</td><td class="sig">Acquired Nava Benefits, an AI-native benefits platform ($90M raised) <span class="d">· Aug 19, 2026</span><span class="s2">Hired Derek Ackerman as VP Employee Benefits <span class="d">· Jun 2026</span></span></td><td class="cnum hi">5,407</td><td class="cnum">1,142</td></tr>
+                        <tr><td class="co">CBIZ<span class="dom">cbiz.com</span></td><td><span class="segbadge seg-a">Brokerage</span></td><td>Independence, OH</td><td>5,000–10,000</td><td class="sig">Agreement to be acquired by Grant Thornton for $5B <span class="d">· Jul 30, 2026</span><span class="s2">Planned NYC office move, Nov 2026 <span class="d">· Jul 2026</span></span></td><td class="cnum hi">4,640</td><td class="cnum">793</td></tr>
+                        <tr><td class="co">OneDigital<span class="dom">onedigital.com</span></td><td><span class="segbadge seg-a">Brokerage</span></td><td>Atlanta, GA</td><td>5,000–10,000</td><td class="sig">Acquired Employee Benefits International (Phoenix benefits brokerage) <span class="d">· Feb 19, 2026</span></td><td class="cnum hi">2,219</td><td class="cnum">309</td></tr>
+                        <tr><td class="co">Higginbotham<span class="dom">higginbotham.com</span></td><td><span class="segbadge seg-a">Brokerage</span></td><td>Fort Worth, TX</td><td>2,500–5,000</td><td class="sig">Agreed to acquire Turbeville Insurance Agency <span class="d">· Jun 29, 2026</span><span class="s2">Hired Mickey Shepherd as COO <span class="d">· Jun 30, 2026</span></span></td><td class="cnum hi">1,770</td><td class="cnum">167</td></tr>
+                        <tr><td class="co">World Insurance Associates<span class="dom">worldinsurance.com</span></td><td><span class="segbadge seg-a">Brokerage</span></td><td>Iselin, NJ</td><td>2,500–5,000</td><td class="sig">Hired Betsey Milord (ex-Aon) as Chief Broking Officer <span class="d">· Jul 13, 2026</span><span class="s2">Record 6-month high in open Sales roles <span class="d">· Jul 2026</span></span></td><td class="cnum hi">1,052</td><td class="cnum">93</td></tr>
+                        <tr><td class="co">Holmes Murphy<span class="dom">holmesmurphy.com</span></td><td><span class="segbadge seg-a">Brokerage</span></td><td>Waukee, IA</td><td>1,000–2,500</td><td class="sig">Launched Holmes Base ops platform; Employee Benefits is the next planned module <span class="d">· Apr 7, 2026</span></td><td class="cnum hi">787</td><td class="cnum">122</td></tr>
+                        <tr><td class="co">EPIC Brokers &amp; Consultants<span class="dom">epicbrokers.com</span></td><td><span class="segbadge seg-a">Brokerage</span></td><td>New York, NY</td><td>2,500–5,000</td><td class="sig">Record 12-month high in open Marketing roles <span class="d">· Jun 2026</span><span class="s2">Record 6-month high in Operations openings <span class="d">· Jun 2026</span></span></td><td class="cnum">225</td><td class="cnum">39</td></tr>
+                        <tr><td class="co">McGohan Brabender<span class="dom">mcgohanbrabender.com</span></td><td><span class="segbadge seg-a">Brokerage</span></td><td>Dayton, OH</td><td>100–250</td><td class="sig">Relocating its Cincinnati office in September 2026 <span class="d">· announced Jun 2026</span></td><td class="cnum">195</td><td class="cnum">8</td></tr>
+                        <tr><td class="co">SterlingRisk<span class="dom">sterlingrisk.com</span></td><td><span class="segbadge seg-a">Brokerage</span></td><td>Woodbury, NY</td><td>250–500</td><td class="sig">Relocating its NYC office (441 Lexington) in November 2026 <span class="d">· announced Jun 2026</span></td><td class="cnum">168</td><td class="cnum">42</td></tr>
+                        <tr><td class="co">INSURICA<span class="dom">insurica.com</span></td><td><span class="segbadge seg-a">Brokerage</span></td><td>Oklahoma City, OK</td><td>500–1,000</td><td class="sig">Record 12-month high in open Operations roles <span class="d">· Aug 15, 2026</span><span class="s2">Planned Houston office move, Sept 2026 <span class="d">· Jun 2026</span></span></td><td class="cnum">42</td><td class="cnum">3</td></tr>
+                        <tr><td class="co">Imagine360<span class="dom">imagine360.com</span></td><td><span class="segbadge seg-b">TPA / Self-funded</span></td><td>Chesterbrook, PA</td><td>1,000–2,500</td><td class="sig">Launched Choice360 integrated health plan with Health Rosetta for self-funded employers <span class="d">· Jul 21, 2026</span></td><td class="cnum hi">510</td><td class="cnum">62</td></tr>
+                        <tr><td class="co">Gravie<span class="dom">gravie.com</span></td><td><span class="segbadge seg-b">TPA / Self-funded</span></td><td>Minneapolis, MN</td><td>250–500</td><td class="sig">Funding round led by General Atlantic, total raised now $463M <span class="d">· Jul 31, 2026</span><span class="s2">Ex-Optum exec Eric Murphy joined the board <span class="d">· Jul 2026</span></span></td><td class="cnum">245</td><td class="cnum">24</td></tr>
+                        <tr><td class="co">Centivo<span class="dom">centivo.com</span></td><td><span class="segbadge seg-b">TPA / Self-funded</span></td><td>Buffalo, NY</td><td>100–250</td><td class="sig">CEO on NYC SHRM podcast on why healthcare costs keep rising <span class="d">· Jun 2026</span><span class="s2">Primary-care-centered plan co-launched with Premise Health <span class="d">· Feb 2025</span></span></td><td class="cnum">146</td><td class="cnum">26</td></tr>
+                        <tr><td class="co">Health Plans Inc. (HPI)<span class="dom">hpitpa.com</span></td><td><span class="segbadge seg-b">TPA / Self-funded</span></td><td>Westborough, MA</td><td>250–500</td><td class="sig">Named Tim O'Brien (ex-CEO, Vitori Health) as President <span class="d">· Jun 23, 2026</span></td><td class="cnum">97</td><td class="cnum">12</td></tr>
+                        <tr><td class="co">Point C Health<span class="dom">pointchealth.com</span></td><td><span class="segbadge seg-b">TPA / Self-funded</span></td><td>Chicago, IL</td><td>500–1,000</td><td class="sig">Acquired Coastal Administrative Services (Pacific NW TPA) <span class="d">· May 5, 2026</span><span class="s2">12-month high in health-tech/dashboard engineering openings <span class="d">· Aug 2026</span></span></td><td class="cnum">72</td><td class="cnum">14</td></tr>
+                        <tr><td class="co">Nova Healthcare Administrators<span class="dom">novahealthcare.com</span></td><td><span class="segbadge seg-b">TPA / Self-funded</span></td><td>Williamsville, NY</td><td>100–250</td><td class="sig">Record 6-month high in open Operations roles <span class="d">· Aug 15, 2026</span></td><td class="cnum">66</td><td class="cnum">3</td></tr>
+                        <tr><td class="co">Reliant Health Partners<span class="dom">relianthp.com</span></td><td><span class="segbadge seg-b">TPA / Self-funded</span></td><td>Collierville, TN</td><td>25–100</td><td class="sig">Record 12-month high in open Marketing roles (medical sales focus) <span class="d">· May 2026</span></td><td class="cnum">29</td><td class="cnum">6</td></tr>
+                        <tr><td class="co">ClaimsBridge<span class="dom">claimsbridge.com</span></td><td><span class="segbadge seg-b">TPA / Self-funded</span></td><td>Arnold, MD</td><td>10–50</td><td class="sig">Strategic investment from Eir Partners; acquired DialysisPPO <span class="d">· Aug 7, 2026</span></td><td class="cnum">14</td><td class="cnum">3</td></tr>
+                        <tr><td class="co">HealthSmart<span class="dom">healthsmart.com</span></td><td><span class="segbadge seg-b">TPA / Self-funded</span></td><td>Richardson, TX</td><td>500–1,000</td><td class="sig">Planned office move from Irving, TX in October 2026 <span class="d">· announced Jun 2026</span></td><td class="cnum">7</td><td class="cnum">1</td></tr>
+                        <tr><td class="co">Judi Health (Capital Rx)<span class="dom">judi.health</span></td><td><span class="segbadge seg-b">TPA / Self-funded</span></td><td>Jersey City, NJ</td><td>500–1,000</td><td class="sig">Rebranded from Capital Rx; launched Judi Care and Judi Cloud (platform licensing to TPAs) <span class="d">· Jul 15, 2026</span><span class="s2">12-month high in actuarial/data-viz Finance openings <span class="d">· Jun 2026</span></span></td><td class="cnum">0*</td><td class="cnum">—</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="note">* Fresh domain from the July 2026 rebrand — contacts get sourced at campaign time via the waterfall. Contact counts reflect the US slice of 42's licensed database; they are a floor, not a ceiling — the waterfall adds coverage per account at send time. Signal sources: PR Newswire, Business Wire, Insurance Journal, company newsrooms, and hiring-surge data (auditable in-platform).</p>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+        <div class="section-inner">
+            <div class="cta">
+                <div>
+                    <h2>This ran with zero paid spend</h2>
+                    <p>Cold + re-engagement first, on your parameters. The full version runs this chain across the whole TAM, layers LinkedIn from real profiles, and holds personalization because every email is built on its own fact.</p>
+                </div>
+                <a class="btn" href="https://www.42agency.com/contact-us">Talk to 42 →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>© 2026 42 Agency · Prepared for Handl Health</div>
+            <div><a href="https://www.42agency.com/contact-us">42agency.com</a></div>
+        </div>
+    </footer>
+</body>
+</html>

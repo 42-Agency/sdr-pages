@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Dotdigital — TAM + Signal Sample | 42 Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif; background: #fff; color: #1a1a1a; line-height: 1.6; }
+        .header { border-bottom: 2px solid #1a1a1a; background: #fff; padding: 16px 24px; position: sticky; top: 0; z-index: 50; }
+        .header-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 800; font-size: 20px; letter-spacing: -0.02em; }
+        .badge { padding: 6px 12px; background: #f5f5f5; border: 2px solid #1a1a1a; border-radius: 9999px; font-size: 12px; font-weight: 700; }
+        .hero { background: #f5f5f5; border-bottom: 2px solid #1a1a1a; padding: 56px 24px; }
+        .hero-inner, .section-inner { max-width: 1200px; margin: 0 auto; }
+        .hero h1 { font-size: 40px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 16px; }
+        .hero h1 .lime { background: #DFFE68; padding: 0 8px; }
+        .hero p { color: #4a4a4a; max-width: 780px; font-size: 17px; }
+        .hero .meta { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+        .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; padding: 40px 24px 8px; max-width: 1200px; margin: 0 auto; }
+        @media (min-width: 768px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+        .stat { background: #fff; border: 2px solid #1a1a1a; border-radius: 12px; padding: 20px; box-shadow: 4px 4px 0 0 #1a1a1a; }
+        .stat .num { font-size: 30px; font-weight: 800; letter-spacing: -0.02em; }
+        .stat .lbl { font-size: 13px; color: #6b6b6b; font-weight: 500; margin-top: 2px; }
+        .section { padding: 40px 24px; }
+        .section h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+        .section .sub { color: #6b6b6b; font-size: 14px; margin-bottom: 20px; }
+        .steps { display: grid; grid-template-columns: 1fr; gap: 12px; }
+        @media (min-width: 900px) { .steps { grid-template-columns: repeat(5, 1fr); } }
+        .step { background: #fff; border: 2px solid #1a1a1a; border-radius: 12px; padding: 16px; box-shadow: 3px 3px 0 0 #1a1a1a; }
+        .step .n { display: inline-block; width: 26px; height: 26px; text-align: center; line-height: 22px; background: #DFFE68; border: 2px solid #1a1a1a; border-radius: 9999px; font-weight: 800; font-size: 13px; margin-bottom: 8px; }
+        .step h3 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+        .step p { font-size: 12.5px; color: #4a4a4a; line-height: 1.45; }
+        .tablewrap { overflow-x: auto; border: 2px solid #1a1a1a; border-radius: 12px; box-shadow: 4px 4px 0 0 #1a1a1a; background: #fff; }
+        table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 900px; }
+        th { text-align: left; padding: 12px 14px; background: #1a1a1a; color: #fff; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
+        td { padding: 12px 14px; border-top: 1px solid #e5e5e5; vertical-align: top; }
+        tr:nth-child(even) td { background: #fafafa; }
+        .co { font-weight: 700; white-space: nowrap; }
+        .co .dom { display: block; font-weight: 400; font-size: 11.5px; color: #9a9a9a; }
+        .sig { max-width: 400px; }
+        .sig .d { color: #6b6b6b; font-size: 11.5px; }
+        .sig .s2 { display: block; margin-top: 6px; padding-top: 6px; border-top: 1px dashed #e0e0e0; }
+        .cnum { font-weight: 700; text-align: right; }
+        .hot { display: inline-block; padding: 2px 8px; border-radius: 9999px; border: 2px solid #F59E0B; color: #F59E0B; background: rgba(245,158,11,0.08); font-size: 10.5px; font-weight: 700; margin-left: 6px; vertical-align: middle; }
+        .citybadge { display: inline-block; padding: 3px 10px; border-radius: 9999px; border: 2px solid; font-size: 11px; font-weight: 700; white-space: nowrap; }
+        .city-ny { border-color: #3B82F6; color: #3B82F6; background: rgba(59,130,246,0.08); }
+        .city-ldn { border-color: #10B981; color: #10B981; background: rgba(16,185,129,0.08); }
+        .note { font-size: 12.5px; color: #6b6b6b; margin-top: 14px; max-width: 860px; }
+        .cta { background: #DFFE68; border: 2px solid #1a1a1a; border-radius: 16px; padding: 32px; box-shadow: 6px 6px 0 0 #1a1a1a; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+        .cta h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 6px; }
+        .cta p { font-size: 14.5px; color: #1a1a1a; max-width: 640px; }
+        .btn { display: inline-block; background: #1a1a1a; color: #fff; font-weight: 700; padding: 14px 24px; border-radius: 10px; text-decoration: none; font-size: 15px; }
+        .btn:hover { background: #333; }
+        .footer { border-top: 2px solid #1a1a1a; background: #1a1a1a; color: #9a9a9a; padding: 32px 24px; margin-top: 48px; font-size: 13px; }
+        .footer a { color: #DFFE68; text-decoration: none; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">42 <span style="background:#DFFE68;padding:0 4px;">Agency</span></div>
+            <div class="badge">TAM + SIGNAL SAMPLE</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>Named accounts, wired to your<br><span class="lime">event calendar</span></h1>
+            <p>Twenty mid-market ecommerce brands split across your two event cities, each with a dated, verifiable signal that they're in an email/CXDP buying moment — hiring lifecycle teams, naming competitor stacks in job ads, changing leadership, expanding markets. This is the distribution layer for the events you already run: New York and London accounts your marketing leaders and SMEs can invite, person by person, off a real reason.</p>
+            <div class="meta">
+                <span class="badge">Prepared Aug 26, 2026</span>
+                <span class="badge">Built with $0 in data spend</span>
+                <span class="badge">Research-agent assembled, human-checked</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats">
+        <div class="stat"><div class="num">20</div><div class="lbl">Sample accounts — 10 NYC-metro, 10 London</div></div>
+        <div class="stat"><div class="num">20/20</div><div class="lbl">Accounts with a dated, sourced signal</div></div>
+        <div class="stat"><div class="num">9</div><div class="lbl">With live CRM / lifecycle / retention job openings (checked Aug 26)</div></div>
+        <div class="stat"><div class="num">1,083</div><div class="lbl">Verified work emails on hand across the US accounts</div></div>
+    </div>
+
+    <section class="section">
+        <div class="section-inner">
+            <h2>How this was built</h2>
+            <p class="sub">Same chain as the email you received — shown at account scale.</p>
+            <div class="steps">
+                <div class="step"><span class="n">1</span><h3>Map the segment</h3><p>Mid-market ecommerce and DTC brands, biased to HQs near your two event cities.</p></div>
+                <div class="step"><span class="n">2</span><h3>Layer signals</h3><p>Live lifecycle/CRM job ads (some naming the incumbent stack), new CMOs and CEOs, funding, market expansion. Dated and sourced.</p></div>
+                <div class="step"><span class="n">3</span><h3>Check owned data first</h3><p>Every domain checked against our licensed contact database before buying anything.</p></div>
+                <div class="step"><span class="n">4</span><h3>No fact, no email</h3><p>Accounts with no verifiable signal get dropped, not templated. Copy is written off the signal, human-edited.</p></div>
+                <div class="step"><span class="n">5</span><h3>Invite, don't pitch</h3><p>Exec and SME profiles carry the LinkedIn layer; the ask is a seat at Wine Down Wednesday or the Expo dinner, not a demo.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+        <div class="section-inner">
+            <h2>The sample</h2>
+            <p class="sub">Signals verified the week of Aug 24, 2026. "Live" job postings confirmed open on Aug 26. Contact counts are verified work emails held in 42's licensed database (US slice).</p>
+            <div class="tablewrap">
+                <table>
+                    <thead><tr><th>Account</th><th>Event city</th><th>Employees</th><th>Signal</th><th style="text-align:right;">Verified emails</th></tr></thead>
+                    <tbody>
+                        <tr><td class="co">Bombas<span class="dom">bombas.com</span><span class="hot">STACK NAMED</span></td><td><span class="citybadge city-ny">New York</span></td><td>100–250</td><td class="sig">Hiring Retention Marketing Manager, Lifecycle — ad names the current Braze + Attentive stack <span class="d">· live Aug 26</span><span class="s2">Second retention hire open: Retention Marketing Associate (Email &amp; SMS) <span class="d">· live Aug 26</span></span></td><td class="cnum">141</td></tr>
+                        <tr><td class="co">Caraway<span class="dom">carawayhome.com</span></td><td><span class="citybadge city-ny">New York</span></td><td>100–250</td><td class="sig">Hiring Director of Retention to own email, SMS, loyalty, referral and post-purchase <span class="d">· live Aug 26</span></td><td class="cnum">71</td></tr>
+                        <tr><td class="co">Harry's<span class="dom">harrys.com</span></td><td><span class="citybadge city-ny">New York</span></td><td>500–1,000</td><td class="sig">Hiring Head of Growth Marketing <span class="d">· live Aug 26</span><span class="s2">Mid-rollout brand reset ("Man That Feels Good") <span class="d">· 2025</span></span></td><td class="cnum">154</td></tr>
+                        <tr><td class="co">Glossier<span class="dom">glossier.com</span></td><td><span class="citybadge city-ny">New York</span></td><td>250–500</td><td class="sig">New CMO Nicole Solorzano (ex-Ouai) running a strategic reset <span class="d">· Apr 2026</span><span class="s2">First campaign under new CMO: "I Love NY" <span class="d">· Jul 2026</span></span></td><td class="cnum">104</td></tr>
+                        <tr><td class="co">Away<span class="dom">awaytravel.com</span></td><td><span class="citybadge city-ny">New York</span></td><td>100–250</td><td class="sig">New CEO Jessica Schinazi (ex-Dyson); first wholesale partnership (Nordstrom) beyond pure DTC <span class="d">· May 2026</span></td><td class="cnum">182</td></tr>
+                        <tr><td class="co">Faherty<span class="dom">fahertybrand.com</span></td><td><span class="citybadge city-ny">New York</span></td><td>250–500</td><td class="sig">VP Marketing posting names CRM, email/SMS and loyalty in the remit <span class="d">· Jan 2026</span><span class="s2">First international store (Biarritz), 80+ doors total <span class="d">· Mar 2026</span></span></td><td class="cnum">189</td></tr>
+                        <tr><td class="co">Brooklinen<span class="dom">brooklinen.com</span></td><td><span class="citybadge city-ny">New York</span></td><td>100–250</td><td class="sig">Launched B2B trade program + Pacific Design Center showroom on top of DTC <span class="d">· Jul 16, 2026</span></td><td class="cnum">134</td></tr>
+                        <tr><td class="co">Magic Spoon<span class="dom">magicspoon.com</span></td><td><span class="citybadge city-ny">New York</span></td><td>50–100</td><td class="sig">Hiring (Sr) Director of Brand Marketing — scope explicitly includes email <span class="d">· live Aug 26</span><span class="s2">Protein Pastries launch at Target <span class="d">· Jan 2026</span></span></td><td class="cnum">47</td></tr>
+                        <tr><td class="co">Dagne Dover<span class="dom">dagnedover.com</span></td><td><span class="citybadge city-ny">New York</span></td><td>30–60</td><td class="sig">Wholesale expansion past 300 doors incl. all 39 Von Maur stores <span class="d">· Oct 2025</span><span class="s2">First sports-league partnership (League One Volleyball) <span class="d">· Mar 2026</span></span></td><td class="cnum">33</td></tr>
+                        <tr><td class="co">Graza<span class="dom">graza.co</span></td><td><span class="citybadge city-ny">New York</span></td><td>25–60</td><td class="sig">Category expansion into 11,000+ retail doors, backed by largest-ever paid campaign <span class="d">· Jan 2026</span></td><td class="cnum">28</td></tr>
+                        <tr><td class="co">Trinny London<span class="dom">trinnylondon.com</span><span class="hot">COMPETITOR ESP NAMED</span></td><td><span class="citybadge city-ldn">London</span></td><td>100–250</td><td class="sig">Lifecycle Coordinator ad names Ometria as the current ESP, while scaling retention headcount <span class="d">· live Aug 26</span><span class="s2">Exploring funding for US expansion; NYC SoHo pop-up running <span class="d">· mid-2026</span></span></td><td class="cnum">†</td></tr>
+                        <tr><td class="co">Bloom &amp; Wild<span class="dom">bloomandwild.com</span></td><td><span class="citybadge city-ldn">London</span></td><td>100–250</td><td class="sig">Hiring Senior CRM Manager AND Head of Retention Marketing at once <span class="d">· both live Aug 26</span></td><td class="cnum">†</td></tr>
+                        <tr><td class="co">Wild<span class="dom">wearewild.com</span></td><td><span class="citybadge city-ldn">London</span></td><td>70–300</td><td class="sig">Hiring CMO — mandate names CRM-driven retention and loyalty <span class="d">· Jul 2026</span><span class="s2">Acquired by Unilever (~£230M) <span class="d">· 2025</span></span></td><td class="cnum">†</td></tr>
+                        <tr><td class="co">ME+EM<span class="dom">meandem.com</span></td><td><span class="citybadge city-ldn">London</span></td><td>100–250</td><td class="sig">Revenue +24% to £147.9M with US sales +61%; NYC flagship live, Beverly Hills just opened <span class="d">· FY25 + Aug 2026</span></td><td class="cnum">†</td></tr>
+                        <tr><td class="co">Papier<span class="dom">papier.com</span></td><td><span class="citybadge city-ldn">London</span></td><td>70–200</td><td class="sig">Moved UK HQ to the Heal's Building, Tottenham Court Road (5-year lease) <span class="d">· Jun 2026</span></td><td class="cnum">†</td></tr>
+                        <tr><td class="co">Beauty Pie<span class="dom">beautypie.com</span></td><td><span class="citybadge city-ldn">London</span></td><td>70–150</td><td class="sig">First permanent retail space at Liberty London — first offline move for the membership brand <span class="d">· May 2026</span></td><td class="cnum">†</td></tr>
+                        <tr><td class="co">Grind<span class="dom">grind.co.uk</span></td><td><span class="citybadge city-ldn">London</span></td><td>100–250</td><td class="sig">£10M round after record £30M sales (+38%); £1M+/month DTC arm <span class="d">· Feb 2025</span></td><td class="cnum">†</td></tr>
+                        <tr><td class="co">Oddbox<span class="dom">oddbox.co.uk</span></td><td><span class="citybadge city-ldn">London</span></td><td>50–100</td><td class="sig">Scaling operations + range beyond fruit &amp; veg via Mindful Chef co-location partnership <span class="d">· May 2026</span></td><td class="cnum">†</td></tr>
+                        <tr><td class="co">Sweaty Betty<span class="dom">sweatybetty.com</span></td><td><span class="citybadge city-ldn">London</span></td><td>250–500</td><td class="sig">Opened 20th London store — first in a Network Rail station <span class="d">· Nov 2025</span></td><td class="cnum">†</td></tr>
+                        <tr><td class="co">Elvie<span class="dom">elvie.com</span></td><td><span class="citybadge city-ldn">London</span></td><td>100–120</td><td class="sig">Rebuilding UK marketing under new ownership (acquired by Willow); CRM Executive role open <span class="d">· accessed Aug 26</span></td><td class="cnum">†</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="note">† UK contact coverage comes from the international slice of 42's licensed database and per-account sourcing at campaign time; only the US slice was scanned for this zero-spend sample. Contact counts are a floor, not a ceiling — the email waterfall adds verified coverage per account at send time. Signal sources: live job boards (Greenhouse, Lever, Workable, Built In), Retail Dive, Business of Fashion, WWD, Business Wire, company newsrooms.</p>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+        <div class="section-inner">
+            <div class="cta">
+                <div>
+                    <h2>The events exist. This is the guest list engine.</h2>
+                    <p>Run the chain across your full named-account list: signals decide who gets invited and why, your marketing leaders' and SMEs' profiles carry the LinkedIn layer, email is built on per-account facts, and paid runs against the same list. Scale without losing the personalization — because every touch has its own reason.</p>
+                </div>
+                <a class="btn" href="https://www.42agency.com/contact-us">Talk to 42 →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>© 2026 42 Agency · Prepared for Dotdigital</div>
+            <div><a href="https://www.42agency.com/contact-us">42agency.com</a></div>
+        </div>
+    </footer>
+</body>
+</html>
