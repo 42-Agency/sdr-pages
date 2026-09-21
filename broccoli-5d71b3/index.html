@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Broccoli AI × 42 Agency — Paid Channel Audit</title>
+<style>
+  :root{
+    --ink:#1a1a1a; --body:#4a4a4a; --muted:#6b6b6b;
+    --lime:#DFFE68; --lime-dark:#C8E85C;
+    --surface:#f5f5f5; --white:#ffffff;
+    --orange:#F59E0B; --blue:#3B82F6; --green:#10B981; --red:#EF4444;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:Inter,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    background:var(--white); color:var(--body);
+    line-height:1.6; font-size:16px;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+  header{border-bottom:2px solid var(--ink);background:var(--white);padding:16px 0}
+  .hdr{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .logo{font-weight:800;font-size:18px;color:var(--ink);letter-spacing:-.02em}
+  .logo span{background:var(--lime);padding:2px 8px;border:2px solid var(--ink);border-radius:6px;margin-right:8px}
+  .badge{padding:4px 12px;background:var(--surface);border:2px solid var(--ink);border-radius:999px;font-size:12px;font-weight:700;color:var(--ink);letter-spacing:.04em}
+
+  .hero{background:var(--surface);border-bottom:2px solid var(--ink);padding:56px 0 48px}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--lime);border:2px solid var(--ink);border-radius:999px;padding:4px 14px;box-shadow:2px 2px 0 0 var(--ink);margin-bottom:20px}
+  h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.03em;color:var(--ink);line-height:1.12;text-wrap:balance;max-width:24ch}
+  .sub{margin-top:16px;font-size:17px;max-width:62ch}
+  .meta{margin-top:20px;font-size:13px;color:var(--muted);font-weight:500}
+
+  section{padding:44px 0}
+  h2{font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:8px}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .lede{max-width:64ch;margin-bottom:24px}
+
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:-34px}
+  @media(min-width:720px){.stats{grid-template-columns:repeat(4,1fr)}}
+  .stat{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:18px;box-shadow:4px 4px 0 0 var(--ink)}
+  .stat .n{font-size:30px;font-weight:800;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1}
+  .stat .l{font-size:12.5px;font-weight:600;color:var(--muted);margin-top:6px;line-height:1.4}
+
+  .channels{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.channels{grid-template-columns:repeat(3,1fr)}}
+  .ch{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:20px;box-shadow:4px 4px 0 0 var(--ink);display:flex;flex-direction:column;gap:10px}
+  .ch h3{font-size:16px;font-weight:700;color:var(--ink)}
+  .ch p{font-size:13.5px}
+  .pill{font-weight:800;font-size:11.5px;letter-spacing:.07em;border:2px solid;border-radius:999px;padding:3px 12px;align-self:flex-start;text-transform:uppercase}
+  .pill.live{color:var(--green);border-color:var(--green);background:rgba(16,185,129,.08)}
+  .pill.dark{color:var(--red);border-color:var(--red);background:rgba(239,68,68,.08)}
+  .pill.pixel{color:var(--orange);border-color:var(--orange);background:rgba(245,158,11,.08)}
+
+  .insight{background:var(--lime);border:2px solid var(--ink);border-radius:16px;padding:32px;box-shadow:6px 6px 0 0 var(--ink);margin-top:28px}
+  .insight h2{margin-bottom:10px;font-size:24px}
+  .insight p{color:var(--ink);max-width:66ch}
+  .insight .vtag{display:inline-block;background:var(--ink);color:var(--lime);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border-radius:6px;padding:4px 10px;margin-bottom:14px}
+
+  .bars{display:grid;gap:10px;margin-top:18px}
+  .bar-row{display:grid;grid-template-columns:210px 1fr 90px;gap:12px;align-items:center;font-size:13.5px}
+  @media(max-width:640px){.bar-row{grid-template-columns:130px 1fr 74px;font-size:12.5px}}
+  .bar-row .k{font-weight:600;color:var(--ink)}
+  .bar-track{background:var(--surface);border:2px solid var(--ink);border-radius:6px;height:22px;overflow:hidden}
+  .bar-fill{height:100%;background:var(--lime);border-right:2px solid var(--ink)}
+  .bar-fill.zero{background:rgba(239,68,68,.25);border-right:none;width:2px}
+  .bar-row .v{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink);text-align:right;white-space:nowrap}
+  .small{font-size:12.5px;color:var(--muted);margin-top:10px;max-width:70ch}
+
+  .tbl-wrap{overflow-x:auto;border:2px solid var(--ink);border-radius:12px;box-shadow:4px 4px 0 0 var(--ink);background:var(--white)}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:600px}
+  th{background:var(--ink);color:var(--white);text-align:left;font-weight:700;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;padding:12px 16px}
+  td{padding:12px 16px;border-top:2px solid #e5e5e5;color:var(--body);vertical-align:top}
+  td.num{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink);white-space:nowrap}
+  tr.hl td{background:rgba(223,254,104,.35)}
+
+  .moves{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.moves{grid-template-columns:repeat(3,1fr)}}
+  .move{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:22px;box-shadow:4px 4px 0 0 var(--ink)}
+  .move .num{font-size:13px;font-weight:800;color:var(--ink);background:var(--lime);border:2px solid var(--ink);border-radius:6px;padding:2px 9px;display:inline-block;margin-bottom:12px}
+  .move h3{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:8px}
+  .move p{font-size:14px}
+
+  .method{background:var(--surface);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  .m-grid{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.m-grid{grid-template-columns:repeat(2,1fr)}}
+  .m-card{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+  .m-card h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:8px}
+  .m-card p{font-size:13.5px}
+
+  .cta{background:var(--lime);border:2px solid var(--ink);border-radius:16px;padding:36px;box-shadow:6px 6px 0 0 var(--ink);text-align:left}
+  .cta h2{font-size:26px;margin-bottom:10px}
+  .cta p{color:var(--ink);max-width:60ch;margin-bottom:22px}
+  .btn{display:inline-block;background:var(--ink);color:var(--white);font-weight:700;font-size:15px;border-radius:8px;padding:13px 26px;text-decoration:none}
+  .btn:hover{background:#333}
+  .cta .alt{margin-top:16px;margin-bottom:0;font-size:13.5px;color:var(--ink)}
+  .cta .alt a{color:var(--ink);font-weight:700;text-decoration:none;border-bottom:2px solid var(--ink)}
+  .cta .alt a:hover{opacity:.7}
+
+  footer{border-top:2px solid var(--ink);background:var(--ink);color:#9ca3af;padding:40px 0;margin-top:24px}
+  footer .ft-title{color:var(--lime);font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+  footer p{font-size:13.5px;max-width:72ch}
+  footer a{color:var(--white);font-weight:600;text-decoration:none;border-bottom:2px solid var(--lime)}
+  footer a:hover{color:var(--lime)}
+  footer .fine{margin-top:18px;font-size:12px;color:#6b7280}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hdr">
+    <div class="logo"><span>42</span>AGENCY</div>
+    <div class="badge">MARKET INTELLIGENCE · PREPARED FOR BROCCOLI AI</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Paid Channel Audit · AI for the Trades</div>
+    <h1>Broccoli is buying Google ads. Nothing on the site can count what they bring back.</h1>
+    <p class="sub">We audited Broccoli's paid footprint across Google Search, LinkedIn and Meta — side by side with Avoca, Hatch (now Yelp) and Goodcall. Every number below is from public ad libraries and search data, and every one is checkable.</p>
+    <p class="meta">Run September 20, 2026 · US market · Sources: Google Ads Transparency Center, LinkedIn &amp; Meta Ad Libraries, DataForSEO, broccoli.com's own tag stack</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="n">2</div><div class="l">Broccoli Google search ads live right now — running since March, under Martian Mobility Inc.</div></div>
+      <div class="stat"><div class="n">0</div><div class="l">Ad-platform conversion tags on broccoli.com — no Google Ads tag, no GTM, no Meta or LinkedIn pixel</div></div>
+      <div class="stat"><div class="n">2,900</div><div class="l">US searches every month for "broccoli ai" — real brand demand, measured by nothing</div></div>
+      <div class="stat"><div class="n">18</div><div class="l">Rivals and review sites ranking for "hvac call answering software" — Broccoli isn't one of them</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Channel by channel</div>
+    <h2>The scoreboard</h2>
+    <div class="channels">
+      <div class="ch">
+        <span class="pill live">Live, blind</span>
+        <h3>Google Search</h3>
+        <p>9 text ads all-time under Broccoli's legal entity Martian Mobility Inc., first seen March 28. Seven went dark by late April; two brand ads are still live today. With no conversion tag on the site, Google's bidding has never received a single conversion signal from them.</p>
+      </div>
+      <div class="ch">
+        <span class="pill dark">None</span>
+        <h3>Conversion tracking</h3>
+        <p>We inspected broccoli.com's tag stack: no Google Ads tag, no Tag Manager, no Meta, LinkedIn, TikTok, Reddit, X or Bing pixels. Only Segment. No paid channel can measure a conversion or build a retargeting audience on this site.</p>
+      </div>
+      <div class="ch">
+        <span class="pill dark">Dark</span>
+        <h3>YouTube &amp; Display</h3>
+        <p>No video or image creatives in the Transparency Center — all 9 Broccoli ads are search text ads. Avoca's Google profile includes video and image formats alongside 30+ text creatives.</p>
+      </div>
+      <div class="ch">
+        <span class="pill pixel">Minimal</span>
+        <h3>LinkedIn</h3>
+        <p>1 unit in the Ad Library — a promoted "follow company" ad with no creative. Avoca has 48 ads running booking-rate and revenue claims at the same HVAC and plumbing owners.</p>
+      </div>
+      <div class="ch">
+        <span class="pill dark">Dark</span>
+        <h3>Meta</h3>
+        <p>No Meta pixel on broccoli.com and no page-level ad activity we could verify. Avoca has 83 ads in the Meta Ad Library, active this week. Hatch has 20.</p>
+      </div>
+      <div class="ch">
+        <span class="pill dark">Absent</span>
+        <h3>Category search</h3>
+        <p>"hvac call answering software", "ai answering service hvac", "ai receptionist home services": Broccoli appears on none of them, paid or organic. Sameday, Smith.ai, Dialzara, Retell and a wall of comparison posts fill every result.</p>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="vtag">The finding</div>
+      <h2>The spend exists. The measurement doesn't.</h2>
+      <p>Most companies build the tracking and never turn on the spend. Broccoli did the opposite: live Google ads since March, and not one conversion tag anywhere on the site to tell those ads what worked. Every click is bought blind — no smart bidding signal, no retargeting audience, no way for the incoming marketing team to know what the last six months of spend produced.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">The demand going past</div>
+    <h2>What people search while nothing gets measured, US monthly</h2>
+    <div class="bars">
+      <div class="bar-row"><span class="k">broccoli ai</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="v">2,900</span></div>
+      <div class="bar-row"><span class="k">avoca ai</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="v">2,900</span></div>
+      <div class="bar-row"><span class="k">hatch app</span><div class="bar-track"><div class="bar-fill" style="width:65.5%"></div></div><span class="v">1,900</span></div>
+      <div class="bar-row"><span class="k">hvac answering service</span><div class="bar-track"><div class="bar-fill" style="width:16.6%"></div></div><span class="v">480</span></div>
+      <div class="bar-row"><span class="k">plumbing answering service</span><div class="bar-track"><div class="bar-fill" style="width:16.6%"></div></div><span class="v">480</span></div>
+      <div class="bar-row"><span class="k">goodcall ai</span><div class="bar-track"><div class="bar-fill" style="width:11%"></div></div><span class="v">320</span></div>
+      <div class="bar-row"><span class="k">Broccoli's category coverage</span><div class="bar-track"><div class="bar-fill zero"></div></div><span class="v">0</span></div>
+    </div>
+    <p class="small">Google Ads search volume, US, 12-month average. "hvac answering service" carries a $145 CPC and "plumbing answering service" $120 — auctions that expensive mean the buyers there convert. Broccoli is in neither, on any format.</p>
+    <p class="small">Worth noting: "broccoli ai" costs $4.54 a click while "avoca ai" costs $39.77 — and Avoca already runs a paid ad on its own name ("The Real Avoca AI") to defend it. Broccoli's brand SERP also has an interloper: Smith.ai ranks #2 organically for "broccoli ai pricing".</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Competitive pressure</div>
+    <h2>What the other three are buying</h2>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Company</th><th>Google creatives (all formats)</th><th>LinkedIn ads in library</th><th>Meta Ad Library</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td><strong>Broccoli AI</strong></td><td class="num">9 (2 live)</td><td class="num">1</td><td>None detected</td></tr>
+          <tr><td>Avoca</td><td class="num">39 — running continuously since May 2025</td><td class="num">48</td><td class="num">83, active</td></tr>
+          <tr><td>Hatch (Yelp)</td><td class="num">13, live — under Yelp Inc.</td><td class="num">0</td><td class="num">20</td></tr>
+          <tr><td>Goodcall</td><td class="num">0 self-run</td><td class="num">0</td><td class="num">0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">Counts from the Google Ads Transparency Center and the LinkedIn and Meta ad libraries, pulled September 20, 2026. Hatch's ads now run under Yelp Inc. — Yelp closed its ~$270M acquisition of Hatch in February, so that line item has a public-company balance sheet behind it. One consolation: we found no competitor bidding on Broccoli's brand terms yet.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Where we'd start</div>
+    <h2>Three moves, in order</h2>
+    <div class="moves">
+      <div class="move">
+        <span class="num">01</span>
+        <h3>Instrument before the hires land</h3>
+        <p>Google Ads conversion tracking, GTM, and Meta + LinkedIn pixels — wired through the Segment install that's already on the site. A week of work that makes every future dollar attributable, and starts building retargeting audiences from the traffic arriving today.</p>
+      </div>
+      <div class="move">
+        <span class="num">02</span>
+        <h3>Enter the category auctions</h3>
+        <p>"hvac answering service" and "plumbing answering service" clear $120–145 a click because the callers convert. Dedicated landing pages per trade, fed by call-tracked conversions, is the play — not the homepage.</p>
+      </div>
+      <div class="move">
+        <span class="num">03</span>
+        <h3>Lock the brand SERP at $4.54</h3>
+        <p>2,900 monthly searches for "broccoli ai", the cheapest clicks in this audit, with Smith.ai already ranking #2 on the pricing variant. Avoca is paying to defend its own name; Broccoli should own its SERP before someone makes it expensive.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="method">
+  <div class="wrap">
+    <div class="kicker">Receipts</div>
+    <h2>How we checked, and where we'd hedge</h2>
+    <div class="m-grid">
+      <div class="m-card">
+        <h3>Method</h3>
+        <p>13 live Google SERP pulls (US) across brand, competitor and category terms · paid-keyword profiles for all four domains via DataForSEO Labs · full-format creative counts and live creatives from the Google Ads Transparency Center · LinkedIn and Meta ad libraries · direct inspection of broccoli.com's tag stack. All four domains verified live.</p>
+      </div>
+      <div class="m-card">
+        <h3>Honest hedges</h3>
+        <p>Ad-library databases are samples and undercount — we treat "zero" as "nothing detectable" and triangulated every Broccoli reading across the Transparency Center, live creatives and the site's own tag stack. The Meta library pull for broccoli.com failed on our end, so Meta status rests on the missing pixel, not library data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <h2>Hiring a first Head of Marketing takes months. This takes weeks.</h2>
+      <p>42 Agency runs paid search, paid social and measurement for B2B software companies. We can instrument broccoli.com and stand up the category program now, then hand it over cleanly the day your marketing leaders start — or keep running it alongside them.</p>
+      <a class="btn" href="https://www.42agency.com/contact-us">Talk to 42 Agency →</a>
+      <p class="alt">Not ready for a call? <a href="https://intel.42agency.com/ask">Ask our GTM assistant anything →</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft-title">42 Agency</div>
+    <p>Demand generation and RevOps for B2B software. This audit was prepared for the team at Broccoli AI using public data only — ad libraries, transparency centers, search databases and broccoli.com's public site. Happy to walk through any number in it.</p>
+    <p class="fine">Sources: Google Ads Transparency Center · LinkedIn Ad Library · Meta Ad Library · DataForSEO (SERP, Labs, Google Ads volumes) · broccoli.com tag inspection. Run date 2026-09-20. · <a href="https://www.42agency.com/contact-us">42agency.com/contact-us</a></p>
+  </div>
+</footer>
+</body>
+</html>

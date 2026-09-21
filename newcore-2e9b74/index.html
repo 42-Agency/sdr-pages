@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>NewCore × 42 Agency — Paid Channel Audit</title>
+<style>
+  :root{
+    --ink:#1a1a1a; --body:#4a4a4a; --muted:#6b6b6b;
+    --lime:#DFFE68; --lime-dark:#C8E85C;
+    --surface:#f5f5f5; --white:#ffffff;
+    --orange:#F59E0B; --blue:#3B82F6; --green:#10B981; --red:#EF4444;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:Inter,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    background:var(--white); color:var(--body);
+    line-height:1.6; font-size:16px;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+  header{border-bottom:2px solid var(--ink);background:var(--white);padding:16px 0}
+  .hdr{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .logo{font-weight:800;font-size:18px;color:var(--ink);letter-spacing:-.02em}
+  .logo span{background:var(--lime);padding:2px 8px;border:2px solid var(--ink);border-radius:6px;margin-right:8px}
+  .badge{padding:4px 12px;background:var(--surface);border:2px solid var(--ink);border-radius:999px;font-size:12px;font-weight:700;color:var(--ink);letter-spacing:.04em}
+
+  .hero{background:var(--surface);border-bottom:2px solid var(--ink);padding:56px 0 48px}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--lime);border:2px solid var(--ink);border-radius:999px;padding:4px 14px;box-shadow:2px 2px 0 0 var(--ink);margin-bottom:20px}
+  h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.03em;color:var(--ink);line-height:1.12;text-wrap:balance;max-width:24ch}
+  .sub{margin-top:16px;font-size:17px;max-width:62ch}
+  .meta{margin-top:20px;font-size:13px;color:var(--muted);font-weight:500}
+
+  section{padding:44px 0}
+  h2{font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:8px}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .lede{max-width:64ch;margin-bottom:24px}
+
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:-34px}
+  @media(min-width:720px){.stats{grid-template-columns:repeat(4,1fr)}}
+  .stat{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:18px;box-shadow:4px 4px 0 0 var(--ink)}
+  .stat .n{font-size:30px;font-weight:800;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1}
+  .stat .l{font-size:12.5px;font-weight:600;color:var(--muted);margin-top:6px;line-height:1.4}
+
+  .channels{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.channels{grid-template-columns:repeat(3,1fr)}}
+  .ch{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:20px;box-shadow:4px 4px 0 0 var(--ink);display:flex;flex-direction:column;gap:10px}
+  .ch h3{font-size:16px;font-weight:700;color:var(--ink)}
+  .ch p{font-size:13.5px}
+  .pill{font-weight:800;font-size:11.5px;letter-spacing:.07em;border:2px solid;border-radius:999px;padding:3px 12px;align-self:flex-start;text-transform:uppercase}
+  .pill.live{color:var(--green);border-color:var(--green);background:rgba(16,185,129,.08)}
+  .pill.dark{color:var(--red);border-color:var(--red);background:rgba(239,68,68,.08)}
+  .pill.pixel{color:var(--orange);border-color:var(--orange);background:rgba(245,158,11,.08)}
+
+  .insight{background:var(--lime);border:2px solid var(--ink);border-radius:16px;padding:32px;box-shadow:6px 6px 0 0 var(--ink);margin-top:28px}
+  .insight h2{margin-bottom:10px;font-size:24px}
+  .insight p{color:var(--ink);max-width:66ch}
+  .insight .vtag{display:inline-block;background:var(--ink);color:var(--lime);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border-radius:6px;padding:4px 10px;margin-bottom:14px}
+
+  .bars{display:grid;gap:10px;margin-top:18px}
+  .bar-row{display:grid;grid-template-columns:250px 1fr 90px;gap:12px;align-items:center;font-size:13.5px}
+  @media(max-width:640px){.bar-row{grid-template-columns:140px 1fr 74px;font-size:12.5px}}
+  .bar-row .k{font-weight:600;color:var(--ink)}
+  .bar-track{background:var(--surface);border:2px solid var(--ink);border-radius:6px;height:22px;overflow:hidden}
+  .bar-fill{height:100%;background:var(--lime);border-right:2px solid var(--ink)}
+  .bar-fill.zero{background:rgba(239,68,68,.25);border-right:none;width:2px}
+  .bar-row .v{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink);text-align:right;white-space:nowrap}
+  .small{font-size:12.5px;color:var(--muted);margin-top:10px;max-width:70ch}
+
+  .tbl-wrap{overflow-x:auto;border:2px solid var(--ink);border-radius:12px;box-shadow:4px 4px 0 0 var(--ink);background:var(--white)}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:600px}
+  th{background:var(--ink);color:var(--white);text-align:left;font-weight:700;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;padding:12px 16px}
+  td{padding:12px 16px;border-top:2px solid #e5e5e5;color:var(--body);vertical-align:top}
+  td.num{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink);white-space:nowrap}
+  tr.hl td{background:rgba(223,254,104,.35)}
+
+  .moves{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.moves{grid-template-columns:repeat(3,1fr)}}
+  .move{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:22px;box-shadow:4px 4px 0 0 var(--ink)}
+  .move .num{font-size:13px;font-weight:800;color:var(--ink);background:var(--lime);border:2px solid var(--ink);border-radius:6px;padding:2px 9px;display:inline-block;margin-bottom:12px}
+  .move h3{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:8px}
+  .move p{font-size:14px}
+
+  .method{background:var(--surface);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  .m-grid{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.m-grid{grid-template-columns:repeat(2,1fr)}}
+  .m-card{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+  .m-card h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:8px}
+  .m-card p{font-size:13.5px}
+
+  .cta{background:var(--lime);border:2px solid var(--ink);border-radius:16px;padding:36px;box-shadow:6px 6px 0 0 var(--ink);text-align:left}
+  .cta h2{font-size:26px;margin-bottom:10px}
+  .cta p{color:var(--ink);max-width:60ch;margin-bottom:22px}
+  .btn{display:inline-block;background:var(--ink);color:var(--white);font-weight:700;font-size:15px;border-radius:8px;padding:13px 26px;text-decoration:none}
+  .btn:hover{background:#333}
+  .cta .alt{margin-top:16px;margin-bottom:0;font-size:13.5px;color:var(--ink)}
+  .cta .alt a{color:var(--ink);font-weight:700;text-decoration:none;border-bottom:2px solid var(--ink)}
+  .cta .alt a:hover{opacity:.7}
+
+  footer{border-top:2px solid var(--ink);background:var(--ink);color:#9ca3af;padding:40px 0;margin-top:24px}
+  footer .ft-title{color:var(--lime);font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+  footer p{font-size:13.5px;max-width:72ch}
+  footer a{color:var(--white);font-weight:600;text-decoration:none;border-bottom:2px solid var(--lime)}
+  footer a:hover{color:var(--lime)}
+  footer .fine{margin-top:18px;font-size:12px;color:#6b7280}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hdr">
+    <div class="logo"><span>42</span>AGENCY</div>
+    <div class="badge">MARKET INTELLIGENCE · PREPARED FOR NEWCORE</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Paid Channel Audit · Identity Security</div>
+    <h1>NewCore is paying to create the category. The search results hand it to Veza.</h1>
+    <p class="sub">We audited NewCore's paid and organic footprint across Google, LinkedIn and Meta — side by side with Okta, Silverfort and Veza. Every number below is from public ad libraries and search data, and every one is checkable.</p>
+    <p class="meta">Run September 20, 2026 · US market · Sources: Google Ads Transparency Center, LinkedIn &amp; Meta Ad Libraries, DataForSEO, newcore.com's own tag stack</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="n">23</div><div class="l">Google creatives NewCore has run since June 15 — five still live today</div></div>
+      <div class="stat"><div class="n">73</div><div class="l">NewCore ads in the LinkedIn Ad Library — Black Hat, Agent Guardian, "Next-Gen IdP for Humans &amp; Agents"</div></div>
+      <div class="stat"><div class="n">0</div><div class="l">Category or "alternative" search results (of 9 checked) where NewCore appears in the top 20</div></div>
+      <div class="stat"><div class="n">$74.89</div><div class="l">CPC on "non-human identity management" — the term Veza ranks #1 for</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Channel by channel</div>
+    <h2>The scoreboard</h2>
+    <div class="channels">
+      <div class="ch">
+        <span class="pill live">Live</span>
+        <h3>Google Ads</h3>
+        <p>23 creatives from advertiser "Newcore identity inc" — 22 text, 1 image, running since June 15, newest launched September 17, five live as of this audit. The engine is on.</p>
+      </div>
+      <div class="ch">
+        <span class="pill live">Live</span>
+        <h3>LinkedIn</h3>
+        <p>73 ads in the library: Black Hat booth promos, Agent Guardian, an agentic-law-firm vertical play. Real creative volume — though Veza has 42,188 ads in the same library and Okta 2,547.</p>
+      </div>
+      <div class="ch">
+        <span class="pill dark">Not found</span>
+        <h3>Meta</h3>
+        <p>No NewCore presence resolvable in the Meta Ad Library — while a Meta pixel is installed on newcore.com, quietly building a retargeting audience no campaign is using. Silverfort runs 10 active Meta ads.</p>
+      </div>
+      <div class="ch">
+        <span class="pill dark">Absent</span>
+        <h3>Category search results</h3>
+        <p>"Non-human identity management," "machine identity security," "identity provider for AI agents": NewCore is in the top 20 of none of them. Veza, SailPoint, Okta and Ping are.</p>
+      </div>
+      <div class="ch">
+        <span class="pill dark">Absent</span>
+        <h3>"Alternative" search results</h3>
+        <p>"Okta alternative," "silverfort alternative," "veza alternative" — the switching-intent searches. NewCore appears on none. Veza defends its own alternative page; Silverfort sits on page 1 of Okta's.</p>
+      </div>
+      <div class="ch">
+        <span class="pill live">Fully wired</span>
+        <h3>Measurement stack</h3>
+        <p>One GTM container on newcore.com loads GA4, Google Ads conversion, Meta pixel, LinkedIn Insight, HubSpot, PostHog and Apollo visitor tracking. Whatever gets launched next is measurable on day one.</p>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="vtag">The finding</div>
+      <h2>You're building the demand. Competitors' pages are collecting it.</h2>
+      <p>Every LinkedIn impression and Google creative NewCore runs exists to make a security leader curious about identity for humans and agents. Curious buyers do one predictable thing next: they search. And on every category and switching-intent result we checked, NewCore doesn't exist — Veza ranks #1 for "non-human identity management," SailPoint and Palo Alto own "machine identity security," and Okta sits on "identity provider for AI agents." NewCore's only page-one rankings are its own name.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">The demand in play</div>
+    <h2>What buyers search after the ad works, US monthly</h2>
+    <div class="bars">
+      <div class="bar-row"><span class="k">okta pricing</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="v">1,600</span></div>
+      <div class="bar-row"><span class="k">okta alternative</span><div class="bar-track"><div class="bar-fill" style="width:13.1%"></div></div><span class="v">210</span></div>
+      <div class="bar-row"><span class="k">non-human identity management</span><div class="bar-track"><div class="bar-fill" style="width:8.8%"></div></div><span class="v">140</span></div>
+      <div class="bar-row"><span class="k">machine identity security</span><div class="bar-track"><div class="bar-fill" style="width:4.4%"></div></div><span class="v">70</span></div>
+      <div class="bar-row"><span class="k">silverfort pricing</span><div class="bar-track"><div class="bar-fill" style="width:1.3%"></div></div><span class="v">20</span></div>
+      <div class="bar-row"><span class="k">NewCore in the top 20 of any of them</span><div class="bar-track"><div class="bar-fill zero"></div></div><span class="v">0</span></div>
+    </div>
+    <p class="small">Google Ads search volume, US, 12-month average. "Non-human identity management" carries a $74.89 CPC — one of the most expensive auctions in security — and we captured no advertisers on it. "Okta alternative" ($41.56 CPC) was equally empty. The paid slots on the exact terms NewCore's creative promotes are sitting vacant.</p>
+    <p class="small">"Identity provider for AI agents" returns no measurable ad volume yet — the category is pre-volume. That cuts both ways: whoever holds the search result when the volume arrives collects it, and today that's Okta (#5), SailPoint (#6) and Ping (#9).</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Competitive pressure</div>
+    <h2>What the other three are buying — and ranking for</h2>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Company</th><th>Google creatives (all formats)</th><th>LinkedIn ads in library</th><th>Organic keywords tracked (US)</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td><strong>NewCore</strong></td><td class="num">23</td><td class="num">73</td><td class="num">50</td></tr>
+          <tr><td>Okta</td><td class="num">2,000</td><td class="num">2,547</td><td class="num">69,859</td></tr>
+          <tr><td>Silverfort</td><td class="num">600</td><td class="num">1,739</td><td class="num">1,738</td></tr>
+          <tr><td>Veza</td><td class="num">13</td><td class="num">42,188</td><td class="num">793</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">Counts from the Google Ads Transparency Center, the LinkedIn Ad Library and DataForSEO Labs, pulled September 20, 2026. Note Veza's shape: light on Google, overwhelming on LinkedIn, and #1 organic on the category's defining term. One consolation: nobody is bidding on NewCore's brand terms yet, and NewCore ranks #1 for its own name. That window is open, not permanent.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Where we'd start</div>
+    <h2>Three moves, in order</h2>
+    <div class="moves">
+      <div class="move">
+        <span class="num">01</span>
+        <h3>Buy the category before it has incumbents</h3>
+        <p>The paid slots on "non-human identity management" and "okta alternative" are empty — 350 combined monthly searches of pure switching and category intent with no advertisers captured. For a seed-stage challenger, an uncontested auction on your own category term is the cheapest visibility in the plan.</p>
+      </div>
+      <div class="move">
+        <span class="num">02</span>
+        <h3>Build the pages the search results reward</h3>
+        <p>NewCore already touches category terms — position 32 for "secrets management," 59 for "identity security posture management" — it just has no pages built to rank. Comparison and alternative pages for Okta, Silverfort and Veza give both the ads a landing spot and the organic results a reason to include you. Veza defends its own alternative result; NewCore currently concedes all of them.</p>
+      </div>
+      <div class="move">
+        <span class="num">03</span>
+        <h3>Use the audience the pixels already captured</h3>
+        <p>The Meta pixel on newcore.com has been collecting visitors with no Meta campaigns behind it, and the full measurement stack (GA4, HubSpot, PostHog, Apollo) is live. Retargeting warm traffic from 73 LinkedIn ads' worth of clicks is the fastest payback in this plan — the setup cost is already paid.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="method">
+  <div class="wrap">
+    <div class="kicker">Receipts</div>
+    <h2>How we checked, and where we'd hedge</h2>
+    <div class="m-grid">
+      <div class="m-card">
+        <h3>Method</h3>
+        <p>12 live Google SERP pulls (US) across brand, competitor-alternative and category terms · organic profiles for all four domains (plus newcore.io, to be sure we had the right entity) via DataForSEO Labs · full-format creative counts from the Google Ads Transparency Center · LinkedIn and Meta ad libraries · direct inspection of newcore.com's tag stack, including the GTM container's contents.</p>
+      </div>
+      <div class="m-card">
+        <h3>Honest hedges</h3>
+        <p>Ad-library databases are samples and undercount — we treat "zero" as "nothing detectable." Live search pulls often fail to trigger ad serving, so "no advertisers captured" on a term is directional, not proven. Transparency data shows creatives, not keywords, so we can't see what NewCore's own text ads bid on. Labs paid-keyword data returned zero for every domain including Okta this run, so we discarded it entirely.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <h2>The ads are running. The search layer under them isn't built.</h2>
+      <p>42 Agency runs paid search, LinkedIn and pipeline programs for B2B SaaS and security companies — in the stack NewCore already has installed (HubSpot, Google Ads, LinkedIn, PostHog). We build the category and comparison layer so your first marketing hire inherits a working system, not a to-do list.</p>
+      <a class="btn" href="https://www.42agency.com/contact-us">Talk to 42 Agency →</a>
+      <p class="alt">Not ready for a call? <a href="https://intel.42agency.com/ask">Ask our GTM assistant anything →</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft-title">42 Agency</div>
+    <p>Demand generation and RevOps for B2B SaaS. This audit was prepared for the team at NewCore using public data only — ad libraries, transparency centers, search databases and newcore.com's public site. Happy to walk through any number in it.</p>
+    <p class="fine">Sources: Google Ads Transparency Center · LinkedIn Ad Library · Meta Ad Library · DataForSEO (SERP, Labs, Google Ads volumes) · newcore.com tag inspection. Run date 2026-09-20. · <a href="https://www.42agency.com/contact-us">42agency.com/contact-us</a></p>
+  </div>
+</footer>
+</body>
+</html>

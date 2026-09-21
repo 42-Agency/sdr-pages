@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Runlayer × 42 Agency — Paid Channel Audit</title>
+<style>
+  :root{
+    --ink:#1a1a1a; --body:#4a4a4a; --muted:#6b6b6b;
+    --lime:#DFFE68; --lime-dark:#C8E85C;
+    --surface:#f5f5f5; --white:#ffffff;
+    --orange:#F59E0B; --blue:#3B82F6; --green:#10B981; --red:#EF4444;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:Inter,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    background:var(--white); color:var(--body);
+    line-height:1.6; font-size:16px;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+  header{border-bottom:2px solid var(--ink);background:var(--white);padding:16px 0}
+  .hdr{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .logo{font-weight:800;font-size:18px;color:var(--ink);letter-spacing:-.02em}
+  .logo span{background:var(--lime);padding:2px 8px;border:2px solid var(--ink);border-radius:6px;margin-right:8px}
+  .badge{padding:4px 12px;background:var(--surface);border:2px solid var(--ink);border-radius:999px;font-size:12px;font-weight:700;color:var(--ink);letter-spacing:.04em}
+
+  .hero{background:var(--surface);border-bottom:2px solid var(--ink);padding:56px 0 48px}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--lime);border:2px solid var(--ink);border-radius:999px;padding:4px 14px;box-shadow:2px 2px 0 0 var(--ink);margin-bottom:20px}
+  h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.03em;color:var(--ink);line-height:1.12;text-wrap:balance;max-width:24ch}
+  .sub{margin-top:16px;font-size:17px;max-width:62ch}
+  .meta{margin-top:20px;font-size:13px;color:var(--muted);font-weight:500}
+
+  section{padding:44px 0}
+  h2{font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:8px}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .lede{max-width:64ch;margin-bottom:24px}
+
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:-34px}
+  @media(min-width:720px){.stats{grid-template-columns:repeat(4,1fr)}}
+  .stat{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:18px;box-shadow:4px 4px 0 0 var(--ink)}
+  .stat .n{font-size:30px;font-weight:800;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1}
+  .stat .l{font-size:12.5px;font-weight:600;color:var(--muted);margin-top:6px;line-height:1.4}
+
+  .channels{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.channels{grid-template-columns:repeat(3,1fr)}}
+  .ch{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:20px;box-shadow:4px 4px 0 0 var(--ink);display:flex;flex-direction:column;gap:10px}
+  .ch h3{font-size:16px;font-weight:700;color:var(--ink)}
+  .ch p{font-size:13.5px}
+  .pill{font-weight:800;font-size:11.5px;letter-spacing:.07em;border:2px solid;border-radius:999px;padding:3px 12px;align-self:flex-start;text-transform:uppercase}
+  .pill.live{color:var(--green);border-color:var(--green);background:rgba(16,185,129,.08)}
+  .pill.dark{color:var(--red);border-color:var(--red);background:rgba(239,68,68,.08)}
+  .pill.pixel{color:var(--orange);border-color:var(--orange);background:rgba(245,158,11,.08)}
+
+  .insight{background:var(--lime);border:2px solid var(--ink);border-radius:16px;padding:32px;box-shadow:6px 6px 0 0 var(--ink);margin-top:28px}
+  .insight h2{margin-bottom:10px;font-size:24px}
+  .insight p{color:var(--ink);max-width:66ch}
+  .insight .vtag{display:inline-block;background:var(--ink);color:var(--lime);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border-radius:6px;padding:4px 10px;margin-bottom:14px}
+
+  .bars{display:grid;gap:10px;margin-top:18px}
+  .bar-row{display:grid;grid-template-columns:210px 1fr 90px;gap:12px;align-items:center;font-size:13.5px}
+  @media(max-width:640px){.bar-row{grid-template-columns:130px 1fr 74px;font-size:12.5px}}
+  .bar-row .k{font-weight:600;color:var(--ink)}
+  .bar-track{background:var(--surface);border:2px solid var(--ink);border-radius:6px;height:22px;overflow:hidden}
+  .bar-fill{height:100%;background:var(--lime);border-right:2px solid var(--ink)}
+  .bar-fill.zero{background:rgba(239,68,68,.25);border-right:none;width:2px}
+  .bar-row .v{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink);text-align:right;white-space:nowrap}
+  .small{font-size:12.5px;color:var(--muted);margin-top:10px;max-width:70ch}
+
+  .tbl-wrap{overflow-x:auto;border:2px solid var(--ink);border-radius:12px;box-shadow:4px 4px 0 0 var(--ink);background:var(--white)}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:600px}
+  th{background:var(--ink);color:var(--white);text-align:left;font-weight:700;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;padding:12px 16px}
+  td{padding:12px 16px;border-top:2px solid #e5e5e5;color:var(--body);vertical-align:top}
+  td.num{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink);white-space:nowrap}
+  tr.hl td{background:rgba(223,254,104,.35)}
+
+  .moves{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.moves{grid-template-columns:repeat(3,1fr)}}
+  .move{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:22px;box-shadow:4px 4px 0 0 var(--ink)}
+  .move .num{font-size:13px;font-weight:800;color:var(--ink);background:var(--lime);border:2px solid var(--ink);border-radius:6px;padding:2px 9px;display:inline-block;margin-bottom:12px}
+  .move h3{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:8px}
+  .move p{font-size:14px}
+
+  .method{background:var(--surface);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  .m-grid{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.m-grid{grid-template-columns:repeat(2,1fr)}}
+  .m-card{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+  .m-card h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:8px}
+  .m-card p{font-size:13.5px}
+
+  .cta{background:var(--lime);border:2px solid var(--ink);border-radius:16px;padding:36px;box-shadow:6px 6px 0 0 var(--ink);text-align:left}
+  .cta h2{font-size:26px;margin-bottom:10px}
+  .cta p{color:var(--ink);max-width:60ch;margin-bottom:22px}
+  .btn{display:inline-block;background:var(--ink);color:var(--white);font-weight:700;font-size:15px;border-radius:8px;padding:13px 26px;text-decoration:none}
+  .btn:hover{background:#333}
+  .cta .alt{margin-top:16px;margin-bottom:0;font-size:13.5px;color:var(--ink)}
+  .cta .alt a{color:var(--ink);font-weight:700;text-decoration:none;border-bottom:2px solid var(--ink)}
+  .cta .alt a:hover{opacity:.7}
+
+  footer{border-top:2px solid var(--ink);background:var(--ink);color:#9ca3af;padding:40px 0;margin-top:24px}
+  footer .ft-title{color:var(--lime);font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+  footer p{font-size:13.5px;max-width:72ch}
+  footer a{color:var(--white);font-weight:600;text-decoration:none;border-bottom:2px solid var(--lime)}
+  footer a:hover{color:var(--lime)}
+  footer .fine{margin-top:18px;font-size:12px;color:#6b7280}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hdr">
+    <div class="logo"><span>42</span>AGENCY</div>
+    <div class="badge">MARKET INTELLIGENCE · PREPARED FOR RUNLAYER</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Paid Channel Audit · AI Agent Security</div>
+    <h1>The top answers to "runlayer pricing" were written by Runlayer's competitors.</h1>
+    <p class="sub">We audited Runlayer's paid and search footprint across Google, LinkedIn and Meta — side by side with Zenity, WitnessAI and Prompt Security. Every number below comes from public ad libraries and search data, and every one is checkable.</p>
+    <p class="meta">Run September 20, 2026 · US market · Sources: Google Ads Transparency Center, LinkedIn &amp; Meta Ad Libraries, DataForSEO, runlayer.com's own tag stack</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="n">2,400</div><div class="l">US searches every month for "runlayer" — a $6.50 CPC auction with no advertisers in it</div></div>
+      <div class="stat"><div class="n">404</div><div class="l">What runlayer.com/pricing returns while TrueFoundry's "Runlayer Pricing" article ranks #3</div></div>
+      <div class="stat"><div class="n">1</div><div class="l">LinkedIn ad Runlayer has ever run — a boosted post about the Fortune fundraise story</div></div>
+      <div class="stat"><div class="n">3</div><div class="l">Channels Zenity is actively buying — Google, LinkedIn and Meta — against the same buyer</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Channel by channel</div>
+    <h2>The scoreboard</h2>
+    <div class="channels">
+      <div class="ch">
+        <span class="pill dark">Dark</span>
+        <h3>Google Search</h3>
+        <p>Zero paid keywords detected for runlayer.com against 79 organic keywords tracked, and no Google Ads tag anywhere in the GTM container. Runlayer's only Transparency Center entry: one display creative registered under an employee's personal advertiser name, not a company account.</p>
+      </div>
+      <div class="ch">
+        <span class="pill dark">Dark</span>
+        <h3>LinkedIn</h3>
+        <p>Insight Tag installed. One ad in the library, ever — a boosted post about Fortune covering the Series A. Zenity has 627 ads in the same library, including creative aimed squarely at engineering orgs running Copilot, Cursor and Claude Code.</p>
+      </div>
+      <div class="ch">
+        <span class="pill pixel">Pixel only</span>
+        <h3>Meta</h3>
+        <p>Meta pixel is live on runlayer.com via GTM, quietly building a retargeting audience — and no ads detectable in the Ad Library. Zenity is running 237 active Meta ads at the same audience right now.</p>
+      </div>
+      <div class="ch">
+        <span class="pill dark">Conquested</span>
+        <h3>Your brand SERP</h3>
+        <p>Page 1 of "runlayer pricing": TrueFoundry's "Runlayer Pricing: A Complete Breakdown for 2026" at #3, MintMCP's "5 RunLayer Alternatives" at #4, Latio's reviews page at #6. TrueFoundry also ranks #5 on "runlayer" itself with a head-to-head comparison page.</p>
+      </div>
+      <div class="ch">
+        <span class="pill dark">Absent</span>
+        <h3>Category SERPs</h3>
+        <p>Runlayer is missing from the top ~19 results on "mcp security" — the exact label TechCrunch filed it under — plus "ai agent security", "ai agent governance" and "shadow ai detection". Organic and paid. Zenity ranks #4 on "ai agent governance".</p>
+      </div>
+      <div class="ch">
+        <span class="pill pixel">Instrumented</span>
+        <h3>Measurement</h3>
+        <p>GA4, Meta pixel and LinkedIn Insight Tag are all wired through GTM and collecting. The tracking layer for a paid program exists today — there are just no campaigns feeding it.</p>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="vtag">The finding</div>
+      <h2>The fundraise created the demand. Competitors are catching it.</h2>
+      <p>The $30M Series A did its job: roughly 2,400 people a month now search "runlayer", at a $6.50 cost per click — the cheapest, highest-intent traffic Runlayer will ever get. But there's no pricing page for them to land on, no ads above the results, and the pages answering their questions belong to TrueFoundry, MintMCP and Latio. In April, Andrew wrote that product is ahead of marketing. On this evidence, the gap has compounded.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">The demand going past</div>
+    <h2>What people search while Runlayer sits out, US monthly</h2>
+    <div class="bars">
+      <div class="bar-row"><span class="k">shadow ai</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="v">3,600</span></div>
+      <div class="bar-row"><span class="k">runlayer</span><div class="bar-track"><div class="bar-fill" style="width:66.7%"></div></div><span class="v">2,400</span></div>
+      <div class="bar-row"><span class="k">ai security platform</span><div class="bar-track"><div class="bar-fill" style="width:24.4%"></div></div><span class="v">880</span></div>
+      <div class="bar-row"><span class="k">mcp security</span><div class="bar-track"><div class="bar-fill" style="width:16.4%"></div></div><span class="v">590</span></div>
+      <div class="bar-row"><span class="k">ai agent security</span><div class="bar-track"><div class="bar-fill" style="width:13.3%"></div></div><span class="v">480</span></div>
+      <div class="bar-row"><span class="k">agentic ai security</span><div class="bar-track"><div class="bar-fill" style="width:13.3%"></div></div><span class="v">480</span></div>
+      <div class="bar-row"><span class="k">Runlayer's paid coverage of any of it</span><div class="bar-track"><div class="bar-fill zero"></div></div><span class="v">0</span></div>
+    </div>
+    <p class="small">Google Ads search volume, US, 12-month average. The category terms run $42–70 CPCs ("ai agent security" $58, "ai security platform" $70). "runlayer" at $6.50 is the outlier — brand traffic is the cheapest auction on this list, and right now nobody is bidding on it, including Runlayer.</p>
+    <p class="small">Organic won't bail it out quickly either: runlayer.com has 79 tracked keywords against Zenity's 557, Prompt Security's 374 and WitnessAI's 722.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Competitive pressure</div>
+    <h2>What the other three are buying</h2>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Company</th><th>Google creatives (all formats)</th><th>LinkedIn ads in library</th><th>Meta Ad Library</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td><strong>Runlayer</strong></td><td class="num">1 (personal account)</td><td class="num">1</td><td>No ads found</td></tr>
+          <tr><td>Zenity</td><td class="num">200</td><td class="num">627</td><td class="num">237 active</td></tr>
+          <tr><td>WitnessAI</td><td class="num">4</td><td class="num">73</td><td>No ads found</td></tr>
+          <tr><td>Prompt Security</td><td class="num">0</td><td class="num">34</td><td>No ads found</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">Counts from the Google Ads Transparency Center and the LinkedIn and Meta ad libraries, pulled September 20, 2026. Zenity has run Google ads continuously since February 2025 and its LinkedIn and Meta creative targets the same buyers Runlayer sells to — CISOs and engineering leaders rolling out coding agents. One consolation: no competitor is bidding on Runlayer's brand terms yet. The conquest so far is organic, which is cheaper to fix — and cheaper for them to escalate.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Where we'd start</div>
+    <h2>Three moves, in order</h2>
+    <div class="moves">
+      <div class="move">
+        <span class="num">01</span>
+        <h3>Publish the pricing and comparison layer</h3>
+        <p>A real pricing page and /vs pages for Zenity, WitnessAI and Prompt Security. Right now TrueFoundry's blog post is the canonical answer to "runlayer pricing" — a page Runlayer publishes outranks it on brand relevance alone.</p>
+      </div>
+      <div class="move">
+        <span class="num">02</span>
+        <h3>Own the brand SERP for $6.50 a click</h3>
+        <p>2,400 monthly searches, no advertisers, and the customer logos (Instacart, Gusto, Opendoor, dbt Labs) to convert them. A brand campaign puts Runlayer's page above TrueFoundry's breakdown this week, not after a months-long SEO climb.</p>
+      </div>
+      <div class="move">
+        <span class="num">03</span>
+        <h3>Enter the category auctions before they reprice</h3>
+        <p>"mcp security" and "ai agent security" are $44–58 CPCs with thin paid competition today — Zenity is the only rival buying Google consistently. And the Meta pixel has been collecting a retargeting audience nobody has ever run a campaign against.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="method">
+  <div class="wrap">
+    <div class="kicker">Receipts</div>
+    <h2>How we checked, and where we'd hedge</h2>
+    <div class="m-grid">
+      <div class="m-card">
+        <h3>Method</h3>
+        <p>12 live Google SERP pulls (US, desktop plus mobile spot-checks) across brand, competitor and category terms · paid-keyword and domain profiles for all four companies via DataForSEO Labs · full-format creative counts from the Google Ads Transparency Center · LinkedIn and Meta ad libraries · direct inspection of runlayer.com's tag stack, including the GTM container. Landing pages verified live, including the /pricing 404.</p>
+      </div>
+      <div class="m-card">
+        <h3>Honest hedges</h3>
+        <p>Ad-library databases are samples and undercount — we treat "zero" as "nothing detectable" and triangulated Runlayer's readings across the keyword database, the Transparency Center and the site's own tag stack before drawing conclusions. Meta lookups for three of the four domains returned no resolvable page, so those cells read "no ads found" rather than a hard zero.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <h2>Hiring a full marketing team takes months. This takes weeks.</h2>
+      <p>42 Agency runs paid search, LinkedIn and pipeline programs for B2B SaaS. We can put Runlayer's page above TrueFoundry's, stand up the brand and category campaigns, and build it all so it hands over cleanly to your Head of Marketing on their first day — or keep running it alongside them.</p>
+      <a class="btn" href="https://www.42agency.com/contact-us">Talk to 42 Agency →</a>
+      <p class="alt">Not ready for a call? <a href="https://intel.42agency.com/ask">Ask our GTM assistant anything →</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft-title">42 Agency</div>
+    <p>Demand generation and RevOps for B2B SaaS. This audit was prepared for the team at Runlayer using public data only — ad libraries, transparency centers, search databases and runlayer.com's public site. Happy to walk through any number in it.</p>
+    <p class="fine">Sources: Google Ads Transparency Center · LinkedIn Ad Library · Meta Ad Library · DataForSEO (SERP, Labs, Google Ads volumes) · runlayer.com tag inspection. Run date 2026-09-20. · <a href="https://www.42agency.com/contact-us">42agency.com/contact-us</a></p>
+  </div>
+</footer>
+</body>
+</html>

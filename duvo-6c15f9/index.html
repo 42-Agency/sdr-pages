@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Duvo × 42 Agency — Paid Channel Audit</title>
+<style>
+  :root{
+    --ink:#1a1a1a; --body:#4a4a4a; --muted:#6b6b6b;
+    --lime:#DFFE68; --lime-dark:#C8E85C;
+    --surface:#f5f5f5; --white:#ffffff;
+    --orange:#F59E0B; --blue:#3B82F6; --green:#10B981; --red:#EF4444;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:Inter,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    background:var(--white); color:var(--body);
+    line-height:1.6; font-size:16px;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+  header{border-bottom:2px solid var(--ink);background:var(--white);padding:16px 0}
+  .hdr{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .logo{font-weight:800;font-size:18px;color:var(--ink);letter-spacing:-.02em}
+  .logo span{background:var(--lime);padding:2px 8px;border:2px solid var(--ink);border-radius:6px;margin-right:8px}
+  .badge{padding:4px 12px;background:var(--surface);border:2px solid var(--ink);border-radius:999px;font-size:12px;font-weight:700;color:var(--ink);letter-spacing:.04em}
+
+  .hero{background:var(--surface);border-bottom:2px solid var(--ink);padding:56px 0 48px}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--lime);border:2px solid var(--ink);border-radius:999px;padding:4px 14px;box-shadow:2px 2px 0 0 var(--ink);margin-bottom:20px}
+  h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.03em;color:var(--ink);line-height:1.12;text-wrap:balance;max-width:24ch}
+  .sub{margin-top:16px;font-size:17px;max-width:62ch}
+  .meta{margin-top:20px;font-size:13px;color:var(--muted);font-weight:500}
+
+  section{padding:44px 0}
+  h2{font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:8px}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .lede{max-width:64ch;margin-bottom:24px}
+
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:-34px}
+  @media(min-width:720px){.stats{grid-template-columns:repeat(4,1fr)}}
+  .stat{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:18px;box-shadow:4px 4px 0 0 var(--ink)}
+  .stat .n{font-size:30px;font-weight:800;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1}
+  .stat .l{font-size:12.5px;font-weight:600;color:var(--muted);margin-top:6px;line-height:1.4}
+
+  .channels{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.channels{grid-template-columns:repeat(3,1fr)}}
+  .ch{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:20px;box-shadow:4px 4px 0 0 var(--ink);display:flex;flex-direction:column;gap:10px}
+  .ch h3{font-size:16px;font-weight:700;color:var(--ink)}
+  .ch p{font-size:13.5px}
+  .pill{font-weight:800;font-size:11.5px;letter-spacing:.07em;border:2px solid;border-radius:999px;padding:3px 12px;align-self:flex-start;text-transform:uppercase}
+  .pill.live{color:var(--green);border-color:var(--green);background:rgba(16,185,129,.08)}
+  .pill.dark{color:var(--red);border-color:var(--red);background:rgba(239,68,68,.08)}
+  .pill.pixel{color:var(--orange);border-color:var(--orange);background:rgba(245,158,11,.08)}
+
+  .insight{background:var(--lime);border:2px solid var(--ink);border-radius:16px;padding:32px;box-shadow:6px 6px 0 0 var(--ink);margin-top:28px}
+  .insight h2{margin-bottom:10px;font-size:24px}
+  .insight p{color:var(--ink);max-width:66ch}
+  .insight .vtag{display:inline-block;background:var(--ink);color:var(--lime);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border-radius:6px;padding:4px 10px;margin-bottom:14px}
+
+  .bars{display:grid;gap:10px;margin-top:18px}
+  .bar-row{display:grid;grid-template-columns:210px 1fr 90px;gap:12px;align-items:center;font-size:13.5px}
+  @media(max-width:640px){.bar-row{grid-template-columns:130px 1fr 74px;font-size:12.5px}}
+  .bar-row .k{font-weight:600;color:var(--ink)}
+  .bar-track{background:var(--surface);border:2px solid var(--ink);border-radius:6px;height:22px;overflow:hidden}
+  .bar-fill{height:100%;background:var(--lime);border-right:2px solid var(--ink)}
+  .bar-fill.zero{background:rgba(239,68,68,.25);border-right:none;width:2px}
+  .bar-row .v{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink);text-align:right;white-space:nowrap}
+  .small{font-size:12.5px;color:var(--muted);margin-top:10px;max-width:70ch}
+
+  .tbl-wrap{overflow-x:auto;border:2px solid var(--ink);border-radius:12px;box-shadow:4px 4px 0 0 var(--ink);background:var(--white)}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:600px}
+  th{background:var(--ink);color:var(--white);text-align:left;font-weight:700;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;padding:12px 16px}
+  td{padding:12px 16px;border-top:2px solid #e5e5e5;color:var(--body);vertical-align:top}
+  td.num{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink);white-space:nowrap}
+  tr.hl td{background:rgba(223,254,104,.35)}
+
+  .moves{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.moves{grid-template-columns:repeat(3,1fr)}}
+  .move{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:22px;box-shadow:4px 4px 0 0 var(--ink)}
+  .move .num{font-size:13px;font-weight:800;color:var(--ink);background:var(--lime);border:2px solid var(--ink);border-radius:6px;padding:2px 9px;display:inline-block;margin-bottom:12px}
+  .move h3{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:8px}
+  .move p{font-size:14px}
+
+  .method{background:var(--surface);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  .m-grid{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.m-grid{grid-template-columns:repeat(2,1fr)}}
+  .m-card{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+  .m-card h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:8px}
+  .m-card p{font-size:13.5px}
+
+  .cta{background:var(--lime);border:2px solid var(--ink);border-radius:16px;padding:36px;box-shadow:6px 6px 0 0 var(--ink);text-align:left}
+  .cta h2{font-size:26px;margin-bottom:10px}
+  .cta p{color:var(--ink);max-width:60ch;margin-bottom:22px}
+  .btn{display:inline-block;background:var(--ink);color:var(--white);font-weight:700;font-size:15px;border-radius:8px;padding:13px 26px;text-decoration:none}
+  .btn:hover{background:#333}
+  .cta .alt{margin-top:16px;margin-bottom:0;font-size:13.5px;color:var(--ink)}
+  .cta .alt a{color:var(--ink);font-weight:700;text-decoration:none;border-bottom:2px solid var(--ink)}
+  .cta .alt a:hover{opacity:.7}
+
+  footer{border-top:2px solid var(--ink);background:var(--ink);color:#9ca3af;padding:40px 0;margin-top:24px}
+  footer .ft-title{color:var(--lime);font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+  footer p{font-size:13.5px;max-width:72ch}
+  footer a{color:var(--white);font-weight:600;text-decoration:none;border-bottom:2px solid var(--lime)}
+  footer a:hover{color:var(--lime)}
+  footer .fine{margin-top:18px;font-size:12px;color:#6b7280}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hdr">
+    <div class="logo"><span>42</span>AGENCY</div>
+    <div class="badge">MARKET INTELLIGENCE · PREPARED FOR DUVO</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Paid Channel Audit · AI Agents &amp; Enterprise Automation</div>
+    <h1>Duvo is creating demand on LinkedIn. Google is where it leaks out.</h1>
+    <p class="sub">We audited Duvo's paid footprint across Google Search, YouTube &amp; display, LinkedIn and Meta — side by side with UiPath, Workato and n8n. Every number below is from public ad libraries and search data, and every one is checkable.</p>
+    <p class="meta">Run September 20, 2026 · US market · Sources: Google Ads Transparency Center, LinkedIn &amp; Meta Ad Libraries, DataForSEO, duvo.ai's own tag stack</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="n">245</div><div class="l">Duvo ads in the LinkedIn library — a real, well-crafted program. This channel works</div></div>
+      <div class="stat"><div class="n">2</div><div class="l">Google ads still live, out of 34 lifetime creatives — 32 went dark in March and June</div></div>
+      <div class="stat"><div class="n">210</div><div class="l">US searches/mo for "freight audit software" — the homepage hero use case. Duvo absent from the top 19, paid and organic</div></div>
+      <div class="stat"><div class="n">#5</div><div class="l">Capterra's "duvo.ai Pricing, Alternatives &amp; More" page on Duvo's own brand SERP — a third party owns the pricing answer</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Channel by channel</div>
+    <h2>The scoreboard</h2>
+    <div class="channels">
+      <div class="ch">
+        <span class="pill live">Live</span>
+        <h3>LinkedIn</h3>
+        <p>245 ads in the library, with genuinely sharp copy: freight audit ("3 to 5% of freight spend"), supplier income (Notino's DSO from 70–120 days to 15), SAP clean core. Demand creation is not the problem.</p>
+      </div>
+      <div class="ch">
+        <span class="pill pixel">Fading</span>
+        <h3>Google Search</h3>
+        <p>34 lifetime creatives under advertiser "Taskcrew Inc." — 28 dark since March 16, 3 more since June 13. Two text ads remain. The Google Ads conversion tag (AW-17668329177) is installed and waiting.</p>
+      </div>
+      <div class="ch">
+        <span class="pill dark">Dark</span>
+        <h3>YouTube &amp; Display</h3>
+        <p>One video creative ever, dark since October 2025. Workato's current Google sample is over half video; n8n's too. Duvo's live footprint is text-only.</p>
+      </div>
+      <div class="ch">
+        <span class="pill dark">Dark</span>
+        <h3>Meta</h3>
+        <p>No ads or page found in the Meta Ad Library. Of the comparison set, only UiPath runs Meta (217 active ads) — low priority, but worth knowing the field.</p>
+      </div>
+      <div class="ch">
+        <span class="pill pixel">Exposed</span>
+        <h3>Brand SERP</h3>
+        <p>Duvo holds #1 organic for "duvo ai" and nobody bids on the brand yet. But Capterra ranks #5 with a "Pricing, Alternatives &amp; More" page — the pricing and alternatives narrative belongs to a directory, not to Duvo.</p>
+      </div>
+      <div class="ch">
+        <span class="pill dark">Dark</span>
+        <h3>Category &amp; use-case search</h3>
+        <p>32 tracked organic keywords total. Absent from the top 19 on "freight audit software", "ai agents for retail operations", "retail process automation" and every alternative/pricing term we pulled.</p>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="vtag">The finding</div>
+      <h2>Demand creation without demand capture.</h2>
+      <p>245 LinkedIn ads are warming up operations and finance leaders every day. When those buyers do what warmed-up buyers do — google the use case, google "duvo ai pricing", google the alternatives — Duvo isn't there. The search layer that should harvest LinkedIn's work has decayed to 2 text ads, and the conversion tag that would measure it sits installed on the site with almost nothing feeding it.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">The demand going past</div>
+    <h2>What people search while the account idles, US monthly</h2>
+    <div class="bars">
+      <div class="bar-row"><span class="k">n8n alternative</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="v">1,000</span></div>
+      <div class="bar-row"><span class="k">workato pricing</span><div class="bar-track"><div class="bar-fill" style="width:26%"></div></div><span class="v">260</span></div>
+      <div class="bar-row"><span class="k">uipath pricing</span><div class="bar-track"><div class="bar-fill" style="width:26%"></div></div><span class="v">260</span></div>
+      <div class="bar-row"><span class="k">freight audit software</span><div class="bar-track"><div class="bar-fill" style="width:21%"></div></div><span class="v">210</span></div>
+      <div class="bar-row"><span class="k">workato alternative</span><div class="bar-track"><div class="bar-fill" style="width:14%"></div></div><span class="v">140</span></div>
+      <div class="bar-row"><span class="k">uipath alternative</span><div class="bar-track"><div class="bar-fill" style="width:9%"></div></div><span class="v">90</span></div>
+      <div class="bar-row"><span class="k">Duvo's coverage of any of it</span><div class="bar-track"><div class="bar-fill zero"></div></div><span class="v">0</span></div>
+    </div>
+    <p class="small">Google Ads search volume, US, 12-month average. "freight audit software" carries a $38.72 CPC and its first page is Trimble, Gartner, FreightPop and Loop — while a freight audit walkthrough is the hero demo on duvo.ai's homepage. The story is built; the SERP has never seen it.</p>
+    <p class="small">Worth knowing: the head category terms ("ai agents for retail operations", "grocery supply chain automation") have effectively zero search volume. Category demand expresses itself through use-case and competitor terms — which is exactly where Duvo is absent.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Competitive pressure</div>
+    <h2>What the automation incumbents are buying</h2>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Company</th><th>Google creatives (all formats)</th><th>LinkedIn ads in library</th><th>Meta Ad Library</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td><strong>Duvo</strong></td><td class="num">34 lifetime · 2 live</td><td class="num">245</td><td>No ads found</td></tr>
+          <tr><td>UiPath</td><td class="num">4,000</td><td class="num">3,833</td><td>217 active</td></tr>
+          <tr><td>Workato</td><td class="num">3,000</td><td class="num">1,524</td><td>No active ads</td></tr>
+          <tr><td>n8n</td><td class="num">300</td><td class="num">157</td><td>No active ads</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">Counts from the Google Ads Transparency Center and the LinkedIn and Meta ad libraries, pulled September 20, 2026. Every Google creative we sampled from all three competitors was live this month. To be clear about the asymmetry: these are horizontal giants and nobody expects a seed-stage vertical player to match their spend. The point is narrower — buyers Duvo already paid to reach on LinkedIn finish their research on Google, and that surface is uncontested. One consolation: no competitor bids on Duvo's brand terms yet. That window is open, not permanent.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Where we'd start</div>
+    <h2>Three moves, in order</h2>
+    <div class="moves">
+      <div class="move">
+        <span class="num">01</span>
+        <h3>Own the use-case auctions</h3>
+        <p>"freight audit software" is 210 searches/mo at $38.72 — small, high-intent, and the exact story Duvo's homepage already tells with the XPO invoice walkthrough. A dedicated freight-audit landing page plus a focused campaign puts Duvo in front of buyers Trimble and Loop currently get by default.</p>
+      </div>
+      <div class="move">
+        <span class="num">02</span>
+        <h3>Put a floor under the brand SERP</h3>
+        <p>Nobody bids on "duvo ai" — including Duvo — and Capterra's pricing-and-alternatives page sits at #5. Owning the brand auction is cheap insurance, and a proper pricing/alternatives page takes the narrative back from the directory.</p>
+      </div>
+      <div class="move">
+        <span class="num">03</span>
+        <h3>Restart the harvest layer under LinkedIn</h3>
+        <p>The Google Ads tag, HubSpot, Clarity and GA4 are all live on duvo.ai. Retargeting the traffic 245 LinkedIn ads generate, plus competitor pricing and alternative terms at seed-appropriate budgets, is the cheapest pipeline available — the instrumentation cost is already paid.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="method">
+  <div class="wrap">
+    <div class="kicker">Receipts</div>
+    <h2>How we checked, and where we'd hedge</h2>
+    <div class="m-grid">
+      <div class="m-card">
+        <h3>Method</h3>
+        <p>12 live Google SERP pulls (US, desktop + mobile) across brand, competitor and use-case terms · paid-keyword profiles for all four domains via DataForSEO Labs · full-format creative counts and last-seen dates from the Google Ads Transparency Center · LinkedIn and Meta ad libraries · direct inspection of duvo.ai's tag stack, including the GTM container.</p>
+      </div>
+      <div class="m-card">
+        <h3>Honest hedges</h3>
+        <p>Ad-library databases are samples and undercount — we treat "zero" as "nothing detectable" and triangulated Duvo's Google reading across the Transparency Center, the Labs keyword database and the site's tag stack. LinkedIn's library doesn't expose per-ad dates, so 245 is the library total, not a count of simultaneously live ads. "duvo" brand search volume is contaminated by unrelated brands (Fujifilm's Duvo lenses, a pet-products line), so we quote no brand-volume number.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <h2>One Growth Generalist req is open. The search layer can't wait for the hire.</h2>
+      <p>42 Agency runs paid search, LinkedIn and pipeline programs for B2B SaaS — in the stack Duvo already uses (HubSpot, GA4, Google Ads). We build it so it hands over cleanly to your hire the day they start, or we keep running it alongside them.</p>
+      <a class="btn" href="https://www.42agency.com/contact-us">Talk to 42 Agency →</a>
+      <p class="alt">Not ready for a call? <a href="https://intel.42agency.com/ask">Ask our GTM assistant anything →</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft-title">42 Agency</div>
+    <p>Demand generation and RevOps for B2B SaaS. This audit was prepared for the team at Duvo using public data only — ad libraries, transparency centers, search databases and duvo.ai's public site. Happy to walk through any number in it.</p>
+    <p class="fine">Sources: Google Ads Transparency Center · LinkedIn Ad Library · Meta Ad Library · DataForSEO (SERP, Labs, Google Ads volumes) · duvo.ai tag inspection. Run date 2026-09-20. · <a href="https://www.42agency.com/contact-us">42agency.com/contact-us</a></p>
+  </div>
+</footer>
+</body>
+</html>

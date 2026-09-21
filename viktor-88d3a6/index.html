@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Viktor × 42 Agency — Paid Channel Audit</title>
+<style>
+  :root{
+    --ink:#1a1a1a; --body:#4a4a4a; --muted:#6b6b6b;
+    --lime:#DFFE68; --lime-dark:#C8E85C;
+    --surface:#f5f5f5; --white:#ffffff;
+    --orange:#F59E0B; --blue:#3B82F6; --green:#10B981; --red:#EF4444;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:Inter,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    background:var(--white); color:var(--body);
+    line-height:1.6; font-size:16px;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+  header{border-bottom:2px solid var(--ink);background:var(--white);padding:16px 0}
+  .hdr{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .logo{font-weight:800;font-size:18px;color:var(--ink);letter-spacing:-.02em}
+  .logo span{background:var(--lime);padding:2px 8px;border:2px solid var(--ink);border-radius:6px;margin-right:8px}
+  .badge{padding:4px 12px;background:var(--surface);border:2px solid var(--ink);border-radius:999px;font-size:12px;font-weight:700;color:var(--ink);letter-spacing:.04em}
+
+  .hero{background:var(--surface);border-bottom:2px solid var(--ink);padding:56px 0 48px}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--lime);border:2px solid var(--ink);border-radius:999px;padding:4px 14px;box-shadow:2px 2px 0 0 var(--ink);margin-bottom:20px}
+  h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.03em;color:var(--ink);line-height:1.12;text-wrap:balance;max-width:24ch}
+  .sub{margin-top:16px;font-size:17px;max-width:62ch}
+  .meta{margin-top:20px;font-size:13px;color:var(--muted);font-weight:500}
+
+  section{padding:44px 0}
+  h2{font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:8px}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .lede{max-width:64ch;margin-bottom:24px}
+
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:-34px}
+  @media(min-width:720px){.stats{grid-template-columns:repeat(4,1fr)}}
+  .stat{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:18px;box-shadow:4px 4px 0 0 var(--ink)}
+  .stat .n{font-size:30px;font-weight:800;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1}
+  .stat .l{font-size:12.5px;font-weight:600;color:var(--muted);margin-top:6px;line-height:1.4}
+
+  .channels{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.channels{grid-template-columns:repeat(3,1fr)}}
+  .ch{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:20px;box-shadow:4px 4px 0 0 var(--ink);display:flex;flex-direction:column;gap:10px}
+  .ch h3{font-size:16px;font-weight:700;color:var(--ink)}
+  .ch p{font-size:13.5px}
+  .pill{font-weight:800;font-size:11.5px;letter-spacing:.07em;border:2px solid;border-radius:999px;padding:3px 12px;align-self:flex-start;text-transform:uppercase}
+  .pill.live{color:var(--green);border-color:var(--green);background:rgba(16,185,129,.08)}
+  .pill.dark{color:var(--red);border-color:var(--red);background:rgba(239,68,68,.08)}
+  .pill.pixel{color:var(--orange);border-color:var(--orange);background:rgba(245,158,11,.08)}
+
+  .insight{background:var(--lime);border:2px solid var(--ink);border-radius:16px;padding:32px;box-shadow:6px 6px 0 0 var(--ink);margin-top:28px}
+  .insight h2{margin-bottom:10px;font-size:24px}
+  .insight p{color:var(--ink);max-width:66ch}
+  .insight .vtag{display:inline-block;background:var(--ink);color:var(--lime);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border-radius:6px;padding:4px 10px;margin-bottom:14px}
+
+  .bars{display:grid;gap:10px;margin-top:18px}
+  .bar-row{display:grid;grid-template-columns:210px 1fr 90px;gap:12px;align-items:center;font-size:13.5px}
+  @media(max-width:640px){.bar-row{grid-template-columns:130px 1fr 74px;font-size:12.5px}}
+  .bar-row .k{font-weight:600;color:var(--ink)}
+  .bar-track{background:var(--surface);border:2px solid var(--ink);border-radius:6px;height:22px;overflow:hidden}
+  .bar-fill{height:100%;background:var(--lime);border-right:2px solid var(--ink)}
+  .bar-fill.zero{background:rgba(239,68,68,.25);border-right:none;width:2px}
+  .bar-row .v{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink);text-align:right;white-space:nowrap}
+  .small{font-size:12.5px;color:var(--muted);margin-top:10px;max-width:70ch}
+
+  .tbl-wrap{overflow-x:auto;border:2px solid var(--ink);border-radius:12px;box-shadow:4px 4px 0 0 var(--ink);background:var(--white)}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:600px}
+  th{background:var(--ink);color:var(--white);text-align:left;font-weight:700;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;padding:12px 16px}
+  td{padding:12px 16px;border-top:2px solid #e5e5e5;color:var(--body);vertical-align:top}
+  td.num{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink);white-space:nowrap}
+  tr.hl td{background:rgba(223,254,104,.35)}
+
+  .moves{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.moves{grid-template-columns:repeat(3,1fr)}}
+  .move{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:22px;box-shadow:4px 4px 0 0 var(--ink)}
+  .move .num{font-size:13px;font-weight:800;color:var(--ink);background:var(--lime);border:2px solid var(--ink);border-radius:6px;padding:2px 9px;display:inline-block;margin-bottom:12px}
+  .move h3{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:8px}
+  .move p{font-size:14px}
+
+  .method{background:var(--surface);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  .m-grid{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.m-grid{grid-template-columns:repeat(2,1fr)}}
+  .m-card{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+  .m-card h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:8px}
+  .m-card p{font-size:13.5px}
+
+  .cta{background:var(--lime);border:2px solid var(--ink);border-radius:16px;padding:36px;box-shadow:6px 6px 0 0 var(--ink);text-align:left}
+  .cta h2{font-size:26px;margin-bottom:10px}
+  .cta p{color:var(--ink);max-width:60ch;margin-bottom:22px}
+  .btn{display:inline-block;background:var(--ink);color:var(--white);font-weight:700;font-size:15px;border-radius:8px;padding:13px 26px;text-decoration:none}
+  .btn:hover{background:#333}
+  .cta .alt{margin-top:16px;margin-bottom:0;font-size:13.5px;color:var(--ink)}
+  .cta .alt a{color:var(--ink);font-weight:700;text-decoration:none;border-bottom:2px solid var(--ink)}
+  .cta .alt a:hover{opacity:.7}
+
+  footer{border-top:2px solid var(--ink);background:var(--ink);color:#9ca3af;padding:40px 0;margin-top:24px}
+  footer .ft-title{color:var(--lime);font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+  footer p{font-size:13.5px;max-width:72ch}
+  footer a{color:var(--white);font-weight:600;text-decoration:none;border-bottom:2px solid var(--lime)}
+  footer a:hover{color:var(--lime)}
+  footer .fine{margin-top:18px;font-size:12px;color:#6b7280}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hdr">
+    <div class="logo"><span>42</span>AGENCY</div>
+    <div class="badge">MARKET INTELLIGENCE · PREPARED FOR VIKTOR</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Paid Channel Audit · AI Employees</div>
+    <h1>Viktor is spending on Google. The site can't tell Google what converted.</h1>
+    <p class="sub">We audited Viktor's paid footprint across Google Search, YouTube &amp; display, LinkedIn and Meta — side by side with Glean, Lindy and Dust. Every number below is from public ad libraries, search data and viktor.com's own tag stack, and every one is checkable.</p>
+    <p class="meta">Run September 20, 2026 · US market · Sources: Google Ads Transparency Center, LinkedIn &amp; Meta Ad Libraries, DataForSEO, viktor.com's own tag stack</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="n">400</div><div class="l">Google creatives live under Viktor's entity ZETA AI, Inc. — video, search text and display, running since July</div></div>
+      <div class="stat"><div class="n">0</div><div class="l">Google Ads tags on viktor.com — no conversion or remarketing ID on any page or in the GTM container</div></div>
+      <div class="stat"><div class="n">10</div><div class="l">Open marketing roles, including Performance Marketing Lead (Google Ads) and Head of Conversion</div></div>
+      <div class="stat"><div class="n">2,400</div><div class="l">US searches every month for "viktor ai" — a $6.78 CPC auction nobody is in, including Viktor</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Channel by channel</div>
+    <h2>The scoreboard</h2>
+    <div class="channels">
+      <div class="ch">
+        <span class="pill live">Live</span>
+        <h3>Google Search &amp; YouTube</h3>
+        <p>400 creatives in the Transparency Center under ZETA AI, Inc. — roughly half video, plus search text ads and display — active continuously since at least July 2, last seen the day of this audit. This is a real program, at real scale for the category.</p>
+      </div>
+      <div class="ch">
+        <span class="pill dark">Missing</span>
+        <h3>Google Ads tag</h3>
+        <p>No AW- conversion ID anywhere: not on the homepage, pricing, media LP or careers pages, and not inside GTM-WSFQ6XPX. The container carries GA4 and LinkedIn Insight — the one platform actually spending is the one with no tag.</p>
+      </div>
+      <div class="ch">
+        <span class="pill dark">Missing</span>
+        <h3>Google remarketing</h3>
+        <p>With no Google tag, no Google-side remarketing audiences are being built from site traffic, and enhanced conversions can't run. Every visitor those 400 creatives buy is anonymous to Google the moment they land.</p>
+      </div>
+      <div class="ch">
+        <span class="pill live">Live</span>
+        <h3>LinkedIn</h3>
+        <p>51 ads in the library — company videos plus boosted thought-leader posts from creator profiles (and the CEO's own). Clever motion, but outgunned: Glean has 1,742 ads in the library, Dust 566.</p>
+      </div>
+      <div class="ch">
+        <span class="pill pixel">Pixel only</span>
+        <h3>Meta</h3>
+        <p>Meta pixel is installed and firing on viktor.com, but the Ad Library returned no verifiable ads for Viktor. Glean and Lindy show zero active Meta ads too — the channel is open in this category.</p>
+      </div>
+      <div class="ch">
+        <span class="pill pixel">Pixel only</span>
+        <h3>Analytics stack</h3>
+        <p>GA4, LinkedIn Insight, Meta pixel and PostHog are all live. If Google Ads is measuring anything today, it's at best imported GA4 events — a weaker signal than native conversion tracking, and invisible to bidding features like enhanced conversions.</p>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="vtag">The finding</div>
+      <h2>The campaigns are flying. The instruments aren't plugged in.</h2>
+      <p>Most startups build tracking before they spend. Viktor did the opposite: 400 Google creatives live and rotating, with zero Google Ads tags on the site to tell the auction what worked. Google's bidding is optimizing on borrowed signal at best — and the Performance Marketing Lead (Google Ads) and Head of Conversion roles Viktor is recruiting will inherit an account they can't measure until someone wires the tag.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">The demand nearby</div>
+    <h2>What people search in Viktor's category, US monthly</h2>
+    <div class="bars">
+      <div class="bar-row"><span class="k">lindy ai</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="v">9,900</span></div>
+      <div class="bar-row"><span class="k">glean ai</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="v">9,900</span></div>
+      <div class="bar-row"><span class="k">viktor ai</span><div class="bar-track"><div class="bar-fill" style="width:24.2%"></div></div><span class="v">2,400</span></div>
+      <div class="bar-row"><span class="k">ai employee</span><div class="bar-track"><div class="bar-fill" style="width:16.2%"></div></div><span class="v">1,600</span></div>
+      <div class="bar-row"><span class="k">dust ai</span><div class="bar-track"><div class="bar-fill" style="width:16.2%"></div></div><span class="v">1,600</span></div>
+      <div class="bar-row"><span class="k">glean pricing</span><div class="bar-track"><div class="bar-fill" style="width:6%"></div></div><span class="v">590</span></div>
+      <div class="bar-row"><span class="k">ai coworker</span><div class="bar-track"><div class="bar-fill" style="width:1.7%"></div></div><span class="v">170</span></div>
+      <div class="bar-row"><span class="k">Search ads captured on any of these</span><div class="bar-track"><div class="bar-fill zero"></div></div><span class="v">0</span></div>
+    </div>
+    <p class="small">Google Ads search volume, US, 12-month average. "viktor ai" costs $6.78 a click and has no advertisers on it — including Viktor. "lindy ai" (9,900/mo, $5.79) is an unguarded competitor brand: Lindy shows no detectable search defense.</p>
+    <p class="small">One more thing on the brand SERP: www.viktor.ai — an unrelated engineering-software company — ranks #2 organic for "viktor ai", directly under viktor.com. At 2,400 searches a month, that name collision is quietly taxing brand demand nobody is defending.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Competitive pressure</div>
+    <h2>What the category is buying</h2>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Company</th><th>Google creatives (all formats)</th><th>LinkedIn ads in library</th><th>Meta Ad Library</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td><strong>Viktor</strong></td><td class="num">400 (live, untagged site)</td><td class="num">51</td><td>Unverifiable (pixel installed)</td></tr>
+          <tr><td>Glean</td><td class="num">700</td><td class="num">1,742</td><td>No active ads</td></tr>
+          <tr><td>Dust</td><td class="num">36</td><td class="num">566</td><td>Unverifiable</td></tr>
+          <tr><td>Lindy</td><td class="num">200</td><td class="num">17</td><td>No active ads</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">Counts from the Google Ads Transparency Center and the LinkedIn and Meta ad libraries, pulled September 20, 2026. Viktor's Google creative count is second only to Glean's — this is not a company that under-spends. It's a company spending without the measurement layer. And nobody is bidding on Viktor's brand terms yet: we checked every competitor's paid profile for "viktor" keywords and found none.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Where we'd start</div>
+    <h2>Three moves, in order</h2>
+    <div class="moves">
+      <div class="move">
+        <span class="num">01</span>
+        <h3>Wire the tag before the hire</h3>
+        <p>Add the Google Ads tag to GTM, wire primary conversions and enhanced conversions, and start building remarketing lists. It's an afternoon of work, and it means the incoming Google Ads lead starts with months of clean data instead of archaeology.</p>
+      </div>
+      <div class="move">
+        <span class="num">02</span>
+        <h3>Own "viktor ai" while it's $6.78</h3>
+        <p>2,400 searches a month, no advertisers, and a name-collision company sitting #2 organic. A small brand campaign caps the confusion tax and protects the SERP before a competitor notices the window.</p>
+      </div>
+      <div class="move">
+        <span class="num">03</span>
+        <h3>Point spend at unguarded demand</h3>
+        <p>"lindy ai" (9,900/mo, $5.79) and "glean pricing" (590/mo, ~$49) have no defenders in the auction. Viktor's Labs profile already shows one conquesting keyword — the instinct is right; it just needs conversion data behind it to scale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="method">
+  <div class="wrap">
+    <div class="kicker">Receipts</div>
+    <h2>How we checked, and where we'd hedge</h2>
+    <div class="m-grid">
+      <div class="m-card">
+        <h3>Method</h3>
+        <p>11 live Google SERP pulls (US) across brand, competitor and category terms · paid-keyword profiles for all four domains via DataForSEO Labs · full-format creative counts from the Google Ads Transparency Center · LinkedIn and Meta ad libraries · direct inspection of viktor.com's tag stack across five pages, including the full GTM container · open roles read from viktor.com/careers the same day.</p>
+      </div>
+      <div class="m-card">
+        <h3>Honest hedges</h3>
+        <p>Ad-library databases are samples and undercount — we treat "zero" as "nothing detectable" and triangulated every zero across independent sources. "No Google Ads tag" means no client-side tag: conversions could still reach Google via GA4 import or API uploads, but neither replaces native tagging for bidding, enhanced conversions or remarketing. Meta returned no data for Viktor, so that channel is marked unverifiable, not dark.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <h2>You're hiring the people to fix this. Give them a measurable account on day one.</h2>
+      <p>42 Agency runs paid search, LinkedIn and conversion instrumentation for B2B SaaS. We can wire Viktor's Google measurement and steady the program now, then hand it over cleanly the day your Performance Marketing Lead starts — or keep running it alongside them.</p>
+      <a class="btn" href="https://www.42agency.com/contact-us">Talk to 42 Agency →</a>
+      <p class="alt">Not ready for a call? <a href="https://intel.42agency.com/ask">Ask our GTM assistant anything →</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft-title">42 Agency</div>
+    <p>Demand generation and RevOps for B2B SaaS. This audit was prepared for the team at Viktor using public data only — ad libraries, transparency centers, search databases and viktor.com's public site. Happy to walk through any number in it.</p>
+    <p class="fine">Sources: Google Ads Transparency Center · LinkedIn Ad Library · Meta Ad Library · DataForSEO (SERP, Labs, Google Ads volumes) · viktor.com tag inspection. Run date 2026-09-20. · <a href="https://www.42agency.com/contact-us">42agency.com/contact-us</a></p>
+  </div>
+</footer>
+</body>
+</html>
