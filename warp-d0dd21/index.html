@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Warp × 42 Agency — Paid Channel Audit</title>
+<style>
+  :root{
+    --ink:#1a1a1a; --body:#4a4a4a; --muted:#6b6b6b;
+    --lime:#DFFE68; --lime-dark:#C8E85C;
+    --surface:#f5f5f5; --white:#ffffff;
+    --orange:#F59E0B; --blue:#3B82F6; --green:#10B981; --red:#EF4444;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:Inter,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    background:var(--white); color:var(--body);
+    line-height:1.6; font-size:16px;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+  header{border-bottom:2px solid var(--ink);background:var(--white);padding:16px 0}
+  .hdr{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .logo{font-weight:800;font-size:18px;color:var(--ink);letter-spacing:-.02em}
+  .logo span{background:var(--lime);padding:2px 8px;border:2px solid var(--ink);border-radius:6px;margin-right:8px}
+  .badge{padding:4px 12px;background:var(--surface);border:2px solid var(--ink);border-radius:999px;font-size:12px;font-weight:700;color:var(--ink);letter-spacing:.04em}
+
+  .hero{background:var(--surface);border-bottom:2px solid var(--ink);padding:56px 0 48px}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--lime);border:2px solid var(--ink);border-radius:999px;padding:4px 14px;box-shadow:2px 2px 0 0 var(--ink);margin-bottom:20px}
+  h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.03em;color:var(--ink);line-height:1.12;text-wrap:balance;max-width:24ch}
+  .sub{margin-top:16px;font-size:17px;max-width:62ch}
+  .meta{margin-top:20px;font-size:13px;color:var(--muted);font-weight:500}
+
+  section{padding:44px 0}
+  h2{font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:8px}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .lede{max-width:64ch;margin-bottom:24px}
+
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:-34px}
+  @media(min-width:720px){.stats{grid-template-columns:repeat(4,1fr)}}
+  .stat{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:18px;box-shadow:4px 4px 0 0 var(--ink)}
+  .stat .n{font-size:30px;font-weight:800;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1}
+  .stat .l{font-size:12.5px;font-weight:600;color:var(--muted);margin-top:6px;line-height:1.4}
+
+  .channels{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.channels{grid-template-columns:repeat(3,1fr)}}
+  .ch{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:20px;box-shadow:4px 4px 0 0 var(--ink);display:flex;flex-direction:column;gap:10px}
+  .ch h3{font-size:16px;font-weight:700;color:var(--ink)}
+  .ch p{font-size:13.5px}
+  .pill{font-weight:800;font-size:11.5px;letter-spacing:.07em;border:2px solid;border-radius:999px;padding:3px 12px;align-self:flex-start;text-transform:uppercase}
+  .pill.live{color:var(--green);border-color:var(--green);background:rgba(16,185,129,.08)}
+  .pill.dark{color:var(--red);border-color:var(--red);background:rgba(239,68,68,.08)}
+  .pill.pixel{color:var(--orange);border-color:var(--orange);background:rgba(245,158,11,.08)}
+
+  .insight{background:var(--lime);border:2px solid var(--ink);border-radius:16px;padding:32px;box-shadow:6px 6px 0 0 var(--ink);margin-top:28px}
+  .insight h2{margin-bottom:10px;font-size:24px}
+  .insight p{color:var(--ink);max-width:66ch}
+  .insight .vtag{display:inline-block;background:var(--ink);color:var(--lime);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border-radius:6px;padding:4px 10px;margin-bottom:14px}
+
+  .bars{display:grid;gap:10px;margin-top:18px}
+  .bar-row{display:grid;grid-template-columns:210px 1fr 90px;gap:12px;align-items:center;font-size:13.5px}
+  @media(max-width:640px){.bar-row{grid-template-columns:130px 1fr 74px;font-size:12.5px}}
+  .bar-row .k{font-weight:600;color:var(--ink)}
+  .bar-track{background:var(--surface);border:2px solid var(--ink);border-radius:6px;height:22px;overflow:hidden}
+  .bar-fill{height:100%;background:var(--lime);border-right:2px solid var(--ink)}
+  .bar-fill.zero{background:rgba(239,68,68,.25);border-right:none;width:2px}
+  .bar-row .v{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink);text-align:right;white-space:nowrap}
+  .small{font-size:12.5px;color:var(--muted);margin-top:10px;max-width:70ch}
+
+  .tbl-wrap{overflow-x:auto;border:2px solid var(--ink);border-radius:12px;box-shadow:4px 4px 0 0 var(--ink);background:var(--white)}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:600px}
+  th{background:var(--ink);color:var(--white);text-align:left;font-weight:700;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;padding:12px 16px}
+  td{padding:12px 16px;border-top:2px solid #e5e5e5;color:var(--body);vertical-align:top}
+  td.num{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink);white-space:nowrap}
+  tr.hl td{background:rgba(223,254,104,.35)}
+
+  .moves{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.moves{grid-template-columns:repeat(3,1fr)}}
+  .move{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:22px;box-shadow:4px 4px 0 0 var(--ink)}
+  .move .num{font-size:13px;font-weight:800;color:var(--ink);background:var(--lime);border:2px solid var(--ink);border-radius:6px;padding:2px 9px;display:inline-block;margin-bottom:12px}
+  .move h3{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:8px}
+  .move p{font-size:14px}
+
+  .method{background:var(--surface);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  .m-grid{display:grid;gap:16px;margin-top:20px}
+  @media(min-width:720px){.m-grid{grid-template-columns:repeat(2,1fr)}}
+  .m-card{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+  .m-card h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:8px}
+  .m-card p{font-size:13.5px}
+
+  .cta{background:var(--lime);border:2px solid var(--ink);border-radius:16px;padding:36px;box-shadow:6px 6px 0 0 var(--ink);text-align:left}
+  .cta h2{font-size:26px;margin-bottom:10px}
+  .cta p{color:var(--ink);max-width:60ch;margin-bottom:22px}
+  .btn{display:inline-block;background:var(--ink);color:var(--white);font-weight:700;font-size:15px;border-radius:8px;padding:13px 26px;text-decoration:none}
+  .btn:hover{background:#333}
+
+  footer{border-top:2px solid var(--ink);background:var(--ink);color:#9ca3af;padding:40px 0;margin-top:24px}
+  footer .ft-title{color:var(--lime);font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+  footer p{font-size:13.5px;max-width:72ch}
+  footer a{color:var(--white);font-weight:600;text-decoration:none;border-bottom:2px solid var(--lime)}
+  footer a:hover{color:var(--lime)}
+  footer .fine{margin-top:18px;font-size:12px;color:#6b7280}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hdr">
+    <div class="logo"><span>42</span>AGENCY</div>
+    <div class="badge">MARKET INTELLIGENCE · PREPARED FOR WARP</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Paid Channel Audit · Payroll &amp; HRIS</div>
+    <h1>Warp's demand engine is fully instrumented. One channel is switched on.</h1>
+    <p class="sub">We audited Warp's paid footprint across Google Search, YouTube &amp; display, LinkedIn, Meta, Reddit and X — side by side with Rippling, Gusto, Deel and Oyster. Every number below is from public ad libraries and search data, and every one is checkable.</p>
+    <p class="meta">Run September 20, 2026 · US market · Sources: Google Ads Transparency Center, LinkedIn &amp; Meta Ad Libraries, DataForSEO, warp.co's own tag stack</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="n">22,200</div><div class="l">US searches every month for "rippling pricing" — a $46 CPC auction Warp isn't in</div></div>
+      <div class="stat"><div class="n">2</div><div class="l">Google ads Warp has ever run — both text, both dark since Aug 24</div></div>
+      <div class="stat"><div class="n">5</div><div class="l">Ad platforms with conversion pixels live on warp.co — Google ×2, Meta, Reddit, X</div></div>
+      <div class="stat"><div class="n">1</div><div class="l">Channel actually spending: LinkedIn, mostly boosted founder posts</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Channel by channel</div>
+    <h2>The scoreboard</h2>
+    <div class="channels">
+      <div class="ch">
+        <span class="pill dark">Dark</span>
+        <h3>Google Search</h3>
+        <p>Zero paid keywords detected for warp.co against 1,217 organic keywords tracked. Warp's entire Google Ads history: two text ads, registered under founder Ayush Sharma's name, live Jun 28 – Aug 24, then nothing.</p>
+      </div>
+      <div class="ch">
+        <span class="pill dark">Dark</span>
+        <h3>YouTube &amp; Display</h3>
+        <p>No video or image creatives in the Transparency Center. Rippling runs YouTube through agency Deutsch LA; Deel's sample is 20% video. Warp: none.</p>
+      </div>
+      <div class="ch">
+        <span class="pill live">Live</span>
+        <h3>LinkedIn</h3>
+        <p>272 ads in the library — boosted founder posts plus product video ("the only non-PEO that handles your compliance"). Working, but outgunned: Rippling has 8,940 ads in the library, Deel 5,473.</p>
+      </div>
+      <div class="ch">
+        <span class="pill pixel">Pixel only</span>
+        <h3>Meta</h3>
+        <p>Pixel installed, page exists (@warphr) — no ads detectable in the Ad Library. All four competitors are actively running Meta campaigns. The pixel is building a retargeting audience nobody is using.</p>
+      </div>
+      <div class="ch">
+        <span class="pill pixel">Pixel only</span>
+        <h3>Reddit</h3>
+        <p>Reddit ads pixel is live on warp.co. Notably, Reddit threads hold the #1 organic spot for "best payroll for startups" and "gusto alternative" — the audience is there; the spend isn't.</p>
+      </div>
+      <div class="ch">
+        <span class="pill pixel">Pixel only</span>
+        <h3>X</h3>
+        <p>X ads pixel (uwt.js) is live on warp.co. No public library to verify spend, but the instrumentation pattern matches the rest: wired up, waiting.</p>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="vtag">The finding</div>
+      <h2>Someone built the tracking. Nobody is flying the plane.</h2>
+      <p>Two Google Ads conversion tags, a Meta pixel, a Reddit pixel and an X pixel are all live on warp.co — collecting audiences and ready to measure. But outside of LinkedIn founder-boosts, no campaigns feed them. Meanwhile the highest-intent demand in the category — people actively pricing your competitors — goes uncontested every month.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">The demand going past</div>
+    <h2>What people search while Warp sits out, US monthly</h2>
+    <div class="bars">
+      <div class="bar-row"><span class="k">rippling pricing</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="v">22,200</span></div>
+      <div class="bar-row"><span class="k">gusto pricing</span><div class="bar-track"><div class="bar-fill" style="width:19.8%"></div></div><span class="v">4,400</span></div>
+      <div class="bar-row"><span class="k">warp payroll</span><div class="bar-track"><div class="bar-fill" style="width:4.5%"></div></div><span class="v">1,000</span></div>
+      <div class="bar-row"><span class="k">rippling vs gusto</span><div class="bar-track"><div class="bar-fill" style="width:1.8%"></div></div><span class="v">390</span></div>
+      <div class="bar-row"><span class="k">gusto alternative</span><div class="bar-track"><div class="bar-fill" style="width:1.2%"></div></div><span class="v">260</span></div>
+      <div class="bar-row"><span class="k">best payroll for startups</span><div class="bar-track"><div class="bar-fill" style="width:0.8%"></div></div><span class="v">170</span></div>
+      <div class="bar-row"><span class="k">Warp's paid coverage of any of it</span><div class="bar-track"><div class="bar-fill zero"></div></div><span class="v">0</span></div>
+    </div>
+    <p class="small">Google Ads search volume, US, 12-month average. Even "warp payroll" (1,000/mo, ~$26 CPC) has no advertisers on it — including Warp. That's rare, and it won't stay that way once a competitor notices.</p>
+    <p class="small">For "rippling vs gusto", Rippling holds #2 and Gusto #3 organically with their own comparison pages — the incumbents actively defend comparison results. Warp's own /versus pages don't appear outside Warp's brand searches.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Competitive pressure</div>
+    <h2>What the other four are buying</h2>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Company</th><th>Google creatives (all formats)</th><th>LinkedIn ads in library</th><th>Meta Ad Library</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td><strong>Warp</strong></td><td class="num">2 (dormant)</td><td class="num">272</td><td>No ads found</td></tr>
+          <tr><td>Deel</td><td class="num">20,000</td><td class="num">5,473</td><td>Active</td></tr>
+          <tr><td>Rippling</td><td class="num">3,000</td><td class="num">8,940</td><td>Active</td></tr>
+          <tr><td>Gusto</td><td class="num">2,000</td><td class="num">1,075</td><td>Active</td></tr>
+          <tr><td>Oyster</td><td class="num">400</td><td class="num">1,144</td><td>Active</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">Counts from the Google Ads Transparency Center and the LinkedIn and Meta ad libraries, pulled September 20, 2026. One consolation: nobody is bidding on Warp's brand terms yet — we checked every competitor's paid profile for "warp" keywords and found none. That window is open, not permanent.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Where we'd start</div>
+    <h2>Three moves, in order</h2>
+    <div class="moves">
+      <div class="move">
+        <span class="num">01</span>
+        <h3>Conquest the pricing auctions</h3>
+        <p>Point campaigns on competitor-pricing and "vs" terms at warp.co/versus/rippling and /versus/gusto — the pages already carry the proof (multi-state registrations and notices handled, transparent $35 pricing, same-day setup). Not the homepage.</p>
+      </div>
+      <div class="move">
+        <span class="num">02</span>
+        <h3>Own the brand SERP while it's free</h3>
+        <p>"warp payroll" gets 1,000 searches a month and has no advertisers. Owning it now is cheap insurance against the day Rippling or Gusto decides to conquest you back.</p>
+      </div>
+      <div class="move">
+        <span class="num">03</span>
+        <h3>Light up the pixels you already have</h3>
+        <p>Meta, Reddit and X pixels have been collecting site audiences with no campaigns behind them. Retargeting warm traffic is the cheapest pipeline in paid — the setup cost is already paid.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="method">
+  <div class="wrap">
+    <div class="kicker">Receipts</div>
+    <h2>How we checked, and where we'd hedge</h2>
+    <div class="m-grid">
+      <div class="m-card">
+        <h3>Method</h3>
+        <p>34 live Google SERP pulls (US, desktop + mobile) across brand, competitor and category terms · paid-keyword profiles for all five domains via DataForSEO Labs · full-format creative counts from the Google Ads Transparency Center · LinkedIn and Meta ad libraries · direct inspection of warp.co's tag stack, including the GTM container. Landing pages verified live.</p>
+      </div>
+      <div class="m-card">
+        <h3>Honest hedges</h3>
+        <p>Ad-library databases are samples and undercount — we treat "zero" as "nothing detectable," and we triangulated Warp's readings across three independent sources before drawing conclusions. Reddit and X have no public ad libraries, so pixel presence is the best available signal there.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <h2>Hiring a Head of Demand Gen takes months. This takes weeks.</h2>
+      <p>42 Agency runs paid search, LinkedIn and pipeline programs for B2B SaaS — in the stack Warp already uses (Salesforce, HubSpot, Gong, Apollo). We build it so it hands over cleanly to your hire the day they start, or we keep running it alongside them.</p>
+      <a class="btn" href="https://www.42agency.com/contact-us">Talk to 42 Agency →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft-title">42 Agency</div>
+    <p>Demand generation and RevOps for B2B SaaS. This audit was prepared for the team at Warp using public data only — ad libraries, transparency centers, search databases and warp.co's public site. Happy to walk through any number in it.</p>
+    <p class="fine">Sources: Google Ads Transparency Center · LinkedIn Ad Library · Meta Ad Library · DataForSEO (SERP, Labs, Google Ads volumes) · warp.co tag inspection. Run date 2026-09-20. · <a href="https://www.42agency.com/contact-us">42agency.com/contact-us</a></p>
+  </div>
+</footer>
+</body>
+</html>
