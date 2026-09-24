@@ -163,6 +163,15 @@
       ]
     },
     {
+      "source": "/handl-renewal-check-3c22d2(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive, nosnippet"
+        }
+      ]
+    },
+    {
       "source": "/geo-(.*)",
       "headers": [
         {
