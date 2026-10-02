@@ -72,6 +72,18 @@
     font:500 12px Satoshi;color:var(--slate);border-top:1px solid var(--line);padding-top:6px}
   .chartnote{font:500 13px/1.55 Satoshi;color:var(--slate);margin:16px 0 0}
 
+  .key{display:flex;gap:20px;align-items:center;margin:0 0 20px;font:500 13px Satoshi;color:var(--slate)}
+  .key i{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:7px;vertical-align:-1px}
+  .pair{padding:15px 0;border-top:1px solid var(--line);min-width:480px}
+  .pair:first-of-type{border-top:0;padding-top:4px}
+  .pair .cap{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:0 0 10px}
+  .pair .place{font:500 13px Satoshi;color:var(--slate)}
+  .pair .mult{font:700 13.5px Satoshi;color:var(--orange);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .pair .badge{display:inline-block;font:700 10.5px Satoshi;letter-spacing:.07em;text-transform:uppercase;
+    color:#fff;background:var(--orange);border-radius:3px;padding:3px 7px;margin-left:8px;vertical-align:1px}
+  .pair .row{padding:3px 0}
+  .pair .row.a .v{color:var(--slate)}
+
   .callout{margin:26px 0 0;padding:22px 26px;background:var(--chip);border-radius:12px;
     font:500 16px/1.6 Satoshi;color:var(--ink)}
   .callout b{font-weight:700;color:var(--head)}
@@ -122,31 +134,62 @@
 
 <div class="wrap float" id="proof">
   <div class="stats">
-    <div class="stat"><div class="n">$571 vs $967</div><div class="d">Median negotiated rate for the same brain MRI at two Boston hospitals across town from each other.</div></div>
-    <div class="stat"><div class="n">$115 &ndash; <em>$3,961</em></div><div class="d">Full range of commercial negotiated rates for that identical scan. A 34&times; spread inside one in-network market.</div></div>
+    <div class="stat"><div class="n">$1,072 vs $2,471</div><div class="d">What one Boston-area health system charges for the same colonoscopy at its hospital versus its own surgery center.</div></div>
+    <div class="stat"><div class="n">$785 &ndash; <em>$3,350</em></div><div class="d">Full range across 62 Boston-area facilities for that identical procedure. A 4.3&times; spread, all of it in-network.</div></div>
     <div class="stat"><div class="n">Zip codes only</div><div class="d">The free check needs a list of employee zip codes. No claims file. Nothing personal.</div></div>
   </div>
 </div>
 
 <section><div class="wrap narrow">
   <span class="eyebrow on-light"><i></i>What the published rates show</span>
-  <h2>Boston, one procedure, six hospitals</h2>
-  <p class="sub">Median commercial negotiated rate for a brain MRI without contrast (CPT 70551), taken directly from each hospital's federally required price transparency filing, spring 2026.</p>
+  <h2>Boston, one procedure, five pairs of buildings</h2>
+  <p class="sub">Median negotiated rate for a colonoscopy with biopsy (CPT 45380) across 62 Boston-area facilities. Screening now starts at 45 rather than 50, so this is the procedure your population runs into most. Every pairing below is in-network &mdash; the patient picks the building, and the plan pays the difference.</p>
 
   <div class="chart">
-    <h3>Same scan, six hospitals</h3>
-    <p class="src">Median of commercial negotiated rates per filing &middot; March&ndash;April 2026</p>
-    <div class="row"><div class="h">Tufts Medical Center</div><div class="track"><div class="bar" style="width:59%;background:var(--bar1)"></div></div><div class="v">$571</div></div>
-    <div class="row"><div class="h">Boston Medical Center</div><div class="track"><div class="bar" style="width:59.4%;background:var(--bar2)"></div></div><div class="v">$574</div></div>
-    <div class="row"><div class="h">Mount Auburn Hospital</div><div class="track"><div class="bar" style="width:65.7%;background:var(--bar3)"></div></div><div class="v">$635</div></div>
-    <div class="row"><div class="h">Beth Israel Deaconess</div><div class="track"><div class="bar" style="width:66%;background:var(--bar4)"></div></div><div class="v">$638</div></div>
-    <div class="row"><div class="h">Brigham and Women's</div><div class="track"><div class="bar" style="width:100%;background:var(--bar5)"></div></div><div class="v">$967</div></div>
-    <div class="row"><div class="h">Mass General Hospital</div><div class="track"><div class="bar" style="width:100%;background:var(--bar6)"></div></div><div class="v">$967</div></div>
-    <div class="axis"><div class="t"><span>$0</span><span>$967</span></div></div>
-    <p class="chartnote">Brigham and Mass General file identical rates (system-level contracts). Cambridge Health Alliance is omitted from the chart: most entries in its filing sit at its list price ($2,467), which would overstate its negotiated median; its clearly negotiated rates run $285&ndash;$844.</p>
+    <h3>Hospital versus surgery center, same procedure, same market</h3>
+    <p class="src">Median of published negotiated rates per facility &middot; Boston metro &middot; CPT 45380</p>
+
+    <div class="key">
+      <span><i style="background:var(--bar6)"></i>Hospital</span>
+      <span><i style="background:var(--bar1)"></i>Ambulatory surgery center</span>
+    </div>
+
+    <div class="pair">
+      <div class="cap"><span class="place">Concord <span class="badge">Same health system</span></span><span class="mult">2.3&times; &middot; $1,399 apart</span></div>
+      <div class="row"><div class="h">Emerson Hospital</div><div class="track"><div class="bar" style="width:96.4%;background:var(--bar6)"></div></div><div class="v">$2,471</div></div>
+      <div class="row a"><div class="h">Emerson Endoscopy Center</div><div class="track"><div class="bar" style="width:41.8%;background:var(--bar1)"></div></div><div class="v">$1,072</div></div>
+    </div>
+
+    <div class="pair">
+      <div class="cap"><span class="place">Boston &amp; Medford <span class="badge">Same health system</span></span><span class="mult">1.7&times; &middot; $833 apart</span></div>
+      <div class="row"><div class="h">Tufts Medical Center</div><div class="track"><div class="bar" style="width:78.5%;background:var(--bar6)"></div></div><div class="v">$2,014</div></div>
+      <div class="row a"><div class="h">Shields Surgery Center</div><div class="track"><div class="bar" style="width:46.1%;background:var(--bar1)"></div></div><div class="v">$1,181</div></div>
+    </div>
+
+    <div class="pair">
+      <div class="cap"><span class="place">Cambridge &amp; Waltham</span><span class="mult">2.2&times; &middot; $1,415 apart</span></div>
+      <div class="row"><div class="h">Cambridge Health Alliance</div><div class="track"><div class="bar" style="width:100.0%;background:var(--bar5)"></div></div><div class="v">$2,564</div></div>
+      <div class="row a"><div class="h">Boston Outpatient Surgical Suites</div><div class="track"><div class="bar" style="width:44.8%;background:var(--bar1)"></div></div><div class="v">$1,149</div></div>
+    </div>
+
+    <div class="pair">
+      <div class="cap"><span class="place">Boston</span><span class="mult">2.0&times; &middot; $1,064 apart</span></div>
+      <div class="row"><div class="h">Boston Medical Center</div><div class="track"><div class="bar" style="width:85.1%;background:var(--bar5)"></div></div><div class="v">$2,183</div></div>
+      <div class="row a"><div class="h">Commonwealth Endoscopy Center</div><div class="track"><div class="bar" style="width:43.6%;background:var(--bar1)"></div></div><div class="v">$1,119</div></div>
+    </div>
+
+    <div class="pair">
+      <div class="cap"><span class="place">North Shore</span><span class="mult">2.0&times; &middot; $1,308 apart</span></div>
+      <div class="row"><div class="h">Beverly Hospital</div><div class="track"><div class="bar" style="width:100.0%;background:var(--bar5)"></div></div><div class="v">$2,564</div></div>
+      <div class="row a"><div class="h">Orchard Surgical Center</div><div class="track"><div class="bar" style="width:49.0%;background:var(--bar1)"></div></div><div class="v">$1,256</div></div>
+    </div>
+
+    <div class="axis"><div class="t"><span>$0</span><span>$2,564</span></div></div>
+
+    <p class="chartnote">In the first two pairings the hospital and the surgery center are the same organization. Emerson Endoscopy and Digestive Health Center is an Emerson Hospital joint venture about two miles from the hospital. Shields Surgery Center Medford is a Shields Health and MelroseWakefield joint venture, and MelroseWakefield is part of Tufts Medicine, which lists it among its own locations. Hospitals are not uniformly more expensive &mdash; a few in this market price below the surgery-center median, which is exactly why the comparison has to be run on your markets rather than assumed.</p>
   </div>
 
-  <div class="callout"><b>Why this matters at renewal:</b> spreads like these are already inside the quote you're about to approve. Plans pay them silently, employees burn deductibles on them, and nothing in the renewal paperwork shows you they exist.</div>
+  <div class="callout"><b>Why this matters at renewal:</b> spreads like these are already inside the quote you're about to approve. Colonoscopy is the case where the cheaper site of service is already in-network, already accredited, and sometimes owned by the same hospital &mdash; so the gap isn't a quality trade-off. Plans pay it silently, employees burn deductibles on it, and nothing in the renewal paperwork shows you it exists.</div>
 </div></section>
 
 <section><div class="wrap narrow">
@@ -166,6 +209,8 @@
   <dl class="qa">
     <dt>Are you a broker?</dt>
     <dd>No. Handl is not a broker, TPA, or carrier. We work alongside your broker, not around them. Many brokers use this same data with their clients; yours can too.</dd>
+    <dt>Is a surgery center really equivalent for this?</dt>
+    <dd>For a routine screening colonoscopy, ambulatory surgery centers are Medicare-certified, accredited, and staffed by the same gastroenterologists who practice at the hospital &mdash; in two of the pairings above they are literally the same organization. Patients with real clinical complexity belong in a hospital, and nothing here suggests otherwise.</dd>
     <dt>Is any of this PHI?</dt>
     <dd>No. The check starts from zip codes only. No names, no claims, no health information of any kind.</dd>
     <dt>We're mid-cycle. Is it too late?</dt>
@@ -189,7 +234,7 @@
 </div></section>
 
 <footer><div class="wrap"><p class="foot">
-  Pricing data: hospital price transparency machine-readable files published under 45 CFR &sect;180, retrieved from March&ndash;April 2026 filings (Mass General Brigham, Beth Israel Lahey Health, Tufts Medicine, Boston Medical Center, Cambridge Health Alliance). Figures are medians of commercial negotiated rates as filed and are directional; they are not a quote, a guarantee, or advice for any specific plan. Brain MRI shown as CPT 70551. &copy; 2026 Handl Health.
+  Pricing data: published negotiated rates for CPT 45380 (colonoscopy with biopsy) across 62 Boston-metro facilities &mdash; 13 ambulatory surgery centers and 49 hospitals &mdash; derived from price transparency files published under 45 CFR &sect;180. Figures are medians of published rates as filed and are directional; they are not a quote, a guarantee, or advice for any specific plan. Facility ownership and affiliation confirmed against the national provider registry. Federal facilities (VA and military treatment facilities) are excluded, as their rates do not apply to a commercial self-funded plan. Screening-age reference: USPSTF colorectal cancer screening recommendation, lowered to age 45 in 2021. &copy; 2026 Handl Health.
 </p></div></footer>
 
 </body>
