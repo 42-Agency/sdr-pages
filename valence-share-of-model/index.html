@@ -227,39 +227,18 @@
 <section class="border-b-2 border-[#1a1a1a] bg-white">
   <div class="max-w-6xl mx-auto px-6 py-16">
     <span class="px-3 py-1 bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-full text-xs font-bold">05 — BRANDED SEARCH</span>
-    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">Branded search, with the chemistry removed</h2>
-    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Bare "valence" gets 33,100 searches a month, which would make Valence look like the category leader. It is chemistry homework, not brand demand. Counting the full keyword tail and discounting the ambiguous terms at the rate their clean equivalents imply, real branded demand is <strong>700–877/mo, or 1.5%</strong>. Torch, EZRA, Hone, Lattice, Cloverleaf and Sounding&nbsp;Board all needed the same correction.</p>
+    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-4 max-w-3xl">"Valence" is too broad a word to measure</h2>
+    <p class="mt-3 text-[#4a4a4a] max-w-3xl">Bare "valence" gets 33,100 searches a month and almost none of it is you — it is chemistry homework. We stripped the obvious noise and modelled the rest, which puts real branded demand at <strong>700&ndash;877/mo, or 1.5%</strong>. Those are assumptions, not counts. Your Search Console would give us the real number, and it is the one input we are missing.</p>
 
-    <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <div class="lg:col-span-2 bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
-        <h3 class="font-bold mb-4">Share of branded search</h3>
-        <div id="searchChart" class="space-y-3"></div>
-      </div>
-      <div class="bg-[#f5f5f5] border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
-        <h3 class="font-bold">The Valence ambiguity model</h3>
-        <p class="mt-2 text-sm text-[#4a4a4a]">Bare "valence" = 33,100/mo. We split it using the unambiguous terms:</p>
-        <div class="mt-4 space-y-2 text-sm">
-          <div class="flex justify-between border-b border-[#ddd] pb-1"><span>clean brand tail</span><span class="font-bold">440</span></div>
-          <div class="flex justify-between border-b border-[#ddd] pb-1"><span>↳ <code>nadia</code> (product)</span><span>260</span></div>
-          <div class="flex justify-between border-b border-[#ddd] pb-1"><span>chemistry / other entities</span><span class="font-bold">82,640</span></div>
-          <div class="flex justify-between"><span>attribution to Valence</span><span class="font-bold text-[#1a1a1a] bg-[#DFFE68] px-1">0.53%</span></div>
-        </div>
-        <p class="mt-3 text-xs text-[#6b6b6b]">For scale: <code>valence electrons</code> alone is 60,500/mo — 69× the entire Valence brand. <code>valence login</code> is 20/mo; BetterUp's is 390/mo.</p>
-      </div>
-    </div>
-    <div class="mt-6 flex flex-wrap items-center gap-4 text-sm">
-      <div class="px-4 py-2 bg-white border-2 border-[#1a1a1a] rounded-lg">Naive single-term read: <strong>would rank #1</strong> — and be wrong</div>
-      <span class="text-[#9a9a9a] font-bold">→</span>
-      <div class="px-4 py-2 bg-[#DFFE68] border-2 border-[#1a1a1a] rounded-lg shadow-[3px_3px_0px_0px_#1a1a1a]">Corrected: <strong>1.5%</strong> · #10</div>
+    <div class="mt-8 bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
+      <h3 class="font-bold mb-4">Share of branded search</h3>
+      <div id="searchChart" class="space-y-3"></div>
+      <p class="mt-4 text-xs text-[#9a9a9a]">Torch, EZRA, Hone, Lattice, Cloverleaf and Sounding&nbsp;Board are common words too, so every one of these numbers is modelled the same way.</p>
     </div>
 
-    <div class="mt-8 bg-[#1a1a1a] text-white border-2 border-[#1a1a1a] rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_#DFFE68]">
-      <h3 class="text-xl font-extrabold">Two consequences</h3>
-      <div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5 text-sm">
-        <div class="border-l-2 border-[#DFFE68] pl-3"><span class="font-bold text-[#DFFE68]">Search Console is the only clean source</span><br><span class="text-gray-300">It counts queries that actually landed on valence.co, so the chemistry never enters. We did not have access. It is the highest-value thing to add.</span></div>
-        <div class="border-l-2 border-[#DFFE68] pl-3"><span class="font-bold text-[#DFFE68]">Paid search needs an audit</span><br><span class="text-gray-300">A brand or broad-match campaign on "valence" is exposed to a 33,100/mo chemistry pool. Worth checking match types and negatives.</span></div>
-      </div>
-      <p class="mt-5 text-white font-bold">Measure Valence on Share of Model and first-party organic. Not on branded search volume.</p>
+    <div class="mt-6 bg-[#1a1a1a] text-white border-2 border-[#1a1a1a] rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_#DFFE68]">
+      <h3 class="text-xl font-extrabold">Worth checking: paid search</h3>
+      <p class="mt-2 text-gray-300 text-sm max-w-3xl">A brand or broad-match campaign on "valence" is exposed to that same 33,100/mo chemistry pool. Worth auditing match types and negatives.</p>
     </div>
   </div>
 </section>
@@ -342,7 +321,7 @@
       <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
         <div class="text-xs font-bold text-[#6b6b6b]">SHARE OF MODEL</div>
         <h3 class="font-bold mt-1">20 prompts × 4 engines = 80 answers</h3>
-        <p class="mt-2 text-sm text-[#4a4a4a]">16 category questions (counted) + 4 questions naming Valence (read separately), each run on four engines through DataForSEO's AI Optimization API. Models: <strong>gpt-6.1-sol</strong>, <strong>gemini-3.8-flash</strong>, <strong>claude-sonnet-5-5</strong>, <strong>sonar-pro</strong>. All had live web search on, so every answer is sourced. No counted question names Valence. One pass per engine; 80/80 calls succeeded.</p>
+        <p class="mt-2 text-sm text-[#4a4a4a]">16 category questions (counted) + 4 questions naming Valence (read separately), each put to all four engines. Every engine ran its current production model with live web search on, so every answer is sourced and the sources were captured. No counted question names Valence. One pass per engine; all 80 answers returned.</p>
       </div>
       <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
         <div class="text-xs font-bold text-[#6b6b6b]">SCORING</div>
@@ -351,7 +330,7 @@
       </div>
       <div class="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0px_0px_#1a1a1a]">
         <div class="text-xs font-bold text-[#6b6b6b]">SHARE OF SEARCH</div>
-        <h3 class="font-bold mt-1">Branded search, via DataForSEO</h3>
+        <h3 class="font-bold mt-1">Branded search demand</h3>
         <p class="mt-2 text-sm text-[#4a4a4a]">Branded Google volume (US, 12-month average) across 15 brands × 18 modifiers. Ambiguous terms discounted at the rate their unambiguous equivalents imply. Nadia counted as Valence. Reported as a floor-to-modelled range.</p>
       </div>
     </div>
@@ -359,9 +338,9 @@
     <div class="mt-6 bg-[#f5f5f5] border-2 border-dashed border-[#F59E0B] rounded-xl p-6 max-w-4xl">
       <h3 class="font-bold text-sm text-[#F59E0B]">⚠ Four limits — read before acting on the numbers</h3>
       <p class="mt-2 text-sm text-[#4a4a4a]"><strong>1. One pass per engine.</strong> Each question ran once per engine, not averaged. Answers vary between runs, so any single mid-pack share has noise around it. Read the cluster shape, not the decimal. 23/36 versus 1/28 is far too big to be noise. Growthspace at 3.6% versus SAP at 3.1% is not.</p>
-      <p class="mt-2 text-sm text-[#4a4a4a]"><strong>2. API, not the consumer app.</strong> These are the production models with live web search, called via API. The ChatGPT and Gemini consumer apps add personalisation and memory on top, so a CHRO's screen will not match exactly.</p>
+      <p class="mt-2 text-sm text-[#4a4a4a]"><strong>2. Measured at the model, not in the app.</strong> These are each engine's production model answering with live web search. The ChatGPT and Gemini consumer apps add personalisation and memory on top, so a CHRO's screen will not match exactly.</p>
       <p class="mt-2 text-sm text-[#4a4a4a]"><strong>3. No Search Console.</strong> We did not have access to valence.co's, so section 05 is modelled from public data. Given the name ambiguity, it is the biggest missing input.</p>
-      <p class="mt-2 text-sm text-[#4a4a4a]"><strong>4. Grok and Copilot not covered.</strong> Grok is not provisioned on our supplier's account and Copilot has no measurement endpoint.</p>
+      <p class="mt-2 text-sm text-[#4a4a4a]"><strong>4. Grok and Copilot not covered.</strong> Neither is measurable at the scale and consistency this study needs. Both are small shares of enterprise research today.</p>
     </div>
 
     <div class="mt-6 bg-white border-2 border-[#1a1a1a] rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_#1a1a1a]">
@@ -394,7 +373,7 @@
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-6">
     <div>
       <div class="font-extrabold text-white text-lg">42<span class="text-gray-500">/</span>INTEL</div>
-      <p class="text-gray-400 text-sm mt-2 max-w-md">Prepared for Valence. Share of Model from live web-grounded answers across ChatGPT, Gemini, Claude and Perplexity, plus branded search volume (DataForSEO), October 2026.</p>
+      <p class="text-gray-400 text-sm mt-2 max-w-md">Prepared for Valence. Share of Model from live web-grounded answers across ChatGPT, Gemini, Claude and Perplexity, plus branded search volume, October 2026.</p>
     </div>
     <div class="text-sm text-right">
       <div class="text-[#DFFE68] font-bold mb-2">CONFIDENTIAL</div>
@@ -402,7 +381,7 @@
     </div>
   </div>
   <div class="max-w-6xl mx-auto mt-8 pt-6 border-t border-gray-700 text-gray-500 text-xs">
-    Enterprise AI coaching / talent development · 20 questions × 4 engines · 418 mentions / 49 vendors / 64 answers / 415 citations · plus DataForSEO branded search · Prepared by 42 Agency for Valence.
+    Enterprise AI coaching / talent development · 20 questions × 4 engines · 418 mentions / 49 vendors / 64 answers / 415 citations · plus branded search demand · Prepared by 42 Agency for Valence.
   </div>
 </footer>
 
