@@ -28,6 +28,15 @@
       ]
     },
     {
+      "source": "/laundry-ad-library(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive, nosnippet"
+        }
+      ]
+    },
+    {
       "source": "/artera-share-of-model(.*)",
       "headers": [
         {
