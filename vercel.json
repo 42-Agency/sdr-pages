@@ -190,6 +190,15 @@
       ]
     },
     {
+      "source": "/shipscience-share-of-search-4e81c7(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive, nosnippet"
+        }
+      ]
+    },
+    {
       "source": "/geo-(.*)",
       "headers": [
         {
