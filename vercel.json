@@ -206,6 +206,15 @@
           "value": "noindex, nofollow, noarchive, nosnippet"
         }
       ]
+    },
+    {
+      "source": "/fazeshift-share-of-model(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive, nosnippet"
+        }
+      ]
     }
   ]
 }
