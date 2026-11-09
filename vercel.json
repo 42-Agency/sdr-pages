@@ -224,6 +224,15 @@
           "value": "noindex, nofollow, noarchive, nosnippet"
         }
       ]
+    },
+    {
+      "source": "/handl-renewal-check-(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive, nosnippet"
+        }
+      ]
     }
   ]
 }
