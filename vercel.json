@@ -154,15 +154,6 @@
       ]
     },
     {
-      "source": "/handl-tam-signal-7c3f91(.*)",
-      "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "value": "noindex, nofollow, noarchive, nosnippet"
-        }
-      ]
-    },
-    {
       "source": "/dotdigital-tam-signal-4ba2e6(.*)",
       "headers": [
         {
@@ -173,15 +164,6 @@
     },
     {
       "source": "/zappi-90-day-plan-d7df6d(.*)",
-      "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "value": "noindex, nofollow, noarchive, nosnippet"
-        }
-      ]
-    },
-    {
-      "source": "/handl-renewal-check-3c22d2(.*)",
       "headers": [
         {
           "key": "X-Robots-Tag",
@@ -218,15 +200,6 @@
     },
     {
       "source": "/workleap-share-of-model(.*)",
-      "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "value": "noindex, nofollow, noarchive, nosnippet"
-        }
-      ]
-    },
-    {
-      "source": "/handl-renewal-check-(.*)",
       "headers": [
         {
           "key": "X-Robots-Tag",
